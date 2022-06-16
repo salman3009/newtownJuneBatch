@@ -1,0 +1,165 @@
+Internet: connecting one computer with another computer 
+Internet & Intranet:
+Internet - anyone can access 
+Intranet - particular set of computer 
+EXample: college website or login 
+Router - it will send packet from one route to another route 
+WWW - World Wide web 
+-It consists of interlink document that can be shared through network
+-Hyperlink ---> a set of information.
+-web page ---> It will consists of set of information 
+-website --> collection of web page is called webiste 
+URL - uniform resource locator:
+http://www.google.com/index.html 
+
+http: hyper text transfer protocol
+protocol: a sef of rule in the network 
+server - someone is going to provide service 
+web server - servic is provided using network 
+Database - permanent storage of data 
+Frontend or client   -- presentation 
+backend  -- business logic 
+database
+library or framework - a set of pre-functionality is written already
+Javascript - Reactjs 
+css - bootstrap 4
+javascript - Nodejs 
+database - Mongodb
+Html - hpertext markup language 
+page -----> web page ---->website ---> network ----> client 
+              html  
+html - basic building block of web 
+html - it will define the structure of webpage 
+html - series of element 
+tags -<>
+<element>Welcome to programming</element>
+/ --- it is end 
+it is mandatory for html to close the tag 
+//element name will be predefined 
+MEAN - Mongodb Expressjs Angular Nodejs 
+MERN - Mongodb Expressjs Reactjs Nodejs 
+============================================================
+Hypertext or hyperlink : it consists of information and that 
+information is connected to another information.
+
+markup - specific rule <element>details</element>
+html is divided into two tags:
+1. head tag  -------> title 
+2. body tag ------> entire information is going to display here 
+
+<!DOCTYPE html> --> we are telling the browser that we are using
+html 5
+Default browser will always take html 5
+
+<html>------------->parent element
+<head></head> --------->child element
+<body></body> ---------->child element 
+</html>
+
+VS Code - IDE -- Integrated Development Environment 
+Editor 
+Intelligence 
+javascript development 
+
+
+visual studio code keys:
+new file - Ctrl+N 
+save file - Ctrl+S 
+filename:1hello.html 
+right click ---> copy path ---> paste in browser 
+
+HTML is divided into two elements: 
+(i)block element 
+(ii)inline element 
+
+Example:
+<p> is block element
+<h1>to <h6> is block element 
+<div> important tag block element (plain block element)
+
+Inline element:
+<span> tag 
+=================================================
+how to write html?
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+<head>
+<title>Title</title>
+</head>
+
+<body>
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+</body>
+
+<body>
+<p></p>
+</body>
+
+html is divided type types:
+1.block element
+2.inline element 
+
+block:h1 to h6 , p , plain(div)
+inline:span 
+==============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			  
+ 
+
+
+
+
+
