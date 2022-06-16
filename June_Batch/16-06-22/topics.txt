@@ -1,14 +1,16 @@
 Today's topic:
-1.Meta tag?
-2.Div tag?
-3.span tag?
-4.What is Header,Nav and Footer?
-5.other usefull tags ?
-6.Special Characters Entities? 
-6.Order list tag?
-7.unorder list tag?
-8.adding video?
-9.adding audio?
-19.What is iframe?
-11.adding youtube video ?
+1.What is HTML
+2.History of html
+3.Doctype of html
+4.head tag 
+5.title tag
+6.body tag 
+7.heading tag 
+8.paragraph tag
+9.what is attribute 
+10.What is block element
+11.what is inline element
+12.formatting tag
+13.Special entities tag 
+14.line break and horizontal line 
 =====================================
