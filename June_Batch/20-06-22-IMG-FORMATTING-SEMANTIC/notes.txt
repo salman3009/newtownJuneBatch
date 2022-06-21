@@ -1,0 +1,160 @@
+Meta tag -- SEO 
+Meta tag - it will help to increase the user to our
+website
+kewords
+description
+example:
+<meta name="keywords" content="html,css,javascript">
+//there is no closing tag for meta 
+standard:
+1.charset
+2.keywords
+3.description
+4.viewport 
+
+==================================
+entities:
+1.< > already there is some meaning  available
+inside the html.
+<>--->opening tag 
+Attribute:
+1.extra information of that particular tag 
+global attribute:
+1.id ----> unique identification of html tag  
+2.name ----> giving some name for that particular tag.
+3.title ---> tooltip  
+4.class ---> collection of data.
+5.align --- deprecated(removed)
+=========================================
+anchor tag ---> To move from one page to another page.
+<a href="http://google.com" target="_blank">Please link here</a>
+<a href="mailto:salman@gmail.com">click for mail</a>
+=============================================
+Assignment:
+1.Input 
+   a:Welcome to the world of web development 
+Ouput:
+   <div id="text">
+   Welcome to the world of web development
+   </div>
+==============================================
+Assignment 2:
+Input:
+    HTML page 
+Output:
+    <h1 id="heading">Why I want to become a developer</h1>
+	  <p id="answer">Because to earn in lakhs</p>
+===============================================
+img -- anywhere in your website if you wan to show
+image we need to use img tag.
+syntax:
+<img> 
+//there is no closing tag avaliable for img tag 
+attribute -- src --->important attribute to give the location.
+example:
+<img src="data.png">
+<img src="https://amazon.com/image/d3.png>
+//img tag is inline element 
+alt attribute - to show alternate name when image is not there.
+width -- you can give width in numeric form 
+height -- you can give height in numeric form 
+src - source attribute give location it will open that particular path
+anchor - to from one page to another page 
+<div>
+<a href="url">
+<img>
+</a>
+</div>
+example:
+<img src="https://google.com/image/d3.png" alt="car" width="300" height="300">
+<img src="download.png">
+======================================
+Formatting tags are inline element
+=======================================
+Semantic Elements:
+//the tag should have some meaning
+p --- paragraph 
+h1 -- heading tag 
+img -- image 
+non-semantic:
+1.div 
+2.span 
+HTML 5:
+below tag are block level element 
+1.header 
+2.nav 
+3.footer 
+4.summary 
+5.main 
+6.section 
+7.aside 
+//For developer understanding they have given the 
+above tag.
+//before that we are using div tag to segregate the 
+page.
+section tag -- mainly we can use to wrap the chapter name or set of section of description for that paritcular blog.
+
+header tag -- if you have multiple header you can 
+wrap with header tag.
+
+nav tag -- it is menu to navigate from one place to
+another place 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
