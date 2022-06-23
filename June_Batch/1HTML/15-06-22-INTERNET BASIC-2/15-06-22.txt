@@ -1,0 +1,90 @@
+2hours:
+
+15minutes --- previous class doubt and revision
+15minutes -- introduction
+5minutes - discussion
+
+50minutes --- 10 minutes
+
+10.50 10 minutes discussion
+
+TCP - transmission control protocol (connection reliable)
+UDP - user Datagram protocol (server less connection)
+network - it is going to connect with one system to another system (to share the information)
+
+
+internet - anyone can able to access this information
+intranet - within the network (particular set of system)
+
+Network
+you can send the data 
+you can receive the data 
+
+
+IP - 192.196.173
+http://www.amazon.com ---- DNS ------> IP address 
+
+
+www - we are going to share the information in the network in the form of hypertext document 
+page - some set of information 
+webpage - sharing the page information to network 
+website - collection of webpage 
+browser - to access the website we need the browser 
+
+hypertext and hyperlink 
+hyper - one information with that information you will get another information 
+link - clickable information 
+text - general information 
+
+TCp - stable connection 
+
+serverless -- 
+
+http - hyper text transfer protocol 
+
+
+server - someone is going to provide you the service is called server 
+youtube -- server ----------> web server 
+flipkart -server   ----->web server 
+netflix - server   -->web server 
+
+frontend
+backend 
+database 
+library
+framework
+
+top language  -- Javascript 
+html - hypertext(information) markup(<>) language 
+<> ---> tag
+we are going to send information in the form of tag 
+html is a basic building block of web page 
+structure of the web page is going to decide by  html 
+<img>
+<video>
+<nav>
+browser -- will take this tag and it will convert into actual output
+syntax:
+<h1>Hello world</h1>
+//you no to close the tag everywhere 
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
