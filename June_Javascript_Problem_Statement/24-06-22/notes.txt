@@ -1,0 +1,41 @@
+Problem statement ---DOM 
+Frontend:
+HTML  -- Hyper Text Mark up language
+CSS   -- Cascading stylesheet
+Javascript -- to make the page dynamic 
+HTML - layout of the web page 
+css -- presentation
+javascript-to make the page dynamic 
+========================================
+DOM --> Document object modal
+
+<style>
+  h1{
+    color:red;
+  }
+</style>
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>
+
+DOM - Document object modal:
+Object -- property and methods
+example:
+car:
+property:color,wiper,tyre,glass 
+methods:how much speed(),enginespeed()
+=======================================
+div - it is plain block scope element 
+======================================
+Table
+flexbox
+grid ---------------->grid is the best solution
+============================================  
+
+
+
+
