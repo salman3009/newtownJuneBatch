@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="post" name="register" action="https://google.com">
+            <label for="fullName">
+                FullName:<sup>*</sup>
+            </label>
+            <input  id="fullName" placeholder="examplePotter" minlength="3" maxlength="20" name="fullName" type="text" required><br/><br/>
+            <label for="email">
+                Email:
+            </label>
+            <input type="email"   id="email" name="userEmail" required><br/><br/>
+            <label for="password">
+                Password:
+            <input type="password"  maxlength="40" id="password" name="passowrd" required><br/><br/>
+            </label>
+            <label for="dob">
+                DOB:
+            </label>
+            <input  type="date" id="dob" name="dob" required><br/><br/>
+            <label for="age">
+                Age:
+            </label>
+            <input type="number" min="18"  max="60" id="age" name="age" required><br/><br/>
+            
+            <label for="gender_m">
+                <input type="radio"  value="male" id="gender_m" name="gender" required>Male
+            </label>
+    
+            <label for="gender_f">
+                <input type="radio" value="female" id="gender_f" name="gender" required>Female
+            </label>
+            <br/>
+            <br/>
+            <input type="submit">
+        </form>
+       
+    </body>
+</html>

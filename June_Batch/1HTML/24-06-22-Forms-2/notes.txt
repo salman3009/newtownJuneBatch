@@ -1,0 +1,50 @@
+Form --> It is used to access data from end user.
+Form attributes:
+1.name
+2.action --->Once you submit the form it will navigate to next page.
+====================================:
+Input tag --->It is used to get the data from user in different format
+example:text,checkbox,radio,email,number etc.
+<input type="text">
+//There is no closing tag for input 
+//Input tag is inline element 
+label tag -->It will increase the movement of user within that particular tag.
+//id and name attribute is important and we need to add for all input tag.
+//whenever you want to use label we need to provide for attribute and that for attribute need to be connected with id attribute inside the input tag.
+=============================================
+value Attribute -->checkbox,radio,select,hidden
+placeholder attribue --> you can use any text box field
+disabled attribue --> anywhere we can you this one.
+readonly --> anywhere we can you this one.
+checked -->radio and checkbox.
+selected -->select tag.
+autofocus -->anywhere we can use it.
+=======================================
+validation:
+1.required -- mandatory something you need to type.
+2.maxlength --> you can use with textbox
+3.minlength--> you can use with textbox
+4.min --------> you can use with type="number"
+5.max -------> you can use with type="number"
+6.pattern --> regular expression
+7.email ---> type="email" 
+====================================
+Form can be submitted in two ways:
+1.Get  -- whenever you are going to send the data in url.
+2.Post ---> whenever inside the http body 
+======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

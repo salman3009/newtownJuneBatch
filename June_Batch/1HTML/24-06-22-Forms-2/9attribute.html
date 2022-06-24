@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form name="register" action="https://google.com">
+            <label for="fullName">
+                FullName:
+            </label>
+            <input  id="fullName" placeholder="examplePotter" name="fullName" type="text"><br/><br/>
+            <label for="email">
+                Email:
+            </label>
+            <input type="email" value="salman@gmail.com" readonly id="email" name="userEmail"><br/><br/>
+            <label for="password">
+                Password:
+            <input type="password" autofocus id="password" name="passowrd"><br/><br/>
+            </label>
+            <label for="dob">
+                DOB:
+            </label>
+            <input disabled type="date" id="dob" name="dob"><br/><br/>
+            <label for="age">
+                Age:
+            </label>
+            <input type="number" value="18" id="age" name="age"><br/><br/>
+            
+            <label for="gender_m">
+                <input type="radio" checked value="male" id="gender_m" name="gender">Male
+            </label>
+
+            <label for="gender_f">
+                <input type="radio" value="female" id="gender_f" name="gender">Female
+            </label>
+            <br/>
+            <br/>
+
+            <label for="city">
+                <input type="checkbox" value="Delhi" id="city" name="delhi">Delhi
+            </label>
+            <label for="mumbai">
+                <input type="checkbox" value="Mumbai" id="mumbai" name="mumbai">Mumbai
+            </label>
+            <label for="bangalore">
+                <input type="checkbox" checked value="Bangalore" id="bangalore" name="bangalore">Bangalore
+            </label>
+            <br/>
+            <br/>
+            <label for="desc">
+                Description:
+            </label>
+            <textarea disabled cols="40" rows="10" id="desc" name="description"></textarea>
+            <br/>
+            <label for="list">
+                Select city:
+            </label>
+            <select  id="list" name="city">
+                <option value="delhi">Delhi</option>
+                <option value="up">UP</option>
+                <option value="mp" selected>MP</option>
+                <option value="jammu">Jammu</option>
+                <option value="kerala">Kerala</option>
+                <option value="karnataka">Karnataka</option>
+            </select>
+            <br/>
+            <br/>
+            <input type="submit" value="register">
+             <input type="reset" value="clear">
+        </form>
+    </body>
+</html>
