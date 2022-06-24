@@ -298,6 +298,16 @@ for (let i = 0; i < countryList.length; i++) {
   select.appendChild(opt);
 }
 
+let select = document.getElementById("selectCountires");
+
+for(let i=0;i<countrList.length;i++){
+          let opt = countryList[i];
+          let list = document.createElement('div');
+          list.classList.add('country-item');
+          list.textContent = "details";
+          select.appendChild(list)
+}
+
 
 </script>
 
