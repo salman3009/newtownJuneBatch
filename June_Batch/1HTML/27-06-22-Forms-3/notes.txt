@@ -1,0 +1,107 @@
+Form:
+//If you want to get end user data we need form.
+Type of input tag:
+1.text
+2.email
+3.url
+4.date
+5.number
+6.password
+7.hidden
+8.file 
+9.checkbox
+10.radio
+11.textarea
+12.select 
+13.submit 
+14.reset
+15.image 
+16.button
+17.label
+Validation attribute:
+1.minlength
+2.maxlength
+3.min
+4.max
+5.required
+6.email 
+7.pattern 
+Form attribute 
+1.readonly 
+2.disabled
+3.selected 
+4.checked 
+5.name 
+6.id 
+7.value 
+8.rows 
+9.cols 
+9.option
+10.for 
+12.method 
+13.action 
+14.placeholder 
+15.enctype 
+16.size 
+17.wrap 
+18.multiple
+19.tabindex 
+20.autofocus
+Form layout
+1.fieldset
+2.legend 
+================================================
+all input tag are inline element 
+div is plain block element 
+pattern --> only alphabets,only number,password 
+minimum one capital and one small case letter 
+url encoding
+form method are two types:
+1.get  --- data will travel to backend in url form 
+2.post --privacy,secure data or large data image or pdf or video 
+Query String --->url encoded  or get method
+Form data --->body data or post method data 
+===========================================
+Binary - 0 or 1 
+Binary file --> collection of o and 1
+example:image,video,audio form one place to another place in the form of binary 
+Whenever you want to upload any file inside the form
+form name="post"  enctype="multipart/form-data" 
+example:
+<input type="file" id="file" name="file">
+accept --> to select particular type of file 
+accept="audio/*"
+accept="video/*"
+accept="image/*"
+accept=".pdf,audio/*,video/*,image/*"
+\====backward slash
+/===forward slash 
+==================================================
+Form method --get and post 
+get --- less data and not secure data 
+get --> in the url header 
+form default method is get 
+this format is called query string parameter
+==========================================
+Post method  --> to send the secure data to backend and if you have large set of data 
+this format is called form data
+=====================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
