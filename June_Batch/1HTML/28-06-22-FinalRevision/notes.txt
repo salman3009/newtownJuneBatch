@@ -1,0 +1,56 @@
+Css JS clone the project 
+DS1 DS2 ---> not interested 
+Frontend: 120 hours 
+10hours -- not possible 
+html css javascript reactjs -----> project 20+project 
+5project 
+===========================================
+Form can be submitted in two ways:
+1.GET -- data will travel in the head section of http.
+url:http://google.com?name="salman"&email="salman%40gmail.com" ---> url encoding
+Query string parameter. 
+//data is not secure 
+//sensitive information we cannot send in the url.
+//enctype - x-www-form-urlencoded
+2.POSt --> Data will travel in the body section of 
+http:
+//it will travel in the form of key and value pair.
+fullName:"salman"
+address:"India"
+//sensitive information 
+//mainly to upload image,audio,video
+//multipart/formData --whenever you have file please attach the multipart/formData.
+=================================================
+HTML 5:
+input type="color"
+input type="range" ---> min and max 
+========================================
+name:value
+name:value 
+fullName:"salman"
+address:"delhi"
+=======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
