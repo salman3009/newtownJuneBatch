@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+</body>
+</html>
+
+<!--
+<html>
+<head>
+<script>
+function preferedBrowser() {
+  prefer = document.forms[0].browsers.value;
+  alert("You prefer browsing internet with " + prefer);
+}
+</script>
+</head>
+<body>
+
+<form>
+Choose which browser you prefer:
+  <select id="browsers" onchange="preferedBrowser()">
+    <option value="Chrome">Chrome</option>
+    <option value="Internet Explorer">Internet Explorer</option>
+    <option value="Firefox">Firefox</option>
+  </select>
+</form>
+
+</body>
+</html>
+
+-->

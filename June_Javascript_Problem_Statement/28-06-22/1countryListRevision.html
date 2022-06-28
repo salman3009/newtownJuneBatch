@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Country List
+        </title>
+    </head>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: auto auto auto auto auto auto ;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+        .box{
+            padding-top:60px;
+            padding-bottom:60px;
+            text-align: center;
+            font-size:18px;
+            border:1px solid grey;
+            box-shadow: 1px 1px 1px 1px grey;
+        }
+    </style>
+    <body>
+        <div class="container" id="country">
+        
+    
+
+        </div>
+        <script>
+            let countryList=["India","USA","France","Germany","Austrai","Norway","India","USA","France","Germany","Austrai","Norway"];
+            let select = document.getElementById('country');
+            for(let i=0;i<countryList.length;i++){
+                let opt = document.createElement('div');
+                opt.textContent=countryList[i];
+                opt.classList.add('box');
+                select.appendChild(opt);
+            }
+        </script>
+    </body>
+</html>
