@@ -1,0 +1,63 @@
+<html>
+
+<head>
+
+    <style>
+        .container {
+            width: 720px;
+            margin: auto;
+        }
+
+        input[type="text"] {
+            border: 3px solid #008000ad;
+            width: 400px;
+            height: 32px;
+        }
+
+        button {
+            background-color: #008000ad;
+            border: 0px;
+            color: white;
+            width: 300px;
+            height: 31px;
+            border-radius: 3px;
+        }
+        .alert{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+
+            <input type="text" id="generate" name="generate" onChange="onNameChangeHandler(event)">
+            <div id="demo"></div>
+            <br/>
+            <button onClick="onGenerate(event)">Button</button>
+        </form>
+    </div>
+    <script>
+        function onNameChangeHandler(event){
+            let fullName = event.target.name;
+            let fullNameValue = event.target.value;
+            let select = document.getElementById('demo');
+            if(!/[a-zA-Z0-9]{5,20}/.test(fullNameValue)){
+                    select.textContent = "Only alphabets is allowed";
+                    select.classList.add('alert');
+            }
+            else{
+                select.textContent='';
+            }
+        }
+        function onGenerate(event){
+            event.preventDefault();
+            var input = document.getElementById('generate').value;
+            alert(input);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+Form:
+//To get the data from end user we need form
+//input tag ---> it will help to access the data from user.
+1.text
+2.email
+3.password 
+4.number 
+5.radio 
+6.checkbox 
+7.select 
+8.textarea 
+10.submit
+========================================
+input tag --> type,name,id
+<form>
+<label for="fullName">
+FirstName
+</label>
+<input type="text" id="fullName" name="registrationFullName">
+</form>
+//value attribute ---> it is important to give value
+attribute in checkbox,radiobutton,select tag.
+//checked attribute -->checkbox and radiobutton.
+//selected attribute -->option tag 
+//name attribute -->important for all tag.but for 
+radio we have to give same name.
+select tag or dropdown -->select tag or option tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
