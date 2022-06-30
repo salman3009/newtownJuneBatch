@@ -1,0 +1,39 @@
+Form submission:
+1.Get Method 
+2.Post Method 
+get method:
+1.The data will transform in the url.
+2.all data will be converted into url encoding.
+HTTP --> hyper text transfer protocol
+3.get method is not secure.
+4.get method has some limitation in sending.
+post method:
+5.data will travel in form of query string
+1.The data will transform in the body section of http.
+2.we can send huge amount of data.
+3.It is secure compare to get method 
+4.method="post"
+5.data will travel in form of form-data 
+6.form data is nothing but key and value pair.
+
+=================================================
+Events:
+//typing something in keyboard
+//clicking mouse.
+example:
+onClick,onChange,Onkeydown,onSubmit 
+We need to write function in js.
+function additionHandler(){
+
+}
+
+
+
+
+
+
+
+
+
+
+
