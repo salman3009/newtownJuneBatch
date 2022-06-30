@@ -61,7 +61,7 @@ Inside the html file we need to include css file.
 ===========================================
 text-align - left | right | center | justify 
 ======================================
-inline style - direclty writing the css code inside the html.
+inline style - directly writing the css code inside the html.
 ==========================================
 Internal
 //inline style is given more priority when we compare to internal style.
@@ -79,7 +79,7 @@ filename:external.html
 ==============================================
 inline--->internal--->external 
 top - bottom approach 
-for internal and external depends upon the top down approach it wil get prioty. first given to down approach 
+for internal and external depends upon the top down approach it will get priority. first given to down approach 
 ========================================
 To comment html:
  <!-- <h1>Welcome to programming</h1> -->
