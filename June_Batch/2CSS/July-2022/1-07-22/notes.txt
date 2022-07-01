@@ -1,0 +1,46 @@
+friday ---> basic selector and combinator selector 
+Monday  ---> Box modal ---> width,height,padding,margin,border
+Tuesday --> box modal 
+wednesday --> grid system 
+thrusday --->background color,position,opacity,top,display
+friday --->sample project 
+saturday ---> submit project-->70%
+==========================================
+Element Selector:
+p{}
+h1{}
+class selector: collection
+id selector: unique identification
+==========================================
+id--->class-->element
+====================================
+universal selector or global or * or wild card:
+1.box-sizing
+2.margin 
+3.padding 
+4.font-family
+==============================================
+combinators selector:
+1.descendant    parent -- child 
+2.direct child  parent -- child 
+<div>
+<p>
+</div>
+div p 
+div>p 
+1.block-->block-->span 
+2.block-->block 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

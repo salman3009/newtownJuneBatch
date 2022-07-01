@@ -1,0 +1,73 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form onSubmit="onSubmitHandler(event)">
+            <label for="fullName">
+                FullName
+            </label>
+            <input type="text" id="fullName" name="fullNames">
+            <br/>
+            <br/>
+            <label for="saving">
+                  Saving
+            </label>
+            <input type="radio" onClick="onSelectHandler()" value="saving" id="saving" name="account">
+            <br/>
+            <br/>
+            <label for="current">
+                Current
+            </label>
+            <input type="radio" onClick="onSelectHandler()" value="current" id="current" name="account">
+            <br/>
+            <br/>
+            <input type="submit">
+        </form>
+        <div id="savingDetails" style="display: none;">
+         <ul>
+             <li>Saving account 10% off</li>
+             <li>Saving account benefits IPO</li>
+         </ul>
+        </div>
+
+        <div id="currenDetails" style="display: none;">
+           <ul>
+               <li>Current account 20% off</li>
+               <li>Benefits ITR return</li>
+           </ul>
+        </div>
+         <script>
+             function onSelectHandler(){
+
+                 let select = document.getElementsByName('account');
+                 let currentOpt = document.getElementById('currenDetails');
+                 let savingOpt = document.getElementById('savingDetails');
+
+                 for(let i=0;i<select.length;i++){
+                      if(select[i].checked && select[i].value == "saving"){
+                            savingOpt.style.display = "block";
+                            currentOpt.style.display = "none";
+                      }
+                      else{
+                          savingOpt.style.display = "none";
+                            currentOpt.style.display = "block";
+                      }
+                      break;
+                 }
+             }
+
+             function onSubmitHandler(event){
+                 event.preventDefault();
+                 alert("submit");
+                 let data = document.forms[0]['fullName'].value;
+                 alert(data);
+             }
+         </script>
+
+       
+
+
+
+    </body>
+</html>

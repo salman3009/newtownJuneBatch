@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+            row-gap: 1px;
+            column-gap: 1px;
+            margin: auto;
+            width: 500px;
+        }
+
+        .box-even {
+            background-color: green;
+            color: white;
+            text-align: center;
+
+        }
+
+        .box-odd {
+            background-color: yellow;
+            color: white;
+            text-align: center;
+        }
+
+        .box-prime {
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+
+        form {
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        input[type="number"] {
+            width: 70%;
+            height: 35px;
+            border: 2px solid green;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: 0px;
+            width: 145px;
+            height: 34px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="number" id="numberGenerator" name="numberGenerator" required>
+        <button onClick="onSubmitHandler(event)">Generate numbers</button>
+    </form>
+    <div class="container" id="list">
+     <!-- <div class="box-even">45</div> -->
+    </div>
+
+    <script>
+        function onSubmitHandler(event){
+            debugger;
+            event.preventDefault();
+            let input = document.getElementById('numberGenerator').value;
+           // console.log(typeof input);
+           let result = checkNumberType(input);
+           let select = document.getElementById('list');
+           let opt = document.createElement('div');
+           opt.textContent = input;
+           if(result == 'prime'){
+            opt.classList.add('box-prime');
+           }else if(result == 'even'){
+            opt.classList.add('box-even');
+           }
+           else{
+            opt.classList.add('box-odd');
+           }
+           select.appendChild(opt);
+
+        }
+
+        function checkNumberType(input){
+            let numberType = Number(input);
+            let flag = false;
+
+            for(let i=2;i<input;i++){
+                if(input%i==0){
+                    flag = true;
+                    break;
+                }
+            }
+
+            if(input>1 && !flag){
+                 return 'prime';
+            }
+            else if(input%2==0){
+                return 'even';
+            }else{
+                return 'odd';
+            }
+
+        }
+    </script>
+</body>
+
+</html>
