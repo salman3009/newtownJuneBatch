@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function addition(a,b,result){
+                let add = a+b;
+                console.log("final value",add);
+                result(add);
+            }
+            function display(input){
+                console.log(input);
+            }
+            addition(23,45,display)
+        </script>
+    </body>
+</html>
