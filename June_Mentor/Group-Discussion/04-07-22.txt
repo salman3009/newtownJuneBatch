@@ -1,0 +1,100 @@
+Web Development or web developer:
+Development: you are going to develop something new.
+skills:python,java,html,css,javascript language.
+300hours 
+web -- from the network you are going to access information.
+================================================
+Native development:
+android and IOs
+=================================================
+web server:service:
+zomato:
+order -->select food --> offer --> payment-->delivery agent ---> deliver partner-->restaruant ---> food --->deliver.
+==============================================
+web development 
+frontend 
+backend 
+web server 
+==============================================
+Data Structure and Algorithm
+MERN --->
+M --> MangoDB
+E -->ExpressJS
+R -->Reactjs 
+N --->Nodejs 
+================================================
+website:collectoin of web page:
+web page:each page will have some information.
+============================================
+Programming language:
+language -- for communication with machine  - 1 and 0
+programming -- some set of input and it is going to give you output.
+Language:c,c++,java,python,javascript,html,css
+================================================
+Frontend developer  --->fresher
+Newton school
+1.html
+2.css
+3.javascript
+
+
+Backend developer
+1.java or python or javascript or c#
+2.c,c++,golang,ruby and rails.--->mechincal,automation car.
+
+full stack developer
+frontend + backend 
+
+MERN developer - full stack (javascript) -- fresher
+Newton school
+
+
+MEAN developer -- full stack (javascript) -- fresher
+Newton school --> angular 
+==================================================
+package: 15lakhs ---  data structure and algorith
+package:5 or 10 --- frontend interview or MERN interview
+==================================================
+Database:will store data permanent.
+RAM ------------->random access memory
+Harddisk--------->permanent data.
+
+Data structure--->Array and object 
+algorithm ---> to solve the problem
+=====================================
+MERN or java or python 5%
+===================================
+Library and framework:
+MERN 
+Frontend -- Reactjs (html+CSS+javascript) 
+Backend  - Backend language  --Nodejs(js) and Expressjs (js)
+           Database Language --Mongodb (similar to js)
+Backend -- Java and spring boot 
+           Oracle or sql and hibernate
+
+=======================================
+Data structure and alogrithm -->2 months
+java or python or javascript
+newschool : java 
+MERN:
+Frontend:html,css,javascipt,reactjs -->3months
+backend:nodejs and mongodb and expressjs -->5months
+============================================
+html and css, and javascript
+==========================================
+html -->
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
