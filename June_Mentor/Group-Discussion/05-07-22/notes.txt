@@ -1,0 +1,54 @@
+Web development:
+Editor:to type code.
+Best Editor: MERN stack --- visual studio code 
+IDE:Integrated development environment
+System: 64bit 
+===========================================
+DS - Tree
+HTML --> hyper text mark up language
+CSS--->Cascading style sheet 
+Javascript ---> dynamic language 
+=========================================
+html  - tag language 
+opening<tag>Welcome to javascript</tag>--->closing tag
+tag - predefined tags 
+example:
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+filname:hello.html
+===============================================
+step1 : open visual studio code.
+step2: create a new file.
+step3:save a file  
+example:filename.html 
+//lowercase name 
+step4:right click on file name and copy path and paste it in browser.
+best browser : chrome.
+=======================================
+<tag src=""></tag>
+attribute --> extra information about the tag.
+==========================================
+anchor tag -- It is used to move from one page to another page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
