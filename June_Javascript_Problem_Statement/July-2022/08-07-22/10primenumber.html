@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>
+        Prime Number
+    </title>
+</head>
+
+<body>
+    <button onclick="primeNumber(12)">Prime</button>
+</body>
+
+</html>
+<script>
+    function primeNumber(n) {
+        debugger;
+        let primeNumber = [];
+
+        function isPrime(num) {
+            for (var i = 2; i < num; i++)
+                if (num % i === 0) return false;
+            return num !== 1 && num !== 0;
+        }
+
+        function checkingPrime(n) {
+            for (let i = 2; i < n; i++) {
+                let a = isPrime(i);
+                if (a) {
+                    primeNumber.push(i);
+                }
+            }
+        }
+
+        checkingPrime(n);
+        console.log(primeNumber);
+
+    }
+
+</script>

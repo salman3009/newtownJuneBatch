@@ -1,0 +1,23 @@
+<script>
+/*Deep copy of Object*/
+let person={id:1,name:"salman"};
+let r={};
+r=Object.assign({},person);
+r.name="khan";
+console.log(r);
+console.log(person);
+
+/*Deep copy of array*/
+let names='';
+let human=[
+    {name:"salman",age:24,car:[2,3,4]},
+    {name:"ahmed",age:24}
+];
+names=[...human[0].car];
+names.splice(0,1);
+console.log(names);
+let copyhuman=[...human];
+copyhuman.splice(0,1);
+console.log(human);
+console.log(copyhuman);
+</script>

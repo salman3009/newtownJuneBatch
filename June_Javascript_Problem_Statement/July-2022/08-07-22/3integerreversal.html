@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>
+Integer Reversal
+</title>
+</head>
+<body>
+<input type="button" onclick="integerReversal(785)" value="IntegerReversal" name="IntegerReversal">
+</body>
+</html>
+<script>
+function integerReversal(str)
+{
+    debugger;
+    let reverseinteger=str.toString().split("").reverse().join("");
+    if(str===parseInt(reverseinteger))
+    {
+        return true;
+    }
+    return false;
+}
+</script>

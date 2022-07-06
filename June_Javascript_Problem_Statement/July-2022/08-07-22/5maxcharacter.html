@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Max Character</title>
+</head>
+<body>
+<input type="button" onclick="maxCharacter('salmansss')" name="maxcharacter" value="maxcharacter">
+<h2>First Program</h2>
+</body>
+</html>
+<script>
+function maxCharacter(n)
+{
+  debugger;
+  let count={};
+  n.split('').forEach(function(s){
+      console.log(s);
+   count[s]?count[s]++:count[s]=1;
+  });
+  let result=Object.keys(count).reduce(function(a,b){
+      return count[a]>count[b]?a:b;
+  });
+  console.log(result);
+}
+
+
+</script>

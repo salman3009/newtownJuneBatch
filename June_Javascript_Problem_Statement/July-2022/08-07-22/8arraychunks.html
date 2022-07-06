@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>
+Array chunks
+</title>
+</head>
+<body>
+<input type="button" onclick="onarraychunks([2,3,4,5,6],2)" name="onarraychunks" value="onarraychunks">
+</body>
+</html>
+<script>
+function onarraychunks(arr,len)
+{
+    debugger;
+    var chunks=[];
+    let n=arr.length;
+    let i=0;
+    while(i<n)
+    {
+    chunks.push(arr.slice(i,i+=len));
+    }
+    console.log(chunks);
+}
+</script>
