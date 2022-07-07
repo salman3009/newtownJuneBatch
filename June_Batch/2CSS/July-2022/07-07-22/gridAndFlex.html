@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      .header{grid-area: header;}
+      .leftbar{grid-area: leftbar;}
+      .mainbar{grid-area: mainbar;}
+      .footer{grid-area: footer;}
+
+      .container{
+        display: grid;
+        gap:20px;
+        grid-template-areas: 'header header header header'
+        'leftbar leftbar mainbar mainbar'
+        'footer footer footer footer';
+      }
+      .header{
+        background-color:grey;
+        width: 100%;
+        height: 100px;
+      }
+      .leftbar{
+        width: 400px;
+        height: auto;
+        background-color: blue;
+      }
+      .mainbar{
+        width: 100%;
+        height:auto;
+        background-color: gold;
+      }
+      .footer{
+        width: 100%;
+        height:200px;
+        background-color: violet;
+      }
+      .flex-container{
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .flex-box{
+           width: 240px;
+           background-color: indigo;
+           height: 250px;
+           margin:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+      <div class="leftbar"></div>
+      <div class="mainbar">
+        <div class="flex-container">
+          <div class="flex-box"></div>
+          <div class="flex-box"></div>
+          <div class="flex-box"></div>
+          <div class="flex-box"></div>
+          <div class="flex-box"></div>
+          <div class="flex-box"></div>
+          
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
