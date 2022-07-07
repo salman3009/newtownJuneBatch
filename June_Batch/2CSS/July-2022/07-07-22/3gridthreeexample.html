@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+        <style>
+            .header{grid-area: header;}
+            .banner{grid-area:banner;}
+            .side-content-one{grid-area: side-content-one;}
+            .side-content-two{grid-area: side-content-two;}
+            .side-content-three{grid-area: side-content-three;}
+            .footer{grid-area:footer;}
+
+            .container{
+                display: grid;
+                gap:20px;
+                grid-template-areas: 'header header header'
+                'banner banner banner'
+                'side-content-one side-content-two side-content-three'
+                'footer footer footer'
+                ;
+            }
+            .header{
+                background-color: indigo;
+                height:100px;
+            }
+            .banner{
+                background-color: lawngreen;
+                height: 200px;
+            }
+            .side-content-one ,.side-content-two, .side-content-three   {
+                background-color: gold;
+                height:350px;
+            }
+            .footer{
+                background-color: grey;
+                height:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"></div>
+            <div class="banner"></div>
+            <div class="side-content-one"></div>
+            <div class="side-content-two"></div>
+            <div class="side-content-three"></div>
+            <div class="footer"></div>
+        </div>
+    </body>
+</html>
