@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.header{grid-area: header;}
+.sidebar{grid-area: sidebar;}
+.main{grid-area: main;}
+.footer{grid-area:footer;}
+
+.container{
+    display:grid;
+    gap:20px;
+    grid-template-areas: 'header header header'
+    'sidebar main main'
+    'footer footer footer';
+}
+
+.container .header{
+    width: 100%;
+    height:90px;
+    background-color: #fc8019f2;
+}
+.header .header-left{
+    float:left;
+    padding-top: 6px;
+}
+/* .header-left .header-font-logo{
+      margin-top:7px;
+} */
+.header .header-right{
+    float:right;
+    padding-top: 26px;
+}
+.header .header-logo{
+    font-size: 38px;
+    font-weight: 900;
+}
+.header-left li{
+    padding-left:30px;
+}
+
+.header-right li{
+    padding-right:20px;
+    font-size:18px;
+    font-weight: 800;
+}
+.header-right li a{
+    text-decoration:none;
+}
+
+.header-right li,.header-left li {
+    list-style-type: none;
+    display:inline-block;
+}
+
+.fa-cube{
+    font-size:50px;
+}
+.container .footer{
+    width: 100%;
+    height: 70px;
+    background-color: #fc8019f2;
+}
+
+.container .sidebar{
+    width: 300px;
+    height: 500px;
+    margin-left:20px;
+    background-color: #fac669d4;
+}
+
+.sidebar .sidebar-brand{
+
+}
+
+.sidebar .sidebar-list{
+  padding:12px;
+
+}
+.sidebar .sidebar-list li{
+    padding-bottom:12px;
+}
+
+.container .main{
+    height: auto;
+    margin-right: 20px;
+}
+
+.main .main-sub-menu{
+    width: 100%;
+    height: 50px;
+    background-color: #fc8019f2;
+}
+
+.main .main-flex{
+    flex-wrap: wrap;
+    display: flex;
+     justify-content: center;
+}
+
+.main-flex .main-flex-box{
+       width: 350px;
+       height: auto;
+       margin:20px;
+       background-color: #fac669d4;
+       border-radius: 20px;
+}
+.main-flex-box img{
+    display: block;
+    width: 250px;
+    height: 207px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+
+input[type="text"]{
+    width: 228%;
+    height: 40px;
+    border: 0;
+    border-radius: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+.text-label{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+button{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 126px;
+    height: 37px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 14px;
+    border: 0;
+    background-color: #fc8019f2;
+}
+
+h1{
+    padding:12px;
+}

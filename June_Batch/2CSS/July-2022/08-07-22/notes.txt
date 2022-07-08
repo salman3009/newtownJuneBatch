@@ -1,0 +1,33 @@
+Notes:
+1.box-sizing 
+2.Project with flex+grid (header,sidebar,footer,maincontent)
+=====================================
+box-sizing:
+width:300
+height:200
+padding:20
+left:20
+right:20
+bottom:20
+top:20
+width:width-(left+right) = 300-(20+20) = 260
+height:height-(top+bottom) = 200-(20+20)=160
+==============================================
+Creating new project:
+1.Always provide the first file as index.html
+2.please provide title and meta tag inside the head tag.
+3.create one folder called assets and paste it icon and images.
+4.please paste the font-awesome folder inside the assets 
+5.Import the font-awesome inside the head tag.
+6.create one css file and name is global.css
+
+
+
+
+
+
+
+
+
+
+
