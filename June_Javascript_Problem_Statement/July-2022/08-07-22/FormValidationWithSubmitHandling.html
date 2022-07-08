@@ -1,0 +1,214 @@
+<html>
+
+<head>
+    <style>
+        .container {
+            width: 50%;
+            margin: auto;
+            height: auto;
+            padding-bottom:20px;
+            margin-top: 30px;
+            background-color: #80808012;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .heading {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: 700;
+            display: block;
+            margin-left: 60px;
+            padding-top: 20px;
+            padding-bottom: 15px;
+        }
+
+        input {
+            width: 75%;
+            margin-left: 60px;
+            height: 41px;
+            border: 1px solid #80808063;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .alert {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: auto;
+            width: 75%;
+            text-align: center;
+            margin-left: 58.313;
+            font-size: 15px;
+            color: #ffa500d6;
+        }
+
+        button {
+            width: 150px;
+            border: 0;
+            height: 46px;
+            background-color: grey;
+            font-size: 17px;
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            margin-top:10px;
+            margin-left: 60px;
+        }
+
+        .remove-alert{
+          display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div style="display:none" id="form-successfully">
+            <h1 id="fullNameDetails"></h1>
+            <h2 id="lastNameDetails"></h2>
+        </div>
+       
+         <div id="form-submission">
+            <h2 class="heading">Validating Web Forms</h2>
+            <form name="register" id="register" action="1firstNamePatternValidation.html">
+                <label for="firstName">
+                    First Name
+                </label>
+                <input type="text" id="firstName" onChange="onChangeHandler(event)" name="registerFirstName" />
+                <div id="registerFirstName" class="alert remove-alert">
+                    First name must be alphanumeric and contain 3-16 characters
+                </div>
+    
+                <label for="lastName">
+                    Last Name
+                </label>
+                <input type="text" id="lastName" onChange="onChangeHandler(event)" name="registerlastName" />
+                <div  id="registerlastName" class="alert remove-alert">
+                    Last name must be alphanumeric and contain 3-16 characters
+                </div>
+    
+    
+    
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email" onChange="onChangeHandler(event)" name="registeremail" />
+                <div id="registeremail" class="alert remove-alert">
+                    Email must be a valid address,e.g.example@example.com
+                </div>
+    
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" id="password" onChange="onChangeHandler(event)" name="registerpassword" />
+                <div id="registerpassword" class="alert remove-alert">
+                    Password must be alphanumeric(@_ and - are also allowed) and between 6-20 characters
+                </div>
+    
+                <label for="telephone">
+                    Telephone
+                </label>
+                <input type="text" id="telephone" onChange="onChangeHandler(event)" name="registertelephone" />
+                <div id="registertelephone" class="alert remove-alert">
+                    A valid telephone Number (11 digits and 333-333-3334)
+                </div>
+    
+                <label for="bio">
+                    Bio
+                </label>
+                <input type="text" id="bio" onChange="onChangeHandler(event)"  name="registerbio" />
+                <div id="registerbio" class="alert remove-alert">
+                    Bio must contain only lowercase letters, underscores,hyphens and be 8-50 characters
+                </div>
+    
+                <button onClick="onSubmitHandler(event)" name="button">Submit</button>
+    
+            </form>
+         </div>
+      
+    </div>
+    <script>
+        let flag = true;
+        let fullName;
+        let lastName;
+        function onSubmitHandler(event){
+            debugger;
+                  event.preventDefault();
+                  let list = document.forms[0];
+                  for(let i=0;i<list.length;i++){
+                      if(list.elements[i].name === "button"){
+                          continue;
+                      }
+                      let event={
+                          target:{
+                              name:list.elements[i].name,
+                              value:list.elements[i].value
+                          }
+                      }
+                      onChangeHandler(event);
+                      let result = validationPattern(list.elements[i].name,list.elements[i].value);
+                      if(!result){
+                          flag = false;
+                          break;
+                      }
+                      fullName = list.elements[i].value;
+                      lastName = list.elements[i].value;
+                  }
+                  if(flag){
+                    alert("success");
+                    let select = document.getElementById('form-submission');
+                    select.style.display = "none";
+                    let list = document.getElementById('form-successfully');
+                    list.style.display = "block";
+                    let opt = document.getElementById('fullNameDetails');
+                    opt.innerText = fullName;
+
+                  }
+                  else{
+                      alert("failure");
+                  }
+                  
+        }
+
+        function onChangeHandler(event){
+
+            let result = validationPattern(event.target.name,event.target.value);
+            let select = document.getElementById(event.target.name);
+            if(!result){
+              select.classList.remove('remove-alert');
+            }
+            else{
+                select.classList.add('remove-alert');
+            }
+            
+        }
+
+        function validationPattern(input,value){
+
+            if(input === 'registerFirstName' || input === 'registerlastName'){
+                return /^[a-zA-Z0-9]{3,16}$/.test(value);
+            }
+            else if(input === 'registeremail'){
+                return /^[a-zA-Z0-9\.]{6,30}@[a-zA-Z]{3,20}\.(com|in)$/.test(value);
+            }
+            else if(input === 'registerpassword'){
+                return /^[a-zA-z0-9-_@]{6,20}$/.test(value);
+            }
+            else if(input === 'registertelephone'){
+                return  /^([0-9]{11}|[0-9]{3}-[0-9]{3}-[0-9]{4})$/.test(value);
+            }
+            else if(input === 'registerbio'){
+                return  /^[a-z_-]{8,50}$/.test(value);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
