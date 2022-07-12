@@ -1,5 +1,0 @@
-package jack;
-
-public class Salman {
-
-}

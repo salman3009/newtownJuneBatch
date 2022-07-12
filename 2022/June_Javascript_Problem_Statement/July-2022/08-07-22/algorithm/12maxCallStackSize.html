@@ -1,0 +1,19 @@
+<script>
+  function computeMaxCallStackSize() {
+        try {
+            return 1 + computeMaxCallStackSize();
+        } catch (e) {
+            // Call stack overflow
+            return 1;
+        }
+    }
+const temp=computeMaxCallStackSize();
+console.log(temp);
+
+function check()
+{
+    return 1;
+}
+const temp2=check();
+console.log(temp2);
+</script>

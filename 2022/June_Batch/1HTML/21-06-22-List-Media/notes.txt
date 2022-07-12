@@ -1,0 +1,164 @@
+<img src="https://www.amazon/image/phone.jpg">
+attribute:
+1.alt -->suppose image is not visible or not supported at that will display some label.
+2.width --> we can give in pixel 200
+3.height ---> we can give in pixel 100 
+//img tag we dont have closing tag 
+anchor tag with image to make mage clickable:
+example:
+<a href="https://flipkart.com">
+<img src="https://www.flipkart/image/phone.jpg">
+</a>
+=======================================
+all formatting tag are inline element 
+<sub></sub>------->base
+<sup></sup>--------->power 
+=====================================
+semantic element --> whenever you are to see any 
+tag you should have some meaning
+1.p -->paragraph tag 
+2.h1 -->heading tag 
+non semantic element --> we dont have meaning for that tag 
+1.div 
+2.span 
+HTML 5 they have introduced some new semantic tag 
+//block element 
+1.nav 
+2.header 
+3.section 
+4.footer 
+5.main 
+6.aside
+7.details/summary 
+Example:
+<html>
+<head>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+	<a href="#">About</a>
+	<a href="#">Contact</a>
+  </nav>
+  <summary>
+    IT Company
+  </summary>
+  <main>
+  
+  <section>
+  <header>
+    <h1>Campus placement</h1>
+	<h2>Placement for ECE,EEE,CSE</h2>
+  </header>
+  <p>
+   we are going to have 100% placement for all the above course.
+  </p>
+  </section>
+  
+  
+    <section>
+  <header>
+    <h1>Fees</h1>
+	<h2>College Fees</h2>
+  </header>
+  <p>
+   we are going to have 100% placement for all the above course.
+  </p>
+  </section>
+  </main>
+  
+  <section>
+   <img>
+   <h4>
+   <p>
+  </section>
+  
+  <footer>
+    <a href="mailto:salman@gmail.com">salman</a>
+  </footer>
+</body>
+==========================================
+<main class="newton" id="school">
+<p class="hello-newton">Hello newton school</p>
+</main>
+class -- collection of element 
+class --- to apply css 
+class="collection" 
+========================================
+render two times tag 
+attribute : data-ns-test=""
+<div data-ns-attribute="block-inline-button">
+<button>Test 1</button>
+<button>Test 2</button>
+Answer:Block
+</div>
+
+<div data-ns-attribute="block-inline-div">
+<div>Test 1</div>
+<div>Test 2</div>
+Answer:Block
+</div>
+
+<div data-ns-attribute="block-inline-span">
+<span>Test 1</span>
+<span>Test 2</span>
+Answer:Inline
+</div>
+========================================
+Input statement:
+1.Block or Inline
+2.<div data-ns-test="block-inline-button">
+    <button>Test1</button>
+    <button>Test2</button>
+	Answer:Block
+</div>
+Output statement:
+===============================================
+ol - ordered list 
+li -- list 
+closing tag 
+block element 
+ul - unorder list 
+========================================
+audio tag to add music in the browser 
+//controls attribute to show control
+//source tag you can use multiple with different extension
+//source tag will give priority to first one.suppose
+first is not working it will move to second one.
+//audio tag is inline element.
+===================================
+table tag 
+tr ----------> row 
+th,td--------->column 
+th --->heading
+td -->normal display.
+===============================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

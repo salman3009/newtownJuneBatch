@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Number Generator</title>
+    </head>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: 100px  100px  100px  100px  100px  100px;
+            column-gap: 1px;
+            row-gap: 1px;
+            margin:auto;
+            width: 45%;
+        }
+        .box-even{
+            padding-top:10px;
+            padding-bottom:10px;
+            background-color: green;
+            color:white;
+            text-align: center;
+
+        }
+        .box-prime{
+            padding-top:10px;
+            padding-bottom:10px;
+            background-color: red;
+            color:white;
+            text-align: center;
+
+        }
+        .box-odd{
+            padding-top:10px;
+            padding-bottom:10px;
+            background-color: yellow;
+            color:white;
+            text-align: center;
+
+        }
+    </style>
+    <body>
+        <div class="container" id="list">
+             
+           
+        </div>
+
+        <script>
+            let select = document.getElementById('list');
+            for(let i=0;i<=101;i++){
+              let opt = document.createElement('div');
+              opt.textContent=i;
+              let result = isNumberCheck(i);
+              if(result === 'prime'){
+                opt.classList.add('box-prime');
+              }
+              else if(result === 'even'){
+                opt.classList.add('box-even');
+              }
+              else{
+                opt.classList.add('box-odd');
+              }
+              
+              select.appendChild(opt);
+            }
+
+            function isNumberCheck(input){
+                let flag = false;
+                
+                for(let i=2;i<input;i++){
+                    if(input%i===0){
+                     flag = true;
+                     break;
+                    }
+                }
+
+                if(!flag && input >1){
+                    return 'prime';
+                }
+                else if(input%2===0){
+                     return 'even';
+                }
+                else{
+                    return 'odd';
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+Form:
+//To get the data from end user we need form
+//input tag ---> it will help to access the data from user.
+1.text
+2.email
+3.password 
+4.number 
+5.radio 
+6.checkbox 
+7.select 
+8.textarea 
+10.submit
+========================================
+input tag --> type,name,id
+<form>
+<label for="fullName">
+FirstName
+</label>
+<input type="text" id="fullName" name="registrationFullName">
+</form>
+//value attribute ---> it is important to give value
+attribute in checkbox,radiobutton,select tag.
+//checked attribute -->checkbox and radiobutton.
+//selected attribute -->option tag 
+//name attribute -->important for all tag.but for 
+radio we have to give same name.
+select tag or dropdown -->select tag or option tag.
+================================================
+Form validation: HTML 5 validation 
+1.minlength ---> type="text","email","password""textarea"
+//minimum character should be present.
+2.maxlength --->type="text","email","password""textarea"
+//maximum number of character.
+3.min --->type="number"
+//minimum amount or age
+4.max --->type="number"
+//maximum amount or age
+5.required -->all the field
+//something we need to fill for all the fill
+6.pattern   -->type="text","email","password","textarea","number
+//which alphanumeric,particular special character.
+7.email 
+======================================
+Form method Get and post:
+hiding and showing in radio button 
+event handlers and event listeners to stay in same page.
+======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 

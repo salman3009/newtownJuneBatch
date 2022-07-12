@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Get and post</title>
+    </head>
+    <body>
+        <form name="login" action="" method="post" enctype="multipart/form-data"  action="successpage.html">
+            <label for="email">
+                Email
+            </label>
+            <input type="email" id="email" name="loginEmail">
+            <br/>
+            <br/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" id="password" name="loginPassword">
+            <br/>
+            <br/>
+            Image<input type="file" id="imageUpload" name="imageUpload" accept="image/*" multiple>
+            <br/>
+            Video<input type="file" id="imageUpload" name="videoUpload" accept="video/*">
+            
+            <br/>
+            Pdf<input type="file" id="imageUpload" name="pdfUpload" accept=".pdf">
+
+            <input type="submit">
+        </form>
+    </body>
+</html>

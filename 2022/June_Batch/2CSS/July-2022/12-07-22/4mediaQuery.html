@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            /* phone and mobile */
+            @media (max-width:480px){
+                body{
+                    background-color: red;
+                    font-size:10px;
+                }
+            }
+            /*low resolution tablet and ipad*/
+            @media (min-width:481px) and (max-width:767px){
+                body{
+                    background-color: green;
+                    font-size:20px;
+                }
+            }
+            /*portrait mode tablet and ipad*/
+            @media (min-width:768px) and (max-width:1024px){
+                body{
+                    background-color: indigo;
+                    font-size:30px;
+                }
+            }
+            /*laptop*/
+            @media (min-width:1025px) and (max-width:1280px){
+                body{
+                    background-color: orange;
+                    font-size:40px;
+                }
+            }
+            /*large screen*/
+            @media(min-width:1281px){
+                body{
+                    background-color: grey;
+                    font-size:50px;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>Welcome to media query</div>
+    </body>
+</html>

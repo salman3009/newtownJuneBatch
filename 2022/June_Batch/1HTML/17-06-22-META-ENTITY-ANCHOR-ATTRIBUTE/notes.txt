@@ -1,0 +1,170 @@
+Basic structure of html:
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+<> ----> tags 
+element name 
+<>--->opening tag 
+</>--->closing tag 
+//closing tag is mandatory in html but some exception is there in 
+some part of tag.
+
+<head>
+<title>Amazon</title>
+</head>
+//title is going to display in browser tab 
+h1 to h6 --- whenever you have any heading you can use this tag:
+example:
+<h1>India</h1>
+<h2>Delhi</h2>
+p ----> paragraph tag 
+<p>Hi welcome to programming.</p>
+
+html is divided into two elements:
+(i)block element -------> It is going to break into multiple lines
+(ii)inline element ----> all element will be shown in same line 
+example:
+h1 to h6 is block element 
+P is block element 
+div is block element but it is plain element 
+
+inline element:
+span tag --- inline element but it is plain element 
+<span>hello</span>
+<span>world</span>
+output:
+hello world 
+===================================================
+Meta tag:
+//meta will be available inside the head section 
+//google search keyword or description will match with your 
+meta tag written in your website.
+
+<head>
+
+</head>
+
+syntax:
+<meta name=""  content="">
+//no closing tag 
+//name and content is called attribute in html 
+//attribute extra information about that particular tag.
+//any programming if you want to string you need to use either 
+'' single quote or "" double quote 
+
+example:
+<meta name="Keywords" content="Laptop,Mobile,Desktop">
+<meta name="Description" content="But online e-commerce,
+50%offer on laptop">
+<meta name="author" content="flipkart">
+<meta name="viewport" content="device=device-width,initial-scale=1">
+<meta charset="utf-8">
+//character encoding html 
+SEO - search engine optimization
+===================================
+types of attribute:
+//extra information about particular tag.
+
+1.align --> this attribute is deprecated(remove) in html 5.
+left,right,center 
+//it will work only in block element and it will not support in 
+inline element 
+
+2.title -- is available for all elements it will show tooltip
+example:
+<p title="information">hello</p>
+
+3.id - it is use to identify unique inside the html. 
+
+4.class - it is use to identify collection of similar element.
+
+5.style - it is use to apply css(cascading stylesheet)
+======================================================
+anchor tag -->To move from one page to another page 
+<a></a> --> anchor is inline element.
+1.href --->we need to give url location of another file 
+2.target -->_blank _self --->new tab 
+href="mailto:salman@gmail.co"
+===============================================
+please use id attribute and inside the href please use #withid to move internally within the page.
+==============================================
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

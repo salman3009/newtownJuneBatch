@@ -1,0 +1,14 @@
+Events:
+1.onSubmit --> form submission
+2.onClick  --> submit button or any other button or 
+radio button or checkbox,dropdown.
+3.onChange ---> input type="text", email,number,date,textarea.
+4.onKeyDown --> solving problem. 
+===========================================
+Event listener:
+//event listener is going to attach an event to document propery.
+function callback:
+//registered function we are going to call after someamount of time or some event is occur.
+
+
+

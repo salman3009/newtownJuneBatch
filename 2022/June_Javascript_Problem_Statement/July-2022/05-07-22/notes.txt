@@ -1,0 +1,11 @@
+Regular expression or regex pattern:
+//For form validation in frontend we going to use this pattern.
+//each and everytext user is going to enter we have see the exact data.
+1.only number should be allowed 0-9.
+2.only alphabets should allow small case and capital case letter.
+3.only particular special symbol: &,#."
+4.alphanumeric -- 0-9a-zA-Z
+================================================
+
+
+

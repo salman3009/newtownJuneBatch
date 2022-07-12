@@ -1,0 +1,149 @@
+CSS --->
+Introduction
+Types of css 
+basic properties:
+text-align
+color 
+font-size 
+Type of Selector 
+=======================================
+CSS - cascading style sheets
+//without html we cannot do css.
+{}====>set of block
+text-align ==> property or key
+: ===> separator operator 
+value ==> predefined value 
+;====>end of statement
+Syntax:
+{
+   text-align : center;
+   color : red;
+}
+Selector:
+h1{
+   text-align : center;
+   color : red;
+}
+p{
+   text-align: right;
+   color:blue;
+}
+===============================================
+Different way of adding css:
+1.inline -- css are written directly inside the html tag.
+<p style="color:red;text-align:center"></p>
+//dont use the inline style anywhere in your code.
+2.internal 
+//for practice test and inside class or any poc related thing we can use internal.
+//separate style tag will be there inside the html 
+page.
+<style>
+h1{
+  text-align:center;
+  color:red;
+}
+</style>
+3.external 
+//good practice for real time project
+create one new file: global.css 
+h1{
+  text-align:center;
+  color:red;
+}
+page.html 
+<head>
+  <link rel="stylesheet" href="global.css" >
+</head>
+=============================================
+Inside the browser we can open only html file.
+css file we cannot open in the browser 
+Inside the html file we need to include css file.
+===========================================
+text-align - left | right | center | justify 
+======================================
+inline style - directly writing the css code inside the html.
+==========================================
+Internal
+//inline style is given more priority when we compare to internal style.
+============================================
+external style:
+filename:global.css 
+h1 {
+    text-align : center;
+    color :red;
+}
+p {
+    color :green;
+}
+filename:external.html
+==============================================
+inline--->internal--->external 
+top - bottom approach 
+for internal and external depends upon the top down approach it will get priority. first given to down approach 
+========================================
+To comment html:
+ <!-- <h1>Welcome to programming</h1> -->
+To comment css:
+     /* h1{
+                color:gold;
+            } */
+			
+=============================================			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

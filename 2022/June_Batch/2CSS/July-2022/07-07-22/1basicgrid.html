@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            .header{grid-area: header;}
+            .left-bar{grid-area: left-bar;}
+            .main-content{grid-area: main-content;}
+
+            .container{
+                display: grid;
+                grid-template-areas: 'header header header'
+                'left-bar main-content main-content';
+                gap:50px;
+            }
+            .header{
+                height:200px;
+                background-color: grey;
+            }
+            .left-bar{
+                height:400px;
+                background-color: red;
+            }
+            .main-content{
+                height:400px;
+                background-color: green;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"></div>
+            <div class="left-bar"></div>
+            <div class="main-content"></div>
+        </div>
+    </body>
+</html>

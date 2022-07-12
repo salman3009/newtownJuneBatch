@@ -1,0 +1,38 @@
+Notes:
+Box Modal
+//Each and every element inside the html either block or inline will have box modal.
+1.width*height
+2.padding
+3.border
+4.margin
+padding,border,margin 
+left,right,top,bottom
+For the entire screen width: 100%;
+to use height:px;
+padding:100px;
+left-padding:10px; ------------->mostly used
+right-padding-10px;
+top-padding-10px; ------------->mostly used
+bottom-padding-10px;
+border:
+border:1px solid red;
+border-radius:2px;
+================================================
+//with inline element marginand padding will not work
+//to make inline element to work with margin and padding make display:block 
+//inline to block ---> display:block 
+//inline to same line you need block -->display:inline:block
+=========================================
+float:make element move towards right or towards left.
+
+
+
+
+
+
+
+
+
+
+
+

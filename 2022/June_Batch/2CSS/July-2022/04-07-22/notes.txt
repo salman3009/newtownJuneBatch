@@ -1,0 +1,52 @@
+Descendant selector(tag tag)
+//It need to have parent and child tag
+//nested child element it will give that color or changes.
+example:
+<div> ------------>parent
+<p></p> ----------->child
+</div>
+direct-child selector(tag>tag) 
+//It need to have parent and child tag 
+//first occurence or continous or alternate occurence of that particular tag.
+//direct relationship with parent not nested.
+example:
+<div> ------------>parent
+<p></p> ----------->child
+</div>
+============================================
+adjacent selector:(tag+tag)
+//siblings relationship
+//it will concentrate on first child only.
+general selector:(tag~tag)
+//siblins relationship
+//it will concentrate on any child but not nested.
+==============================================
+parent-child relationship --> descendant,direct-child
+siblings relations -->adjacent and general 
+
+Nested element or continous --> descendant , general 
+
+single element or only child -->direct child , adjacent
+==============================================
+1.basic selector
+   (i)element selector 
+   (ii)id selector 
+    (iii)class selector 
+	(iv)universal selector 
+	(v)grouping selector 
+2.combinator selector 
+     (i)descendant selector 
+	  (ii)direct child selector 
+	  (iii)adjacent sibling 
+	   (iv) General sibling 
+============================================
+Box Modal:
+//each and every tag is going to have box modal
+//either it can be block element or inline element.
+1.width and height 
+2.padding  -- top,bottom,left,right 
+3.border    -- top,bottom,left,right
+4.margin     -- top,bottom,left,right 
+
+
+

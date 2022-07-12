@@ -1,0 +1,64 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form onSubmit="OnSubmitEvent(event)" action="https://www.google.com">
+            <label for="saving">
+                 Saving
+            </label>
+            <input type="radio" onClick="onRadioHandler()" value="saving" name="account">Saving 
+            <label for="current">
+                current
+           </label>
+           <input type="radio"  onClick="onRadioHandler()"  value="current" name="account">current
+           <div style="display:none" id="saving">
+             <ul>
+                 <li>Saving 20%</li>
+                 <li>amount 20%</li>
+                 <li>deposit 20%</li>
+             </ul>
+           </div>
+           <div style="display:none" id="current">
+            <ul>
+                <li>current 20%</li>
+                <li>amount 20%</li>
+                <li>deposit 20%</li>
+            </ul>
+          </div>
+           <br/>
+           <br/>
+           <input type="submit"> 
+
+        </form>
+        <script>
+            function OnSubmitEvent(event){
+                event.preventDefault();    
+                alert("coming");   
+            }
+            function onRadioHandler(){
+                var rates = document.getElementsByName('account');
+                var select;
+              for(var i = 0; i < rates.length; i++){
+              if(rates[i].checked){
+                select = rates[i].value;
+                console.log(select);
+               }
+              }
+              if(select=="saving"){
+                let opt = document.getElementById('saving');
+                opt.style.display = 'block';
+                let option = document.getElementById('current');
+                option.style.display = 'none';
+              }
+              else{
+                let opt = document.getElementById('saving');
+                opt.style.display = 'none';
+                let option = document.getElementById('current');
+                option.style.display = 'block';
+              }
+
+            }
+        </script>
+    </body>
+</html>

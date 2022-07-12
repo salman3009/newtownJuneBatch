@@ -1,0 +1,6 @@
+Difference between let const and var 
+//all three types is used for variable declaration.
+var --> it is use to declare the variable but it is function scope.
+let (2015) -->It is es6 variable. block scope variable.
+const (2015)-->it is es6 variable.block scope variable but you cannot reassign the variable.
+==========================================

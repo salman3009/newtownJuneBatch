@@ -1,0 +1,27 @@
+<script>
+let person=[{
+    age:12,
+    name:"allu kutty",
+    experience:23,
+    car:[{a:1,b:2}]
+},
+{
+    age:22,
+    name:"kutty",
+    experience:56,
+    car:[{a:1,b:2}]
+},
+{
+    age:44,
+    name:"kutty",
+    experience:67,
+    car:[{a:1,b:2}]
+}];
+
+
+const final=person.filter(value=>value.name=="kutty").
+// map(value=>value.age+value.experience).
+// reduce((acc,value)=>acc+value,0);
+console.log(final);
+
+</script>

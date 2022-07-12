@@ -1,0 +1,56 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+  .fade-in-text {
+  font-family: Arial;
+  font-size: 150px;
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+    </style>
+    <body>
+        <div id="container" class="fade-in-text">
+
+        </div>
+        <script>
+            debugger;
+            let list =['30Daysof','javascript',"challenge 2020",'Asabeneh YeTAYe'];
+            let colorList =['red','green','blue','black','grey','orange','pink','gold','yellow'];
+            let count=0;
+            let global = document.getElementById('container');
+            for(let i=0;i<list.length;i++){
+                 let result = separateValue(list[i]);
+                 global.appendChild(result);
+            }
+
+
+            function separateValue(input){
+                 let select = document.createElement('div');
+                for(let i=0;i<input.length;i++){
+                    let content='';
+                    let opt = document.createElement('span');
+                    if(count<colorList.length){     
+                        count++;
+                    }
+                    else{
+                        count=0;
+                    }
+                    opt.style.color=colorList[count];
+                    opt.style.fontSize="20px";
+                    content+=input[i];
+                    opt.textContent = content;
+                    select.appendChild(opt);
+                }
+                  
+                select.style.letterSpacing = "10px";
+                return select;
+            }
+            
+        </script>
+    </body>
+</html>

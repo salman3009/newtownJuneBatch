@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <script>
+            let input = "java html";
+            let pattern = /^[a-zA-Z\s]{2,50}$/;
+            //zero or more
+            //to allow space
+            let result = pattern.test(input);
+            console.log(result);
+        </script> -->
+        <script>
+            let input = "java/@RT.com`";
+            let pattern = /^[a-zA-Z`\/\s@,''\.&#]{2,50}$/;
+            //zero or more
+            //to allow space
+            let result = pattern.test(input);
+            console.log(result);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Form Registration</title>
+    </head>
+    <body>
+        <form name="registration" action="successpage.html">
+            <div>
+                <label for="fullName">
+                    FullName
+                  </label>
+                  <input type="text" placeholder="please provide the name" id="fullName" minlength="3" maxlength="100" name="registerfullName" required>
+            </div>
+            <div>
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email" minlength="4" maxlength="100" name="registrationEmail" required>
+            </div>
+            <div>
+                <label for="password">
+                    Password 
+                </label>
+                <input type="password"  id="password" name="registrationPassword" minlength="3" maxlength="100" required>
+            </div>
+            <div>
+                <label for="confirmPassword">
+                   confirm Password 
+                </label>
+                <input type="password"  id="confirmPassword" name="confirmPassword" minlength="3" maxlength="100" required>
+            </div>
+            <div>
+                <label for="dob">
+                    Date of Birth
+                </label>
+                <input type="date" id="dob" name="registrationdob" required>
+            </div>
+            <div>
+               <h5> Select Gender:</h5>
+                <input type="radio" id="male" name="gender" value="male" checked required>
+                <label for="male">
+                    Male
+                  </label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">
+                    Female
+             </label>
+            </div>
+            <div>
+                <h5>Select the city:</h5>
+                <input type="checkbox" id="delhi" name="registrationDelhi" checked value="delhi">
+                <label for="delhi">
+                   Delhi
+                </label>
+                <input type="checkbox" id="Mumbai" name="registrationMumbai"  value="mumbai">
+                <label for="Mumbai">
+                    Mumbai
+                </label>
+                <input type="checkbox" id="Bangalore" name="registrationBangalore"  value="bangalore">
+                <label for="Bangalore">
+                    Bangalore
+                </label>
+            </div>
+            <div>
+                <label for="category">
+                    Please Select the Age category
+                </label>
+                <select id="category" name="registrationCategory" required>
+                       <option value="10">10-15</option>
+                       <option value="20">20-35</option>
+                       <option value="30">40-55</option>
+                       <option value="60">60-75</option>
+                       <option value="70">80-95</option>
+                       <option value="90">100</option>
+                </select>
+            </div>
+            <div>
+                <label for="phone">
+                    Phone Number
+                </label>
+                <input type="text" id="phone" minlength="10" maxlength="10" name="registrationPhone" required>
+            </div>
+            <div>
+                <label for="comment">
+                    Comment
+                </label>
+                <textarea id="comment" name="registrationComment"></textarea>
+            </div>
+            <div>
+                <label for="profile"> 
+                    Linkedin Profile
+                </label>
+                <input type="url" id="profile" name="registrationProfile" required>
+            </div>
+             <input type="hidden" name="token" value="456645444">
+
+             <div>
+                 <!-- <input type="submit" value="Submit" name="submit"> -->
+                 <!-- <input type="image" src=""> -->
+                 <button type="submit" name="submit">Submit</button>
+                 <input type="reset" value="clear">
+             </div>
+            
+
+        </form>
+    </body>
+</html>

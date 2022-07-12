@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            font-family: Helvetica, sans-serif;
+            font-weight: 700;
+            width: 100%;
+            height: 70px;
+            background-color: indigo;
+            color: white;
+            font-size: 22px;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        .navigation-left {
+            float: left;
+            padding-top: 18px;
+            padding-left: 30px;
+        }
+
+        .navigation-right {
+            float: right;
+            padding-top: 18px;
+            padding-right: 60px;
+        }
+
+        .navigation-right li {
+            padding-right: 60px;
+        }
+
+        .navigation-select{
+            margin-left: 33px;
+            width: 204px;
+            height: 39px;
+            border: 0;
+            border-radius: 7px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <ul class="navigation-left">
+            <li>Logo</li>
+            <li>
+                <select class="navigation-select" id="theme">
+                    <option selected>Indigo</option>
+                    <option>Grey</option>
+                    <option>Gold</option>
+                </select>
+            </li>
+
+        </ul>
+        <ul class="navigation-right">
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contact</li>
+            <li>Help</li>
+        </ul>
+    </div>
+</body>
+
+</html>

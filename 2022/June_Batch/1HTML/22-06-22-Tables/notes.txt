@@ -1,0 +1,95 @@
+ol - ordered list 
+ul - unordered list 
+list are block element 
+closing tag is mandatory
+example:
+<ol>
+<li>pen</li>
+<li>pencil</li>
+</ol>
+attribute:
+type = "1" "a" "A" "I"
+start = "5" "c" 
+ul
+<ul type="disc">
+<li>pen</li>
+<li>pencil</li>
+</ul>
+type = "disc" "circle" "square"
+=========================================
+Media:
+audio 
+video
+<audio contorls>
+  <source src=""  type="audio/mp3">
+</audio>
+exmaple:
+<audio src="" alt=""controls></audio>
+video
+<video  width="" height="" contorls>
+  <source src=""  type="audio/mp3">
+</video>
+=============================================
+iframe --> To attach one html file with another html
+file in the same file 
+<iframe src="" title="" width="" height></iframe>
+=================================================
+Table
+tr --->row
+th-->header  column 
+td -->column
+rowspan - to merge two row together
+colspan - to merge two column together 
+============================================
+We are providing the information to the user:
+1.h1 h6, p tag ,img a,table,ul,ol
+Second part 
+Form 
+//we can get the information from the end user 
+List of tag inside the form:
+1.text
+2.checkbox
+3.radio 
+4.textarea
+5.file 
+6.button 
+7.email 
+8.date 
+9.number 
+10.password
+=================================
+input tag ---> no closing tag and inline element  
+attribute:
+type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

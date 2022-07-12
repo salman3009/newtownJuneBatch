@@ -1,0 +1,36 @@
+Position:
+1.static
+2.sticky --- Header bar
+3.fixed ---> it will fix in particular place 
+4.absolute --> it will not follow the flow of document.
+================================
+Media query 
+
+@media (min-width:480px){
+
+}
+
+@media (max-width:480px){
+
+}
+
+@media (min-width:480px) and (max-width:680px){
+
+}
+=============================================
+Text effects:
+1.overflow:auto,hidden
+2.white-space:nowrap;
+3.text-overflow:ellipsis
+4.word-break:break-all,break-word 
+5.writing-mode:verticle-rl,verticle-lr,horizontal-tb
+==================================================
+
+
+
+
+
+
+
+
+

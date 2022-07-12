@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>
+        Keyboard Listener
+    </title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .box {
+            width: auto;
+            margin: auto;
+            padding: 15px;
+            font-size: 68px;
+            color: green;
+            height: 95px;
+            font-weight: 600;
+            border: 1px solid #80808029;
+            border-radius: 2px;
+            box-shadow: 1px 1px 1px 1px #80808029;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="list" class="box"></div>
+    </div>
+    <script>
+        document.addEventListener('keydown', display);
+        function display(event) {
+            console.log(event.key);
+            let select = document.getElementById('list');
+            let input = select.innerHTML;
+            select.innerHTML = input + event.key;
+           // let result = input + event.key;
+            // select.innerHTML = result.slice(0,2);
+            // 3+3 = 6;
+            // 3+'3' = '33';
+            //'3'+'3' = '33';
+            //slice
+
+        }
+    </script>
+</body>
+
+</html>

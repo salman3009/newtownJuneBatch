@@ -1,0 +1,34 @@
+<html>
+  <head>
+     <style>
+       .container{
+         animation:fadeIn 5s;
+         font-size: 100px;
+         font-family: Arial, Helvetica, sans-serif;
+         text-align: center;
+         margin-top: 50px;
+       }
+       @keyframes fadeIn {
+         0%{opacity: 0};
+         100%{opacity:1};
+       }
+     </style>
+  </head>
+  <body>
+    <div class="container" id="list">
+
+    </div>
+    <script>
+      let input = "Google";
+      let colorList=['#4285f4','#ea4335','#fbbc05','#fbbc05','#34a853','#ea4335'];
+      let select = document.getElementById('list');
+      for(let i=0;i<input.length;i++){
+           let opt = document.createElement('span');
+           opt.textContent = input[i];
+           opt.style.color=colorList[i];
+           select.appendChild(opt);
+      }
+     
+    </script>
+  </body>
+</html>

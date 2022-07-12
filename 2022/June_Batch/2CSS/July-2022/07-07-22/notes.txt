@@ -1,0 +1,22 @@
+How to use Font-awesome icon? (third party plugins)
+Step1:https://fontawesome.com/v4/icons/
+step2:Please download the folder from website
+https://fontawesome.com/v4/get-started/
+step3:Please unzip and keep in particular location
+step4:rename the folder font-awesome
+step5:remove one nested folder of font-awesome 
+step6:please add the link tag in your html:
+ <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+step7:
+        <i class="fa fa-facebook-square" aria-hidden="true"></i> 
+=================================================	Grid area:
+   grid-template-areas: 'header header header'
+                'left-bar main-content main-content';
+				
+1st row : 'header header header'
+2nd row:  'left-bar main-content main-content'
+
+
+
+
+

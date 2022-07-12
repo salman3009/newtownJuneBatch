@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    *{
+        box-sizing: border-box;
+    }
+.container {
+  display: grid;
+  column-gap: 2px;
+  row-gap:2px;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.country-item-prime {
+    padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  font-size: 19px;
+  border-radius:5px;
+  background-color: red;
+  text-align: center;
+}
+
+.country-item-even {
+    padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  font-size: 19px;
+  border-radius:5px;
+  background-color: green;
+  text-align: center;
+}
+
+.country-item-odd {
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  font-size: 19px;
+  border-radius:5px;
+  background-color: yellow;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Number Generator</h1>
+
+
+
+<div id="selectCountries" class="container">
+   
+  
+</div>
+
+<script>
+
+
+let select = document.getElementById('selectCountries');
+
+for (let i = 1; i <=100; i++) {
+  let type = CheckTypeofNumber(i);
+  let opt = document.createElement('div');
+  opt.textContent = i;
+  if(type=="prime"){
+    opt.classList.add('country-item-prime');
+  }
+  else if(type=="even"){
+    opt.classList.add('country-item-even');
+  } 
+  else{
+    opt.classList.add('country-item-odd');
+  }
+  select.appendChild(opt);
+}
+
+function CheckTypeofNumber(input){
+    let flag = false;
+
+    for(var i = 2; i < input; i++)
+    if(input % i === 0){
+        flag = true;
+    }
+    
+
+    if(!flag && input>1){
+        return 'prime';
+    }
+    else if(input%2==0){
+        return "even";
+    }
+    else{
+        return "odd"
+    }
+}
+
+</script>
+
+</body>
+</html>
+
+

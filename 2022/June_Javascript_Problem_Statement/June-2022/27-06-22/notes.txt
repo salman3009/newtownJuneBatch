@@ -1,0 +1,27 @@
+Javascript DOM Manipulation:
+DOM - Document Object Modal
+style tag and script tag you can write anywhere inside the html.
+Topcis:
+1.CSS
+2d dimension layout -- display:grid 
+text-align 
+border 
+padding 
+box-shadow
+border-radius 
+Js topic:
+array 
+loop for 
+to accaess the dom element
+to create dynamic dom element 
+to add dynamic class using dom element 
+to append element inside the parent dom 
+=======================================
+
+
+
+
+
+
+
+

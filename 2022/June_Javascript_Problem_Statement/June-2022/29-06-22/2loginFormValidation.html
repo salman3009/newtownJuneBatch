@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="successpage.html">
+            <label for="registerNumber">
+               RegisterNumber
+            </label>
+            <input type="text" pattern="[a-zA-Z]{2,5}" id="registerNumber" minlength="2" maxlength="5" name="registerNumber" required>
+            <br/>
+            <br/>
+            <label for="registerEmail">
+                registerEmail
+             </label>
+             <input type="email" id="registerEmail" maxlength="50" name="registerEmail" required>
+             <br/>
+             <br/>
+             <label for="registerAge">
+                registerAge
+             </label>
+             <input type="number" min="18" max="60" id="registerAge" name="registerAge" required>
+             <br/>
+             <br/>
+             <label for="male">
+                Male
+            </label>
+            <input type="radio" id="male" value="male" name="gender"  required>
+            <label for="female">
+                Female
+            </label>
+            <input type="radio" id="female" value="female" name="gender" required>
+            <br />
+            <br />
+  
+            <input type="submit">
+
+        </form>
+    </body>
+</html>

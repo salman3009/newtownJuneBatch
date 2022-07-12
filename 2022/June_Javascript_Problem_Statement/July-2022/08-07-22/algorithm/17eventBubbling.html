@@ -1,0 +1,20 @@
+
+<div id="div1">
+  parent
+  <div id="div2">child</div>
+</div>
+
+<script>
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+
+div1.addEventListener("click", function() {
+    debugger;
+  console.log("div1 clicked");
+});
+div2.addEventListener("click", function(event) {
+    debugger;
+  console.log("div2 clicked");
+ // event.stopPropagation();
+});
+</script>

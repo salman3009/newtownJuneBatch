@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <label for="current">
+              Current
+            </label>
+            <input type="radio" onClick="onSelectionHandler()" id="current" value="current" name="account">
+            <label for="saving">
+                Saving
+              </label>
+              <input type="radio" onClick="onSelectionHandler()" id="saving" value="saving" name="account">
+
+              <div style="display:none" id="listSaving">
+                 <ul>
+                     <li>Saving account Details</li>
+                     <li>Saving account Details - 40%</li>
+                     <li>Saving account Details- 80%</li>
+                 </ul>
+              </div>
+
+              <div style="display:none" id="listCurrent">
+                <ul>
+                    <li>current account Details</li>
+                    <li>current account Details - 40%</li>
+                    <li>current account Details- 80%</li>
+                </ul>
+              </div>
+
+        </form>
+        <script>
+            function onSelectionHandler(){
+                debugger;
+             let select = document.getElementsByName('account');
+             for(let i=0;i<select.length;i++){
+                 if(select[i].checked){
+                    let opt = document.getElementById('listSaving');
+                    let currentOpt = document.getElementById('listCurrent');
+                      if(select[i].value == "saving"){
+                         opt.style.display="block";
+                         currentOpt.style.display = "none";
+                      }
+                      else{
+                        opt.style.display="none";
+                         currentOpt.style.display = "block";
+                      }
+                 }
+
+             }
+            }
+        </script>
+    </body>
+</html>

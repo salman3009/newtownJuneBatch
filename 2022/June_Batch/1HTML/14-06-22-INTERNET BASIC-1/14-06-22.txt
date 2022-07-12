@@ -1,0 +1,127 @@
+HTML - hYPER TEXT MARKUP LANGUAGE 
+https://en.wikipedia.org/wiki/World_Bank
+smtp protocol
+ftp protocol 
+
+extension .html 
+API - Application programming interface 
+
+
+html - hyper text markup language  --- layout of the page 
+css  - cascading style sheet    -- color of the page or presentation 
+javascript - to make page dynamic 
+
+
+
+javascript language 
+
+Reactjs  library or framework frontend 
+Angular 
+vuejs 
+
+
+web application:
+
+native application:
+android
+ios 
+
+reactnative
+
+
+desktop application 
+electronjs  
+
+
+MERN:
+
+Mongodb Expressjs Reacjt Nodejs 
+
+
+Mongodb --- Database 
+Reactjs - frontend framework 
+Nodejs -- Backend language --- runtime environment for javascript  
+Expressjs - framework of nodejs 
+
+<element>some content</element> 
+
+visual studio code: IDE- Integrated development environment
+MIT 
+
+Backend purpose:
+Nodejs 
+PHP - scripting language 
+
+
+programming language - whole code will compile and then you will get final output 
+scripting language - line by line execution - interpretor
+
+var a = 56;
+var b = 89;
+var result = a+b;
+console.log(result);
+
+output :
+
+=========================================
+To open the new file : Ctrl+N 
+To save the file: Ctrl+s ---->filename.html 
+To fresh the page: ctrl+shift+R 
+to opent the inspect: Ctrl+shift+I 
+
+html two types:
+block scope 
+inline scope 
+=========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

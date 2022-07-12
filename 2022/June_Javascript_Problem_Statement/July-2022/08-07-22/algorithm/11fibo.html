@@ -1,0 +1,20 @@
+<script>
+    function fibo(num)
+    {
+    debugger;
+    let a=0;
+    let b=1;
+    let len=0;
+    let fibo=[];
+    while(num>len)
+    {
+    a=a+b;
+    let temp=a;
+    fibo.push(a);
+    len=fibo.length;
+    a=b;
+    b=temp;
+    }
+    }
+    fibo(10);
+    </script>

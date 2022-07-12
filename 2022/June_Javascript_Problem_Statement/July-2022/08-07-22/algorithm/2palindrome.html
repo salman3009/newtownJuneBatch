@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>
+Palindrome
+</title>
+</head>
+<body>
+<input type="button" onclick="checkpalindrome('madamd')" name="Palindrome" value="Palindrome">
+</body>
+</html>
+<script>
+function checkpalindrome(str)
+{
+ debugger;
+ let stringcheck=str.split("").reverse().join("");
+ if(str===stringcheck)
+ {
+     return true;
+ }
+ return false;
+}
+</script>

@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>CountryList</title>
+        <style>
+            .container{
+                display:grid;
+                grid-template-columns: auto auto auto auto auto auto;
+                column-gap: 10px;
+                row-gap: 10px;
+            }
+            .box{
+                text-align: center;
+                padding-top:40px;
+                padding-bottom:50px;
+                border:1px solid #80808073;
+                box-shadow: 1px 1px 1px 1px #80808047;
+                border-radius: 3px;
+            }
+            .linearText{
+                color:red;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container" id="listdetails">
+          
+        </div>
+        <script> 
+            let country=["USA","India","France","Germany","China","Austria","Norway","Russia","Sri lanka","Iran","columbai","Japan","North Korea","South Korea","lebanon"];
+            let dolist = document.getElementById('listdetails');
+            for(let i=0;i<country.length;i++){
+                 let optList = document.createElement('h2');
+                 optList.textContent = country[i];
+                 console.log(country[i]);
+                 optList.classList.add('box');
+                 optList.classList.add('linearText');
+                 dolist.appendChild(optList);
+            }
+
+            //array -- storing the data continously
+            //[22,33,44,55,55,55,33]
+            //array address will start from zero
+            //let superMarket=["shampooA","shampooB"];
+            //superMarket[0] ==>shampooA
+            //superMarket[1]===>shamppooB
+
+            //loop for iteration
+            //for(condition1,condition2,condition3)
+            //condition1-->0
+            //superMarket.length
+            //condition3-->i++
+            // for(let i=0;i<10;i++){
+            //     console.log(i);
+            // }
+            
+            //DOM -->
+            //whenever you want to interact with html we need to use document property
+
+
+            //let const  var 
+            //grid even number odd number and prime number
+        </script>
+    </body>
+</html>

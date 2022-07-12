@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            First Number:<input type="text" id="firstNumber"/>
+            <br/>
+            <br/>
+            Second Number:<input type="text" id="secondNumber"/>
+            <br/>
+            <br/>
+            <input type="submit" onClick="additionHandler(event)">
+        </form>
+        <h1>The final addition value is:<span id="result"></span></h1>
+        <script>
+            function additionHandler(event){
+                event.preventDefault();
+               // alert("addition");
+                let a = document.getElementById('firstNumber').value;
+                let b = document.getElementById('secondNumber').value;
+                //string cancatenation:
+                //44+44 = 4444
+                //alert(typeof a);
+                //to check datatype
+                let finalResult = Number(a)+Number(b);
+                let select = document.getElementById('result');
+                select.innerHTML = finalResult;
+            }
+        </script>
+    </body>
+</html>
+
+

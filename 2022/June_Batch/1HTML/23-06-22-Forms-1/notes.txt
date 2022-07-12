@@ -1,0 +1,49 @@
+Topic:
+Table ---> layout in form of row and column 
+example:excel sheet 
+tr ---------> to create row 
+th,td -----> to create column 
+everything is block element and closing tag is mandatory.
+thead,tbody,tfoot
+Example:
+<table>
+<thead>
+<tr>
+<th>fullName</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>henry</td>
+<td>44</td>
+</tr>
+<tr>
+<td>walter</td>
+<td>44</td>
+</tr>
+</tbody>
+</table>
+=============================================
+Form tag --> to get the information from end user 
+frontend ------------> backend 
+action attribute --> once you submit the form it will go to next page.
+type:text,email,password,number,date 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

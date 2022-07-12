@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        #container{
+            display: flex; 
+    justify-content: center;
+    font-size: 110px;
+    height: 200px;
+    overflow: auto;
+    box-shadow: 1px 1px 1px 1px #8080808c;
+    color: green;
+        }
+    </style>
+    <body>
+        <div id="container">
+           3
+        </div>
+    </body>
+</html>
+
+
+
+<script>
+    document.addEventListener('keydown', (event) => {
+  let name = event.key;
+  let code = event.code;
+  let select = document.getElementById('container');
+  let details = select.textContent;
+  select.textContent = details+name;
+  // Alert the key name and key code on keydown
+//   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
+}, false);
+</script>
+

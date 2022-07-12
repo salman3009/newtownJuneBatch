@@ -1,0 +1,47 @@
+
+<html>
+<head>
+    <style>
+        h1{
+          color:red;
+        }
+      </style>
+</head>
+<body>
+<h1 id="demo"></h1>
+<h1>Hello world</h1>
+
+<div id="country">
+
+</div>
+<h1>Hello world</h1>
+
+<script>
+    console.log(window);
+    document.getElementById("demo").innerHTML = "welcome to javascript";
+    document.getElementById("demo").style.backgroundColor="grey";
+   
+     let select = document.getElementById('country');
+     let opt = document.createElement('div');
+     opt.textContent="welcome page";
+     select.appendChild(opt);
+
+     //array 
+     let city1="India";
+     let city2="usa";
+     let list=["India","usa","India","usa","India","usa","India","usa","India","usa","India","usa"];
+     console.log(list[0]);
+     console.log(list[1]);
+     console.log(list);
+
+     //loop 
+     //for 
+     //for of for in forEach while dowhile 
+
+     for(let i=0;i<list.length;i++){
+         console.log(list[i])
+
+     }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>
+        count of Vowels
+    </title>
+</head>
+
+<body>
+    <input type="button" name="vowels" value="vowels" onclick="global()">
+</body>
+
+</html>
+<script>
+    function global() {
+        debugger;
+        function onvowels(n) {
+            let a = n.match(/[aeiou]/gi);
+            return (a===null)?0:a.length;
+        }
+        let result=onvowels('salman');
+        console.log(result);
+    }
+
+</script>

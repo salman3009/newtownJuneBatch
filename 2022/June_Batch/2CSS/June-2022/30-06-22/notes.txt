@@ -1,0 +1,81 @@
+CSS
+Cascading style sheet
+//making black and white page to color one.
+//making responsive in all device.
+//Default all html tag will have some css.
+syntax:
+{
+  text-align:left;
+  color:red;
+}
+Types of CSS:
+1.inline ---><div style="color:blue;">Hello world</div>
+2.internal 
+<style>
+h1{
+color:red;
+}
+</style>
+3.external
+global.css 
+h1{
+color:red;
+}
+<link rel="stylesheet" href="global.css">
+================================================
+Priority level:
+1.inline 
+2.interal and external will be taken based top-down approach. last one will be given priority.
+!important--inline -->internal or external.
+============================================
+CSS Unit:
+//font-size,width,height,margin,padding
+1.absolute example:px ---> it will look similar in all devices.some exception depends upon os and resolution.
+2.relative example:em ---> it will refer parent element.
+1px --> 1/96 inch 
+1em --> 16px
+2em -->32px
+36*2-->72px
+=========================================
+Basic selector:
+1.element selector.
+2.id selector 
+3.class selector 
+============================================
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+Input:
+4 --------> 4,5,5,2
+2------------>3,4
+
+Sum of square == 16+25+25+4
+result = 70/4 ===> 35
+squrare root 35 ==>5.9
+================================
+some set of input ------------> some set of output 
+
+class Main{
+   
+}
+class -- defined keyword or collection of data.
+Java language -- everything is collection.
+object oriented.
+ 
+Main --> class name 
+{} ----> set of code we are going to write.
+
+class Main{
+  
+   public static void main (String[] args) {
+                      // Your code here
+					  
+    }
+
+}
+===================
+variable: address
+datatype:how many space u need 
+ int n;
+ double r;
+ n = 67;
+0000111100011110101110
+System.out.print(n);
+=============================
+Java  -- Programming language 
+programming -- some of input it is going you output
+ 
+library --> someone already written code for you.
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+class --------> collection of data.
+main()---------> function 2+2 = 4 
+{ 
+ ------------------->set of instruction 
+}
+variable --- address creation.
+datatype --> space creation
+  int n;  ---> complete instruction 
+=============================================
+you want to get input from user.
+ Scanner input =  new Scanner(System.in);
+ int n = input.nextInt();
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+short(){   --->function
+
+}
+
+main(){
+             --->function
+			 
+}
+
+
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function message() {
+  alert("This alert box was triggered by the onreset event handler");
+}
+</script>
+</head>
+<body>
+
+<form onreset="message()">
+  Enter your name: <input type="text" size="20">
+  <input type="reset">
+</form>
+
+</body>
+</html>

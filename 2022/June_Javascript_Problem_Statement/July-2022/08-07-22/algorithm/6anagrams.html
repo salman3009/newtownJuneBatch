@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>
+Anagrams
+</title>
+</head>
+<body>
+<input type="button" name="anagrams" value="anagrams" onclick="global()">
+</body>
+</html>
+<script>
+
+function global()
+{
+    debugger;
+    function Anagrams(n1,n2)
+{
+    let a=n1.replace("/\W+/gi",'').split('').sort().join('');
+    let b=n2.replace("/\W+/gi",'').split('').sort().join('');
+    return (a===b)?"Anagrams":"Not Anagrams";
+}
+
+let result=Anagrams('salman','manlas');
+console.log(result);
+}
+
+
+
+</script>
