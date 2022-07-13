@@ -1,0 +1,112 @@
+Notes:
+Group Discussion:1hour 30mins - Tuesday --11pm to 12.30pm
+Group Discussion:1hour 30mins - friday --11pm to 12.30pm
+
+one-one-session -- 30mins 
+========================================
+1.Data structure and algorithm ---> interview preparation
+2.MERN stack --->technology
+frontend +backend --->project 
+======================================
+6month --> DS and algorithm --> clear interview 
+Group discussion:
+MERN --> HTMl,css,js,reactjs,nodejs,expressjs 
+2.5 DS--->html,css,js 
+4month --> entire poject using reactjs 
+=========================================
+Programming Language:
+Language --> for communication purpose
+Programming -->set of input it will give you output.
+with programming language we are interacting with machine.
+IT --> Information technology
+Data structure and algorithm:
+1.data structure: structuring the data inside the memory.
+2.programming language: to bring that data we need the programming language.
+3.algorithm--> set of instruction to proceed is called algorithm.
+Please write the algorithm to add two numbers;
+step1: please take two numbers 
+         number 1: 10 
+		 number 2: 20 
+step 2: please add the number 1 and number 2 
+            number1 + number 2 
+			10+20 
+step3: please store the result in the variable final.
+                final = 30.
+				
+===========================================
+Different application:
+1.desktop application
+example:notepad,teams,zoom
+2.web application 
+anything that is running on browser is called web application.
+3.native application:
+google pay downloading from playstore.
+=========================================
+web application:
+frontend developer ----> 3months
+backend developer -------> 1 year 
+full stack developer  ----> 2years 
+MERN stack 
+===================================
+frontend:
+html,css,javascript
+backend:
+java,javascript(nodejs),c#,perl,python
+database:
+oracle,sql,postgres,mongodb
+=========================================
+frontend:
+html,css,javascript 
+backend:
+nodejs(javascript)
+database:
+mongodb
+MERN --> stack:
+M --Mongodb ---> database 
+E --expressjs -->framework for backend 
+R --->reactjs -->framework for frontend 
+N---Nodejs
+====================================
+framework:
+A predefined set of code written by someone.
+====================================
+HTML
+CSS
+Javascript
+=====================================
+Full stack developer:
+Angular with java 
+Reactjs wth java 
+Angular with .net 
+reactjs with .net 
+angular with python
+reactjs with python 
+=======================================
+90% of data structure and algorithm is written in the framework. We are going to reuse.
+==========================================
+
+
+Web Development:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
