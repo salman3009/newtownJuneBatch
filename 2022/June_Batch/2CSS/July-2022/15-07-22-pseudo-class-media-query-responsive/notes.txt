@@ -1,0 +1,48 @@
+Notes:
+Pseudo_class:
+1.link ------>anchor initial link
+2.active  --->anchor while pressing the link
+3.visited  --->anchor already visited the page 
+4.hover  ---->anchor mouse hover 
+5.target  --->anchor moving within the page target.
+6.focus  ------->form focus element
+7.checked   --->form radio and checkbox
+8.required  ---->form with required input tag
+9.optional   --->form with no required input tag
+10.enable   ---> form with no disabled input tag
+11.disabled --->form with disabled input tag.
+12.in-range --> form with min and max input type=number
+13.out-of-range -->form with min and max with input type=number 
+14.readonly -->form with input type readonly property
+15.read-write-->form with input tag without readonly property.
+16.valid -->input tag will all valid input
+17.invalid -->input tag with anyone invalid value 
+validation(min,max,minlength,maxlength,required,email)
+18.default --->radio,checkbox,select 
+19.first-child-->first tag of that particular element.
+20.last-child - it will target the last element of that particular tag.
+21.root --->similar to universal selector it will target all the element inside the html.
+22.nth-child(2n)--->targeting even number
+23.nth-last-child(2n) ---> it will target from last element.
+24.nth-of-type ---> without parent it is going to work.
+=============================================
+Monday:
+css selector - complete
+media query -- mobile, tab, laptop
+website - linking multiple page.
+popup.
+revision
+Tuesday:git and github 
+wednesday:git and github 
+Thrusday:javascript
+=================================================
+
+
+
+
+
+
+
+
+
+

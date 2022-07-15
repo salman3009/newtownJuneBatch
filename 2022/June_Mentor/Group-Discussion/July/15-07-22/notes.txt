@@ -1,0 +1,39 @@
+Web Development:
+html,css,javascript.
+==============================
+web browser - software
+Harry potter Book -----------> multiple pages -->read (content,image,page number number)
+website----------------------->multiple web pages -->read(content,image,page number) -->html
+HTML - Hyper text markup language.
+HTTP protocol - hyper text transfer protocol.
+https://gmail.com/
+https://www.youtube.com 
+https://www.flipkar.com
+
+https: -- main job of https is to bring web page.
+==========================================================
+web server ---> someone is going to provide you the service using internet.
+https://www.flipkart.com/mobile/index.html 
+https://----------->protocol
+www.flipkart.com ---->domain name 
+mobile --->directory path 
+index.html ---->file 
+===================================================
+anything you are opening in the browser it will support html file 
+html file extension -->.html 
+frontend ----------->backend -------------> data store (database)
+type:football------>web server----------->database 
+==========================================================
+API - Application programming interface
+======================================================
+HTML - Hyper Text markup language 
+=====================================================
+<element>most spectacular year 2021</element>
+==============================================
+
+
+
+
+
+
+

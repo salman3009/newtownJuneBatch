@@ -1,0 +1,56 @@
+1.Selector topic
+2.media query 
+3.assignment
+====================================
+^ (caret symbol) ----> start 
+$ (dollar symbol) ---> End
++ (plus symbol) ---> one or more 
+* (start symbol) ---> zero or more 
+======================================
+1.general attribute selector:
+   input[type]
+2.value attribute selector:matching exact attribute value
+    input[type="text"]   
+3.caret symbol: should matching start keyword 
+    li[id^="ac"]
+4.dollar symbol:should end with particular keyword 
+    li[id$="lg"]
+5.* symbol: should match the paricular keyword anywhere inside the the attribute 
+    li[id*="ac"]
+6.tilde symbol:similar to * symbol but keyword should have space in between.
+    li[id~="ac"]	
+7.pipe symbol --> it should start with particular keyword after that hypen is mandatory 
+     li[id|="ac"]
+===================================================
+1.psuedo_elements_before:it will add the content in the first position
+     p::before{
+         content:" welcome";
+		 color:red;
+     }		 
+2.psuedo_elements_after:it will add the content at the end position of that particular tag.
+     p::after{
+          content:" by salman";
+           color:red;
+        }
+3.psuedo_elements_first_letter:it will target the first character in the given word.
+      p::first-letter{
+	      font-size:20px;
+		  color:red;
+	  }		
+4.psuedo_elements_first_line:it will target the first line of the given sentence.
+      p::first-line{
+           color:red;
+           font-size:22px;
+         }
+5.psuedo_elements_selection:it is going to selector the particular set of elements while selecting from the mouse.
+       p::selection{
+	      background-color:grey;
+	   }		 
+6.psuedo_elements_placeholder:it is going to select the placeholder attribute inside the form tag
+          input::placeholder{
+            color:red;
+		  }		  
+===============================================		  
+	   
+		 
+   

@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+        <style>
+            input:valid{
+                border:2px solid green;
+            }
+            input:invalid{
+                border: 2px solid red;
+            }
+         
+        </style>
+    </head>
+    <body>
+        <form>
+            FullName:<input type="text" name="fullName" minlength="5" required>
+            <br/>
+            <br/>
+            phone:<input type="text" name="phone" minlength="10" maxlength="10" required>
+            <br/>
+            <br/>
+            email:<input type="email" name="email" required>
+            <br/>
+            <br/>
+        </form>
+    </body>
+</html>
