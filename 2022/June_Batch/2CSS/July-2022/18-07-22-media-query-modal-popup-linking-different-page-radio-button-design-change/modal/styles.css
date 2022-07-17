@@ -1,0 +1,21 @@
+.modal {
+  box-shadow: 0 1px 4px indigo;
+  border-radius: 6px;
+  background-color: red;
+  padding: 2px;
+  text-align: center;
+  width: 400px;
+  z-index: 10;
+  display: block;
+  position: fixed;
+  top: 20%;
+  left: 35%
+}
+
+.card{
+  background-color:grey;
+  width:100%;
+  height:400px;
+}
+
+

@@ -1,0 +1,153 @@
+<html>
+
+<head>
+  <style>
+   
+
+    /* phone and mobile */
+    @media (max-width:599px) {
+
+      .header {
+      grid-area: header;
+    }
+
+    .main-content {
+      grid-area: main-content;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+      .container {
+        display: grid;
+        grid-template-areas: 'header'
+          'main-content'
+          'footer';
+        gap: 50px;
+      }
+
+      .header {
+        height: 50px;
+        background-color: rgb(94, 34, 34);
+      }
+
+      .main-content {
+        height: 300px;
+        background-color: rgb(26, 37, 26);
+      }
+
+      .footer {
+        height: 50px;
+        background-color: rgb(168, 139, 189);
+      }
+    }
+
+    /*low resolution tablet and ipad*/
+    @media (min-width:600px) and (max-width:1023px) {
+
+      .header {
+      grid-area: header;
+    }
+
+    .left-bar {
+      grid-area: left-bar;
+    }
+
+    .main-content {
+      grid-area: main-content;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+      .container {
+        display: grid;
+        grid-template-areas: 'header header'
+          'left-bar main-content'
+          'footer footer';
+        gap: 50px;
+      }
+
+      .header {
+        height: 100px;
+        background-color: rgb(168, 0, 143);
+      }
+
+      .left-bar {
+        height: 200px;
+        background-color: rgb(22, 11, 11);
+      }
+
+      .main-content {
+        height: 200px;
+        background-color: rgb(41, 4, 53);
+      }
+
+      .footer {
+        height: 100px;
+        background-color: rgb(24, 43, 83);
+      }
+    }
+
+    /*portrait mode tablet and ipad*/
+    @media (min-width:1024px) {
+      .header {
+      grid-area: header;
+    }
+
+    .left-bar {
+      grid-area: left-bar;
+    }
+
+    .main-content {
+      grid-area: main-content;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+      .container {
+        display: grid;
+        grid-template-areas: 'header header header'
+          'left-bar main-content main-content'
+          'footer footer footer';
+        gap: 50px;
+      }
+
+      .header {
+        height: 200px;
+        background-color: grey;
+      }
+
+      .left-bar {
+        height: 400px;
+        background-color: red;
+      }
+
+      .main-content {
+        height: 400px;
+        background-color: green;
+      }
+
+      .footer {
+        height: 100px;
+        background-color: indigo;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header"></div>
+    <div class="left-bar"></div>
+    <div class="main-content"></div>
+    <div class="footer"></div>
+  </div>
+</body>
+
+</html>

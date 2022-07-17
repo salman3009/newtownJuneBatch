@@ -1,0 +1,26 @@
+6month of duration:
+HTML
+CSS
+Javascript
+Reactjs
+NOdejs 
+
+Frontend Developer 
+
+one-one discussion - 30mins
+DS and algorithm and some common solving pattern
+Javascript 
+========================================
+1.open VS code.
+2.create a new file ---> Ctrl+N 
+3.To save a file --->Ctrl+S
+
+Javascript:
+It is scripting language 
+line by line execution will happend inside the machine.
+lightweight language 
+var a = 33;
+var b = 56;
+var c = a + b;
+console.log(c);
+=======================================
