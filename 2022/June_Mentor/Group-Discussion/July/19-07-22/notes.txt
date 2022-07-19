@@ -1,0 +1,44 @@
+Notes:
+HTML - hyper text markup language 
+hyper -- one information will consists of another information 
+text --> content 
+markup --> tag <>
+example
+<element>content</element>
+=====================================
+html is divided into two parts:
+1.head section 
+    //mainly for configuration
+2.body section 
+=========================================
+/ --------->forward slash
+\ ---------->backward slash 
+extension:.html
+<html>
+<head>
+ <title>Newtown School</title>
+</head>
+<body></body>
+</html>
+==============================
+step1:open visual studio code 
+step2:Ctrl+n to create new file
+step3:ctrl+s to save a file 
+step4:
+<html>
+<head>
+ <title>Newtown School</title>
+</head>
+<body></body>
+</html>
+step5:ctrl+s 
+step6:right click on tab --> copy path
+step 7:open the chrome browser -->paste the path 
+==============================================
+To create a link : to move from one page to another page.
+Anchor tag - <a></a>
+attribute -->extra information about that particular tag.
+============================================
+- ==>hyphen
+_ ==>underscore 
+=====================================

@@ -1,0 +1,49 @@
+root ---> universal selector
+Example:
+list,table,dropdown
+:first-child --> it is targeting the first element of that particular tag.
+
+:last-child--->it is targeting the last element of that particular tag.
+
+:nth-child -->if you want to target only even section(2n) -->if you want to target only odd section(2n+1)-->if you want to apply for all give 1n
+
+:nth-last-child --->opposite of nth-child 
+
+:nth-of-type -->any tag without parent you can apply this element.
+//n means it will repeat 
+
+:nth-last-of-type --->opposite of nth-of-type 
+
+:only-child ---> inside the li tag you have one more nested tag with only one child.
+
+only->one
+:only-of-type-->in any wrapper only one that particular tag should be present
+
+:first-of-type --> with or without parent it is concentrating on first element.
+
+:last-of-type--->opposite of first-of-type 
+========================================
+nth --->n 
+only --->one 
+child -->parent(li,tr,td,option)
+type-->with or withou parent(div,p,h1)
+===========================================
+:first-child                 --->:first-of-type 
+
+:last-child                  -----> :last-of-type
+
+:nth-child * :nth-last-child ---->:nth-of-type * :nth-last-of-type 
+
+:only-child              -----> :only-of-type
+====================================================
+:empty --->any tag without content as well as without space.
+:not --->except that particular element given in the parameter.
+(parameter or argument)
+:lang ---> language targeting the lang attribute
+=============================================== 
+1.pseudo class
+2.pseudo element 
+3.selector attribute 
+4.combinator selector
+5.basic selector 
+=============================================
