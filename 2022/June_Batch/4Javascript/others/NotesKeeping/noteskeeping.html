@@ -2,6 +2,10 @@
 
 <head>
   <style>
+    *{
+      margin:0;
+      padding:0;
+    }
     .header {
       grid-area: header;
     }
@@ -85,6 +89,39 @@
       font-size: 28px;
     font-weight: 700;
     }
+    
+    .header .header-left{
+    float:left;
+    padding-top: 6px;
+}
+/* .header-left .header-font-logo{
+      margin-top:7px;
+} */
+.header .header-right{
+    float:right;
+    padding-top: 26px;
+}
+.header .header-logo{
+    font-size: 38px;
+    font-weight: 900;
+}
+.header-left li{
+    padding-left:30px;
+}
+
+.header-right li{
+    padding-right:20px;
+    font-size:18px;
+    font-weight: 800;
+}
+.header-right li a{
+    text-decoration:none;
+}
+
+.header-right li,.header-left li {
+    list-style-type: none;
+    display:inline-block;
+}
   </style>
 
 </head>
@@ -92,7 +129,17 @@
 <body>
   <div class="container">
     <div class="header">
-
+      <nav class="header">
+        <ul class="header-left">
+            <li class="header-font-logo"><i class="fa fa-cube" aria-hidden="true"></i></li>
+            <li class="header-logo">Newton</li>
+        </ul>
+        <ul class="header-right">
+           <li><a href="./noteskeeping.html">Create</a></li>
+           <li><a href="./notesListKeeping.html">List</a></li>
+           <li><a href="#">Help</a></li>
+       </ul>
+    </nav>
     </div>
     <div class="main-content">
       <div class="create-notes">
@@ -121,25 +168,20 @@
             debugger;
                   event.preventDefault();
                   let formList = document.forms[0];
-                  let formObject={};
-                  for(let i=0;i<formList.length;i++){
-                      if(formList.elements[i].name === "button"){
-                          continue;
-                      }
-                      formObject={
-                              [formList.elements[i].name]:formList.elements[i].value,
-                              date: new Date()         
-                      }  
-                  }
+                  let formObject={
+                    title:formList.elements[0].value,
+                    description:formList.elements[1].value,
+                    date:new Date()
+                  };
                  let productList = JSON.parse(localStorage.getItem('list'));
                  if(productList && productList.length>0){
                      productList.push(formObject);
-                     localStorage.setItem(JSON.stringify(productList));
+                     localStorage.setItem('list',JSON.stringify(productList));
                  }            
                  else{
                      let productList =[];
                      productList.push(formObject);
-                     localStorage.setItem(JSON.stringify(productList));
+                     localStorage.setItem('list',JSON.stringify(productList));
                  }  
         }
   </script>
