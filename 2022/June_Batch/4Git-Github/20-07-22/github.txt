@@ -1,0 +1,44 @@
+=====================================================
+1.Install the git in your system
+2.create a account in github 
+3.
+Git bash
+ssh-keygen -t rsa -C "your_email@example.com"
+4.
+notepad ~/.ssh/id_rsa.pub
+5.
+ssh -T git@github.com
+6.create repository on github 
+7.
+git clone url 
+8.git branch 
+9.git status 
+10.git add .
+11.git commit -m "developer connect code"
+12.git push origin master 
+https://www.pluralsight.com/guides/using-git-and-github-on-windows
+===========================================================
+GITHUB PUSH:
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:salman3009/typescript.git
+git push -u origin main
+==================================================
+git checkout -b master 
+git add .
+git commit -m "first commit"
+git push origin master
+===============================================
+next onwards:
+git add .
+git commit -m "first commit"
+git push origin master
+================================================
+
+
+
+
+
+

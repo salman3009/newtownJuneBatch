@@ -1,0 +1,55 @@
+Version Control System:
+Push --> you are pushing to server 
+pull -->you are taking data from server 
+revert -->we can go to previous changes
+Centralized and Distributed system 
+commits --> before push we need to keep our code ready.
+branches --> copy of your repository
+merge --> copying your local code to master branch.
+conflicts ---> two developers are working in the same file.
+=======================================
+git is distributed version control system 
+git --->internet connection--->clone(Internet)-->pull(Internet)--work--push(Internet)
+================================================
+green color --> push 
+red color ---> removed 
+==========================================
+repository --->it consists of collections of files and folder 
+branch---->repository code will be there.
+branch a ---> branch b ----> branch c 
+local --->master ---> sit ---> uat ---> release -->production
+==============================================
+Basic command:
+git init --->create new repository or existing repository
+
+git clone ---> we are going to take copy of remote repo to your system.
+
+git add ---> which files you want to commit  we are keeping in stage.
+
+git status -->current staged file you can check it
+
+git branch --> what is current branch 
+
+git commit -->above code with some message.
+
+git pull ---> latest code from repo.
+
+
+git push ---> finally it will push the code in repo.
+==============================================
+master ---> working --> local (pull)--->master 
+master --->work --->local branch ---> master 
+master -->work -->local branch --> master 
+==============================================
+repository:
+1.gitlab
+2.bigbucket
+3.github 
+
+
+
+
+
+
+
+

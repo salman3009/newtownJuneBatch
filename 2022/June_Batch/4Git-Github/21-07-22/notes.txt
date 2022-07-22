@@ -1,0 +1,110 @@
+git -- version control
+github -- cloud
+==========================
+1.Install of git.
+link:https://git-scm.com/download/win
+64-bit Git for Windows Setup.
+======================================
+2.Install of github 
+password:qwerty@Code2008
+akash7473
+==================================
+Connect between Git and github 
+Step1:
+git bash:ssh-keygen -t rsa -C "yourname@gmail.com"
+git bash:Enter button
+git bash:Enter button
+git bash:Enter button
+git bash:notepad ~/.ssh/id_rsa.pub
+step 2:
+Go to gihub account:
+https://github.com/settings/profile
+step 3:
+notepad : Ctrl+a -->Ctral+c -->ctrl+v 
+=========================================
+//whenever new repo is created we need to 
+give below command:
+cmd:git init 
+//it will make ready for staging
+cmd:git add .
+//staging it will give a final confirmation as message.
+git commit -m "first commit"
+//to create main branch
+git branch -M 'main'
+================================
+git checkout -b master 
+git add .
+git commit -m "updated code"
+git push origin master 
+=======================================
+To create new repo:
+1.repo name 
+2.create repo 
+git init
+git add .
+git commit -m "first commit details"
+git branch -M main
+
+git remote add origin git@github.com:salman3009/typescript.git
+
+git push -u origin main
+========================================
+git init 
+git add .
+git commit -m "first commit"
+git checkout -b "uat" 
+git push origin uat 
+===================================
+second time:
+cmd:git branch 
+cmd:git status 
+cmd:git add . 
+cmd:git status 
+cmd:git commit -m "updated code"
+cmd:git push origin uat 
+======================================
+short:
+cmd:git add .
+cmd:git commit -m "updated code"
+cmd:git push origin master
+===================================
+Frontend:
+1.html ---> it is used to layout of web page 
+2.css --->it is used to do presentation for web page
+3.javascript ---> it is used to make web page dynamic.
+pure javascript --> vanilla javascript 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

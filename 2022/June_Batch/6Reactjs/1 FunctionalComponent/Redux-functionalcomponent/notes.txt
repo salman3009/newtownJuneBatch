@@ -1,0 +1,123 @@
+Step1:
+Install the package:
+cmd:npm install redux
+cmd:npm install react-redux
+======================================== 
+Step2:
+Create the reducer:
+user.js 
+const initialState = {
+         status:false,
+         fullName:''
+  };
+
+  function users(state = initialState, action){
+
+      switch(action.type){
+          case 'success' : 
+                    return {
+                        ...state,
+                        fullName:"salman",
+                        status:true
+                    }
+        case 'failure':
+            return{
+                ...state,
+                fullName:"noname",
+                status:false
+            }
+            
+            default:          
+            return state;   
+      }
+
+  }
+
+  export default users;
+  
+ 
+ import { combineReducers } from "redux";
+import users from './users';
+
+const rootReducers = combineReducers({
+     users:users
+});
+
+export default rootReducers;
+==============================================================
+step3:
+create service.js 
+
+const Users = {
+    
+    loadUsers(dispatch) {
+        dispatch({
+            type: 'success',
+            payload: null
+        })
+      
+    }
+}
+export default Users;
+==========================================================
+step4:
+create store
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducers from './reducers';
+
+const store = createStore(rootReducers)
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+=======================================================================
+step5:
+import {UserContext} from './App';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import Users from './services/users';
+function ComponentC(){
+
+
+    const dispatch = useDispatch();
+    const usersInfo = useSelector((state) => state.users);
+
+
+    useEffect(() => {
+        Users.loadUsers(dispatch);
+        setInterval(()=>{
+            console.log(usersInfo);
+        },3000)
+    }, [dispatch])
+
+return(<div>
+        <UserContext.Consumer>
+            {
+                obj=>{
+                    return (<div>{obj}</div>)
+                }
+            }
+        </UserContext.Consumer>
+        This is component {usersInfo.fullName}</div>)
+}
+
+export default ComponentC;
+=======================================================================

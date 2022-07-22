@@ -1,0 +1,75 @@
+Notes:
+1.Git bash setup
+2.Github setup 
+3.Git bash and github 
+git config --global user.name salman 
+git config --global user.email salman@gmail.com 
+ssh-keygen -t rsa -C salman@gmail.com 
+notepad ~/.ssh/id_rsa.pub
+==================================
+Creating one new repo:
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:salman3009/typescript.git
+git push -u origin main
+=====================================
+Above not working
+git checkout -b newton 
+git add .
+git commit -m "first commit"
+git push origin newton
+======================================
+next push onwards 
+git add .
+git commit -m "first commit"
+git push origin newton
+=====================================
+Notes:
+Web application: Anything that is running on internet.
+Example:
+flipkart
+amazon
+gmail 
+Web appication Layer:
+1.Frontend  --- HTML,CSS,Javascript (Reactjs)
+2.Backend ----Nodejs ,Expressjs 
+3.Database --- Mongodb 
+========================================
+Ajax --- to interact web server 
+DOM ---> to interact with html ,css 
+cookies,local storage,session storage --> to store some set of data in client machine 
+=========================================
+Javascript you can write in two ways:
+1.internal --->for POC or practice project 
+2.external ---> real time application 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

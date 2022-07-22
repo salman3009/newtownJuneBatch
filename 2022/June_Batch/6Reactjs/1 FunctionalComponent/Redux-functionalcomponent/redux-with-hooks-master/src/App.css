@@ -1,0 +1,35 @@
+.row {
+  display: flex;
+  justify-content:flex-start;
+  flex-direction:row;
+  width:99%;
+  padding:5px;
+ 
+}
+addcontainer {
+  width: 300px;
+}
+.header {
+    display: flex;
+    justify-content:flex-start;
+    flex-direction:row;
+    width:99%;
+    padding:5px;
+    font-weight:bold;
+    background-color:#9dc7b2;
+    color:#fff;
+    height:48px;
+    line-height: 48px; 
+}
+.row > div , .header > div{
+  width :19%;
+  text-align:left;
+  word-wrap: break-word;
+  color :#333300;
+}
+.row:nth-of-type(odd) {
+background-color:#DAF7A6;
+}
+.row:nth-of-type(even) {
+background-color:#FFFF99;
+}
