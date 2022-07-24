@@ -1,0 +1,10 @@
+Input: kasim
+Output:misak
+========================================
+To check the version of nodejs 
+cmd:node -v 
+======================================
+cmd:node filename
+==========================
+runtime environment for javascript
+======================================

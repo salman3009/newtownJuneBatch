@@ -1,0 +1,110 @@
+NOtes:
+Web application : anything running on browser
+Web application three layers:
+1.Frontend -->HTML,CSS,Javascript,Library:Reactjs 
+2.Backend -->Nodejs,Framework(ExpressJs)
+3.Database--->Mongodb
+//Everything is written on Javascript:Reactjs,Nodejs,Expressjs 
+=======================================
+Web Page Request:For request you will html page.
+Javascript:
+1.client side scripting 
+2.interpreted language (line by line execution)
+3.open source - (MIT license anyone can use it)
+4.cross-platform (in any operating system it will run)
+5.case sensitive (there is difference between capital and small letter)
+6.Dynamic language.
+7.Chrome browser(V8 Engine)
+======================================
+Refer ppt:9 - 22-07-22
+========================================
+Javascript in frontend is not secure.
+Javascript in backend is secure.
+========================================
+HTML - Layout of web page.
+CSS - presentation of the web page.
+javascript -dynamic language.
+=========================================
+Javascript you can write in two ways:
+1.internal --- practice or instruction session
+2.external  --- for real time project 
+Internal:
+1.inside the head tag 
+2.inside the body tag 
+3.script tag 
+external:
+1.inside the head tag 
+2.inside the body tag .
+==============================================
+variable: Storing some set of data inside the memory.
+= assignment operator
+synatax:
+var laptopName = "sony"; 
+================================================
+Datatype:depends upon the space we need to create data.
+Primitive Types:
+1.string 
+2.number 
+3.boolean 
+4.undefined
+Non - Primitive Types:
+1.Object --->Object,Array,Null
+=====================================
+Javascript has dynamic typing
+=====================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

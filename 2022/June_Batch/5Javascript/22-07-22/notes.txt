@@ -44,7 +44,7 @@ cookies,local storage,session storage --> to store some set of data in client ma
 Javascript you can write in two ways:
 1.internal --->for POC or practice project 
 2.external ---> real time application 
-
+========================================
 
 
 

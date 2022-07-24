@@ -1,0 +1,11 @@
+Installing Nodejs (to run javascript inside our system)
+step1:https://nodejs.org/en/download/
+step2:window installer(.msi) --> 64bit.
+step3:open the command prompt 
+cmd:node -v
+step4:create one new file and save a file with extension .js 
+hello.js
+console.log("hello world");
+step 5: open the cmd where the file is present 
+cmd:node hello 
+=============================================================

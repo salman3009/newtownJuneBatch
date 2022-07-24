@@ -1,0 +1,30 @@
+NOtes:
+step1:
+https://nodejs.org/en/download/
+step2:
+Window installer (.msi) -- 64bit 
+step3:next--->install 
+================================
+step 4:
+open the command prompt from search window 
+step 5:
+cmd:node -v
+//16 
+=========================================
+javascript extension - .js 
+=======================================
+filename: hello.js 
+================================
+step 5:
+save a file:hello.js 
+console.log("hello world");
+====================================
+step 6:
+cmd:node hello 
+====================================
+
+
+
+
+
+
