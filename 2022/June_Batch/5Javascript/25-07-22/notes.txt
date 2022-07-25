@@ -1,0 +1,26 @@
+NOtes:
+any string can be represented by using 
+"" or '' 
+all comparison operator is going to return boolean value.
+Total:6
+0 1 2 3 4 5 
+Total 6
+1 2 3 4 5 6 
+Comparison:
+1.==      //it is comparing only value
+2.===      //it comparing value + datatype
+3.>
+4.>=
+5.<
+6.<= 
+7.!= (similar to == but opposite condition)
+8.!== (similar to === but opposite condition)
+===============================
+anything if you add with string it will become string.
+Because string is given more priority with other datatype.
+================================================
+
+
+
+
+
