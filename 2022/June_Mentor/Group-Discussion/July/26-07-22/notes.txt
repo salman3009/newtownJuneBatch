@@ -1,0 +1,2 @@
+Notes:
+In html if you want to get information from the user means you need to use form tag.
