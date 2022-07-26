@@ -1,0 +1,24 @@
+Notes:
+False condition:false,undefined,"  ",0
+Logical Operator:
+&&  --> more than one condition
+//anyone is false means false.
+T && T = T
+F && T = F 
+T && F = F 
+F && F = F
+|| ---> any one condition is true means true.
+T || T = T 
+T || F = T 
+F || T = T 
+F || F = F
+!operator:
+//it will return opposite condition 
+//not operator will always return boolean true or false.
+========================================
+conditional operator or ternary operator:
+syntax:
+condition?"yes":"no";
+
+
+ 

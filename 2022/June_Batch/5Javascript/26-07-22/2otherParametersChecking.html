@@ -1,0 +1,30 @@
+<script>
+    var resultOne = "" && 56;
+    //empty string is considered as false in javascript
+    console.log(resultOne);
+    resultOne = "salman" && 56>2;
+    console.log(resultOne);
+    resultOne = undefined && 56;
+    console.log(resultOne);
+    resultOne = false && 56;
+    console.log(resultOne); 
+    resultOne = true && 56;
+    console.log(resultOne);
+    resultOne = true && 56 && 77;
+    console.log(resultOne);
+    resultOne = true && undefined && 77;
+    console.log(resultOne);
+    resultOne = true && -67 && 77;
+    console.log(resultOne);
+    //false,"",undefined,0
+    resultOne = 0 && 76;
+    console.log(resultOne);
+    resultOne = undefined && undefined && 77;
+    console.log(resultOne);
+    resultOne = "s" && 33;
+    console.log(resultOne);
+    resultOne = 56 && 56 && 23 && "finally success";
+    console.log(resultOne);
+    resultOne = "  " && 56;
+    console.log(resultOne);
+ </script>
