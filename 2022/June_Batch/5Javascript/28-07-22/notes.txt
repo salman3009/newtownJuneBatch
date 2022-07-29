@@ -1,0 +1,10 @@
+Symbols:
+() ---> function expression 
+;  --->end of the instruction
++,-,*,/,%,>,<,>=,<=,=,==,===,!=,!==,&&,||,!,:,?
+{} --->group of statements
+===============================================
+Decision Making Statement:
+1.if -else
+2.switch 
+====================================

@@ -1,0 +1,35 @@
+<!-- <script>
+    var days = "tuesday";
+    switch(days){
+     case "monday":
+         console.log("monday is selected");
+    case "tuesday": 
+         console.log("tuesday is selected");
+    case "wednesday": 
+        console.log("wednesday is selected");
+    default: 
+        console.log("nothing is selected");    
+    }
+</script> -->
+<script>
+    var days = "monday";
+    var amount = 500;
+    switch (days) {
+        case "tuesday":
+            if (amount >= 500) {
+                console.log("tuesday is selected");
+                break;
+            }
+        case "monday":
+        case "Monday":
+            if (amount >= 500) {
+                console.log("monday is selected");
+                break;
+            }
+        case "wednesday":
+            console.log("wednesday is selected");
+            break;
+        default:
+            console.log("nothing is selected");
+    }
+</script>

@@ -1,0 +1,20 @@
+<script>
+    var amount = 800;
+    var offer = 0;
+    var days = 'wednesday';
+    if(days === 'monday' && amount>=500){
+         //offer+=40;
+         offer = offer + 40;
+    }
+    else if(days === 'tuesday' && amount>=500){
+        offer+=30;
+    }
+    else if((days === 'friday' || days === 'saturday') && amount>=500){
+        offer+=50;
+    }
+    else{
+        offer+=5;
+    }
+    var finalAmount = amount - offer;
+    console.log(finalAmount);
+</script>
