@@ -1,0 +1,35 @@
+HTML:To layout of the webpage
+CSS:Cascading style sheet 
+Types of writing CSS:
+1.internal - <style></style>
+2.external 
+//create two files:
+(i)global.css 
+(ii)external.html 
+global.css
+h1{
+    color:red;
+}
+h2{
+    color:green;
+}
+(ii)external.html 
+
+ <link rel="stylesheet" href="global.css">
+
+3.inline style 
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="color:red;">Hello world</h1>
+        <h1>Welcome to microsoft</h1>
+    </body>
+</html>
+=============================================
+//for class learning we will use internal style sheet.
+//But for real time project please use the external style sheet
+=============================================
+
+
