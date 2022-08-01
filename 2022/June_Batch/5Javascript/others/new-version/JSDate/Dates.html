@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript getTime()</h2>
+
+<p>The internal clock in JavaScript counts from midnight January 1, 1970.</p>
+<p>The getTime() function returns the number of milliseconds since then:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+// document.getElementById("demo").innerHTML = d.getTime();
+// document.getElementById("demo").innerHTML = d.getFullYear();
+// document.getElementById("demo").innerHTML = d.getMonth() + 1;
+
+// var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// document.getElementById("demo").innerHTML = months[d.getMonth()];
+
+// document.getElementById("demo").innerHTML = d.getDate();
+// document.getElementById("demo").innerHTML = d.getHours();
+// document.getElementById("demo").innerHTML = d.getMinutes();
+// document.getElementById("demo").innerHTML = d.getSeconds();
+// document.getElementById("demo").innerHTML = d.getMilliseconds();
+// document.getElementById("demo").innerHTML = d.getDay();
+
+// var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// document.getElementById("demo").innerHTML = days[d.getDay()];
+
+//Setting Dates;
+// var d = new Date();
+// d.setFullYear(2020);
+// document.getElementById("demo").innerHTML = d;
+
+// d.setDate(15);
+// document.getElementById("demo").innerHTML = d;
+
+// d.setFullYear(d.getFullYear(), d.getMonth() - 6);
+
+// d.setHours(15);
+// d.setMilliseconds(192);
+// d.setMinutes(17);
+// d.setMonth(4);
+// d.setSeconds(35);
+// d.setTime(1332403882588);
+
+
+// Convert today's date into a readable string:
+//  d.toDateString();
+
+
+//Return a Date object as a String, formatted as a JSON date:
+//d.toJSON();
+
+
+// Return the primitive value of a Date object:
+// d.valueOf();
+
+
+//Get milliseconds
+// d = Date.UTC(2012, 02, 30);
+
+
+// to display the UTC date and time as a string.
+// d.toUTCString();
+
+//to display the time as a string.
+//d.toTimeString();
+
+
+</script>
+
+</body>
+</html>
+
+<script>
+    console.log(Date.now());
+    let data=new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+    let todayDate = new Date(data)
+    console.log(todayDate.getTime());
+    </script>

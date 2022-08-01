@@ -1,0 +1,34 @@
+Notes:
+//it will change the original array.
+push --adding value at the end position. O(1)
+unshift -- adding value at the front position O(N)
+pop -- removing value at the end position O(1) 
+shift -- removing value at the front position O(N)
+===================================================
+slice - original array will not change here - O(N)
+splice - original array will change here - O(N)
+//first parameter index value 
+//second parameter length (how much you want to delete).
+==============================================
+Removing value from Array:
+1.pop   - original array-end - no parameter 
+2.shift - original array-first - no parameter
+3.slice  - not   - any - (0,2)-index-length from position 1
+4.splice - original array -any -(0,2) -index-total number of value.
+==========================================
+Converting array to string 
+1.toString() - not - no parameter 
+2.join() - not - one parameter 
+converting string to array
+1.split() - not - one parameter 
+============================================
+Other methods of array:
+1.concat - not - multi parameter(pass array or else other type as well it will add that value inside teh array)
+2.sort - original array - parameter(call back function)
+//different browser is using different sorting algorithm
+//chrome is using merge sort 
+//firefox is using insertion sort.
+=====================================
+Callback function - some function we are going to call after some condition is met.
+=================================================
+
