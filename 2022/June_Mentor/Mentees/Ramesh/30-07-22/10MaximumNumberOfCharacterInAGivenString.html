@@ -1,0 +1,22 @@
+<script>
+    var input = "microsoft";
+    var s={};
+    for(let i=0;i<input.length;i++){
+        s[input[i]]?s[input[i]]++:s[input[i]]=1;
+    }
+    console.log(s);
+    console.log(Object.keys(s));
+    let list = Object.keys(s).reduce((a,b)=>{
+         return s[a]>s[b]?a:b;
+    })
+    console.log(list);
+</script>
+
+<script>
+    debugger;
+    var result =[1,2,3,4,5];
+    var finalResult = result.reduce((a,b)=>{
+         return a+b;
+    });
+    console.log(finalResult);
+</script>

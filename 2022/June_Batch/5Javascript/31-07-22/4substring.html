@@ -1,0 +1,15 @@
+<script>
+    function sliceHandler(input,start,end,output){
+          var result = input.substring(start,end);
+          console.log(result);
+          if(result === output){
+              console.log("result is matched");
+          }
+          else{
+              console.log("no matched found");
+          }
+    }
+    sliceHandler("microsoft",0,5,"micro");
+    sliceHandler("microsoft",5,9,"soft");
+    sliceHandler("microsoft",4,6,"os");
+</script>

@@ -1,0 +1,15 @@
+<script>
+    var input = 4343;
+    input = 4343 + "";
+    //number is converted to string
+    var output = "";
+    for(var i=input.length-1;i>=0;i--){
+        output+=input[i];
+    }
+    console.log(output);
+    console.log(typeof output);
+    output = +(output);
+    //string is converted to number by using unary operator +
+    console.log(typeof output);
+    //typeof to check the datatype of variable
+</script>

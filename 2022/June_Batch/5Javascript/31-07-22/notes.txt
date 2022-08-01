@@ -1,0 +1,18 @@
+Primitive Data types:
+1.number
+2.string,
+3.boolean
+4.undefined
+Non-primitive Data types:
+1.Array
+2.Object 
+3.Null 
+========================
+Array:
+1.Insertion - 0(1) it is inserted at the end position
+0(N) it is inserted at the first position
+2.removal - 0(1) it is removed at the end position
+0(N) it is at the first position.
+3.searching - 0(N)
+4.accessing - 0(1)
+===================================

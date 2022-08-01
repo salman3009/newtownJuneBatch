@@ -1,0 +1,12 @@
+<script>
+    var input = "microsoftt";
+    var s={};
+    input.split('').forEach((obj)=>{
+        s[obj]?s[obj]++:s[obj]=1;
+    })
+    for(let key in s){
+        if(s[key]>=2){
+            console.log(key);
+        }
+    }
+</script>

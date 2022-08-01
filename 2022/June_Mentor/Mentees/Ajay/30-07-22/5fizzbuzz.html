@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>
+Fizz Buzz
+</title>
+</head>
+<body>
+<input type="button" name="fizz" value="fizz" onclick="onFizz(7)">
+</body>
+</html>
+<script>
+function onFizz(n)
+{
+    debugger;
+    
+    for(let i=1;i<=n;i++)
+    { 
+        if(i%2 ==0 && i%3 ==0)
+        {
+            console.log("Fizz Buzz");
+        }
+        else if(i%2==0)
+        {
+            console.log("Fizz");
+        }
+        else if(i%3==0)
+        {
+            console.log("Buzz");
+        }
+        else{
+            //Do nothing
+        }
+                  
+    }
+}
+</script>

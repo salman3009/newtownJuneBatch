@@ -1,0 +1,12 @@
+<script>
+    var input = "microsoft";
+    var s={};
+    input.split('').forEach((obj)=>{
+        s[obj]?s[obj]++:s[obj]=1;
+    })
+    console.log(s);
+     let list = Object.keys(s).reduce((a,b)=>{
+           return s[a]>s[b]?a:b;
+     })
+     console.log(list);
+</script>
