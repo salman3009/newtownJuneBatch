@@ -1,0 +1,89 @@
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+const getTodoItems =  () => {
+  try {
+    axios.get('https://jsonplaceholder.typicode.com/todos').then((response)=>{
+         console.log(response.data);
+    }).catch((error)=>{
+          console.log(error);
+    })
+  } catch (errors) {
+    console.error(errors);
+  }
+};
+getTodoItems();
+</script> -->
+
+
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+const getTodoItems =  () => {
+  try {
+    axios.get('https://jsonplaceholder.typicode.com/todos/'+1).then((response)=>{
+         console.log(response.data);
+    }).catch((error)=>{
+          console.log(error);
+    })
+  } catch (errors) {
+    console.error(errors);
+  }
+};
+getTodoItems();
+</script> -->
+
+
+
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+const getTodoItems =  () => {
+  try {
+    axios.post('https://jsonplaceholder.typicode.com/todos/',{"sample":"aneco"})
+    .then((response)=>{
+         console.log(response.data);
+    }).catch((error)=>{
+          console.log(error);
+    })
+  } catch (errors) {
+    console.error(errors);
+  }
+};
+getTodoItems();
+</script> -->
+
+
+
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+const getTodoItems =  () => {
+  try {
+    axios.delete('https://jsonplaceholder.typicode.com/todos/'+1)
+    .then((response)=>{
+         console.log(response.data);
+    }).catch((error)=>{
+          console.log(error);
+    })
+  } catch (errors) {
+    console.error(errors);
+  }
+};
+getTodoItems();
+</script> -->
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+const getTodoItems =  () => {
+  try {
+    axios.patch('https://jsonplaceholder.typicode.com/todos/'+1,{"data":"sample"})
+    .then((response)=>{
+         console.log(response.data);
+    }).catch((error)=>{
+          console.log(error);
+    })
+  } catch (errors) {
+    console.error(errors);
+  }
+};
+getTodoItems();
+</script>
