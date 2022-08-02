@@ -1,0 +1,49 @@
+Sort():
+
+1.if you have only number and you need in ascending order:
+input.sort(function(a,b){
+   return a-b;
+})
+
+2.if you have only number and you need in descending order:
+input.sort(function(a,b){
+return b-a;
+})
+
+3.if you have alphabets in lower case and you need in ascending order 
+input.sort();
+
+4.if you have alphabets in lower case and you need in descending order 
+input.sort().reverse();
+=================================================
+indexOf - O(N)
+if you have the value it will return that particular index.
+if no match found it will return -1 
+=============================================
+includes - 
+if you have value it will return true 
+if you don't have the value it will return false.
+================================================
+Array.isArray(input) 
+it is going to return true if array is found otherwise it will return false.
+===============================================
+for and while both will work in same way but syntax is different.
+Both while and do-while main difference is do-while will run for one time in negative condition as well.
+===========================================
+break statement:
+1.inside the switch statement 
+2.inside the loop 
+continue statement:
+1.inside the loop.
+============================================
+break and return 
+//return we can use only within the  function 
+//inside the loop we can use return but that loop should be inside the function.
+============================================
+Loops:
+1.for 
+2.while 
+3.dowhile 
+4.for of 
+5. forEach
+===========================================
