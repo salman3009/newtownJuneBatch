@@ -1,0 +1,16 @@
+<script>
+//https://my.newtonschool.co/playground/code/mt5y9hjmgllt/
+
+//Problem Statement
+//Write a program to find the compound interest for given principal amount
+// P, time Tm(in years), and interest rate R.
+
+//Formula
+//CI = p[(1+r/100)^n-1]
+
+function calculateCI(P, R, T)
+    {
+        let interest = P * (Math.pow(1.0 + R/100.0, T) - 1);
+        return interest.toFixed(2);
+    }
+</script>

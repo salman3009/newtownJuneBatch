@@ -1,0 +1,28 @@
+<!-- <script>
+    var countryList=["china","india","usa","france","japan","russia","india"];
+    var result = countryList.filter(function(input){
+        return input === 'india';
+    });
+    console.log("original array",countryList);
+    console.log("new array",result);
+</script> -->
+
+<!-- <script>
+    var countryList=["china","india","usa","france","japan","russia","india"];
+    var result = countryList.filter(function(input){
+        return (input === 'india' || input === 'russia');
+    });
+    console.log("original array",countryList);
+    console.log("new array",result);
+</script> -->
+
+
+<script>
+    var countryList=[1,2,4,5,4,3,4,5];
+    var result = countryList.filter(function(input,index){
+        console.log(index);
+        return input>=4;
+    });
+    console.log("original array",countryList);
+    console.log("new array",result);
+</script>

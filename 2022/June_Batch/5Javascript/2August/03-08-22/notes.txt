@@ -1,0 +1,29 @@
+Notes:
+1.map function
+//map function will not change original array
+//it will add/remove or check some condition and it will return new set of data.
+//it consists of two parameter (i)each iteration value (ii)index value.
+================================================
+2.filter function:
+//it will not change the original array 
+//It is used to filter the data depends upon the condition.
+//Once condition is met it will return the following value into the new array.
+//filter consists of callback function.
+==========================================
+3.find function:
+//it will not change the original array.
+//It is used to find one particular data. IF matches found it will stop searching further
+//it also consists of index parameter as well.
+========================================
+4.reduce function: 
+//it will not change the original array. 
+//it used to reduce the value into single parameter 
+//it consists of two parameter one is return result and next one is iteraion value.
+=======================================
+5.findIndex  -- once match found it will return the index value it will from position 0.
+6.findLast  - it will find the last vale once match is found it will start from position last.
+7.findLastIndex - it will find the last occurence of that particular value in the given array. 
+=============================================
+8.some - any one value is met the condition it will return the boolean value true otherwise false.
+9.every - if all the value is met the condition then only it will return true otherwise false.
+==========================================

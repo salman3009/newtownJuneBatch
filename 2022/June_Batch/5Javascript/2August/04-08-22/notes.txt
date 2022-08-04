@@ -1,0 +1,72 @@
+Notes:
+To add the array value from start or end position:
+1.push - original - noCallBack
+2.unshift - original - noCallBack
+
+To remove the array from start or end position:
+1.pop - original - noCallBack
+2.shift - original - noCallBack
+
+To remove the array value in between 
+1.slice - Nooriginal - noCallBack - index - length count from first
+2.splice - original - noCallBack - index - length means total number of value.
+
+Converting array to string 
+1.toString - Nooriginal - noCallBack 
+2.join - Nooriginal - Nooriginal
+
+to combine the array 
+1.concat - Nooriginal - noCallBack
+
+ascending and descinding 
+1.sort - original - callback - return 
+
+reverse array 
+1.reverse - original - noCallBack
+
+Finding individual value or index 
+1.indexOf - Nooriginal - NoCallBack
+2.includes - Nooriginal - NoCallBack - will return boolean value 
+
+Checking Array or not
+1.isArray- Nooriginal - NoCallBack - will return boolean value 
+
+Loops: - Nooriginal 
+1.for 
+2.for of 
+3.while 
+4.do while 
+5.forEach  - callback - index
+
+Others Methods 
+1.map - Nooriginal - callback - index -return 
+2.filter - Nooriginal - callback - index - return
+3.reduce  - Nooriginal - callback - return
+4.find  - Nooriginal -  callback - index - return
+5.findIndex - Nooriginal - callback -index - return
+6.findLast  - Nooriginal - callback - index - return
+7.findLastIndex - Nooriginal - callback - index - return
+8.some - Nooriginal - callback - index - return boolean
+9.every - Nooriginal - callback - index - return boolean
+10.fill - original - Nocallback - index - length(slice) - return
+11.copywithin - original - Nocallback - index - length(slice) - return
+========================================== 
+Total:31
+=======================================
+Data structure:
+1.Array - order important - key is constant
+2.Object - no order - key is constant - unique - you need to give key
+=============================================
+Datatype:
+1.number
+2.string 
+3.boolean 
+4.undefined 
+Non-primitive:
+1.Array 
+2.object 
+3.null
+
+
+
+
