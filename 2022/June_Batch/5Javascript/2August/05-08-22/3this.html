@@ -1,0 +1,18 @@
+<script>
+    var employee={
+        fullName:"salman",
+        age:44,
+        location:"bangalore",
+        display(){
+            console.log(this);
+            return this.fullName;
+        },
+        addition(a,b){
+            this.result = a+b;
+            return a+b;
+        }
+    }
+    console.log(employee.display());
+    console.log(employee.addition(22,33));
+    console.log(employee);
+</script>

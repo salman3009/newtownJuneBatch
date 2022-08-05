@@ -1,0 +1,48 @@
+<!-- <script>
+    var result = Math.random();
+    console.log(result);
+</script> -->
+
+<!-- <script>
+    var result = Math.round(((Math.random()*10)));
+    console.log(result);
+</script> -->
+
+<!-- <script>
+    
+    var flag = true;
+
+    function dice(){
+    var result = Math.round(Math.random()*10);
+     return result;
+    }
+
+    while(flag){
+         var result = dice();
+         if(result>=1 && result <=6){
+             console.log("dice value",result);
+             flag = false;
+         }
+    }
+
+</script> -->
+
+
+<script>
+    
+    var count = 0;
+
+    function dice(){
+    var result = Math.round(Math.random()*10);
+     return result;
+    }
+
+    while(count<6){
+         var result = dice();
+         if(result>=1 && result <=6){
+             console.log("dice value",result);
+             count++;
+         }
+    }
+
+</script>

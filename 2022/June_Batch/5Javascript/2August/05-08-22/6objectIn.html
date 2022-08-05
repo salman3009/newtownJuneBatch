@@ -1,0 +1,16 @@
+<script>
+    var employee={
+        fullName:"akash",
+        age:22,
+        location:"bangalore"
+    };
+    console.log(employee.fullName);
+    console.log(employee['fullName']);
+
+    for(var obj in employee){
+        console.log(obj);
+        //only key
+        console.log(employee[obj]);
+        //only value 
+    }
+</script>

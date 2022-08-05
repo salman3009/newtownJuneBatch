@@ -1,0 +1,21 @@
+<script>
+    var employee={
+        fullName:"salman",
+        age:44,
+        location:"bangalore",
+        display(){
+            console.log(this);
+            return this.fullName;
+        },
+        addition(a,b){
+            this.result = a+b;
+            return a+b;
+        }
+    }
+    var key = Object.keys(employee);
+    console.log(key);
+    var val = Object.values(employee);
+    console.log(val);
+    var entries = Object.entries(employee);
+    console.log(entries);
+</script>
