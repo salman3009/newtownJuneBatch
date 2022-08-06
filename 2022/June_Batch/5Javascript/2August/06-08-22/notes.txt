@@ -1,0 +1,37 @@
+Date:
+//To display the date in javascript 
+//YOu can display only year 
+//You can display only month 
+//You can display only hours,minutes,seconds
+//you can combine together
+//you can set the value 
+//Date one type of inbuild object in javascript 
+==============================================
+Universal Time coodinate - GMT or UTC 
+World standard time - UTC 
+Local time - IST 
+UTC + 5.30 ---> IST
+==================================
+Javascript will use date depends upon your local system time zone.
+=========================================
+1Hour - 60 minutes 
+1minute - 60 seconds
+1seconds - 1000 milliseconds
+========================================
+DOM - Document Object Model
+//Tree Data structure.
+//Javascript need to talk with html
+//already inbuild methods is attached to DOM by using document object 
+//By using this DOM we can read the html from javascript(tag,attributes,content)
+//By using this DOM we can delete the html tag 
+//By using this DOM we can add new element to html tag.
+//By using this DOM we can update the element to html.
+//By using this DOM we can update the css and we can delete as well.
+CRUD - create,read,update,delete.
+Tree Structure will be generated in the browser after loading the html.
+===========================================
+
+
+
+
+
