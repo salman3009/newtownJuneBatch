@@ -1,0 +1,31 @@
+Problem Statement
+Given a string, convert it to a list containing all of its elements only once without any repetition, even if there is repetition in the string.
+
+hint - you might use sets for this.
+
+//https://my.newtonschool.co/playground/code/10ldf67qo1fx/
+<script>
+let n = "aabbbcc";
+let list=[];
+function Main(n){
+   for(let i=0;i<n.length;i++){
+       check(n[i]);
+   }
+}
+
+function check(input){
+    let flag = false;
+    for(let i=0;i<list.length;i++){
+      if(list[i]==input){
+          flag = true;
+          break;
+      }
+    }
+    if(!flag){
+        list.push(input);
+    }
+}
+
+Main(n);
+console.log(list);
+</script>

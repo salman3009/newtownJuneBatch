@@ -1,0 +1,23 @@
+<script>
+    function Main(input){
+        debugger;
+    let list =[];
+    for(let i=0;i<input.length;i++){
+              let flag = false;
+        for(let j=0;j<list.length;j++){
+             if(list[j]==input[i]){
+                 flag = true;
+                 break;
+             }
+        }
+        if(!flag){
+            list.push(input[i]);
+        }
+    }
+    return list;
+    }
+
+    Main('abbccc');
+
+
+</script>

@@ -1,0 +1,85 @@
+<!-- <script>
+    if(1 && 1){
+        alert("1 && 1");
+    }
+    if(1 && 0){
+        alert("1 && 0");
+    }
+    if(0 && 0){
+        alert("0 && 0");
+    }
+</script> -->
+
+
+<!-- <script>
+    debugger;
+     let input = 432;
+     let sum =0;
+     while(input){
+         sum+=input%10;
+         input = parseInt(input/10);
+     }
+     console.log(sum);
+</script> -->
+
+
+<!-- <script>
+  function check(n){
+      if(n<10){
+          return 1;
+      }
+      else {
+          return 0;
+      }
+  }
+
+  let i=1;
+  let n=7;
+  //7-1 = 6
+  //7+1 = 8
+  while(check(n-i) && check(n+i)){
+      //1 && 1
+      i++;
+  }
+</script> -->
+
+
+
+
+<script>
+
+   function check(input){
+       let s = 0;
+       let p = 0;
+       while(input){
+           if(input%10 == 7){
+               s = 1;
+           }
+           if(input%10 == 9){
+               p =1;
+           }
+           input = parseInt(input/10);
+       }
+       if(s && p){
+           return 0;
+       }
+       else {
+           return 1;
+       }
+   }
+
+
+    function MagicNumber(n){
+        debugger;
+        let i=0;
+        while(check(n-i) && check(n+i)){
+            i++;
+        }
+        if(check(n-i)==0){
+            return n-i;
+        }else{
+            return n+i;
+        }
+    }
+    console.log(MagicNumber(80));
+</script>

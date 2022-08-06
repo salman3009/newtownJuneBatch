@@ -1,0 +1,23 @@
+<script>
+//Removing the duplicates value from the string 
+let input = "abbbcccc";
+let list=[];
+for(let i=0;i<input.length;i++){
+         check(input[i]);
+}
+
+function check(n){
+    let flag = false;
+    for(let i=0;i<list.length;i++){
+       if(list[i]==n){
+           flag = true;
+           break;
+       }
+    }
+    if(!flag){
+        list.push(n);
+    }
+
+}
+console.log(list);
+</script>

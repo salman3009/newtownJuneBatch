@@ -1,0 +1,74 @@
+Problem Statement
+A magic number is a natural number that contains both the digits 7 and 9 in it. For eg:- 79, 879, 53729 etc.
+Given a number N, your task is to find the closest Magic number from the given number N.
+
+Note:- If more than one answer exists return the minimum one
+
+https://my.newtonschool.co/playground/code/f0sm7n7ovb77/
+//Logic 1:
+<!-- <script>
+    debugger;
+let n = 534;
+let sum =0;
+while(n){
+    sum+= n%10;;
+    n=parseInt(n/=10);
+}
+console.log(sum);
+</script> -->
+
+<!-- //Logic 2:
+<script>
+// 6 & 8 
+// 5 & 9
+// 4 & 10
+let n = 7;
+let i=0;
+while(check(n-i) && check(n+i)){
+i++;
+}
+function check(n){
+    if(n<10){
+        return 1;
+    }
+    else {
+        return 0;
+    }
+
+}  
+</script> -->
+
+
+
+<script>
+function check(n){
+debugger;
+let s=0;
+let p=0;
+while(n){
+if(n%10==7){s=1;}
+if(n%10==9){p=1;}
+n/=10;
+n=parseInt(n);
+}
+if(s && p){return 0;}
+return 1;
+}
+
+function MagicNumber(n){
+let i=0;
+console.log("magicNumber");
+while(check(n-i) && check(n+i)){
+i++;
+}
+
+if(check(n-i)==0){
+    return n-i;
+}
+else{
+return n+i;
+}
+}
+
+console.log(MagicNumber(79))
+</script>

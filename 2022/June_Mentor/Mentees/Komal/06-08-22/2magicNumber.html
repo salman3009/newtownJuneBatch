@@ -1,0 +1,80 @@
+<script>
+    //https://my.newtonschool.co/playground/code/f0sm7n7ovb77/
+//22323879 --> 7 and 9
+</script>
+
+<!-- <script>
+    debugger;
+    let input = 731;
+    let sum = 0;
+    while(input){
+      sum+= input%10;
+      input = parseInt(input/10);
+    }
+    console.log(sum);
+    if(1 && 1){
+        alert("inside");
+    }
+    if(1 && 0){
+        alert("it will not go");
+    }
+    if(0 && 0){
+        alert("no");
+    }
+</script> -->
+
+
+<!-- <script>
+    let i=0;
+    let n = 7;
+    //7-1 = 6
+    //7+1 = 8
+    while(check(n-i) && check (n+i)){
+          //1 && 1  - true
+          //1 && 1 - true
+          //1 && 0 - false
+        i++;
+    }
+
+    function check(n){
+        if(n<10){
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+</script> -->
+
+
+<script>
+    function check(n){
+    debugger;
+    let s=0;
+    let p=0;
+    while(n){
+    if(n%10==7){s=1;}
+    if(n%10==9){p=1;}
+    n/=10;
+    n=parseInt(n);
+    }
+    if(s && p){return 0;}
+    return 1;
+    }
+    
+    function MagicNumber(n){
+    let i=0;
+    console.log("magicNumber");
+    while(check(n-i) && check(n+i)){
+    i++;
+    }
+    if(check(n-i)==0){
+        return n-i;
+    }
+    else{
+    return n+i;
+    }
+    }
+    
+    console.log(MagicNumber(79))
+    </script>
