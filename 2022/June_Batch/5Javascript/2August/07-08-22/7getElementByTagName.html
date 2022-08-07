@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="heading">Welcome to programming</div>
+        <div>Welcome to html</div>
+        <div class="heading">Welcome to css</div>
+        <div>Welcome to javascript
+        </div>
+    </body>
+    <script>
+        var list = document.getElementsByTagName('div');
+        //[div,div]
+        //div is object 
+        //dis is object so that we have innerHTML is a propery inside every object when we access document object
+        //it will return html collection 
+        //html collection similar to array will loop and length property will work
+        //push ,pop ,shift and other method will not work
+        // console.log(list);
+        // console.log(list.length);
+        for(var obj of list){
+            // console.log(obj);
+            console.log(obj.innerHTML);
+        }
+    </script>
+</html>

@@ -1,0 +1,19 @@
+Elements: p,h1,a,img,li,nav 
+Attributes: id,name,class,readonly,disable.
+Style and Class : css
+Events:click,change,mouse..
+====================================
+Types of DOM Selectors:
+//Use to access existing element.
+1.getElementById:
+//it will access the element using id attribute.
+//innerHTML property will help you to add dynmic content inside the html.
+style attribute:
+//you can attach css properties
+//inside this propery hypen is not allowed. Instead we need to add capital letter after hyphen and remove the hyphen symbol.
+======================================
+1.we can add the content 
+2.we can set the attribute dynamically.example src 
+3.we can write the inline style dynamically example  style.color 
+4.we can write css class dynamically using classList.add()
+=========================================

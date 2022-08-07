@@ -1,0 +1,20 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+       <img id="demo">
+       <div id="list"></div>
+    </body>
+    <script>
+        var list = document.getElementById("demo");
+        console.log(list);
+        if(list){
+        list.src = 'download.png';
+        //dynamically we can add the content;
+        }
+        
+        var content = document.getElementById("list");
+        content.innerHTML = "image";
+    </script>
+</html>
