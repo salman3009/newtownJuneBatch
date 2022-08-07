@@ -1,0 +1,21 @@
+<script>
+    function removingDuplicate(Input){
+        debugger;
+    var list =[];
+    for(var i=0;i<Input.length;i++){
+           var flag = false;
+        for(var j=0;j<list.length;j++){
+            if(list[j]===Input[i]){
+                flag = true;
+                break;
+            }
+        }
+        if(!flag){
+            list.push(Input[i]);
+        }
+    }
+    return list;
+    }
+    console.log(removingDuplicate("aabbbbccc"));
+
+</script>
