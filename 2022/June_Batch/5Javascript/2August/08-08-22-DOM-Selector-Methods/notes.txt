@@ -1,0 +1,3 @@
+//Array
+//getElementByClassName,getElementByTagName,querySelectorAll --> html collection
+//similar like array but only length and loop will work.

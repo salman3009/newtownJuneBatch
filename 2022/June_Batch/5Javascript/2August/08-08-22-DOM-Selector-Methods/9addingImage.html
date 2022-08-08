@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+
+            *{
+                box-sizing: border-box;
+            }
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content:center;
+            }
+
+            .box{
+                padding-top:25px;
+                width: 200px;
+                margin:5px;
+                display: block;
+                height:100px;
+                text-align: center;
+                border: 1px solid grey;
+                border-radius: 5px;
+            }
+
+    
+
+        </style>
+
+    </head>
+    <body>
+        <div id="contain" class="container">
+            
+        </div>
+        <script>
+            function display(){
+             
+                for(var i=0;i<10;i++){
+                    var parent = document.createElement('img');
+                    parent.src='download.png';
+                    parent.classList.add('box');
+                    var global = document.getElementById('contain');
+                    global.appendChild(parent);
+
+                }
+             
+            }
+
+            display();
+            
+
+        </script>
+    </body>
+</html>

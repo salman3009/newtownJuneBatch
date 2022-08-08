@@ -1,0 +1,35 @@
+<script>
+// https://my.newtonschool.co/playground/code/2hsfqo5bu8dw/
+
+// Problem Statement
+// An array of 5 string is given where each string contains 2 characters, Now you have to sort these strings, like in a dictionary.
+
+// Input
+function easySorting(arr)
+  {
+    debugger;
+    for(let i = 1; i < 5; i++)
+    {
+        let str = arr[i];
+        let j = i-1;
+        while(j >= 0 && (arr[j].toString().localeCompare(str)) > 0 )
+        {
+          arr[j+1] = arr[j];
+          j--;
+        }
+        arr[j+1] = str;
+    }
+    return arr;
+  }
+  console.log(easySorting(["AS","KF","ER","DD"," JK"]));
+</script>
+
+<script>
+// -1 if sorted before
+//  1 if sorted after
+//  0 if equal
+    let text1 = "cd";
+    let text2 = "ab";
+    let result = text1.localeCompare(text2);
+    console.log(result);
+</script>

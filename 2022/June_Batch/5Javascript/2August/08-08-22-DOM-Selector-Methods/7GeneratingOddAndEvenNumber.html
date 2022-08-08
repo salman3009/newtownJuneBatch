@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content:center;
+            }
+
+            .box{
+                width: 50px;
+                margin:2px;
+                height:30px;
+                color:white;
+                text-align: center;
+            }
+
+            .even{
+                background-color: yellow;
+            }
+
+            .odd{
+                background-color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="global" class="container">
+            
+        </div>
+        <script>
+            function display(){
+                for(var i=1;i<500;i++){
+                    var parent = document.createElement('div');
+                    var child = document.createTextNode(i);
+                    parent.appendChild(child);
+                    parent.classList.add('box');
+                    if(i%2==0){
+                        parent.classList.add('even');
+                    }
+                    else{
+                        parent.classList.add('odd');
+                    }
+                    var global = document.getElementById('global');
+                    global.appendChild(parent);
+
+                }
+             
+            }
+
+            display();
+            
+
+        </script>
+    </body>
+</html>
