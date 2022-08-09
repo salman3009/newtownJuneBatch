@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+            <form>
+                fullName:<input type="text" id="fullName" onselect="onSelectHandler(event)" onblur="onblurHandler(event)" onfocus="onfocusHandler(event)"/>
+                <br/>
+                <br/>
+                lastName:<input type="text" id="lastName" onselect="onSelectHandler(event)" onblur="onblurHandler(event)" onfocus="onfocusHandler(event)"/>
+                <br/>
+                <br/>
+                <button>Submit</button>
+            </form>
+            <script>
+                function onSelectHandler(event){
+                    var list = document.getElementById(event.target.id);
+                     list.style.backgroundColor = "grey";
+                }
+                function onfocusHandler(event){
+                     var list = document.getElementById(event.target.id);
+                     list.style.border = "7px solid green";
+                }
+                function onblurHandler(event){
+                    var list = document.getElementById(event.target.id);
+                     list.style.border = "1px solid black";
+                }
+            </script>
+      
+    </body>
+</html>

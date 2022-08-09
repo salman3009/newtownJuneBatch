@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .left-box {
+            width: 500px;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        .inner-box-container {
+           
+            display: flex;
+
+            width: 200px;
+            margin: auto;
+            margin-top: 63px;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .right-box-container {
+            border: 1px solid black;
+            display: flex;
+            margin: 45px;
+            width: 200px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box {
+            display: block;
+            width: 200px;
+            margin: 20px;
+        }
+
+        .box-result {
+            display: block;
+        }
+
+        .calculator-button {
+            width: 800px;
+            margin: auto;
+            height: 200px;
+
+        }
+
+        .box-result-display {
+            width: 200px;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-box">
+            <div class="inner-box-container">
+                <button  id="inputOne" class="box-result-display"></button>
+                <button id="symbol" class="box-result-display"></button>
+                <button  id="inputTwo" class="box-result-display"></button>
+                <button  id="result" class="box-result-display"></button>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="right-box-container">
+                <button  id="add" onclick="onSubmitHandler(event)" class="box-result">ADD</button>
+                <button id="subtract" onclick="onSubmitHandler(event)" class="box-result">SUBTRACT</button>
+                <button id="multi" onclick="onSubmitHandler(event)" class="box-result">MULTIPLICATION</button>
+                <button id="division" onclick="onSubmitHandler(event)" class="box-result">DIVISION</button>
+              
+            </div>
+
+        </div>
+    </div>
+    <div class="calculater-container">
+        <div class="calculator-button">
+            <table>
+                <tr>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="1" class="box">1</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="2" class="box">2</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="3" class="box">3</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="4" class="box">4</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)"  id="5" class="box">5</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="6" class="box">6</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="7" class="box">7</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="8" class="box">8</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="9" class="box">9</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="0" class="box">0</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="01" class="box">0</button>
+                    </td>
+                    <td>
+                        <button onclick="onButtonHandler(event)" id="02" class="box">0</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+<script>
+    function onButtonHandler(event){
+       debugger;
+        var inputOne = document.getElementById('inputOne');
+        var inputTwo = document.getElementById('inputTwo');
+        if(!inputOne.innerHTML){
+          inputOne.innerHTML = event.target.id;
+        }
+        else if(!inputTwo.innerHTML){
+            inputTwo.innerHTML = event.target.id;
+        }
+
+    }
+
+    function onSubmitHandler(event){
+        debugger;
+        var list = document.getElementById('symbol');
+        var inputOne = document.getElementById('inputOne').innerHTML;
+        var inputTwo = document.getElementById('inputTwo').innerHTML;
+        var result = document.getElementById('result');
+
+        inputOne = parseInt(inputOne)?parseInt(inputOne):0;
+        inputTwo = parseInt(inputTwo)?parseInt(inputTwo):0;
+
+        if(event.target.id == "add"){
+          list.innerHTML = "+";
+          result.innerHTML = inputOne + inputTwo;
+        }
+        else if(event.target.id =="subtract"){
+            list.innerHTML = "-";
+            result.innerHTML = inputOne - inputTwo;
+        }
+        else if(event.target.id =="multi"){
+            list.innerHTML = "*";
+            result.innerHTML = inputOne * inputTwo;
+        }
+        else if(event.target.id == "division"){
+            list.innerHTML = "/";
+            result.innerHTML = inputOne / inputTwo;
+        }
+    }
+    </script>
+</body>
+
+</html>

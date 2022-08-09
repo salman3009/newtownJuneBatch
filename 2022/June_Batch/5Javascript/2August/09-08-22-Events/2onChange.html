@@ -1,0 +1,50 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            FullName:<input type="text"  name="fullName" onchange="onChangeHandler(event)"/>
+            <br/>
+            <br/>
+            lastName:<input type="text" name="lastName" onchange="onChangeHandler(event)"/>
+            <br/>
+            <br/>
+            <button>Submit</button>
+        </form>
+        <table>
+            <tr>
+                <td>
+                    FullName
+                </td>
+                <td id="full">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   lastName
+                </td>
+                <td id="last">
+
+                </td>
+            </tr>
+
+        </table>
+        <script>
+            function onChangeHandler(event){
+                console.log(event);
+                console.log(event.target.name);
+                console.log(event.target.value);
+                if(event.target.name == "fullName"){
+                    var list = document.getElementById("full");
+                    list.innerHTML = event.target.value;
+                }
+                else if(event.target.name == "lastName"){
+                    var listLast = document.getElementById("last");
+                    listLast.innerHTML = event.target.value;
+                }
+            }
+        </script>
+    </body>
+</html>

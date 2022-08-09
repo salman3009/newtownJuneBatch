@@ -1,0 +1,8 @@
+Two types of event:
+1.onblur - whenever you leave that particular text box it will trigger an event
+2.onchange - whenever you type something that if you leave it will trigger.
+//realtime will use the above event.
+Event Object
+//any events in javascript we have event object default provided by javascript.
+3.onfocus - once you keep your cursor in the text box this event will be called.
+4.onselect - once you select the element it will trigger an event.

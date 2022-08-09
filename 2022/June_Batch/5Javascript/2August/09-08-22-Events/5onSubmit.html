@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form onsubmit="onSubmitHandler(event)">
+            <input type="text" id="fullName" name="registerFullName"/>
+            <br/>
+            <br/>
+            <input type="text" id="lastName" name="registerLastName"/>
+            <br/>
+            <br/>
+            <input type="submit" value="submit">
+        </form>
+        <script>
+            function onSubmitHandler(event){
+                event.preventDefault();
+                var list = document.forms[0];
+                console.log(list.length);
+                for(var i=0;i<list.length;i++){
+                    console.log(list.elements[i].value,list.elements[i].name);
+                }
+                alert("submit");
+            }
+        </script>
+    </body>
+</html>
