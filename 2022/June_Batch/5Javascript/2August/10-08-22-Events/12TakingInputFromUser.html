@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+      
+           InputONe <input type="text" name="inputOne" onchange="onclickHandler(event)">
+         <div id="demo">
+
+         </div>
+        <script>
+            function onclickHandler(event){
+                var commonName = event.target.value;
+                var list = document.getElementById("demo");
+                list.innerHTML = commonName.toUpperCase();
+                list.style.backgroundColor = commonName;
+                list.style.margin = "20px";
+                list.style.border = "2px solid black";
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+Event:
+//any user actions either keyboard press on mouse action event will get trigger so that we can call the function for DOM manipulation
+1.onblur - input
+2.onchange - input 
+3.onsubmit - form
+4.onreset - form 
+5.onclick - anywhere
+6.onfocus - input
+7.onselect  - input
+8.onkeyup - input
+9.onkeydown input
+10.onkeypress - input
+11.onmouseover - anywhere
+12.onmouseout - anywhere
+13.onmouseup - anywhere
+14.onmousedown - anywhere
+15.ondblclick - anywhere
+16.onload  - body
+17.onerror - anywhere 
+//all event will return event object
+===============================================
+Event Listener:
+//We are going to attach event to some of the element.
+//whenever we target that particular element event listener will capture it and it will trigger a callback function.
+==================================================
+first class function
+//passing function as parameter is called first class function 
+//Inside the event listener we have two parameters first is event name and second one you can pass function as parameter so whenever it onvoke the particular event the function parameter will call the actual function.
+//please don't pass parenthesis for function parameter otherwise it will onvoke immediately
+======================================
+1.how to take input from user?
+2.how to write change and click event?
+3.how to apply css class or style dynmically?
+4.how create element and attach to parent div dynmically.
+5.event object and how to access value,id,name and prevent default 
+==================================================
+
+

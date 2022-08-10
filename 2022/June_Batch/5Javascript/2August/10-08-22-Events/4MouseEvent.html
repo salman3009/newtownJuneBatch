@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            .heading{
+                width: 200px;
+                height: 100px;
+                border:1px solid black;
+            }
+            .box{
+                margin-top:20px;
+                display: inline-block;
+                width: 100px;
+                height: 40px;
+                border: 1px solid black;
+            }
+            .box-green{
+                background-color: green;
+            }
+            .box-yellow{
+                background-color: yellow;
+            }
+            .box-orange{
+                background-color: orange;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="heading" id="demo" onmouseover="onmouseoverHandler(event)" onmouseout="onmouseOutHandler(event)">
+
+        </div>
+        <div class="box box-green" id="green" onmousedown="onmousedownHandler(event)">
+
+        </div>
+        <div class="box box-yellow" id="yellow" onmousedown="onmousedownHandler(event)">
+
+        </div>
+        <div class="box box-orange" id="orange" onmousedown="onmousedownHandler(event)">
+
+        </div>
+    </body>
+    <script>
+        var commonColor = "black";
+        function onmouseoverHandler(event){
+            var list = document.getElementById(event.target.id);
+            list.style.backgroundColor = commonColor;
+        }
+        function onmouseOutHandler(event){
+            var list = document.getElementById(event.target.id);
+            list.style.backgroundColor = "white";
+        }
+        function onmousedownHandler(event){
+          console.log(event.target.id);
+          commonColor = event.target.id;
+        }
+    </script>
+</html>

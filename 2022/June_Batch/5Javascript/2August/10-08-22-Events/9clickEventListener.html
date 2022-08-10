@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="red">
+            Indian Bank is a major nationalised bank. It is under the ownership of the Ministry of Finance, Government of India. It was established in 1907 and is headquartered in Chennai, India. Wikipedia
+        </p>
+        <p id="blue">
+            Indian Bank is a major nationalised bank. It is under the ownership of the Ministry of Finance, Government of India. It was established in 1907 and is headquartered in Chennai, India. Wikipedia
+        </p>
+        <p id="green">
+            Indian Bank is a major nationalised bank. It is under the ownership of the Ministry of Finance, Government of India. It was established in 1907 and is headquartered in Chennai, India. Wikipedia
+        </p>
+    </body>
+    <script>
+        document.getElementById("red").addEventListener("click",function(event){
+            var list = document.getElementById(event.target.id);
+            list.style.backgroundColor = event.target.id;
+        });
+        document.getElementById("blue").addEventListener("dblclick",function(event){
+            var list = document.getElementById(event.target.id);
+            list.style.backgroundColor = event.target.id;
+        });
+        document.getElementById("green").addEventListener("mouseover",function(event){
+            var list = document.getElementById(event.target.id);
+            list.style.backgroundColor = event.target.id;
+        });
+    </script>
+</html>
