@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            #demo{
+                width: 300px;
+                height:200px;
+                border:2px solid black;
+            }
+            button{
+                margin-top:50px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="demo">
+
+        </div>
+        <button id="mouseover" onclick="onRemoveHandler(event)">Remove MouseOver</button>
+        <button id="mouseout" onclick="onRemoveHandler(event)">Remove MouseOut</button>
+        <button id="mousedown" onclick="onRemoveHandler(event)">Remove MouseDown</button>
+        <script>
+            var list = document.getElementById("demo");
+            list.addEventListener('mouseover',mouseoverHandler);
+            list.addEventListener('mouseout',mouseoutHandler);
+            list.addEventListener('mousedown',mousedownHandler);
+
+            function mouseoverHandler(){
+                list.style.backgroundColor = "red";
+            }
+            function mouseoutHandler(){
+                list.style.backgroundColor = "green";
+            }
+            function mousedownHandler(){
+                list.style.backgroundColor = "yellow";
+            }
+            function onRemoveHandler(event){
+                var eventName = event.target.id;
+                var list = document.getElementById("demo");
+                 if(eventName == "mousedown"){
+                    list.removeEventListener(eventName,mousedownHandler);
+                 }
+                 else if(eventName == "mouseout"){
+                    list.removeEventListener(eventName,mouseoutHandler);
+                 }
+                 else{
+                    list.removeEventListener(eventName,mouseoverHandler);
+                 }
+                 list.style.backgroundColor = 'white';
+            }
+        </script>
+    </body>
+</html>

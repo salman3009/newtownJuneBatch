@@ -1,0 +1,25 @@
+Global Scope:
+//any variable that is declare outside the function is called global scope
+//This variable we can access in any function.
+ 
+function scope:
+//any variable is declare inside the function is called funciton scope. 
+//we can use that variable only inside that particular function.
+==========================================
+eventListener:
+1.whatever event we have used everything will work on eventListener. Instead on onclick we need to use click.
+(please remove "on" keyword).
+
+first class function:
+//passing function name as parameter.
+===========================================
+Event Bubbling:
+//user action in the browser is called event.
+//One Event is getting called to another event in sequence of child to parent tree.
+//Normally in javascript whenever you use event inside the nested element event bubbling will happen default.
+//To avoid this problem you can pass event object and call the stopPropagation() method to stop further calling of event.
+//This problem occurs in click event handler.
+================================================
+
+
+

@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <style>
+        .header {
+            margin: auto;
+            width: 35%;
+            margin-top: 30px;
+        }
+
+        .header input {
+            width: 300px;
+            height: 35px;
+            border-radius: 8px;
+            border: 2px solid green;
+        }
+
+        .header button {
+            border: 0;
+            width: 151px;
+            height: 36px;
+            color: white;
+            background-color: green;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .container{
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+        .box{
+            width: 75px;
+            height: 40px;
+            background-color:green;
+            margin:10px;
+            color:white;
+            font-size:20px;
+            text-align: center;
+            padding-top:10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <input type="text" id="prime" name="primeNumber" /> <button onclick="generatePrime()">Generate</button>
+    </div>
+
+    <div id="demo" class="container">
+    </div>
+
+    <script>
+function generatePrime(){
+    debugger;
+    var list = document.getElementById("prime").value;
+    list = parseInt(list)?parseInt(list):false;
+    if(list && primeNumber(list)){
+        var contain = document.getElementById("demo");
+        var parent = document.createElement("div");
+        var child = document.createTextNode(list);
+        parent.appendChild(child);
+        parent.classList.add('box');
+        contain.appendChild(parent);
+    }
+    else{
+        alert("please provide proper number");
+    }
+}
+
+function primeNumber(input) {
+            for (var i = 2; i < input; i++) {
+                if (input % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(primeNumber(7));
+    </script>
+</body>
+
+</html>

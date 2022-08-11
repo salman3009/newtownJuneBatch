@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            .box-one{
+                width: 500px;
+                height: 500px;
+                border:5px solid red;
+            }
+            .box-two{
+                width: 250px;
+                height: 250px;
+                border:5px solid green;
+            }
+            .box-three{
+                width: 125px;
+                height:125px;
+                border:5px solid yellow;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div onclick="boxfourHandler()">Box four</div>
+        <br/>
+        <br/>
+        <div onclick="boxOneHandler(event)" class="box-one">
+            box one 
+            <div onclick="boxTwoHandler(event)" class="box-two">
+                box two
+                <div onclick="boxThreeHandler(event)" class="box-three">
+                         box three
+                </div>
+            </div>
+        </div>
+        <script>
+            function boxOneHandler(event){
+                event.stopPropagation();
+                  alert("box one is clicked");
+            }
+            function boxTwoHandler(event){
+                event.stopPropagation();
+                alert("box two is clicked");
+            }
+            function boxThreeHandler(event){
+                event.stopPropagation();
+                alert("box three is clicked");
+            }
+            function boxfourHandler(){
+                alert("box four is clicked");
+            }
+        </script>
+    </body>
+</html>
