@@ -1,0 +1,23 @@
+<script>
+      function evenAndOdd(arr,size){
+          debugger;
+          let even =[];
+          let odd=[];
+          for(let i=0;i<size;i++){
+              if(arr[i]%2==0){
+                  even.push(arr[i]);
+              }
+              else{
+                  odd.push(arr[i]);
+              }
+          }
+           odd.sort(function(a,b){
+              return b-a;
+           });
+           even.sort(function(a,b){
+               return a-b; 
+           })
+           return odd.concat(even);
+      }
+      evenAndOdd([1,2,3,5,4,7,10],7)
+</script>

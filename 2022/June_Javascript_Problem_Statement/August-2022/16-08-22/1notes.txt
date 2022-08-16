@@ -1,0 +1,33 @@
+1.['AS','KF','ER','DD','JK']
+Output:['AS','DD','EK','Jk','kF'];
+
+//please try to convert into array
+//solve the problem
+//string into array
+//number into array 
+//boolean into array 
+//array into string 
+//array into number 
+//array into boolean 
+
+1.Array - solution 
+2.sort() 
+
+
+=====================================
+https://my.newtonschool.co/playground/code/zllfbgj70hlf/
+1.input - []
+first part - odd number - descending order 
+second part - event number - ascending order 
+finall - first odd ,second even 
+
+
+
+
+
+
+
+
+
+
+

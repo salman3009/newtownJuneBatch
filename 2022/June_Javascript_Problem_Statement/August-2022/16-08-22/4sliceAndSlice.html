@@ -1,0 +1,18 @@
+<script>
+    let input =[33,44,55,22,11];
+    //pop to remove the value at the end position - original
+    //shift to remove the value from the front position - original
+    //slice and splice method
+    // let output = input.slice(1,3);
+    // let output = [...input.slice(1,2),...input.slice(3,4)];
+    // console.log("original array",input);
+    // console.log("result array",output); 
+    //slice is not changing the original array.
+
+    let output = input.splice(1,3);
+    console.log("result",output);
+    console.log("original array",input);
+    //splice will change the original array 
+    //slice two argument  - index - length from one
+    //splice two argument  - index - total number of values you want to delete
+</script>

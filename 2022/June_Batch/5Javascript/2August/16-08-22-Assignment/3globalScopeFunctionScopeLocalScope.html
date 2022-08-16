@@ -1,0 +1,23 @@
+<script>
+    let age = 33;
+    //global variable
+
+    console.log(age);
+    function addition(){
+        let result = 34;
+        //function scope
+        console.log(result);
+          console.log(age);
+          {
+              console.log(result);
+          }
+    }
+
+
+    {
+        let local = "harry";
+        //local scope;
+        console.log(age);
+
+    }
+</script>

@@ -1,0 +1,21 @@
+<script>
+    function PrimeNumber(N){
+
+        let count = 0;
+        for(let i=2;i<=N;i++){
+            let flag = false;
+
+            for(let j=2;j<=i/2;j++){
+                if(i%j==0){
+                    flag = true;
+                }
+            }
+            if(!flag){
+                count++;
+            }
+        }
+
+        return count;
+    }
+    console.log(PrimeNumber(10));
+</script>

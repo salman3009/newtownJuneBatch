@@ -1,0 +1,25 @@
+<script>
+    function oddAndEven(arr,length){
+      let oddNumberArray=[];
+      let evenNumberArray =[];
+      for(let i=0;i<arr.length;i++){
+          if(arr[i]%2==0){
+             evenNumberArray.push(arr[i]); 
+          }
+          else{
+              oddNumberArray.push(arr[i]);
+          }
+      }
+      oddNumberArray.sort((a,b)=>{
+          return b-a;
+      });
+      evenNumberArray.sort((a,b)=>{
+          return a-b;
+      });
+      console.log("even number",evenNumberArray);
+      console.log("odd number",oddNumberArray);
+      return [...oddNumberArray,...evenNumberArray];
+
+    }
+  console.log(oddAndEven([1,2,3,5,4,7,10],7));
+</script>

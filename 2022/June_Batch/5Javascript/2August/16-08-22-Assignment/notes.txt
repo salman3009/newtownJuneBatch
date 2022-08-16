@@ -1,0 +1,66 @@
+1.https://my.newtonschool.co/playground/code/mt5y9hjmgllt/
+compound interest:
+Formula: 
+//CI = p[(1+r/100)^n-1]
+p = P
+r = R 
+n = T
+Solution:
+1.Math.pow 
+2.toFixed()
+==================================
+any problem statement you can use let keyword 
+=================================================
+Problem statement:
+1.using formula --Math inbuilt methods 
+2.string, array ,number --> convert into array.
+['AS','KF','ER','DD','JK']
+Output:
+['AS','DD','ER','JK','KF']
+//Sorting
+==========================================
+Prime Number:
+https://my.newtonschool.co/playground/code/bfjy1iqa4upo/
+input: 
+===========================================
+Even - odd Sorting algorithm:
+https://my.newtonschool.co/playground/code/zllfbgj70hlf/
+input:[1,2,3,5,4,7,10]
+first part ---> odd number - descending order 
+second part ---> even number -- ascending order 
+1.odd number -[1,3,5,7]--->[7,5,3,1]
+2.even number -[2,4,10]--->[2,4,10]
+[7,5,3,1,2,4,10]
+==================================
+Regular expression:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        Principal:<input type="number"  id="principal"/>
+        <br/>
+        <br/>
+        Tenure:<input type="number" id="tenure"/>
+        <br/>
+        <br/>
+        Rate:<input type="number" id="rate"/>
+        <br/>
+        <br/>
+        <button onClick="calculateCI()">Submit</button>
+        <br/>
+        <br/>
+        <div id="demo">
+
+        </div>
+        <script>
+            ////CI = p[(1+r/100)^n-1]
+            function calculateCI()
+           {
+               debugger;
+            var P = parseInt(document.getElementById('principal').value);
+            var R = parseInt(document.getElementById('rate').value);
+            var T = parseInt(document.getElementById('tenure').value);
+            var result = (P*(Math.pow((1+R/100),T))-1);
+            document.getElementById("demo").innerHTML = result.toFixed(2);
+         
+        }
+
+        var decimal = 23232323.23232323;
+            decimal = decimal.toFixed(2);
+            console.log(decimal);
+    
+           </script>
+    </body>
+</html>
+
+
