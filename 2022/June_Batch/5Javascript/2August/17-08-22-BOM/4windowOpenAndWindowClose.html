@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onClick="onOpenHandler()">Open the flipkart</button>
+        <button onClick="onCloseHandler()">close the flipkart</button>
+
+        <script>
+            let input;
+            function onOpenHandler(){
+               input = window.open('https://www.flipkart.com','_blank','width=400px,height=200px,left=350px,top=200px');
+            }
+            function onCloseHandler(){
+                  input.close();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+DOM - Document Object Model
+BOM - Browser Object Model 
+first object - window 
+document - window.document 
+====================================
+Window object is global object.
+//This is the first object that is available inside the browser window.
+//Inside the window object we have document object.
+======================================= 
+var keyword will attach the variable to global object.
+========================================
+BOM - 
+innerWidth,innerHeight,open,close,resizeBy,moveTo
+Alert
+confirm 
+prompt 
+         window 
+		        1.document  - DOM
+				2.innerwidth,innerHeight - BOM 
+				3.alert,confirm,prompt - BOM 
+
+=================================================
+
+ 

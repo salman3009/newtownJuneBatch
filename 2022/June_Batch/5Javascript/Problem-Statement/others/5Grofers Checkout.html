@@ -1,0 +1,69 @@
+<script>
+//https://my.newtonschool.co/playground/markup/j6yvun0rqwq5/
+
+//     You are given a Grocery list in a HTML table. You want to find the total price by calculating the sum of prices of individual items listed in the table. Write the sum logic in such a way that it works for given prices and also if the values are changed in the table. Show the total price by adding new row to the table with single cell that has the total price.
+
+// Implementation Hint:
+
+// You can choose to use Element.querySelectorAll() to get the prices from the HTML table.
+
+// Once you get the numbers, you can add them to get the total price.
+
+// You can choose to use Document.createElement() to create the last row of the table that shows the total value.
+
+
+
+
+// Make sure that you give the following data attributes and values to the elements. They are used to identify the elements when test cases are run.
+
+// data-ns-test="prices" for element that stores the price of each item in the list
+// data-ns-test="grandTotal" for the element where sum total is displayed
+
+
+</script>
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>        
+            <tr>
+                <td>1</td>
+                <td>Item-2</td>
+                <td data-ns-test="price">18361</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item-2</td>
+                <td data-ns-test="price">18361</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Item-3</td>
+                <td data-ns-test="price">17373</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Item-4</td>
+                <td data-ns-test="price">17361</td>
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    var table = document.querySelector('table');
+var lastRow = document.createElement('tr');
+var prices = document.querySelectorAll('[data-ns-test=price]');
+let sum = 0;
+for(let i = 0; i < prices.length; i++) {
+    sum += parseInt(prices[i].textContent);
+}
+var child = document.createElement("td");
+child.setAttribute('data-ns-test', 'grandTotal');
+
+child.textContent = sum;
+lastRow.appendChild(child);
+table.appendChild(lastRow);
+</script>

@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+  <button onclick="onPromptHandler()">click to get Prompt</button>
+  <div id="demo"></div>
+  <script>
+      function onPromptHandler(){
+          let result = window.prompt("please enter your name","suresh");
+          if(result){
+              document.querySelector("#demo").innerHTML = result;
+            //   document.getElementById("demo").innerHTML = result;
+          }
+          else{
+              document.querySelector("#demo").innerHTML = "user has not entered the value";
+          }
+          console.log(result);
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<script>
+//https://my.newtonschool.co/playground/code/zllfbgj70hlf/
+//Problem Statement
+// Given an array A of positive integers. 
+//Your task is to sort them in such a way that the first part of the array 
+//contains odd numbers sorted in descending order, rest portion contains even numbers sorted in ascending order.
+
+function sortEvenOdd(arr, arrSize)
+  {
+      var even = [];
+      var odd = [];
+      
+      for(let i = 0; i < arrSize; ++i)
+      {
+        if((arr[i]) % 2 === 0)
+         even.push(arr[i]);
+         else 
+         odd.push(arr[i]);
+      }
+        even.sort((x, y) => (x - y));
+        odd.sort((x, y) => (x - y));
+
+       let res = [];
+    
+        for(let i = odd.length - 1; i >= 0; i--)
+             res.push(odd[i]);
+          
+          
+         for(let i = 0; i < even.length; i++)
+            res.push(even[i]);
+
+           return res;
+           
+  }
+  sortEvenOdd([1,2,3,5,4,7,10],7);
+</script>

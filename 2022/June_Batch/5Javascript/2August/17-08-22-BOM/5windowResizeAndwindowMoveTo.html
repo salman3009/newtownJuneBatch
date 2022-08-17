@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+    <button onclick="onOpenHandler()">Open the current window</button>
+    <button onclick="onResizeHandler()">on Resize the window</button>
+    <button onclick="onMoveHandler()">move the position of the window</button>
+    <script>
+        let input;
+        function onOpenHandler(){
+            input = window.open("","","width=300px,height=200px");
+        }
+        function onResizeHandler(){
+            input.resizeBy("600","300");
+            input.focus();
+        }
+        function onMoveHandler(){
+            input.moveTo("300","200");
+            input.focus();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<script>
+// https://my.newtonschool.co/playground/code/408uekbvuiif/
+
+// Given an array of N elements, your task is to find the count of repeated elements. Print the repeated elements in ascending order along with their frequency.
+// Have a look at the example for more understanding.
+
+function countDuplicates(arr,n)
+{
+ 
+  let count={};
+  arr.forEach(function(s){
+   count[s]?count[s]++:count[s]=1;
+  });
+
+
+  for(let obj in count){
+      if(count[obj]>1){
+        console.log(obj+" "+arr[obj]);
+      }
+   
+  }
+}
+
+countDuplicates([3,2,1,1,2],5)
+
+</script>

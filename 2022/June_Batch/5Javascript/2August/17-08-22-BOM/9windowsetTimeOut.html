@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="onStartTimerHandler()">Start the timer</button>
+        <button onclick="onCloseTimerHandler()">close the timer</button>
+        <div id="demo"></div>
+        <script>
+            let input;
+            function onStartTimerHandler(){
+                input = window.setTimeout(function(){
+                    //any code you write here
+                    document.querySelector("#demo").innerHTML = "The function timer is running on 3000";
+                },3000);
+                window.setTimeout(function(){
+                    document.querySelector("#demo").innerHTML = "The function timer is running on 5000";
+                },5000)
+                //3000 milliseconds = 3 seconds
+            }
+
+            function onCloseTimerHandler(){
+                  clearTimeout(input);
+                   document.querySelector("#demo").innerHTML = "we stopped the timer";
+            }
+        </script>
+    </body>
+</html>
