@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: #0000ff9e;
+            height: 100px;
+
+        }
+
+        li {
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 80px;
+            font-size: 25px;
+            font-weight: 800;
+            color: white;
+
+        }
+
+        .button-float {
+            float: right;
+
+        }
+
+        button {
+            width: 115px;
+            height: 41px;
+            border: 4px solid white;
+            border-radius: 11px;
+            font-size: 14px;
+            color: white;
+            background-color: #00b4ff;
+        }
+
+        .login {
+            margin-right: 20px;
+        }
+
+        .link-box {
+            /* box-shadow: 4px 4px 2px 1px white; */
+            width: 100px;
+            height: 42px;
+            text-align: center;
+            font-family: "system-ui";
+        }
+
+        .image-logo {
+            background-image: url('./logo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="link-box image-logo">Logo</li>
+        <li class="link-box pointer">About</li>
+        <li class="link-box pointer">Contact</li>
+        <li class="link-box pointer">Service</li>
+        <li class="link-box pointer">Help</li>
+        <li class="button-float login pointer"><button class="pointer">Login</button></li>
+        <li class="button-float pointer"><button class="pointer">Register</button></li>
+    </ul>
+</body>
+
+</html>
