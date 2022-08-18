@@ -1,0 +1,21 @@
+<script>
+    const fullName = "suresh";
+    const age = 45;
+    const flag = true;
+    console.log(fullName,age,flag);
+    const list = [1,2,3];
+    console.log(list);
+    //Object.freeze(list);
+    console.log(Object.isFrozen(list));
+    list.push(45);
+    console.log(list);
+    list.pop();
+
+    const employee={
+        firstName:"rajesh",
+        age:33
+    }
+    employee.age = 56;
+    console.log(employee);
+
+</script>

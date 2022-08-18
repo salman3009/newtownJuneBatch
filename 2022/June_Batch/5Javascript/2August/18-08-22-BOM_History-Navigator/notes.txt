@@ -1,0 +1,21 @@
+Notes:
+Window Object 
+           1. Document object 
+		   2. innerWidth,innerHeight,resizeBy,moveTo
+		   3. Alert,Confirm,Prompt 
+		   4. setTimeout,setInterval 
+		   5. History 
+		   6. Navigator - (web browser information)
+===============================================
+1.let and const 
+   //both are block scope variable 
+   //both are not attached to window object 
+  //let and const you cannot redeclare same variable again.
+  //const variable we cannot reassign 
+===========================================  
+variable scope:
+1.global 
+2.function 
+3.block or local 		 
+		 
+		   

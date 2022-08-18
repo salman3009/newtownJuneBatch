@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="setIntervalHandler()">Start Interval</button>
+        <button onclick="closeIntervalHandler()">close Interval</button>
+        <img id="demo">
+
+        <script>
+            let input;
+            let count =0;
+            let list=['https://rukminim1.flixcart.com/image/312/312/l4rd0280/mobile/q/x/g/e10-e10-cellecor-original-imagfh9ccyjh2sgv.jpeg?q=70','https://rukminim1.flixcart.com/image/312/312/l4n2oi80/mobile/a/s/v/e5-e5-cellecor-original-imagfhvaepsahfhn.jpeg?q=70','https://rukminim1.flixcart.com/image/312/312/kwgpz0w0/mobile/r/6/w/-original-imag95yfhejsz5vp.jpeg?q=70'];
+            let result = document.getElementById('demo');
+            function setIntervalHandler(){
+                debugger;
+              input = setInterval(function(){
+                    if(count<3){
+                        result.src=list[count];
+                        count++;
+                    }else{
+                        count=0;
+                        result.src=list[count];
+                    }
+              },3000);
+            }
+            
+
+            function closeIntervalHandler(){
+                clearInterval(input);
+            }
+        </script>
+    </body>
+</html>
