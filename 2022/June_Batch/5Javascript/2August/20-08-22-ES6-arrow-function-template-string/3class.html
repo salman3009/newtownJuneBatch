@@ -1,0 +1,21 @@
+<script>
+    class ApplicationForm{
+
+        //it is used to initialized the object
+        constructor(name,age,salary,gender){
+        //this refer to current object
+           this.fullName = name;
+           this.age = age;
+           this.salary = salary;
+           this.gender = gender;
+        }
+
+    }
+    let salmanObject = new ApplicationForm("salman",44,null,null);
+    console.log(salmanObject);
+    console.log(salmanObject.age);
+    let akashObject = new ApplicationForm("akash",55,8000,"male");
+    console.log(akashObject);
+    let henryObject = new ApplicationForm("Henry",33,5000,"female");
+    console.log(henryObject);
+</script>

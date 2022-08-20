@@ -1,0 +1,16 @@
+Notes:
+1.procedure language: line by line code is written and it is plain code.
+2.object oriented language:It is defined using object and everything we can reuse and will do encapsulation.
+OOPS - object oriented programming language
+=================================== 
+class:blue print of object 
+========================================
+object - any noun 
+        properties - color,width,height
+		method  - what is speed of laptop,how much battery backup.
+class - application form 
+           object 1: salman 
+		   object 2 :akash 
+=====================================		   
+		
+		
