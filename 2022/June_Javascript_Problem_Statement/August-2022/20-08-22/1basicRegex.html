@@ -1,0 +1,55 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="inputOne" />
+    <button onclick="onSubmitHandler()">Submit</button>
+    <div id="input-result"></div>
+</body>
+
+</html>
+
+
+<!-- <script>
+    function onSubmitHandler() {
+        //document.getElementById()
+        //document.getElementByClassName()
+        //document.getElementByTagName()
+        let input = document.querySelector("#inputOne").value;
+        let pattern = /javascript/;
+        let result = pattern.test(input);
+        if(result){
+            document.querySelector("#input-result").innerHTML = "match is found";
+        }
+        else{
+            document.querySelector("#input-result").innerHTML = "no match";
+        }
+    }
+
+</script> -->
+
+
+
+<script>
+    function onSubmitHandler() {
+        //document.getElementById()
+        //document.getElementByClassName()
+        //document.getElementByTagName()
+        let input = document.querySelector("#inputOne").value;
+        let pattern = /javascript/i;
+        let result = pattern.test(input);
+        if(result){
+            document.querySelector("#input-result").innerHTML = "match is found";
+        }
+        else{
+            document.querySelector("#input-result").innerHTML = "no match";
+        }
+    }
+
+</script>
+
+
+

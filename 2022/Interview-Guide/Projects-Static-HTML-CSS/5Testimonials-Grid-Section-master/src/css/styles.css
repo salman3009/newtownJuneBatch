@@ -1,0 +1,306 @@
+/* Imported Specific Font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+
+/* Global CSS Variables*/
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: var(--light-grayish-blue);
+}
+
+/* Body Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "one one one one two five" "three four four four four five";
+  padding: 6.5rem 17.5rem;
+}
+
+.card-one {
+  grid-area: one;
+  padding: 40px;
+  background-color: var(--moderate-violet);
+  border-radius: 11px;
+}
+
+.card-two {
+  grid-area: two;
+  padding: 40px;
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 11px;
+}
+
+.card-three {
+  grid-area: three;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 10px 10px 20px 0 rgb(0, 0, 0, 0.06);
+}
+
+.card-four {
+  grid-area: four;
+  padding: 40px;
+  background-color: var(--very-dark-blackish-blue);
+  border-radius: 11px;
+}
+
+.card-five {
+  grid-area: five;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 10px 10px 20px 0 rgb(0, 0, 0, 0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.image img {
+  border-radius: 50%;
+  border: 3px solid hsl(263, 63%, 66%);
+  width: 50px;
+}
+
+.img-border img {
+  border: none;
+  width: 47px;
+}
+
+.background-image {
+  position: absolute;
+  right: 57px;
+  top: -40px;
+  width: 153px;
+  z-index: inherit;
+}
+
+.card-titles {
+  margin-left: 25px;
+  color: var(--light-gray);
+}
+
+.title-light {
+  color: var(--very-dark-grayish-blue);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.sub-title {
+  font-size: 17px;
+  font-weight: normal;
+  opacity: 0.5;
+}
+
+.card-one .title,
+.card-one .sub-title {
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  position: relative;
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--white);
+  margin-bottom: 15px;
+  z-index: 999;
+}
+
+.body-light .text {
+  color: var(--very-dark-grayish-blue);
+}
+
+.sub-text {
+  font-size: 16px;
+  color: var(--light-gray);
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.body-light .sub-text {
+  color: var(--very-dark-grayish-blue);
+}
+
+/* Media Queries */
+/* Desktop */
+@media (max-width: 1440px), (max-width: 1550px) {
+  .cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: "one one one one two five" "three four four four four five";
+    padding: 8rem;
+  }
+
+  .card-one,
+  .card-two,
+  .card-three,
+  .card-four,
+  .card-five {
+    padding: 30px;
+    padding-top: 25px;
+  }
+
+  .card-one .title,
+  .card-one .sub-title {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-header {
+    margin-bottom: 15px;
+  }
+
+  .background-image {
+    right: 56px;
+    top: -25px;
+    width: 122px;
+  }
+
+  .image img {
+    width: 40px;
+  }
+
+  .img-border img {
+    width: 37px;
+  }
+
+  .card-titles {
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .sub-title {
+    font-size: 15px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  .sub-text {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: "one one one one two two" "three three four four four four" "five five five five five five";
+    padding: 4rem;
+  }
+
+  .card-one,
+  .card-two,
+  .card-three,
+  .card-four,
+  .card-five {
+    padding: 30px;
+  }
+
+  .background-image {
+    right: 0;
+    top: -30px;
+    width: 115px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 376px), (max-width: 700px) {
+  .cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: "one" "two" "three" "four" "five";
+    padding: 60px 25px;
+  }
+
+  .card-one,
+  .card-two,
+  .card-three,
+  .card-four,
+  .card-five {
+    padding: 30px;
+  }
+
+  .card-header {
+    margin-bottom: 10px;
+  }
+
+  .card-one .title,
+  .card-one .sub-title {
+    position: relative;
+    z-index: 1;
+  }
+
+  .background-image {
+    right: 0;
+    top: -30px;
+    width: 115px;
+  }
+
+  .image img {
+    width: 35px;
+  }
+
+  .img-border img {
+    width: 32px;
+  }
+
+  .title {
+    font-size: 16.5px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+  }
+
+  .card-titles {
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+
+  .text {
+    font-size: 20.5px;
+  }
+
+  .sub-text {
+    font-size: 14px;
+  }
+}

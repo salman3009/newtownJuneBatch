@@ -1,0 +1,31 @@
+<script>
+       function subArray(arr,n,x){
+        
+        let currSum = 0;
+        let min_length = n;
+        for(let i=0;i<n;i++){
+
+          currSum = arr[i];
+
+          if(currSum>x){
+              return 1;
+          }
+
+          for(let j=i+1;j<n;j++){
+
+            currSum+=arr[j];
+
+            if(currSum >= x && (j-i)<min_length){
+                min_length = j-i;
+            }
+
+        }
+
+        }
+
+          return min_length+1;
+
+
+       }
+      console.log(subArray([2,3,2,5,2,4,2,5,2,5],9,15));
+</script>

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    width: 100%;
+    height: 70px;
+    background-color: #82420f;
+    color: white;
+    font-size: 22px;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.navigation-left {
+    float: left;
+    padding-top: 18px;
+    padding-left: 30px;
+}
+
+.navigation-right {
+    float: right;
+    padding-top: 18px;
+    padding-right: 60px;
+    text-decoration: none;
+}
+
+.navigation-right li {
+    padding-right: 60px;
+}
+
+.navigation-select {
+    margin-left: 33px;
+    width: 204px;
+    height: 39px;
+    border: 0;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner {
+    margin-top: 20px;
+}
+
+.banner img {
+    width: 100%;
+    height: 400px;
+}
+
+.footer-left {
+    float: right;
+    width: 100%;
+    margin-top: 82px;
+    height: 137px;
+    background-color: #824200;
+    color: white
+}
+
+.header {
+    float: ;
+    text-align: center;
+    color: white;
+    padding-top: 7px;
+}
+
+.product-flex {
+    display: flex;
+    margin-top: 20px;
+
+    background-color: #80808012;
+}
+
+.product-box {
+    width: 408px;
+    height: 200px;
+    margin: 20px;
+}
+
+.product-box img {
+    width: 100%;
+    height: 220px;
+}
+
+h2 {
+    text-align: center;
+    color: #b39b9b;
+}
+
+.name {
+    float: right;
+    color: white;
+    font-style: italic;
+}
+
+#name {
+    text-align: center;
+    color: aliceblue;
+}
+
+.text-label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navigation-right a {
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    width: 126px;
+    height: 37px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 14px;
+    border: 0;
+    background-color: indigo;
+    color: white;
+}
+
+.home {
+    text-align: center;
+    color: blue;
+}
+
+.review {
+    float: right;
+    height: 27px;
+    width: 164px;
+    padding: 60;
+    margin-top: -126px;
+}

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(155, 89, 182, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.phone{
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #eee;
+    border-radius: 15px;
+    height: 600px;
+    width: 340px;
+}
+.phone .content.show{
+    opacity: 1;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+}
+.navigation{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+    width: 100%;
+}
+
+nav ul{
+    background-color: white;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+
+nav li{
+    color: #777;
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+nav ul li p{
+    font-size: 12px;
+    margin: 2px 0;
+}
+nav ul li:hover , nav ul li.active{
+     color: rgb(42, 42, 157);
+}

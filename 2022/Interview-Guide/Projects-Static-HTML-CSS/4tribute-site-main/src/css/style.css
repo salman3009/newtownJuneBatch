@@ -1,0 +1,135 @@
+html {
+  font-size: 10px;
+  height: auto;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #edf0f1;
+  margin: 0;
+}
+
+#title {
+  font-size: 5rem;
+  margin-bottom: 0;
+  letter-spacing: 10px;
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#sub-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  color: #74638f;
+}
+
+a:hover {
+  color: #0088ae;
+}
+
+#main {
+  margin: 30px 8px;
+  padding: 15px;
+  /* border-radius: #eee; */
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  opacity: 0.8;
+}
+
+#img-caption {
+  margin: 35px 4px 0px 0;
+  font-size: 1.6rem;
+}
+
+#headline {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin: 60px 0px;
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+li {
+  margin: 16px 0;
+}
+
+blockquote {
+  font-style: italic;
+  max-width: 545px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  #title {
+    font-size: 4.6rem;
+    letter-spacing: 4px;
+  }
+
+  #sub-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  #headline {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  #title {
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  #sub-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  #main {
+    margin: 0;
+  }
+
+  #headline {
+    margin: 35px 0 25px 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  blockquote {
+    margin: 0px 25px;
+  }
+}

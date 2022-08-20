@@ -1,0 +1,17 @@
+<script>
+    function countDuplicates(arr,n){
+       let obj={};
+       arr.forEach((count)=>{
+           obj[count]?obj[count]++:obj[count]=1;
+       });
+
+       for(let input in obj){
+           if(obj[input]>1){
+            console.log(`${input} ${obj[input]}`);
+           }
+            
+       }
+  
+    }
+    countDuplicates([3,2,1,1,2],5);
+</script>

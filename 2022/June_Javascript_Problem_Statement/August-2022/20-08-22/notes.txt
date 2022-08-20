@@ -1,0 +1,12 @@
+Tuesday: 7PM  to 8.30PM
+Saturday: 7PM to 8PM 
+Regular expression or regex pattern or validation pattern:
+1.validation for form element 
+2.it will check each entered value is matching our expectation.
+=======================================
+i - To ignore the case.
+[a-z]
+[A-Z]
+[0-9]
+space -->it is counted in javascript
+
