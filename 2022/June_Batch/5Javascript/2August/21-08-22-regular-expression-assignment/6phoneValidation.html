@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text"  id="inputOne"/>
+        <br/>
+        <br/>
+        <button onClick="onSubmitHandler()">Submit</button>
+        <br/>
+        <br/>
+        <h1 id="result"></h1>
+        <script>
+            function onSubmitHandler(){
+                let input = document.querySelector("#inputOne").value;
+             
+               
+                //let pattern = /^[a-zA-Z@#$]{4,10}$/;
+                //exact 10 number 
+
+                // let pattern = /^[789]{1}[0-9]{9}$/;
+                let pattern = /^[+]{1}[9]{1}[1]{1}[\s-]{1}[789]{1}[0-9]{9}$/;
+                let result = pattern.test(input);
+                if(result){
+                    document.querySelector("#result").innerHTML = "The values matched is found";
+                }
+               else{
+                   document.querySelector("#result").innerHTML = "The value matched is not found";
+               }
+            }
+        </script>
+    </body>
+</html>

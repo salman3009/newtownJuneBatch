@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text"  id="inputOne"/>
+        <div id="error" style="color:red"></div>
+        <br/>
+        <br/>
+        <button onClick="onSubmitHandler()">Submit</button>
+        <br/>
+        <br/>
+        <h1 id="result"></h1>
+        <script>
+            function onSubmitHandler(){
+                let input = document.querySelector("#inputOne").value;
+
+                //aKash343@newtownschool.com
+                // let pattern = /^[a-zA-Z0-9]{4,40}@newtonschool\.(com|in)$/;
+                let pattern = /^[a-zA-Z0-9]{4,40}@[a-z]{3,10}\.(com|in)$/;
+            
+
+                let result = pattern.test(input);
+                if(result){
+                    document.querySelector("#result").innerHTML = "The values matched is found";
+                    document.querySelector("#error").innerHTML = "";
+                }
+               else{
+                   document.querySelector("#result").innerHTML = "The value matched is not found";
+                   document.querySelector("#error").innerHTML = "please write the validation only @newtonschool.in or @newtonschool.com";
+                }
+            }
+        </script>
+    </body>
+</html>

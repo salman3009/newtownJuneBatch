@@ -1,0 +1,62 @@
+/*for removing the arrows in input field*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*===========================================*/
+
+.container{
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid black;
+    width: 700px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 300px 500px;
+    margin-left: 250px;
+    margin-top: 150px;
+}
+.container-left{
+    margin: 10px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.container-right{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 70px 430px;
+    align-items: center;
+} 
+.txt-iput{
+    text-align: center;
+}
+.tip-txt-div, .person-txt-div{
+    display: flex;
+    flex-direction: column;
+}
+.rup-symbol{
+    font-size: 60px;
+}
+.total-bold ,.tip-bold{
+    font-size: larger;
+    font-weight: bolder;
+}
+.per-person-output, .tip-output{
+    font-size: 45px;
+    font-weight: bolder;
+    height: 35px;
+    width: 260px;
+}
+.div-change{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

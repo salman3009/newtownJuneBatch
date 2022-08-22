@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text"  id="inputOne"/>
+        <br/>
+        <br/>
+        <button onClick="onSubmitHandler()">Submit</button>
+        <br/>
+        <br/>
+        <h1 id="result"></h1>
+        <script>
+            function onSubmitHandler(){
+                let input = document.querySelector("#inputOne").value;
+                // let pattern = /^.$/;
+                // //it will allow any number or alphabets or special symbol
+                // let pattern = /^.+$/;
+                //it will allow any number or alphabets or special symbol
+                
+                let pattern = /^\.$/;
+                //escape sequence backslash if you add it will give .dot
+                let result = pattern.test(input);
+                if(result){
+                    document.querySelector("#result").innerHTML = "The values matched is found";
+                }
+               else{
+                   document.querySelector("#result").innerHTML = "The value matched is not found";
+               }
+            }
+        </script>
+    </body>
+</html>

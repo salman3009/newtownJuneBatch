@@ -1,0 +1,15 @@
+Min and max:
+
+*    min - 0 max - n
+
++    min - 1 max - n
+
+{4,10} min - 4 max -10
+
+{3,}  min - 3 max - n
+
+{10} min-10 max-10
+=====================================
+1.alphanumeric
+2.phone number validation
+===================================

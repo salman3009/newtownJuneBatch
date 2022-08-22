@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text"  id="inputOne"/>
+        <div id="error" style="color:red"></div>
+        <br/>
+        <br/>
+        <button onClick="onSubmitHandler()">Submit</button>
+        <br/>
+        <br/>
+        <h1 id="result"></h1>
+        <script>
+            function onSubmitHandler(){
+                let input = document.querySelector("#inputOne").value;
+
+                // let pattern = /^(th|l|Th|L)ink$/;
+
+                // let pattern = /^[+-]?[0-9]{1,10}$/;
+                let pattern = /^(([+][9][1])|0)?[0-9]{1,10}$/;
+            
+
+                let result = pattern.test(input);
+                if(result){
+                    document.querySelector("#result").innerHTML = "The values matched is found";
+                    document.querySelector("#error").innerHTML = "";
+                }
+               else{
+                   document.querySelector("#result").innerHTML = "The value matched is not found";
+                   document.querySelector("#error").innerHTML = "please add +91 or 0 after that number";
+                }
+            }
+        </script>
+    </body>
+</html>

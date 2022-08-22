@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="inputOne"/>
+        <br/>
+        <br/>
+        <button onClick="onSubmitHandler()">Submit</button>
+        <br/>
+        <br/>
+        <h1 id="result"></h1>
+        <script>
+            function onSubmitHandler(){
+                let input = document.querySelector("#inputOne").value;
+                
+                //let pattern = /^[a-z]$/;
+                //any character from small a to z only one
+                
+                //let pattern = /^[a-z][a-z][a-z]$/;
+                //any character from small a to z totally three characters
+
+                 //let pattern = /^[A-Z]$/;
+                //any character from capital a to z totally three characters
+                
+                 //let pattern = /^[A-Z][A-Z][A-Z]$/;
+                //any character from small A to Z totally three characters
+
+                let pattern = /^[0-9][0-9]$/;
+                //any number from 0-9
+
+                let result = pattern.test(input);
+                if(result){
+                    document.querySelector("#result").innerHTML = "The values matched is found";
+                }
+               else{
+                   document.querySelector("#result").innerHTML = "The value matched is not found";
+               }
+            }
+        </script>
+    </body>
+</html>

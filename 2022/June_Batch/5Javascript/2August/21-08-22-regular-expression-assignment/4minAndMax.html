@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" maxlength="10" id="inputOne"/>
+        <br/>
+        <br/>
+        <button onClick="onSubmitHandler()">Submit</button>
+        <br/>
+        <br/>
+        <h1 id="result"></h1>
+        <script>
+            function onSubmitHandler(){
+                let input = document.querySelector("#inputOne").value;
+                
+                // let pattern = /^[a-zA-Z0-9]+$/;
+                //alphanumeric character altest one or more
+
+                // let pattern = /^[a-zA-Z0-9]*$/;
+                //alpahnumeric character zero or more
+
+                // let pattern = /^[0-9]+$/;
+                //it will allow any number
+
+                //let pattern = /^[a-zA-Z]{4,10}$/;
+                //min - 4 and max - 10
+
+                //let pattern = /^[a-zA-Z]{4,}$/;
+                //min - 4 and max - any number
+
+                let pattern = /^[0-9]{10}$/;
+                //exact 10 number 
+
+                let result = pattern.test(input);
+                if(result){
+                    document.querySelector("#result").innerHTML = "The values matched is found";
+                }
+               else{
+                   document.querySelector("#result").innerHTML = "The value matched is not found";
+               }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<script>
+// https://my.newtonschool.co/playground/markup/mi41hvt8e3q8/
+
+// In this project we will be creating the same functionality as the find function (control + f in windows and command + f on mac)
+// of the browser.
+
+// The html markup has already been pre defined for you.
+
+// #paragraph-input div is a normal div, but it has contenteditable
+// property set to true which makes it possible to type inside it.
+// Here the user will enter the text they want to search from.
+
+// #word-input will take input for the word we want to highlight/find. We want to highlight each time a character is typed, just like browser find on page functions.
+
+
+// span#word-counterwill contain the number of words found
+
+
+// #ignore-case checkbox will decide whether we want to it to be case sensitive or not, be default it is. Upon changing it, the highlighted text also should change, as in the demo video
+
+// All the highlighted sections of the paragraph will have class="highlighted-text"(hint:- use span in order not to change text spacing )
+
+// class .highlighted-text is already defined for you
+
+</script>
+<html>
+    <head>
+        <style>
+                    #paragraph-input {
+            border: 2px solid rgb(150, 0, 0);
+            width: 400px;
+            height: 300px;
+            padding: 8px 16px;
+            overflow: scroll;
+        }
+
+        .highlighted-txt {
+            color: rgb(0, 0, 0);
+            background-color: rgb(241, 255, 45);
+        }
+        </style>
+    </head>
+    <body>
+        <label for="paragraph-input">Enter paragraph here</label>
+        <div id="paragraph-input" contenteditable="true">Enter text here</div>
+        <br />
+        <br />
+        <div>Total matches:- <span id="words-counter">0</span></div>
+        <br />
+        <label for="word-input">Enter word to be higlighted here</label>
+        <input type="text" id="word-input" oninput="highlight()">
+        <br />
+        <br />
+        <label for="ignore-case">Ignore case?</label>
+        <input type="checkbox" id="ignore-case" onchange="highlight()"/>
+        
+    </body>
+</html>
+<script>
+            function highlight() {
+            const paraEl = document.querySelector('#paragraph-input')
+            const wordEl = document.querySelector('#word-input')
+            const wordCounterEl = document.querySelector('#words-counter')
+            const shouldMatchLowerCase = document.querySelector('#ignore-case').checked
+            if(!wordEl.value) return;
+            let newParaElText = ''
+            let i = 0
+            if (shouldMatchLowerCase) {
+                const reg = new RegExp(wordEl.value,'ig')
+                newParaElText = paraEl.innerText.replaceAll(reg, (args) => {
+                    i++;
+                    return `<span class="highlighted-txt">${args}</span>`
+                })
+            }else{
+                newParaElText = paraEl.innerText.replaceAll(wordEl.value, (args) => {
+                    i++;
+                    return `<span class="highlighted-txt">${args}</span>`
+                })
+            }
+
+            paraEl.innerHTML = newParaElText
+            wordCounterEl.innerText = i
+        }
+</script>
+
+
+<!-- <script>
+    //regex match 
+    let input = "Is this all there is?";
+    const reg = new RegExp("is","ig");
+    console.log(reg);
+</script> -->
+
+
+<!-- <script>
+    const p = 'html is web language. HTML is easy to understand';
+
+console.log(p.replaceAll('html', 'web development'));
+
+const regex = /html/ig;
+console.log(p.replaceAll(regex, 'web development'));
+
+var result = p.replaceAll(regex,(input)=>{
+    debugger;
+       return `<span>${input}</span>`
+});
+
+console.log(result);
+</script> -->
