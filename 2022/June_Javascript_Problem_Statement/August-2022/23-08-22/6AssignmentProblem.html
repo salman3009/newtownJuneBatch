@@ -1,0 +1,41 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Phone Survey Form</h1>
+    <form onsubmit="handleSubmit(event)">
+        <label for="age">Your age</label>
+        <input type="number" id="q_age" min="0" oninput="ageChange(event)" value="0">
+        <br>
+        <label for="q_owns_phone">Do you own a phone</label>
+        <input type="checkbox" id="q_owns_phone">
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="errors-holder"></div>
+    <div id="result-holder"></div>
+    <script>
+        function ageChange(e) {
+            // debugger;
+            // console.log(event.target.id);
+            // console.log(event.target.value);
+            // console.log(event);
+            let input = parseInt(e.target.value)?parseInt(e.target.value):0;
+            // console.log(input);
+            // console.log(typeof input);
+            if(input<5){
+                
+            }
+
+        }
+
+        function handleSubmit(e) {
+
+        }
+    </script>
+</body>
+
+</html>

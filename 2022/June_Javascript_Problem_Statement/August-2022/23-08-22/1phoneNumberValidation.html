@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="inputOne" />
+    <button onclick="onSubmitHandler()">Submit</button>
+    <div id="input-result"></div>
+</body>
+
+</html>
+
+
+<script>
+    function onSubmitHandler() {
+        //start with 7 or 8 or 9 and remaining 9
+        //7453456321
+        let input = document.querySelector("#inputOne").value;
+        let pattern = /^[789]{1}[0-9]{9}$/;
+        let result = pattern.test(input);
+        if(result){
+            document.querySelector("#input-result").innerHTML = "match is found";
+        }
+        else{
+            document.querySelector("#input-result").innerHTML = "no match";
+        }
+    }
+
+</script>
+
+
+

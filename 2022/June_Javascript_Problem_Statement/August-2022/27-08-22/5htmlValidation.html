@@ -68,3 +68,42 @@
 </script>
 
 
+
+<!-- <script>
+
+    function ageChange(e) {
+        document.querySelector('#errors-holder').innerHTML = "";
+        document.querySelector('#result-holder').innerHTML="";
+        let input = Number(e.target.value);
+        if (input < 5) {
+            document.querySelector('#errors-holder').innerHTML = "You need to be atleast 5 years old to participate";
+        }
+    }
+
+    function handleSubmit(e) {
+        debugger;
+        e.preventDefault();
+        document.querySelector('#errors-holder').innerHTML = "";
+        document.querySelector('#result-holder').innerHTML="";
+        let input = Number(document.querySelector('#q_age').value);
+        if (!input) {
+            document.querySelector('#errors-holder').innerHTML = "Please choose age";
+        }
+        else {
+            let checkedInput = document.querySelector('#q_owns_phone').checked;
+        if(checkedInput && input<13){
+            document.querySelector('#result-holder').innerHTML = "You are too young to have a phone";
+        }
+        else if(checkedInput && input>=13){
+            document.querySelector('#result-holder').innerHTML = "Use your phone in moderation";
+        }
+        else if(!checkedInput && input<13){
+            document.querySelector('#result-holder').innerHTML = "You will get a phone soon";
+        }
+        else if(!checkedInput && input>=13){
+            document.querySelector('#result-holder').innerHTML = "You should get a phone";
+        }
+        }
+
+    }
+</script> -->
