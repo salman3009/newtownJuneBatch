@@ -1,0 +1,14 @@
+constructor - method or function
+method - anything you write inside the class or object 
+function - declare outside the class or object 
+constructor- inbuilt method 
+constructor- it is use to initialize the data
+=============================================
+1.Encapsulation
+     --any property we can access using method 
+=================================================
+Method overriding - (last one it will take)
+//same function name if you use it will take the last one.
+method overloading
+//same function name if you use difference parameter depends upon that it will execute. This is not happening in javascript.
+===============================================	 

@@ -1,0 +1,30 @@
+<!-- <script>
+    function addition(a,b){
+        return a+b;
+    }
+    function addition(a,b,c){
+        return a+b+c;
+    }
+    console.log(addition(2,2,2));
+</script> -->
+
+<script>
+    class Employee{
+        constructor(name,salary){
+            this.name = name;
+            this.salary = salary
+        }
+        setSalary(amountOne,amountTwo){
+            this.salary += amountOne + amountTwo;
+        }
+        setSalary(amountOne,amountTwo,amountThree){
+            this.salary += amountOne + amountTwo + amountThree;
+        }
+     
+    }
+    let details = new Employee("rajesh",1000);
+    console.log(details.salary);
+    details.setSalary(1000,1000);
+    console.log(details.salary);
+
+</script>
