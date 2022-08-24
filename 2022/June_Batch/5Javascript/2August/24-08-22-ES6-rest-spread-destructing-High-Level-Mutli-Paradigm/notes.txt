@@ -1,0 +1,15 @@
+ES6:
+1.let and const 
+2.arrow function 
+3.class 
+4.inheritance
+5.static method 
+6.get and set 
+7.spread and rest parameter 
+8.destructing of array and object
+9.map,filter,reduce,indexOf,includes
+=============================================
+1.procedure
+2.OOPS - ES6
+3.functional programming
+4.Prototype based object oriented
