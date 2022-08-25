@@ -1,0 +1,31 @@
+<script>
+    debugger;
+    const name = "akash";
+    
+    const first=()=>{
+       let a = 1;
+       let b = second(7,9);
+       a = a+b;
+       return a;
+    }
+
+    function second(x,y){
+      var c = 2;
+      return c;
+    }
+    
+    let x = first();
+    //Global execution context:
+    //name
+    //first
+    //second
+    //x=unknown
+
+    //first 
+    //a
+    //b=unknown
+
+    //second
+    //c
+    //arugment[7,9]
+</script>

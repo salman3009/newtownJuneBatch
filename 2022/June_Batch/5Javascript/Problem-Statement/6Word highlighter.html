@@ -83,20 +83,30 @@
         }
 </script>
 
+<!-- <script>
+    let temp= "hello world welcome to hello";
+    let count =0;
+    let result = temp.replaceAll('hello',(input)=>{
+            count++;
+            return `<span>${input}</span>`;
+    });
+    console.log("existing:",temp);
+    console.log("new:",result);
+    console.log(count);
+  </script> -->
+
 
 <!-- <script>
     //regex match 
     let input = "Is this all there is?";
     const reg = new RegExp("is","ig");
     console.log(reg);
+    console.log(reg.test('IS'));
 </script> -->
 
 
 <!-- <script>
-    const p = 'html is web language. HTML is easy to understand';
-
-console.log(p.replaceAll('html', 'web development'));
-
+const p = 'html is web language. HTML is easy to understand';
 const regex = /html/ig;
 console.log(p.replaceAll(regex, 'web development'));
 

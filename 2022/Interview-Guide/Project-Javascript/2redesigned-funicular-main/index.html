@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon-32x32.png">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-left">
+            <label for="bill">Bill</label>
+            <input type="number" class="txt-iput" id="bill-input">
+            <label for="tip">Tip</label>
+            <div>
+                <button class="tip-decrement-btn" onclick="tipDecrementHandler()">-</button>
+                <input type="number" class="txt-iput" id="tip-input" value="0">
+                <button class="tip-increment-btn" onclick="tipIncrementHandler()">+</button>
+            </div>
+            <label for="people">Number of People</label>
+            <div>
+                <button class="ppl-decrement-btn" onclick="ppldecrementHandler()">-</button>
+                <input type="number" class="txt-iput" id="ppl-input" value="1">
+                <button class="ppl-increment-btn" onclick="pplIncrementHandler()">+</button>
+            </div> 
+        </div>
+        <div class="container-right">
+            <div class="tip-txt-div">
+                <span class="tip-bold">Tip</span>
+                <span class="tip-txt">Per Person</span>
+            </div>
+            <div class="div-change">
+                <span class="rup-symbol">&#8377</span>
+                <input type="text" class="tip-output" id="tip-op" style="border: 0;">
+            </div>
+            <div class="person-txt-div">
+                <span class="total-bold">Total</span>
+                <span class="per-person">Per Person</span>
+            </div>
+            <div class="div-change">
+                <span class="rup-symbol">&#8377</span>
+                <input type="number" class="per-person-output" id="person-out" style="border: 0;">
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

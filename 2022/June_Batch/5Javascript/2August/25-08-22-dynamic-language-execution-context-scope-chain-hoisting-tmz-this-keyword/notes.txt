@@ -1,0 +1,41 @@
+Javascript is running on browser - v8Engine 
+Javascript is running on single thread 
+single thread - stack and heap memory 
+javascript Non-blocking because of event loop
+call stack - code is executing
+heap - array and object will store inside the heap memory.
+callback queue - waiting data will be store here
+=====================================
+1.compilation - portable file - Java , .net
+2.interpretation - line by line execution - 2015 - javascript
+3.JIT - immediate execution entire file. - after 2015 - javascript
+=======================================
+stack - FILO
+Queue - FIFO
+=======================================
+API - Application programming interface
+let n = false;
+while(!n){
+      //infinite time
+}
+=========================================
+1.call stack 
+2.heap
+3.web api 
+4.event loop 
+5. callback queue 
+=======================================
+code is going to execute inside the call stack.
+execution context:
+1.variable environment
+2.scope chain
+3.this keyword 
+========================================
+execution context :
+normal function we have this keyword
+arrow function we don't have this keyword 
+1.global execution will be created default 
+2.for each function separate execution context will be created.
+=================================
+
+
