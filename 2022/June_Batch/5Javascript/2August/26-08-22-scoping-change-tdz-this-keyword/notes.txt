@@ -1,0 +1,38 @@
+let   - block scope
+const - block scope 
+var  - function scope 
+
+{
+   ---> let and const 
+}
+
+function (){
+
+---------------> var 
+
+}
+//var is attached to window object 
+//any variable will have access to outer scope 
+//outer scope variable will not have access to inner scope.
+==============================================
+what is scope chain
+//the limitation of variable withing the code.
+three types of scope:
+1.global scope - outside of all the function - let and const
+2.function scope - inside the function 
+3.block scope  - inside the curly braces
+let and const - block scope 
+var - function scope and attached to window object
+=================================================
+Hoisting:
+    display();
+    function display(){
+        console.log("welcome to hoisting concept");
+    }
+1.Javascript run time engine
+2.we have call stack
+3.call stack execution context will be created for each function and one global execution context will be created 
+4.each execution will have details about variable environment,functions,arguments,scope chain and this keyword.
+5.Inside the global execution context all the varibale and function is stored thats way I can able to call function before declaration.
+6.Inside the call stack first thing that is going to run is global execution context.
+============================================

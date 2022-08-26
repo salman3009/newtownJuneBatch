@@ -1,0 +1,48 @@
+<script>
+//https://my.newtonschool.co/playground/code/q7hk0cumkicb/
+
+//Problem Statement
+// Given an array containing N integers and an integer K. Your task is to find the length of the longest Sub-Array with sum of the elements equal to the given value K.
+// Input
+// The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case consists of two lines. The first line of each test case contains two integers N and K and the second line contains N space-separated elements of the array.
+
+// Constraints:-
+// 1<=T<=500
+// 1<=N,K<=10^5
+// -10^5<=A[i]<=10^5
+
+// Sum of N over all test cases does not exceed 10^5
+
+function lenOfLongSubarr(A, N, K)
+{
+    debugger;
+ 
+    let i = 0, j = 0, sum = 0;
+    let maxLen = 0;
+   
+    while (j < N) {
+        sum += A[j];
+        if (sum < K) {
+            j++;
+        }
+        else if (sum == K) {
+            maxLen = Math.max(maxLen, j-i+1);
+            j++;
+        }
+        else if (sum > K) {
+            while (sum > K) {
+                sum -= A[i];
+                 i++;
+            }
+            if(sum == K){
+                maxLen = Math.max(maxLen, j-i+1);
+            }
+            j++;
+        }
+    }
+    return maxLen;
+}
+ 
+// console.log(lenOfLongSubarr([2, 3, 2, 5, 2, 4, 2, 5, 2, 5], 9, 15));
+// console.log(lenOfLongSubarr([5,5], 2, 9));
+</script>
