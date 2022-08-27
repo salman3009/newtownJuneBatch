@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate fare</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <main>
+            <h1>Taxi fare Calculator</h1>
+            <div>
+                <form onsubmit=taxifare() action="">
+                    <label>Kilometer</label>
+                    <input type="number" step=".1" id="kilometer" placeholder="enter km">
+                    <br>
+                    <button type="submit">Calculate</button>
+                    <input type="reset" onclick="">
+
+                </form>
+                <h2>Total fare is INR <span id="total_fare">0</span>/-</h2>
+
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+
+</html>

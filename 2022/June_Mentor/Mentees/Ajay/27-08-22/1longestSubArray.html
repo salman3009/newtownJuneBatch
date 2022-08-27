@@ -1,0 +1,32 @@
+<script>
+    function longestSubArray(n,len,k){
+        let i=0;
+        let sum=0;
+        let maxlen=0;
+        let j=0;
+        //[1,2,3,4,4,5]
+        while(i<len){
+            sum+=n[i];
+           if(sum<k){
+             i++;
+           }
+           else if(sum==k){
+            maxlen = Math.max(maxlen,i-j+1);
+            i++;
+           }
+           else if(sum>k){
+               while(sum>k){
+                    sum-=n[j];
+                    j++;
+               }
+               if(sum==k){
+                maxlen = Math.max(maxlen,i-j+1);
+                   
+               }
+               i++;
+           }
+        }
+        return maxlen;
+    }
+    console.log(longestSubArray([2, 3, 2, 5, 2, 4, 2, 5, 2, 5], 9, 15));
+</script>

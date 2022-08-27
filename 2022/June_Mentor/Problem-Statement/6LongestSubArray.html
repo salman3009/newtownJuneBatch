@@ -15,7 +15,7 @@
 
 function lenOfLongSubarr(A, N, K)
 {
-    debugger;
+   
  
     let i = 0, j = 0, sum = 0;
     let maxLen = 0;
@@ -37,12 +37,12 @@ function lenOfLongSubarr(A, N, K)
             if(sum == K){
                 maxLen = Math.max(maxLen, j-i+1);
             }
-            j++;
+             j++;
         }
     }
     return maxLen;
 }
  
-// console.log(lenOfLongSubarr([2, 3, 2, 5, 2, 4, 2, 5, 2, 5], 9, 15));
+console.log(lenOfLongSubarr([2, 3, 2, 5, 2, 4, 2, 5, 2, 5], 9, 15));
 // console.log(lenOfLongSubarr([5,5], 2, 9));
 </script>

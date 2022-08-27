@@ -1,0 +1,7 @@
+any input tag final value will be string and for checked it will be boolean value.
+==============================================
+oninput - for everytype this event will be trigger
+onchange - after entering the whole value this event will be trigger once you leave the text box.
+===========================================
+form tag - it will try to navigate to next page.
+========================================
