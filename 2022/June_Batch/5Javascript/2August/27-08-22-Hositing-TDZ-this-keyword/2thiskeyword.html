@@ -1,0 +1,48 @@
+<script>
+    // console.log(this);
+   
+    // const employee={
+    //     fullName:"akash",
+    //     display:function(){
+    //         console.log(this);
+    //     }
+    // }
+    // employee.display();
+
+    // function addition(){
+    //     console.log(this);
+    // }
+    // addition();
+
+    // const addition=()=>{
+    //     console.log(this);
+    // }
+    // addition();
+
+    // const employee={
+    //     fullName:"akash",
+    //     display:function(){
+    //         console.log(this);
+    //         let a = this;
+    //         function sector(){
+    //            console.log(this);
+    //            console.log(a.fullName);
+    //         }
+    //         sector();
+    //     }
+    // }
+    // employee.display();
+
+
+    const employee={
+        fullName:"akash",
+        display:function(){
+            console.log(this);
+           const sector=()=>{
+               console.log(this.fullName);
+           }
+            sector();
+        }
+    }
+    employee.display();
+</script>

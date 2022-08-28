@@ -1,0 +1,22 @@
+<script>
+    class Employee{
+        constructor(fullName,age){
+           this.fullName = fullName;
+           this.age = age;
+        }
+        displayAge(){
+            console.log(this.age);
+        }
+    }
+    class Token extends Employee{
+        constructor(fullName,age,amount){
+                super(fullName,age);
+                this.amount = amount;
+        }
+        displayAge(){
+            console.log("this is age value",this.age);
+        }
+    }
+    let obj = new Token("akash",23,3000);
+    obj.displayAge();
+</script>

@@ -1,0 +1,14 @@
+<!-- <script>
+    let input ="welcome to programming and we have javascript programming";
+    let result = input.replaceAll('programming','language');
+    console.log(result);
+</script> -->
+
+<script>
+    let count =0;
+    let input ="welcome to programming and we have javascript programming";
+    let result = input.replaceAll('programming',function(){
+          count++;
+    });
+    console.log(count);
+</script>

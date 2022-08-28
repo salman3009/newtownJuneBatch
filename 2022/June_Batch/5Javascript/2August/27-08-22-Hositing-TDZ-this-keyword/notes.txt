@@ -1,0 +1,39 @@
+ES6:
+1.let and const 
+2.arrow function 
+3.class
+4.inheritance
+7.static method 
+8.get and set 
+9.template string 
+======================
+What is hoisting?
+//calling function before declaration
+//this concept is called hoisting
+//call stack
+//each function execution context
+//global execution context - first call stack
+//global exectuion context all function and variable is defined here.
+=========================================
+tdz means =calling variable before its initialisation.
+
+hoisting is possible with var and normal function declaration 
+
+hoisting is not possible with let/const and arrow function and function expression even though it is store in var also.
+
+function expression means storing the function inside the variable.
+============================================
+this - this will refer to current object.
+arrow function we don't this keyword
+arrow function will borrow nearby this keyword from scoping chain (outermost)
+=============================================
+vanilla javascript - pure javascript 
+=========================================
+Abstraction - hiding the content from actual implemention ( data hiding)
+encapsulation - hiding the data from outside world or outside the class. (javascript we don't access modifier so encapsulation is not possible only wrapper get and set).
+inheritance - reusing the parent class method and properties.
+polymorphism - a child child will overwrite the method define in the parent class(once you have same name).
+=====================================
+
+	
+	

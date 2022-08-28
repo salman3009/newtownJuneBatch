@@ -1,0 +1,14 @@
+Assignment part:
+1.HTML
+2.Javascript
+3.CSS
+==================================
+oninput - for each change that is happening on input tag. Event will be trigger.
+onchange - after you leave the input tag than it will trigger.
+============================================
+HTML - no need 
+CSS - no need 
+Javascript part - Validations
+//Anything value from form it will give you in two ways one is string and one more is boolean(radio,checkbox).
+=======================================
+
