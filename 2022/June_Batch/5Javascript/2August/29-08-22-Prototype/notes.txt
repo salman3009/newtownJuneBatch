@@ -1,0 +1,44 @@
+Primitive And Reference Types:
+1.string
+2.number
+3.boolean
+4.undefined
+
+Reference types:
+1.array
+2.object 
+
+Whenever we have array and object it will give you address while assign or copying the value.
+
+If you need deep copy of array you can use following things:
+1.slice 
+2.spread parameter
+3.Object.assign 
+
+If you need deep copy of object you can go with following thinsg:
+1.spread parameter 
+2.object.assign 
+
+Shallow copy (normal assignment) - one memory address shared to all variables.
+Deep copy (slice,spread,Object.assign) - each variable will have separate memory address.
+
+=================================================
+OOPS:
+ES6 - 2015
+1.class 
+2.inheritance
+3.static 
+4.get and set 
+
+OOPS:
+1993:
+Prototypes: will contain methods
+1.array,object 
+========================================
+OOPS - using prototype:
+1.constructor function 
+2.what is prototype 
+3.__proto__ ( default method attached)
+4.compare with array.
+=====================================
+

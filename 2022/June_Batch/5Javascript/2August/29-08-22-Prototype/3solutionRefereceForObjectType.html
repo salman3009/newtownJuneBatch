@@ -1,0 +1,19 @@
+<!-- <script>
+    let employee={
+        firstName:"suresh"
+    }
+    let address = Object.assign({},employee);
+    address.phone = 834343434;
+    console.log("address object",address);
+    console.log("employee object",employee);
+</script> -->
+
+<script>
+    let employee={
+        firstName:"suresh"
+    }
+    let address = {...employee};
+    address.phone = 834343434;
+    console.log("address object",address);
+    console.log("employee object",employee);
+</script>
