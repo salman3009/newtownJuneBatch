@@ -1,0 +1,33 @@
+<!-- <script>
+    // let list=[2,3,5,65,31,2,2];
+    let list=[2,2,2,2];
+
+    console.log(list.__proto__);
+
+    function findingEven(list){
+        for(let i=0;i<list.length;i++){
+             if(list[i]%2!=0){
+                 return false;
+             }
+        }
+        return true;
+    }
+    // list.push(33);
+    console.log(findingEven(list));
+</script> -->
+
+
+<script>
+        let list= new Array(2,2,2,2);
+        let global=[3,2,2,2];
+        Array.prototype.findingEven=function(){
+            for(let i=0;i<this.length;i++){
+             if(this[i]%2!=0){
+                 return false;
+             }
+        }
+        return true;
+        }
+        console.log(list.findingEven());
+        console.log(global.findingEven());
+</script>

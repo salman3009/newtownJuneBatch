@@ -1,0 +1,17 @@
+<script>
+    let list = new Array(3,4,5);
+    //let list =[5,6,7];
+    let global = new Array(4,5);
+    console.log(list);
+    console.log(list.__proto__);
+    Array.prototype.findingNumberFive=function(){
+        for(let i=0;i<this.length;i++){
+            if(this[i]%5==0){
+                return true;
+            }
+        }
+        return false;
+    }
+    console.log(list.findingNumberFive());
+
+</script>

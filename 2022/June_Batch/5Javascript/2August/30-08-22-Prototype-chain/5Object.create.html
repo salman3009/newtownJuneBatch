@@ -1,0 +1,13 @@
+<script>
+    const personProto= {
+        calculateAge:function(){
+             return this.age - 10;
+        }
+    }
+
+    let akashObj = Object.create(personProto);
+    akashObj.age = 56;
+    akashObj.fullName = "akash";
+    console.log(akashObj.calculateAge());
+
+</script>

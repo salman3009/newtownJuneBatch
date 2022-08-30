@@ -1,0 +1,84 @@
+Three types of syntax:
+1.constructor function 
+2.ES6 class 
+3.Object.create 
+===============================
+const Person = function(){
+  this.fullName = fullName;
+}
+
+class Person{
+    constructor(){
+	  this.fullName = fullName;
+	}
+}
+const Person = Object.create({});
+Person.fullName = "akash";
+======================================
+inheritance:
+Person.prototype.calculateAge=function(){
+  console.log(this);
+}
+=======================================
+inheritance:
+
+class Person{
+    constructor(){
+	  this.fullName = fullName;
+	}
+	calculateAge(){
+	  return this;
+	}
+}
+
+
+class Token extends Person{
+
+     display(){
+	  console.log(this.calculateAge());
+	 }
+    
+}
+====================================
+    const personProto= {
+        calculateAge:function(){
+             return this.age - 10;
+        }
+    }
+
+    let akashObj = Object.create(personProto);
+    akashObj.age = 56;
+    akashObj.fullName = "akash";
+    console.log(akashObj.calculateAge());
+=================================================
+OOPS
+1.class based  - ES6
+2.prototype based 
+      1.constructor function 
+	  2.prototypal inheritance 
+	  3.object.create 
+====================================
+class based:
+1.class
+2.inheritance 
+3.static method 
+4.get and set 
+OOPS 
+prototype based 
+//using object they are creating class 
+//array,object,function everyting is object 
+//They are creating common pattern like class using constructor function 
+//To use inheritance concept they are attaching all methods inside the prototype 
+//chaining of method -- one object is connected to another object 
+==============================================
+function callback we can use in three places:
+1.setTimeout,setInterval
+2.addEventListener
+3.Async code 
+============================================
+
+
+
+	  
+	  
+

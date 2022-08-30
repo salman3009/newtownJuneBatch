@@ -1,0 +1,37 @@
+<!-- <script>
+    let list=[2,4,21];
+    let result = list.filter((input)=>{
+        return input%2==0;
+    }).reduce((a,b)=>{
+        return a+b;
+    });
+    console.log(result);
+</script> -->
+
+<script>
+    class Account{
+         constructor(amount){
+             this.amount = amount;
+         }
+
+         deposit(input){
+          this.amount+=input;
+          return this;
+         }
+         withdraw(input){
+             if(input<this.amount){
+                 this.amount-=input;
+                 return this;
+             }
+         }
+         balance(){
+             return this.amount;
+         }
+    }
+
+    let akashObj = new Account(100);
+   
+    console.log(akashObj.deposit(700).withdraw(300).balance());
+
+
+</script>

@@ -1,0 +1,26 @@
+<!-- <script>
+    let fullName = "akash";
+    let age = 44;
+    //string,number,boolean,undefined - functionByValue
+    function display(age){
+        age = 56;
+        console.log(age);
+    }
+    display(age);
+    console.log(age);
+</script> -->
+
+
+<script>
+    let employee={
+        fullName:"akash",
+        age:33
+    }
+    //array/object - functionByReference
+    function display(employee){
+        employee.age = 56;
+        console.log(employee.age);
+    }
+    display(employee);
+    console.log(employee);
+</script>

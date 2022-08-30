@@ -1,0 +1,14 @@
+<script>
+    const Person = function(fullName,age){
+         this.fullName = fullName;
+         this.age = age;
+    }
+    Person.prototype.calculateAge=function(){
+         this.age = this.age - 10;
+    }
+    const akashObj = new Person("akash",22);
+    akashObj.calculateAge();
+    console.log(akashObj.hasOwnProperty('fullName'));
+    console.log(akashObj.hasOwnProperty('lastName'));
+
+</script>

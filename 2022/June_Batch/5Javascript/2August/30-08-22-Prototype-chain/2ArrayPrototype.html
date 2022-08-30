@@ -1,0 +1,15 @@
+<script>
+    const list=[4,6];
+    console.log(list.__proto__);
+    console.log(list.__proto__ == Array.prototype);
+    Array.prototype.average = function(){
+        console.log(this);
+        let sum = this.reduce((a,b)=>{
+            return a+b;
+        });
+        return sum/this.length;
+    }
+    let result = list.average();
+    console.log(result);
+
+</script>
