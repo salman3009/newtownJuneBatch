@@ -1,0 +1,15 @@
+Assignment:
+1.html is present
+2.
+
+Input:
+1.#paragraph-input - first
+2.#word-input  - second 
+Output:
+1.#word-counter - no of match 
+2.ignore-case - functionality
+3.class="highlighted-text"  - #paragraph-input (use span tag)
+
+==================================
+1.replaceAll call back function 
+2.forming regex pattern using new RegExp 

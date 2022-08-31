@@ -1,0 +1,44 @@
+<!-- <script>
+    let input = "welcome to javascript. javascript is fun language";
+    let result = input.replaceAll("javascript","html");
+    console.log(result);
+</script> -->
+
+<!-- <script>
+    let input = "welcome to javascript. Javascript is fun language";
+    let result = input.replaceAll(/javascript/ig,"html");
+    console.log(result);
+</script> -->
+<!-- 
+<script>
+    let input = "welcome to javascript. Javascript is fun language";
+    let result = input.replaceAll(/javascript/ig,(result)=>{
+        console.log("calling this function",result);
+        return "html";
+    });
+    console.log(result);
+</script> -->
+
+
+
+<!-- <script>
+    let count = 0;
+    let input = "welcome to javascript. Javascript is fun language";
+    let result = input.replaceAll(/javascript/ig,(result)=>{
+        console.log("calling this function",result);
+        count++;
+        return "html";
+    });
+    console.log(result,count);
+</script> -->
+
+<script>
+    let word = "javascript";
+    let result = new RegExp(word,'ig');
+    console.log(result);
+    let finalResult = result.test("javascript");
+    console.log(finalResult);
+    // let finalResult = /javascript/ig.test("javascript");
+    // console.log(finalResult);
+
+</script>

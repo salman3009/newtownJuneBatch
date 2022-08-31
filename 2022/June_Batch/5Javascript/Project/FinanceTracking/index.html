@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            .container{
+                width: 600px;
+                min-height:200px;
+                margin:auto;
+                border:1px solid black;
+                text-align: center;
+                margin-top:15px;
+            }
+            input{
+                display: block;
+                margin:auto;
+            }
+            button{
+                margin:10px;
+            }
+            ol{
+                list-style-type: none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+           <h3>Balance:<span id="balance-id">0</span></h3>
+           <input type="number" id="expense-id" value="0">
+           <button onClick="onChangeHandler('ADD')">Add</button><button onClick="onChangeHandler('REMOVE')">Remove</button>
+        </div>
+        <div class="container">
+            <ol id="demo">
+                
+            </ol>
+         </div>
+         <script>
+             function onChangeHandler(input){
+                let amount = Number(document.querySelector('#expense-id').value);
+                let balance = Number(document.querySelector('#balance-id').innerHTML);
+                if(input=="ADD"){
+                    document.querySelector('#balance-id').innerHTML = balance+amount;
+                }
+                else{
+                    document.querySelector('#balance-id').innerHTML = balance-amount;
+                }
+             
+                let parentElement = document.querySelector("#demo");
+                let childElement = document.createElement("li");
+                let parentNode = document.createTextNode(new Date().toISOString()+"-"+amount+"-"+input);
+                childElement.appendChild(parentNode);
+                parentElement.appendChild(childElement);
+             }
+
+         </script>
+    </body>
+</html>

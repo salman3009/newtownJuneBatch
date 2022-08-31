@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="demo">Welcome to programming</div>
+        <input type="text" id="word" oninput="onInputText()">
+    </body>
+</html>
+
+<script>
+    function onInputText(){
+    let input = document.querySelector("#demo").innerHTML;
+    let findingWord = document.querySelector("#word").value;
+    let result = input.replaceAll(findingWord,(result)=>{
+          return `<span>${result}</span>`;
+    })
+    console.log(result);
+    }
+ 
+</script>
+
+<!-- <script>
+    let input = document.querySelector("#demo").innerText;
+    let findingWord = "programming";
+    let result = input.replaceAll(findingWord,(result)=>{
+        return `<span>${result}</span>`;
+    })
+    console.log(result);
+</script> -->

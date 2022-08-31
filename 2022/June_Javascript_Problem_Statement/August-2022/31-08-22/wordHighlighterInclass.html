@@ -1,0 +1,67 @@
+<script>
+
+    
+    </script>
+    <html>
+        <head>
+            <style>
+                        #paragraph-input {
+                border: 2px solid rgb(150, 0, 0);
+                width: 400px;
+                height: 300px;
+                padding: 8px 16px;
+                overflow: scroll;
+            }
+    
+            .highlighted-txt {
+                color: rgb(0, 0, 0);
+                background-color: rgb(241, 255, 45);
+            }
+            </style>
+        </head>
+        <body>
+            <label for="paragraph-input">Enter paragraph here</label>
+            <div id="paragraph-input" contenteditable="true">Enter text here</div>
+            <br />
+            <br />
+            <div>Total matches:- <span id="words-counter">0</span></div>
+            <br />
+            <label for="word-input">Enter word to be higlighted here</label>
+            <input type="text" id="word-input" oninput="highlight()">
+            <br />
+            <br />
+            <label for="ignore-case">Ignore case?</label>
+            <input type="checkbox" id="ignore-case" onchange="highlight()"/>
+            
+        </body>
+    </html>
+    <script>
+                function highlight() {
+                let newParaElText = ''
+                let count = 0
+                const paraEl = document.querySelector('#paragraph-input')
+                const word = document.querySelector('#word-input')
+                const wordCounterEl = document.querySelector('#words-counter')
+                const ignoreCaseInput = document.querySelector('#ignore-case').checked;
+                console.log(ignoreCaseInput);
+                if(!word.value) return;
+                if(ignoreCaseInput){
+                    let resultWord = new RegExp(word.value,'ig');
+                    newParaElText = paraEl.innerText.replaceAll(resultWord, (section) => {
+                       console.log(section);
+                        count++;
+                        return `<span class="highlighted-txt">${section}</span>`
+                    });
+                }
+                else{
+                    newParaElText = paraEl.innerText.replaceAll(word.value, (section) => {
+                       console.log(section);
+                        count++;
+                        return `<span class="highlighted-txt">${section}</span>`
+                    });
+                }
+                paraEl.innerHTML = newParaElText
+                wordCounterEl.innerText = count;
+            }
+    </script>
+    
