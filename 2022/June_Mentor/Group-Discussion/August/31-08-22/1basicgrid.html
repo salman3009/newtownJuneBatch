@@ -1,0 +1,50 @@
+<html>
+    <head>
+       <style>
+
+           .header{grid-area: header;}
+           .footer{grid-area: footer;}
+           .side-menu{grid-area: side-menu;}
+           .main-content{grid-area: main-content;}
+
+           .container{
+               display: grid;
+               grid-template-areas: 'header header header'
+               'side-menu main-content main-content'
+               'footer footer footer';
+           }
+           .header,.footer{
+               height: 100px;
+               background-color: red;
+           }
+           .side-menu{
+     
+               height: 400px;
+               background-color: green;   
+           }
+           .main-content{
+               height: 400px;
+               background-color: orange;
+           }
+
+       </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+
+            </div>
+            <div class="side-menu">
+    
+            </div>
+            <div class="main-content">
+    
+            </div>
+            <div class="footer">
+    
+            </div>
+        </div>
+
+    </body>
+</html>

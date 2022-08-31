@@ -1,0 +1,62 @@
+<html>
+    <head>
+       <style>
+
+           .header{grid-area: header;}
+           .footer{grid-area: footer;}
+           .banner{grid-area: banner;}
+           .list-cart{grid-area: list-cart;}
+           .list-cart-large{grid-area: list-cart-large;}
+
+           .container{
+               display: grid;
+               grid-template-areas: 'header'
+               'list-cart'
+               'banner'
+               'list-cart-large'
+               'footer';
+               gap:50px;
+
+           }
+           .header,.footer{
+               height: 100px;
+               background-color: red;
+           }
+           .list-cart{
+     
+               height: 200px;
+               background-color: green;   
+           }
+           .list-cart-large{
+               height: 250px;
+               background-color: violet;
+           }
+           .banner{
+               height: 250px;
+               background-color: orange;
+           }
+
+       </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+
+            </div>
+            <div class="list-cart">
+    
+            </div>
+            <div class="banner">
+    
+            </div>
+            <div class="list-cart-large">
+    
+            </div>
+            <div class="footer">
+    
+            </div>
+        </div>
+
+    </body>
+</html>
