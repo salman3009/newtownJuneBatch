@@ -1,0 +1,16 @@
+IIFE - Immediately invoke function expression
+===========================================
+Higer order function
+1.
+addEventListener
+1.click,callback concept
+
+2.
+Function return new function 
+closure concept
+=================================
+JSON - Javascript object notation
+
+
+
+

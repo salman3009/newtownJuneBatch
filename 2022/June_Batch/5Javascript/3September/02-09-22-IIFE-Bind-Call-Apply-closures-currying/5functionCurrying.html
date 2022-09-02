@@ -1,0 +1,16 @@
+<script>
+    function volume(length){
+        return function(breadth){
+            return function(height){
+                return length*breadth*height;
+            }
+        }
+    }
+    console.log(volume(2)(3)(4));
+    let firstPartSet = volume(2);
+    console.log(firstPartSet(3)(3));
+    console.log(firstPartSet(3)(4));
+    let secondPartSet = volume(2)(4);
+    console.log(secondPartSet(4));
+    console.log(secondPartSet(5));
+</script>

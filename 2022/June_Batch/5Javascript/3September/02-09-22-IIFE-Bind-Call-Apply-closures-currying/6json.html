@@ -1,0 +1,16 @@
+<script>
+    let employee={
+        fullName:"ganesh",
+        lastName:"raj",
+        address:"bangalore"
+    };
+    console.log(typeof employee);
+    //javascript object is converted to json
+    let result = JSON.stringify(employee);
+    console.log(typeof result);
+    console.log(result.fullName);
+    //json is converted into javacript object 
+    result = JSON.parse(result);
+    console.log(typeof result);
+    console.log(result.fullName);
+</script>
