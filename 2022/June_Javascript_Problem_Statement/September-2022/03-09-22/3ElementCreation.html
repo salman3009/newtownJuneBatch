@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="demo">
+
+        </div>
+        <script>
+            let parentElement = document.querySelector("#demo");
+            let createElementDiv = document.createElement("div");
+            createElementDiv.innerText = "welcome to programming";
+            // let createElementDivNode = document.createTextNode("welcome to programming");
+            // createElementDiv.appendChild(createElementDivNode);
+            //<div>welcome to programming</div>
+            parentElement.appendChild(createElementDiv);
+
+            let createElementButton = document.createElement("button");
+            let createElementButtonNode = document.createTextNode("submit");
+            createElementButton.appendChild(createElementButtonNode);
+            parentElement.appendChild(createElementButton);
+            createElementButton.addEventListener('click',onAddHandler);
+
+            function onAddHandler(){
+                alert("submit");
+            }
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" oninput="onInputEventHandler(event)" id="evaluatedText">
+        <h3 id="wordCount">0</h3>
+    </body>
+
+    <script>
+        function onInputEventHandler(event){
+        //  console.log(event.target.value);
+         let input = event.target.value;
+         let word = document.querySelector("#wordCount");
+         let result =  input.match(/\s+/g);
+         //match will return array
+         if(result && result.length==1){
+            word.innerText = result?(result.length):0;
+         }
+         else{
+            word.innerText = result?(result.length+1):0; 
+         }
+        
+        }
+    </script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .box{
+                color:red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="demo">
+                    welcome to programming
+        </div>
+        <button onclick="onAddHandler()">
+            click
+        </button>
+        <script>
+            // let result = document.querySelector("#demo");
+            // result.classList.add("box");
+
+            function onAddHandler(){
+                let result = document.querySelector("#demo");
+                result.classList.toggle("box");
+            }
+
+        </script>
+    </body>
+</html>
