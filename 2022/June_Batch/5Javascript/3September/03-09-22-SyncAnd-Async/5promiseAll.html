@@ -1,0 +1,45 @@
+<script>
+    // console.log(window.Promise);
+
+    function googlePayDetails(input){
+        return new Promise((success,failure)=>{
+            setTimeout(()=>{
+                // success("payment is success");
+                  if(input<10){
+                      failure("value is less payment failed");
+                  }
+                  else{
+                    success([input]);
+                  }
+                
+            },5000)
+        })
+    }
+
+
+    function successPage(payment){
+        return new Promise((success,failure)=>{
+            setTimeout(()=>{
+                // success("payment is success");
+                if(payment){
+                    success("payment is done successfully");
+                }
+                else{
+                    failure("not processed");
+                }
+                  
+                
+            },7000)
+        })
+    }
+
+  
+
+   Promise.all([googlePayDetails(6),successPage(true)]).then((success)=>{
+            console.log(success);
+   },(error)=>{
+       console.log(error);
+   })
+
+
+</script>

@@ -1,0 +1,33 @@
+<script>
+    // console.log(window.Promise);
+
+    function googlePayDetails(input){
+        return new Promise((success,failure)=>{
+            setTimeout(()=>{
+                // success("payment is success");
+                  if(input<10){
+                      failure("value is less payment failed");
+                  }
+                  else{
+                    success([input]);
+                  }
+                
+            },5000)
+        })
+    }
+    // console.log(googlePayDetails());
+    googlePayDetails(100).then((result)=>{
+          console.log(result);
+    });
+
+    googlePayDetails(4).then((result)=>{
+          console.log(result);
+    },(failure)=>{
+        console.log(failure);
+    });
+
+    function two(){
+        console.log("two");
+    }
+    two();
+</script>

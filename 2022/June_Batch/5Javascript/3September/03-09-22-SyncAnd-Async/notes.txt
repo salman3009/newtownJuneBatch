@@ -1,0 +1,51 @@
+Javascript:
+1.javascript default behaviour it will work in synchronous way 
+2.javascript also supports asynchornous code.
+3.Async means any waiting period is there in that particular code  the other  program will not wait for that code to be executed.
+4.javascript is non-blocking operation.
+5.async code - setTimeout,setInterval.
+============================================
+Promise:
+1.it will work in Async way 
+2.It consists of two paramets 
+               1.success 
+			   2.failure 
+3.any function that is going to return promise we need to use then block to access success or failure data.
+4.whenever we have api call or some code is dependent on async code.
+=====================================
+new Promise(()=>{
+})
+
+new Promise((success,failure)=>{
+
+})
+
+function display(){
+new Promise((success,failure)=>{
+             success("success");
+});
+
+
+display().then()
+
+display().then(()=>{},()=>{})
+
+display().then((a)=>{console.log(a)},(failure)=>{
+console.log(failure);
+})
+}
+=============================================
+Promise chain:
+scan--->our bank to check balance -->there bank is connected--->transfer -->success-->home
+============================================
+1.normal promise  - es6
+ 2.chain  - es6
+3.promise.all - es6
+4.async and await - es7 (because of promise chain)
+===================================
+
+
+
+
+
+
