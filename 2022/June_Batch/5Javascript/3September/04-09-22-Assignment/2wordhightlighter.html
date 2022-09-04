@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <style>
+        #paragraph-input {
+            border: 2px solid rgb(150, 0, 0);
+            width: 400px;
+            height: 300px;
+            padding: 8px 16px;
+            overflow: scroll;
+        }
+
+        .highlighted-txt {
+            color: rgb(0, 0, 0);
+            background-color: rgb(241, 255, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <label for="paragraph-input">Enter paragraph here</label>
+    <div id="paragraph-input" contenteditable="true">Enter text here</div>
+    <br />
+    <br />
+    <div>Total matches:- <span id="words-counter">0</span></div>
+    <br />
+    <label for="word-input">Enter word to be higlighted here</label>
+    <input oninput="onSelectionHandler(event)" type="text" id="word-input">
+    <br />
+    <br />
+    <label for="ignore-case">Ignore case?</label>
+    <input type="checkbox" id="ignore-case" />
+</body>
+
+<script>
+    function onSelectionHandler(e){
+          let count = 0;
+          let input = document.querySelector('#word-input').value;
+          let paragraph = document.querySelector('#paragraph-input');
+          let parentCheckBox = document.querySelector("#ignore-case").checked;
+          let result="";
+         if(parentCheckBox){
+            result = paragraph.innerText.replaceAll(new RegExp(input,"ig"),function(section){
+              count++; 
+              return `<span class="highlighted-txt">${section}</span>`;
+          });
+         }else{
+            result = paragraph.innerText.replaceAll(input,function(section){
+              count++; 
+              return `<span class="highlighted-txt">${section}</span>`;
+          });
+         }
+      
+
+          document.querySelector('#words-counter').innerHTML = count;
+          paragraph.innerHTML = result;
+    
+        
+          if(!input){
+            document.querySelector('#words-counter').innerHTML = 0;
+          }
+        }
+
+</script>
+
+</html>
+
+//value   - input  
+//checked  - input ---"checkbox or radio"
+//innerHTML - you need access of text with html 
+//innerText  -- plain text 
