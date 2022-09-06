@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+    function fetchDetails() {
+
+        try {
+            let obj={
+                UserId:1,
+                details:"type"
+            };
+
+            axios.post('https://jsonplaceholder.typicode.com/posts',obj).then((result)=>{
+                 console.log(result.data);
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    fetchDetails();
+
+</script>

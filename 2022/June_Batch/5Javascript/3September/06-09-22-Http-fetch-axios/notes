@@ -1,0 +1,127 @@
+HTTP - HYPER TEXT TRANSFER PROTOCOL
+//It will help to bring json data from backend to frontend and frontend to backend.
+Method:
+1.GET
+2.POST
+3.PATCH
+4.DELETE
+
+1.GET METHOD - Bringing existing data
+//Any request that we are hitting in browser is default get method.
+//Get method will bring html,css,javascript and also json file.
+
+2.POST Method - Sending new data from frontend to backend
+
+3.PATCH Method - update the data.
+
+4.DELETE Method - It is used to delete the data.
+
+===============================
+Ajax:
+Status code:
+200 or 300 - success
+400 - client side error
+500 - backend error
+==================================
+404 - page not found 
+200 - get data is fetch successfully.
+
+- server is telling data is created in backend
+================================
+HTTP Method:
+GET   - header  - 
+POST  - header  - body
+PATCH  -header  - body
+DELETE  - header
+============================
+By using browser we can do only get method
+For post,delete,patch we need to develop our UI application or we can using postman tools for testing.
+================================
+Postman 
+//It is testing tool to check the api response.
+============================================
+Reactjs
+1.function
+2.callback function
+3.all array method
+4.what is class
+5.inheritance
+6.object
+8.spread parameter
+9.destructing
+10.return 
+12.&& || if and else
+13.sync and async
+13.get and post 
+14.what is ajax
+15.what is promise 
+16.html and css basic knowledge
+17.arrow function
+18. let and const 
+20.loops
+21.axios
+===================================
+frontend:html,css,javascript
+step1:browser url --> https - Get method
+//it will html,css,javascript file
+step2:you are selecting mobile
+//ajax call - it will not refresh the page. it will bring particular set of data.
+step3:ajax call fetching the data we have get method
+step4:ajax call for registration or buying item post method with body.
+===================================
+Ajax call:
+1.default package given by javascript - fetch method
+2.third party package - axios 
+Difference:
+axios:
+1.no need to convert into json in axios
+2.you write short and simple code
+3.no need to provide extra information for post method.
+4.third party package.
+==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
