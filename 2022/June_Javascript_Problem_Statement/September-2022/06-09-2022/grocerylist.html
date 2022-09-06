@@ -1,0 +1,120 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Grocery Bill</h1>
+    <input placeholder="search" id="search-bar" onchange="update()" />
+    <table>
+    </table>
+
+    <script>
+        const billItems = [{
+    id: 1,
+    itemName: "Bread",
+    price: 20
+  }, {
+    id: 2,
+    itemName: "Butter",
+    price: 50
+  }, {
+    id: 3,
+    itemName: "Tomatoes",
+    price: 30
+  }, {
+    id: 4,
+    itemName: "Onion",
+    price: 40
+  }, {
+    id: 5,
+    itemName: "Pomegranate",
+    price: 60
+  }, {
+    id: 6,
+    itemName: "Apple",
+    price: 40
+  }, {
+    id: 7,
+    itemName: "Grapes",
+    price: 30
+  }, {
+    id: 8,
+    itemName: "Mango",
+    price: 100
+  }];
+
+  function update(){
+     let input = document.querySelector("#search-bar").value;
+     let result = billItems.filter((obj)=>{
+        return obj.itemName.toLowerCase().includes(input.toLowerCase());
+     });
+   initialTable(result);
+  
+
+  }
+
+  function clearTable(){
+    let event = document.querySelector('table');
+    while(event.firstChild){
+        event.firstChild.remove();
+    }
+  }
+
+    function renderTable(type,id,name,price){
+         const input = type;
+         //we are accessing the table tag
+         let globalElement = document.querySelector("table");
+
+         //we are creating tr tag
+         let parentElement = document.createElement("tr");
+
+         //creating th tag
+         let idElement = document.createElement(input);
+        //creating th tag
+         let nameElement = document.createElement(input);
+        //creating th tag
+         let priceElement = document.createElement(input);
+
+         //creating text for th tag
+         let idElementNode = document.createTextNode(id);
+         let nameElementNode = document.createTextNode(name);
+         let priceElementNode = document.createTextNode(price);
+
+         //adding text to th tag
+         idElement.appendChild(idElementNode);
+         nameElement.appendChild(nameElementNode);
+         priceElement.appendChild(priceElementNode);
+
+         //adding th tag to tr tag
+         parentElement.appendChild(idElement);
+         parentElement.appendChild(nameElement);
+         parentElement.appendChild(priceElement);
+
+         //adding tr tag to table
+         globalElement.appendChild(parentElement);
+
+    }
+
+    function initialTable(billItems){
+        clearTable();
+        if(billItems.length>0){
+            renderTable("th","id","itemName","price");
+        for(let obj of billItems){
+            renderTable("td",obj.id,obj.itemName,obj.price);
+        }
+        }
+        else{
+            let global = document.querySelector('table');
+            let node = document.createTextNode('No items found!');
+            global.appendChild(node);
+        }
+       
+
+    }
+    initialTable(billItems);
+    </script>
+</body>
+
+</html>
