@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <style>
+        .heading{
+            text-align: center;
+            font-weight: 800;
+        }
+        .single-container {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 300px auto;
+        }
+
+        .display-container {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .single-line-box {
+            border: 1px solid black;
+            width: 50px;
+            height: 30px;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+        <h1 id="selectedNumber"></h1>
+    </div>
+    <div class="heading">
+        <h1 id="tried-count"></h1>
+    </div>
+
+    <div class="display-container">
+
+    </div>
+
+    
+    <div class="single-container">
+
+    </div>
+    <script>
+        let count =0;
+        //board[0][1]
+        let board = [
+            "--74916-5",
+            "2---6-3-9",
+            "-----7-1-",
+            "-586----4",
+            "--3----9-",
+            "--62--187",
+            "9-4-7---2",
+            "67-83----",
+            "81--45---"
+        ];
+
+        let solution = [
+            "387491625",
+            "241568379",
+            "569327418",
+            "758619234",
+            "123784596",
+            "496253187",
+            "934176852",
+            "675832941",
+            "812945763"
+        ];
+        function initialLoad() {
+            
+
+            for (let r = 0; r < 9; r++) {
+                for(let c=0;c<9;c++){
+                let globalElement = document.querySelector(".display-container");
+                let parentElement = document.createElement("div");
+                parentElement.addEventListener('click', selectHandler);
+                parentElement.classList.add("single-line-box");
+                parentElement.id = r+""+c;
+                parentElement.innerHTML = board[r][c];
+                globalElement.appendChild(parentElement);
+                }
+               
+            }
+
+            for (let i = 0; i <= 9; i++) {
+                let globalElement = document.querySelector(".single-container");
+                let parentElement = document.createElement("div");
+                parentElement.addEventListener('click', solutionHandler);
+                parentElement.classList.add("single-line-box");
+                parentElement.id = i;
+                parentElement.innerHTML = i;
+                globalElement.appendChild(parentElement);
+            }
+
+
+        }
+        initialLoad();
+
+        function selectHandler(event) {
+            console.log(event.target.id);
+            let[r,c]=event.target.id.split("");
+            let result = solution[r][c];
+            let selectedElement = document.querySelector("#selectedNumber").innerText;
+            if(result == selectedElement){
+                 document.getElementById(event.target.id).innerHTML =  result;
+                 document.querySelector("#selectedNumber").innerHTML="";
+                 count=0;
+                 document.querySelector("#tried-count").innerHTML= "";
+                }
+                else{
+                    count++;
+                    document.querySelector("#tried-count").innerHTML= "Total number of attempts "+count;
+                }
+            console.log(r,c);   
+        }
+
+        function solutionHandler(event){
+            document.querySelector("#selectedNumber").innerHTML = event.target.id;
+            document.querySelector("#tried-count").innerHTML="Total number of attempts 0";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+     function deleteDetails(){
+          axios.delete(`https://jsonsuccess.typicode.com/todos`).then((response)=>{
+              console.log(response.data);
+          }).catch((error)=>{
+            console.log(error);
+          })
+
+     }
+     deleteDetails();
+
+ 
+
+</script>

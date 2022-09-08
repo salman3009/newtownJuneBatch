@@ -1,0 +1,26 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+        function fetchDetails(){
+            axios.get(`https://jsonplaceholder.typicode.com/todos`).then((response)=>{
+              console.log(response.data);
+              postDetails(response.data[0].id);
+          })
+        }
+
+     function postDetails(id){
+        let obj={
+            password:12345
+        }
+          axios.put(`https://jsonplaceholder.typicode.com/todos/${id}`,obj).then((response)=>{
+              console.log(response.data);
+          })
+
+     }
+
+     fetchDetails();
+  
+
+  
+</script>

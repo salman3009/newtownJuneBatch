@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <style>
+        .container {
+            width: 50%;
+            min-height: 200px;
+            border: 1px solid brown;
+            background-color: #a52a2a45;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin: auto;
+            width: 100%;
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        input,
+        button {
+            margin: auto;
+            display: block;
+        }
+
+        input {
+            width: 50%;
+            border: 0;
+            border: 1px solid brown;
+            height: 28px;
+            border-radius: 8px;
+        }
+
+        button {
+            border: 0;
+            width: 25%;
+            height: 39px;
+            background-color: brown;
+            border-radius: 6px;
+        }
+
+        .notes,
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .form-button {
+            display: inline;
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group notes">
+            Total Notes: <span id="count">0</span>
+        </div>
+        <div class="form-group">
+            <input type="text" id="list-notes" />
+        </div>
+        <div class="form-group">
+            <button onclick="onSubmitHandler()">Submit</button>
+        </div>
+    </div>
+
+    <div class="container" id="list">
+        <h1>LIST OF NOTES</h1>
+    </div>
+
+    <script>
+        let count=0;
+        function onSubmitHandler() {
+            count++;
+            let input = document.querySelector("#list-notes").value;
+            document.querySelector("#count").innerHTML = count;
+
+            //div tag will be created
+            let parentElement = document.createElement("div");
+            //<div class="form-group"></div>
+            parentElement.classList.add("form-group");
+            //<div class="form-group notes"></div>
+            parentElement.classList.add("notes");
+
+            //<p></p>
+            let paragraphElement = document.createElement("p");
+            let paragraphNode = document.createTextNode(count+" . "+input);
+            paragraphElement.addEventListener('blur',onBlurHandler);
+            //<p>welcome to programming</p>
+            paragraphElement.appendChild(paragraphNode);
+            //<div class="form-group notes"><p>welcome to programming</p></div>
+            parentElement.appendChild(paragraphElement);
+
+            //<button></button>
+            let deleteElement = document.createElement("button");
+            //<button class="form-button"></button>
+            deleteElement.classList.add("form-button");
+            deleteElement.addEventListener('click',onDeleteHandler);
+            let deleteNode = document.createTextNode("Delete");
+            //<button class="form-button">Delete</button>
+            deleteElement.appendChild(deleteNode);
+            //  <div class="form-group notes">
+            //     <p>welcome to programming</p>
+            //     <button class="form-button">Delete</button>
+            //     </div>
+            parentElement.appendChild(deleteElement);
+
+            //<button></button>
+            let editElement = document.createElement("button");
+            editElement.addEventListener('click',onEditHandler);
+            //<button class="form-button"></button>
+            editElement.classList.add("form-button");
+            let editNode = document.createTextNode("Edit");
+            //<button class="form-button">Edit</button>
+            editElement.appendChild(editNode);
+            //  <div class="form-group notes">
+            //     <p>welcome to programming</p>
+            //     <button class="form-button">Delete</button>
+            // <button class="form-button">Edit</button>
+            //     </div>
+            parentElement.appendChild(editElement);
+
+            let globalList = document.querySelector("#list");
+
+            // <div class="container" id="list">
+            //         <h1>LIST OF NOTES</h1>
+            //     </div>
+            //  <div class="form-group notes">
+            //     <p>welcome to programming</p>
+            //     <button class="form-button">Delete</button>
+            // <button class="form-button">Edit</button>
+            //     </div>
+            globalList.appendChild(parentElement);
+            
+
+
+        }
+
+        function onDeleteHandler(event){
+            count--;
+            document.querySelector("#count").innerHTML = count;
+            event.target.parentElement.remove();
+        }
+
+        function onEditHandler(event){
+            event.target.parentElement.firstChild.setAttribute("contenteditable",true);
+        }
+
+        function onBlurHandler(event){
+            event.target.parentElement.firstChild.setAttribute("contenteditable",false);
+        }
+    </script>
+</body>
+
+</html>

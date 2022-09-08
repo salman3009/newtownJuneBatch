@@ -1,0 +1,18 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+     function postDetails(){
+        let obj={
+            email:"salman@gmail.com",
+            password:12345
+        }
+          axios.post('https://jsonplaceholder.typicode.com/todos',obj).then((response)=>{
+              console.log(response.data);
+          })
+
+     }
+     postDetails();
+
+  
+</script>

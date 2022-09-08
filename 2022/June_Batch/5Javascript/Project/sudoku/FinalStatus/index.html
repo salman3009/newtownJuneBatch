@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .board{
+                width: 465px;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .title{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border:1px solid black;
+            }
+            .selection{
+                width: 465px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="board">
+
+        </div>
+        <div class="selection">
+
+        </div>
+        <script>
+            var board = [
+    "--74916-5",
+    "2---6-3-9",
+    "-----7-1-",
+    "-586----4",
+    "--3----9-",
+    "--62--187",
+    "9-4-7---2",
+    "67-83----",
+    "81--45---"
+]
+
+var solution = [
+    "387491625",
+    "241568379",
+    "569327418",
+    "758619234",
+    "123784596",
+    "496253187",
+    "934176852",
+    "675832941",
+    "812945763"
+];
+
+function initial(){
+       for(let r=0;r<9;r++){
+          for(let c=0;c<9;c++){
+             let globalElement = document.querySelector(".board");
+             let parentElement = document.createElement("div");
+             parentElement.addEventListener('click',onGivenHandler);
+             parentElement.id=r.toString()+""+c.toString();
+             parentElement.innerHTML=board[r][c];
+             parentElement.classList.add('title');
+             globalElement.appendChild(parentElement);
+
+          }
+       }
+
+       for(let r=0;r<9;r++){
+             let globalElement = document.querySelector(".selection");
+             let parentElement = document.createElement("div");
+             parentElement.addEventListener('click',selectionElement);
+             parentElement.id=r.toString();
+             parentElement.innerHTML=r;
+             parentElement.classList.add('title');
+             globalElement.appendChild(parentElement); 
+
+       }
+}
+initial();
+
+let selected = -1;
+function selectionElement(event){
+          alert(event.target.id);
+          selected = event.target.id;
+}
+
+function onGivenHandler(event){
+    debugger;
+       let [r,c] = event.target.id.split('');
+       let input = solution[r][c];
+       if(selected == input){
+           document.getElementById(event.target.id).innerHTML=selected;
+           selected=-1;
+       }
+       
+}
+
+
+        </script>
+    </body>
+</html>

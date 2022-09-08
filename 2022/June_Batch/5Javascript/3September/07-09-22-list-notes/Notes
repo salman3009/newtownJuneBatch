@@ -1,0 +1,15 @@
+Notes:
+FRONTEND TECHNOLOGIES:HTML,CSS,JAVASCRIPT,REACTJS
+WEB TECHNOLOGIES:Anything that is running on browser - html,css,javascript,reactjs,nodejs,expressjs,mongodb,sql,mongoose
+Web:
+HTTP - Hyper text transfer protocol
+URL - uniform resource locator
+HTTP - Will bring html file,css file,js file,json data
+Method:
+get - to fetch existing data
+post - to send new data
+put or patch - to send existing data for update
+delete - to delete existind data
+===================================
+Frontend and backend communication
+//By using JSON (javascript object notation);
