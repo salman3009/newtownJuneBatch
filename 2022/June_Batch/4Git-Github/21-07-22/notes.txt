@@ -73,8 +73,14 @@ Frontend:
 2.css --->it is used to do presentation for web page
 3.javascript ---> it is used to make web page dynamic.
 pure javascript --> vanilla javascript 
-
-
+==========================================
+cmd:git init
+cmd:git clone https://github.com/yoururl/reactjs.git
+cmd:git checkout -b master 
+cmd:git add .
+cmd:git commit -m "code"
+cmd:git push origin master
+=====================================
 
 
 
