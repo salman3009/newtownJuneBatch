@@ -1,0 +1,72 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/m4jmsyg38w1c/
+</script>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <lable for="input1">Enter value:- </lable>
+        <input type="text" id="input1" />
+        <button type="button" onclick="evalString()">Test</button>
+     <script>
+        function evalString() {
+  let str = document.getElementById("input1").value;
+  try {
+   
+  } catch (e) {
+    alert("failed " + e.name + " " + e.message);
+    if (window.Cypress) {
+      throw e;
+    }
+  }
+}
+ class OutOfRangeError extends Error {
+
+  constructor(args) {
+
+    super();
+
+    this.name = "OutOfRangeError";
+
+    this.message =
+
+      "Expression should only consist of integers and +-/* characters and not '" +
+
+      args +
+
+      "' ";
+
+  }
+
+}
+
+
+ 
+
+class InvalidExprError extends Error {
+
+  constructor() {
+
+    super();
+
+    this.name = "InvalidExprError";
+
+    this.message =
+
+      "Expression should not have an invalid combination of expression";
+
+  }
+
+}
+
+if (window.Cypress) {
+  window.OutOfRangeError = OutOfRangeError
+  window.InvalidExprError = InvalidExprError
+
+}
+     </script>
+    </body>
+</html>
+

@@ -7,34 +7,52 @@
     </head>
     <body>
         <div>
-            <input type="text" id="amountId" name="amount"/>
+            <input type="text" id="billamt" name="amount"/>
         </div>
         <br><br>
         <div>
-           <select>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
+           <select id="serviceQual">
+            <option value="0.05">5</option>
+            <option value="0.1">10</option>
+            <option value="0.15">15</option>
+            <option value="0.2">20</option>
+            <option value="0.25">25</option>
+            <option value="0.3">30</option>
            </select>
         </div>
         <br><br>
         <div>
-            <input type="number" id="peopleId" name="people"/>
+            <input type="number" id="peopleamt" name="people"/>
         </div>
         <br><br>
         <div>
-            <button>Calculate</button>
+            <button onclick="onInitailDetails()" id="Calculate">Calculate</button>
+        </div>
+        <div id="result">
+
         </div>
 
     </body>
     <script>
         function onInitailDetails(){
-
+                let amount = document.querySelector("#billamt").value?Math.round(document.querySelector("#billamt").value):null;
+                if(amount==null){
+                    alert("Please Enter Bill Amount");
+                    return;
+                }
+                let quality = Number(document.querySelector("#serviceQual").value);
+                let noOfPeople = document.querySelector("#peopleamt").value?Number(document.querySelector("#peopleamt").value):1;
+                let finalAmount = (amount/noOfPeople)*quality;
+                console.log(finalAmount);
+                if(noOfPeople==1){
+                   document.querySelector("#result").innerHTML=`TIP AMOUNT $ ${finalAmount.toFixed(2)}`;
+                }
+                else{
+                    document.querySelector("#result").innerHTML=`TIP AMOUNT $ ${finalAmount.toFixed(2)} each`;
+                }
+             
         }
-        onInitailDetails();
+       
 
     </script>
 </html>

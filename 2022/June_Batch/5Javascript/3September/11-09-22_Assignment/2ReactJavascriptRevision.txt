@@ -1,0 +1,133 @@
+HTML Part - 1
+1.div 
+2.span 
+3.form element (input,button,form)
+4.table 
+5.anchor tag 
+6.img tag 
+7.h1,p tag 
+9list tag 
+=========================
+CSS part  - 2
+1.box modal(width,height,margin,padding,border)
+2.display:flex,display;grid,display:block,display:inline-block 
+3.font-family,font-size,font-weight 
+4.id,class,boxing-sizing,color,background-color 
+============================================
+Basics: - 3
+1.arithmetic operator (+,-,*,/,%)
+2.comparison operator (>,<,>=,<=,==,===)
+3.logical operator (&&,||,!)
+4.conditionl operator (a>b?true:false)
+Decision making
+switch 
+if,else 
+function
+1.passing argument 
+2.return statement 
+3.default parameter
+function age(flag = true){
+
+} 
+this keyword in javascript 
+DOM Part:
+document.getElementById('id');
+===========================================
+string: - 4
+1.trim
+2.includes 
+3.length 
+4.+ 
+5.tolowercase
+6.slice
+====================================
+array methods: - 5
+1.map 
+2.filter 
+3.reduce 
+4.includes 
+5.indexOf
+6.for of 
+7.normal for loop 
+=====================================
+please use const for array,object,function 
+================================
+Object methods: - 6
+1.for in 
+2.object,properties,methods 
+===========================
+ES6 features: - 7
+
+1.Destructring of array and object 
+Example:
+let list =[1,2,3];
+let [a,b,c]=list;
+let employee = {fullName:"akash",age:45};
+let {fullName,age} = employee;
+
+2.spread parameter of array and object 
+let arrayOne = [5,6,7,8];
+let arrayTwo = [...arrayOne];
+
+3.let and const 
+
+4.template string 
+let fullName = "programming";
+example: `welcome to javascript ${fullName}`
+
+5. arrow function 
+()=>{}
+6.
+class Employee{
+
+    constructor(fullName,age){
+
+    }
+    getListDetails(){
+
+
+    }
+}
+
+class Token extends Employee{
+
+    constructor(fullName,age){
+        super(fullName,age)
+    }
+}
+======================================
+What is ajax - 8
+what is http 
+what is sync and Async 
+what is promise 
+what is async and await 
+axios package 
+what is then block and catch block 
+try and catch exception handling
+
+const initialData = ()=>{
+        try{
+            axios.get("url").then(resposne)=>{
+
+            }).catch((error)=>{
+
+            })
+
+        }
+        catch(err){
+
+        }
+
+}
+
+initialData();
+=============================
+9.
+validation regular expression
+===========================
+
+
+
+
+
+

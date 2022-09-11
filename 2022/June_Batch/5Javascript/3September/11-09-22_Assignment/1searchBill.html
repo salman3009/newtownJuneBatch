@@ -1,0 +1,119 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Grocery Bill</h1>
+
+    <input placeholder="search" id="search-bar" onchange="update()" />
+    <table>
+
+    </table>
+</body>
+<script>
+    const billItems = [{
+    id: 1,
+    itemName: "Bread",
+    price: 20
+  }, {
+    id: 2,
+    itemName: "Butter",
+    price: 50
+  }, {
+    id: 3,
+    itemName: "Tomatoes",
+    price: 30
+  }, {
+    id: 4,
+    itemName: "Onion",
+    price: 40
+  }, {
+    id: 5,
+    itemName: "Pomegranate",
+    price: 60
+  }, {
+    id: 6,
+    itemName: "Apple",
+    price: 40
+  }, {
+    id: 7,
+    itemName: "Grapes",
+    price: 30
+  }, {
+    id: 8,
+    itemName: "Mango",
+    price: 100
+  }];
+
+  function update(){
+      let input = document.querySelector("#search-bar").value;
+      console.log(input);
+      let result = billItems.filter((obj)=>{
+         return obj.itemName.toLowerCase().includes(input.toLowerCase());
+      });
+      console.log(result);
+      onLoad(result);
+  }
+
+  function renderTable(flag,id,itemName,price){
+    //table
+    let tableElement = document.querySelector("table");
+    //creating tr tag
+    let row = document.createElement('tr');
+    //creating th or td
+    let elementType = flag?"th":"td";
+    //th
+    let idElement = document.createElement(elementType);
+    //id
+    let idNode = document.createTextNode(id);
+    //th
+    let itemNameElement = document.createElement(elementType);
+    //itemName
+    let itemNameNode = document.createTextNode(itemName);
+    //th
+    let priceElement = document.createElement(elementType);
+    //price
+    let priceNode = document.createTextNode(price);
+    //<th>id</th>
+    idElement.appendChild(idNode);
+    //<th>itemName</th>
+    itemNameElement.appendChild(itemNameNode);
+    //<th>price</th>
+    priceElement.appendChild(priceNode);
+    //<tr><th>id</th></tr>
+    row.appendChild(idElement);
+     //<tr><th>id</th><th>itemName</th></tr>
+    row.appendChild(itemNameElement);
+     //<tr><th>id</th><th>itemName</th><th>price</th></tr>
+    row.appendChild(priceElement);
+    tableElement.appendChild(row);
+  }
+
+  function onLoad(items){
+        clearTable();
+        if(items && items.length>0){
+            renderTable(true,"id","itemName","price");
+        for(let obj of items){
+            renderTable(false,obj.id,obj.itemName,obj.price);
+        }
+        }
+        else{
+            let tableElement = document.querySelector("table");
+            let tableNode = document.createTextNode("No items found!");
+            tableElement.appendChild(tableNode);
+
+        }
+     
+  }
+  onLoad(billItems);
+
+  function clearTable(){
+    let tableElement = document.querySelector("table");
+    while(tableElement.firstChild){
+        tableElement.firstChild.remove();
+    }
+  }
+</script>
+</html>

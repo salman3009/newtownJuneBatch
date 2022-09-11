@@ -1,0 +1,55 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/gb0b3v5vuqsz/
+</script>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <!-- <p draggable="true" ondragstart="drag(event)" id="drag1">naman</p> -->
+              <img src="images/1.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="83px" height="83px">
+        </div>
+    
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="images/2.png" draggable="true" ondragstart="drag(event)" id="drag2" width="83px" height="83px">
+        </div>
+    
+        <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="images/3.png" draggable="true" ondragstart="drag(event)" id="drag3" width="83px" height="83px">
+        </div>
+    
+        <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="images/4.png" draggable="true" ondragstart="drag(event)" id="drag4" width="83px" height="83px">
+        </div>
+    
+        <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="images/5.jpeg" draggable="true" ondragstart="drag(event)" id="drag5" width="83px" height="83px">
+        </div>
+    
+        <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="images/6.jpeg" draggable="true" ondragstart="drag(event)" id="drag6" width="80px" height="80px">
+        </div>
+        <script>
+            function allowDrop(ev) {
+		  ev.preventDefault();
+		}
+
+		function drag(ev) {
+		  ev.dataTransfer.setData("dragid", ev.target.id);
+		  ev.dataTransfer.setData("parid", ev.target.parentElement.id);
+		}
+
+		function drop(ev) {
+		  ev.preventDefault();
+		  var dragid = ev.dataTransfer.getData("dragid");
+		  var parid = ev.dataTransfer.getData("parid");
+		  if(ev.target.draggable)
+		  {
+		  	ev.target.parentElement.appendChild(document.getElementById(dragid));
+		  	document.getElementById(parid).appendChild(ev.target);
+		  }
+		}
+        </script>
+    </body>
+</html>
