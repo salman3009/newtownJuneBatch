@@ -1,0 +1,50 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/ufa8n3917e7g/
+</script>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>Item-2</td>
+            <td data-ns-test="price">18361</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Item-2</td>
+            <td data-ns-test="price">18361</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Item-3</td>
+            <td data-ns-test="price">17373</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Item-4</td>
+            <td data-ns-test="price">17361</td>
+        </tr>
+    </table>
+    <script>
+        var table = document.querySelector('table');
+        var lastRow = document.createElement('tr');
+        var prices = document.querySelectorAll('[data-ns-test=price]');
+        let sum = 0;
+        for (let i = 0; i < prices.length; i++) {
+            sum += parseInt(prices[i].innerText);
+        }
+        var child = document.createElement("td");
+        child.setAttribute('data-ns-test', 'grandTotal');
+
+        child.innerText = sum;
+        lastRow.appendChild(child);
+        table.appendChild(lastRow);
+    </script>
+</body>
+
+</html>

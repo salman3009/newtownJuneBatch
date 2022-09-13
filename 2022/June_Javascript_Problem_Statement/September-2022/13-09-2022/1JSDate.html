@@ -1,0 +1,36 @@
+<script>
+    function whichDay(date) {
+        let input = "";
+        //sunday-0,Monday-1,Tuesday-2,wednesday-3,Thrusday-4,friday-5,saturday-6
+        // console.log(date.getDay());
+        switch (date.getDay()) {
+            case 0:
+                str = "last";
+                break;
+            case 1:
+                str = "first";
+                break;
+            case 2:
+                str = "second";
+                break;
+            case 3:
+                str = "third";
+                break;
+            case 4:
+                str = "fourth";
+                break;
+            case 5:
+                str = "fifth";
+                break;
+            case 6:
+                str = "sixth";
+                break;
+            default:
+                str="";
+                break;    
+        }
+                return `It is the ${str} day of the week`;
+        
+    }
+        console.log(whichDay(new Date()));
+</script>

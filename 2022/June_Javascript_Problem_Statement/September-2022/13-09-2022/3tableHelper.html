@@ -1,0 +1,41 @@
+<!-- <html>
+    <head>
+        
+    </head>
+    <body>
+        <table>
+
+        </table>
+        <script>
+            let globalElement = document.querySelector("table");
+            let trElement = document.createElement("tr");
+            let tdElement = document.createElement("td");
+            tdElement.innerText="welcome";
+            trElement.appendChild(tdElement);
+            globalElement.appendChild(trElement);
+        </script>
+    </body>
+</html> -->
+
+
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div class="heading">Welcome</div>
+        <div class="heading">programming</div>
+        <!-- <script>
+            let globalElement = document.querySelector(".heading");
+            console.log(globalElement.innerHTML);
+
+        </script> -->
+        <script>
+            let globalElement = document.querySelectorAll(".heading");
+            console.log(globalElement.length);
+            console.log(globalElement[0].innerHTML);
+
+        </script>
+    </body>
+</html>

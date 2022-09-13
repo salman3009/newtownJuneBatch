@@ -1,0 +1,34 @@
+<script>
+// https://my.newtonschool.co/playground/code/7ek9qr9lyhje/
+function whichDay(date) {
+    // write code here
+    // return the output , do not use console.log here
+    let str = ""
+    switch (date.getDay()) {
+        case 0:
+            str = 'last'
+            break;
+        case 1:
+            str = 'first'
+            break;
+        case 2:
+            str = 'second'
+            break;
+        case 3:
+            str = 'third'
+            break;
+        case 4:
+            str = 'fourth'
+            break;
+        case 5:
+            str = 'fifth'
+            break;
+        case 6:
+            str = 'sixth'
+            break;
+        default:
+            break;
+    }
+    return `Today is the ${str} day of the week`
+}
+</script>

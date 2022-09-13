@@ -1,0 +1,19 @@
+{
+  "name": "axios-implementation",
+  "version": "1.0.0",
+  "description": "axios demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "[\"axios\"",
+    "\"promise\"]"
+  ],
+  "author": "salman",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
