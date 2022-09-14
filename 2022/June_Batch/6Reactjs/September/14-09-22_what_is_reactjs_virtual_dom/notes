@@ -1,0 +1,98 @@
+Notes:
+Frontend Development:HTML,CSS,Javascript
+Reactjs:
+//It is an library
+//Reactjs is a SPA (Single page application)
+//Only one html file will be present inside the reactjs application
+//only section will get change in that particular page.
+Example:gmail.com
+Single Page application other examples:
+1.Reactjs
+2.Angular
+3.Vuejs 
+=================================
+Declarative:
+1.we cannot see the inner lying only wrapper will be present
+Component based:
+1.function is called component in reactjs
+example:
+function name(){
+	
+}
+2.component based help us to reuse the code.
+3.always we need to divide our entire application into many number of 
+components.
+example:
+1.button 
+2.anchor tag 
+3.search box
+4.filter 
+=======================================================
+Reactjs is a combination of html ,css and javascript
+=====================================================
+Benefits:
+1.SPA
+2.component based - code reuse
+3.code maintainable
+4.virtual dom
+5.More of functional programming
+6.optimization (lazy loading,useMemo,usecallback,suspense)
+7.unit testing setup
+8.production build setup
+==============================
+Virtual DOM
+//copy of real dom in the memory - reconciliation
+//entire application first it will interact with virtual dom
+//virtual dom will interact real dom
+//To keep track of each similar data react will use unique key to identify them.
+==================================================
+Reactjs and ReactNative:
+1.Before learning reactnative we should have knowledge on reactjs 
+2.reactivenative helps to build native apps for andriod and ios 
+===========================================
+To setup Reactjs we need to have nodejs in our system.
+Project structure:
+1.node_modules
+2.package.json
+3.package-lock.json
+4.readme - documenation file
+5.src - source code 
+6.public - index.html
+============================================
+To run the react application:
+1.right click on package.json 
+2.cmd:npm start
+=====================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
