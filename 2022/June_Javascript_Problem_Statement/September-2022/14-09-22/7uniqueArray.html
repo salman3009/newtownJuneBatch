@@ -1,0 +1,27 @@
+<script>
+    //https://my.newtonschool.co/playground/code/qznsydltru6q/
+    function removeDuplicates(arr){
+      let newTemp=[];
+      for(let obj of arr){
+        if(newTemp.indexOf(obj)==-1){
+            newTemp.push(obj);
+        }
+      }
+      return newTemp.join(' ');
+}
+console.log(removeDuplicates([1, 2, 3, 5, 1, 5, 9, 1, 2, 8]));
+</script>
+
+<script>
+    let list=[1,2,3,4];
+    for(let obj of list){
+        console.log(obj);
+    }
+</script>
+
+<script>
+    let listOfNames=["akash","ram","raju","rakesh"];
+    let index = listOfNames.indexOf("suresh");
+    console.log(index);
+    
+</script>

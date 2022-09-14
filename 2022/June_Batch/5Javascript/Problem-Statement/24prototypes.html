@@ -6,7 +6,7 @@
 
 for (let i = 0; i < this.length; i++) {
     if ((list.length === 0) || (this.length === 0)) { return false; }
-    if (Array.isArray(list[0]) && Array.isArray(this[0]))
+    if (Array.isArray(list[0]) && Array.isArray(this[0])){
         for (let j = 0; j < list.length; j++) {
             let array1 = this[i];
             let array2 = list[j];
@@ -14,16 +14,10 @@ for (let i = 0; i < this.length; i++) {
                 return true;
             }
         }
-    if (Array.isArray(list[0]) && Array.isArray(this[0]))
-        for (let j = 0; j < list.length; j++) {
-            let array1 = this[i];
-            let array2 = list[j];
-            if (array1.length === array2.length && array1.every(function (value, index) { return value == array2[index] })) {
-                return true;
-            }
-        }
+    }
+  
     if ((this[0].constructor === Object) && (list[0].constructor === Object)) {
-        for (let j = 0; j < Object.keys(list).length; j++) {
+        for (let j = 0; j < list.length; j++) {
             let array1 = this[i];
             let array2 = list[j];
             if (Object.keys(array1).length === Object.keys(array2).length && Object.entries(array1).every(function (a) { return a[1] == array2[a[0]] })) {

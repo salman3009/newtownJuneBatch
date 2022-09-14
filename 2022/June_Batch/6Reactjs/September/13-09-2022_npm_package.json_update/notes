@@ -1,0 +1,130 @@
+Notes:
+Nodejs - To run javascript outside the browser. We need nodejs 
+Nodejs - It is rune environment for javascript.
+Nodejs - It is used to write backend coding
+Nodejs - database and files system.tim
+=================================
+Javascript on browser - window,document,(global object is not present)
+Javascript on Nodejs - global (window,document is not present)
+==============================================
+Node software:
+
+https://nodejs.org/en/
+LTS - long term support
+===========================
+cmd:node -v
+========================== 
+To run reactjs we need node version greater then 14
+==================================
+hello.js 
+console.log(2+2);
+console.log("akash".toUpperCase());
+// console.log(window);
+console.log(global);
+cmd:node hello.js 
+============================================
+NPM - Node package manager
+cmd:npm -v
+npm version should be greater then 5.6
+//It helps to manage the packages in our project
+=====================================
+npm:
+package.json file
+cmd:npm init
+//It is configuration file
+//It consists of information about the project and set of packages installed and how to run the project.
+
+Using npm how to start the project
+1.inside the scripts tag please create key and value pair
+2.inside the key please provide any name with small case character
+3.value should command to execute that code:
+  "scripts": {
+    "start":"node index.js"
+  },
+cmd:npm run start
+cmd:npm start
+===================
+0.27.2
+0 - major version 
+27 - minor version
+2 - patch version
+0.28.3 - you can update
+1.01.0 - testing is needed
+^symbol will update minor and patch version
+========================
+//any package you are going to install will be store in node_modules folder
+//Inside then node_modules folder we cannot do anything because it will install everything from network or cloud 
+//package.lock.json  this file will be created automatically whenever we install the new package.
+==============================
+npm install - will install all the packages that is available inside the package.json->dependencies
+===============================
+commands:
+cmd:node -v
+cmd:npm -v
+cmd:npm init 
+cmd:npm install axios
+cmd:npm install
+cmd:npm run start or npm start 
+cmd:npm outdated
+cmd:npm install -g npm-check-updates
+cmd:ncu
+cmd:ncu -u
+// -g means global
+===================================
+  "axios": "^0.27.2" - latest
+================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
