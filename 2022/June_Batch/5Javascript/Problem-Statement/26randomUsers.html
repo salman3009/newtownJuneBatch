@@ -1,0 +1,63 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/5gye6jb6wevg/
+</script>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <article class="user">
+            <div class="img-holder">
+                <img src="">
+            </div>
+            <h2 class="user-name"></h2>
+            <section class="user-info">
+    
+            </section>
+            <div class="btn-holder">
+                <button data-attr="age">Age</button>
+                <button data-attr="email">Email</button>
+                <button data-attr="phone">Phone</button>
+            </div>
+        </article>
+        <button onclick="display()" id="getUser">GET ANOTHER USER</button>
+        <script>
+            const img = document.querySelector('.img-holder img')
+        const userNameEl = document.querySelector('h2.user-name')
+        const userInfoEl = document.querySelector('.user-info')
+        const btns = document.querySelectorAll('.btn-holder button')
+        const getRandomUserInfo = async () => {
+            const URL = "https://randomuser.me/api/";
+            const response = await fetch(URL);
+            const data = await response.json();
+            const person = data.results[0];
+            const { phone, email } = person;
+            const { large: image } = person.picture;
+            const { first, last } = person.name;
+            const {
+                dob: { age },
+            } = person;
+
+            return {
+                phone,
+                email,
+                image,
+                name: `${first} ${last}`,
+                age,
+            };
+        }
+        const display = async () =>{
+            userInfoEl.innerText = ''
+            const data = await getRandomUserInfo();
+            img.setAttribute('src',data['image'])
+            userNameEl.innerHTML = data['name']
+            btns.forEach(btn=>{
+                btn.addEventListener('click',(e)=>{
+                    userInfoEl.innerText = data[e.target.dataset['attr']]
+                })
+            })
+        }
+        display()
+        </script>
+    </body>
+</html>

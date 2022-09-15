@@ -2,33 +2,49 @@
     // https://my.newtonschool.co/playground/markup/jne90d82ynak/
 </script>
 <script>
-    Array.prototype.includesOneof = function (list) {
-
-for (let i = 0; i < this.length; i++) {
-    if ((list.length === 0) || (this.length === 0)) { return false; }
-    if (Array.isArray(list[0]) && Array.isArray(this[0])){
-        for (let j = 0; j < list.length; j++) {
-            let array1 = this[i];
-            let array2 = list[j];
-            if (array1.length === array2.length && array1.every(function (value, index) { return value == array2[index] })) {
-                return true;
+  Array.prototype.includesOneof = function(list){
+      for(let i=0;i<this.length;i++){
+        if(this.length===0 || list.length ===0){
+            return false;
+        }
+        if(Array.isArray(this[0]) && Array.isArray(list[0])){
+            for(let j=0;j<list.length;j++){
+                let arr1 = this[i];
+                let arr2 = list[j];
+              if((arr1.length === arr2.length)){
+                 let result = arr1.every((obj,index)=>{
+                        return obj === arr2[index];
+                  });
+                  if(result){
+                    return true;
+                  }
+              }
             }
         }
-    }
-  
-    if ((this[0].constructor === Object) && (list[0].constructor === Object)) {
-        for (let j = 0; j < list.length; j++) {
-            let array1 = this[i];
-            let array2 = list[j];
-            if (Object.keys(array1).length === Object.keys(array2).length && Object.entries(array1).every(function (a) { return a[1] == array2[a[0]] })) {
-                return true;
+        if(this[0].constructor === Object && list[0].constructor === Object){
+            for(let j=0;j<list.length;j++){
+                  let arr1 = this[i];
+                  let arr2 = list[j];
+                  if(Object.keys(arr1).length === Object.keys(arr2).length){
+                     let result = Object.entries(arr1);
+                     let finalResult = result.every((obj)=>{
+                        // console.log(obj[1]);
+                        // console.log(arr2[obj[0]]);
+                        return obj[1] === arr2[obj[0]];
+                     })
+                     if(finalResult){
+                        return true;
+                     }
+                  }
             }
         }
+        if(list.includes(this[i])){
+           return true;
+        }
+      }
+      return false;
     }
 
-    if (list.includes(this[i])) { return true; }
-}
-return false;
-}
-
+    const arr2 = [{name:"James Bond",code:"OO7"},{name:"Edward Donne",code:"OO1"}];
+    console.log(arr2.includesOneOf([{name:"James Bond",code:'OO7',organization: 'MI6'}]));
 </script>

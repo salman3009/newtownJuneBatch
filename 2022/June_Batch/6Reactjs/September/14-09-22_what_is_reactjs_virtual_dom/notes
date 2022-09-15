@@ -50,7 +50,8 @@ Reactjs and ReactNative:
 1.Before learning reactnative we should have knowledge on reactjs 
 2.reactivenative helps to build native apps for andriod and ios 
 ===========================================
-To setup Reactjs we need to have nodejs in our system.
+1.To setup Reactjs we need to have nodejs in our system.
+2.cmd:npx create-react-app hello-world
 Project structure:
 1.node_modules
 2.package.json
@@ -63,7 +64,9 @@ To run the react application:
 1.right click on package.json 
 2.cmd:npm start
 =====================================
-
+Reactjs is opening on local http-server
+//it will bundle all the file.
+===================================
 
 
 

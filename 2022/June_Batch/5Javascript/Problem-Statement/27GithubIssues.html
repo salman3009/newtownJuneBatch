@@ -1,0 +1,37 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h4 id="page_indicator"></h4>
+        <ol id="issue_container">
+        </ol>
+        <button onclick="loadNext()" id="load_next">Load Next</button>
+        <button onclick="loadPrev()" id="load_prev">Load Prev</button>
+        <script>
+            let i=1
+        async function fetchByPage (){
+            const cont = document.getElementById('issue_container')
+            const pi = document.getElementById('page_indicator')
+            pi.innerText = `Page number ${i}`
+            const rawData = await fetch(`https://api.github.com/repositories/1296269/issues?page=${i}&per_page=5`)
+            const parsedData = await rawData.json()
+            let store =''
+            parsedData.forEach(issue => {
+                store += `<li>${issue.title}</li>`
+            });
+            cont.innerHTML = store
+        }
+        fetchByPage(i)
+        function loadNext(){
+            i++;
+            fetchByPage()
+        }
+        function loadPrev(){
+            if(i === 1) return;
+            i--;
+            fetchByPage()
+        }
+        </script>
+    </body>
+</html>
