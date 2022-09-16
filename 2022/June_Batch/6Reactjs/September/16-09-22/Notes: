@@ -1,0 +1,16 @@
+Notes:
+1.SPA - Single page application
+2.What is component?
+3.How to create functional component?
+4.JSX - Javascript XML?
+5.what is props and how to pass props to child component
+
+6.what is state and when to use state?
+  //Implemetation - useState()
+  //UseState will return array with two values
+  //currentstate and one more to update the state.
+
+7.What is event handler and to call events?
+
+8.How to write javascript inside the jsx - {}
+==================================================  
