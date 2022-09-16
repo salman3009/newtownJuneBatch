@@ -1,0 +1,28 @@
+<!-- <script>
+    let list=[33,4,4];
+    let global=[45,566];
+    list.push(45);
+    list.pop();
+</script> -->
+
+<script>
+    console.log(this);
+    let obj={
+        fullName:"akash",
+        skills:function(){
+            console.log(this)
+        }
+    }
+    obj.skills();
+    let list=[4,5,6];
+    console.log(typeof list);
+    Array.prototype.average=function(){
+        // console.log(this);
+        // return "yes";
+        let result = this.reduce((a,b)=>{
+            return a+b;
+        });
+         return result/this.length;
+    }
+    console.log(list.average());
+</script>

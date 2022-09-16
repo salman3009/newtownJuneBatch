@@ -1,0 +1,39 @@
+<!-- <script>
+    let list=[[4,5,6]];
+    let result = Array.isArray(list[0]);
+    console.log(result);
+</script> -->
+
+<!-- <script>
+    let arr1=[1,2,3];
+    let result = arr1.every((obj)=>{
+        return obj>=3;
+    });
+    console.log(result);
+</script> -->
+
+<!-- <script>
+    let arr1=[1,2,3];
+    let arr2=[1,2,3];
+     //false && false && true = false;
+    let result = arr1.every((obj,index)=>{
+        console.log(index);
+        return obj == arr2[index];
+        //1 === 1 
+        //2 === 2
+        //3 === 3
+    });
+    console.log(result);
+</script> -->
+
+<script>
+    let employee={name:"James Bond",code:'OO7',organization: 'MI6'};
+    let person={name:"James Bond",code:'OO7',organization: 'MI6'};
+    console.log(employee.name);
+    console.log(employee['name']);
+    let keys = Object.keys(employee);
+    let list=keys.every((obj)=>{
+        return employee[obj] === person[obj];
+    });
+    console.log(list);
+</script>

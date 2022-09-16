@@ -1,0 +1,44 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/jne90d82ynak/
+</script>
+
+<script>
+    Array.prototype.includesOneof = function(list){
+
+        for(let i=0;i<this.length;i++){
+            if(this.length==0 || list.length==0){
+                return false;
+            }
+
+            if(Array.isArray(this[0]) && Array.isArray(list[0])){
+                for(let j=0;j<list.length;j++){
+                    arr1 = this[i];
+                    arr2=list[j];
+                    if(arr1.length === arr2.length){
+                        let result = arr1.every((obj,index)=>{
+                            return obj === arr2[index];
+                        });
+                        if(result){
+                            return true;
+                        }
+                    }
+
+                }
+
+            }
+
+
+            if(list.includes(this[i])){
+                return true;
+            }
+        }
+
+
+        return false;
+
+    }
+
+const arr3 =[[1,22,33,4],[4,55,6,772]];
+console.log(arr3.includesOneof([[1,22,33,4]])) 
+console.log(arr3.includesOneof([[1,33,22,4]]))
+</script>

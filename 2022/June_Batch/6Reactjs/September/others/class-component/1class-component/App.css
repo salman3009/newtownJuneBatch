@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.form-box{
+  width: 80%;
+  margin:auto;
+  height: 200px;
+  border:1px solid black;
+}
+input,strong{
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+button{
+  margin:5px;
+}
+
+
+.list-box{
+  width: 80%;
+  margin:auto;
+  margin-top: 20px;
+  min-height: 200px;
+  border:1px solid black;
+}
