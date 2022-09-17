@@ -1,8 +1,8 @@
 import './CounterDisplay.css';
 
-const CounterDisplay=()=>{
+const CounterDisplay=(props)=>{
     return (<div className='container-display'>
-            <p>The updated value is</p>
+            <p>The updated value is: {props.counter}</p>
     </div>)
 }
 

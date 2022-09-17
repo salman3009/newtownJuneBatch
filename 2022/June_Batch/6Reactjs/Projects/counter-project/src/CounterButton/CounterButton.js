@@ -1,8 +1,8 @@
 import './CounterButton.css';
 
-const CounterButton=()=>{
+const CounterButton=(props)=>{
    return(<div className="container-button">
-    <button>Increment</button><button>Decrement</button>
+    <button onClick={props.onIcrementHandler}>Increment</button><button onClick={props.onDecrementHandler}>Decrement</button>
 </div>) 
 }
 
