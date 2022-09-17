@@ -28,6 +28,25 @@
             }
 
 
+             if(Object.keys(list[0]) && Object.keys(list[0].length>0)){
+                if(this[0].constructor === Object  && list[0].constructor === Object){
+                        for(let j=0;j<list.length;j++){
+                            let arr1=this[i];
+                            let arr2=list[j];
+                            if(Object.keys(arr1).length === Object.keys(arr2).length){
+                               let list = Object.keys(arr1).every((obj)=>{
+                                           return arr1[obj] === arr2[obj];
+                               })
+                               if(list){
+                                   return true;
+                               }
+                            }
+                        }
+            }
+             }
+         
+
+
             if(list.includes(this[i])){
                 return true;
             }
@@ -38,7 +57,8 @@
 
     }
 
-const arr3 =[[1,22,33,4],[4,55,6,772]];
-console.log(arr3.includesOneof([[1,22,33,4]])) 
-console.log(arr3.includesOneof([[1,33,22,4]]))
+const arr2 = [{name:"James Bond",code:'OO7'},{name:"Edward Donne",code:"OO1"}];
+// console.log(arr2.includesOneof([{name:"James Bond",code:'OO7'}]));
+console.log(arr2.includesOneof([{}]));
+
 </script>
