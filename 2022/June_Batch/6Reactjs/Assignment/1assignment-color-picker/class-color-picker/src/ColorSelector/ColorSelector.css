@@ -1,0 +1,7 @@
+.color-selector{
+    margin-top:100px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+}
