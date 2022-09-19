@@ -7,6 +7,8 @@ function App() {
 
   const [getText,setText]=useState('');
   const [getList,setList] = useState([]);
+  const [getEdit,setEdit] = useState(false);
+  const [getIndex,setIndex]=useState(-1);
 
   const onSetChangeHandler=(event)=>{
     console.log(event.target.value);
@@ -18,6 +20,20 @@ function App() {
     console.log(getList);
   }
 
+  const onEditHandler=(index)=>{
+    setEdit(true);
+    setText(getList[index]);
+    setIndex(index);
+
+  }
+
+  const onEditSubmit=()=>{
+     let list=getList;
+     list[getIndex]= getText;
+     setList([...list]);
+     setText('');
+  }
+
   const onDeleteHandler=(index)=>{
     let list = getList;
     list.splice(index,1);
@@ -26,8 +42,8 @@ function App() {
 
   return (
     <div className="App">
-     <FormInput onAddHandler={onAddHandler} onSetChangeHandler={onSetChangeHandler} />
-     <List onDeleteHandler={onDeleteHandler} list={getList}/>
+     <FormInput value={getText} onEditSubmit={onEditSubmit} typeStatus={getEdit} onAddHandler={onAddHandler} onSetChangeHandler={onSetChangeHandler} />
+     <List onEditHandler={onEditHandler} onDeleteHandler={onDeleteHandler} list={getList}/>
     </div>
   );
 }

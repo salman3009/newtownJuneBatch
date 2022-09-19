@@ -6,7 +6,8 @@ const List=(props)=>{
             {props.list.map((obj,index)=>{
                 return(<div className="list" key={index}>
                     <li>{obj}</li>
-                    <button onClick={()=>props.onDeleteHandler(index)}>Delete</button>
+                    <button className="list-button" onClick={()=>props.onEditHandler(index)}>Edit</button>
+                    <button className="list-button" onClick={()=>props.onDeleteHandler(index)}>Delete</button>
                 </div>)
             })}
         </ul>

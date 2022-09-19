@@ -8,3 +8,8 @@
 .list{
     margin:10px;
 }
+
+.list-button{
+    display: inline-block;
+    margin-left:10px;
+}
