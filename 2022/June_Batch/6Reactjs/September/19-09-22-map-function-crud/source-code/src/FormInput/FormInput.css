@@ -1,0 +1,20 @@
+.form-box{
+    width: 400px;
+    height: 200px;
+    margin: 50px auto;
+    border:1px solid black;
+    text-align: center;
+}
+
+input{
+    display: block;
+    width: 60%;
+    margin:30px auto;
+    height: 50px;
+}
+
+.form-button{
+    display: block;
+    margin:30px auto;
+    width: 60%;
+}
