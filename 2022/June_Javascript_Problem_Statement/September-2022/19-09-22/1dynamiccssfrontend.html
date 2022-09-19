@@ -1,0 +1,97 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class='text-here' id='text-container'>
+            welcome to programming language
+        </div>
+        <input type="text" id="colorbox">
+        <button class="stylebt" onclick="onColorHandler()">click</button>
+        <input type="range" id="rangebox" value="55" min="10" max="100" oninput="onChangeHandler()">
+        <button  class="stylebt"  onclick="onBoldHandler()" id="bold">bold</button>
+        <button class="stylebt"   onclick="onItalicHandler()" id="italic">italic</button>
+        <button class="stylebt"  onclick="onDecorationHandler()" id="underline">underline</button>
+        <select onChange="onFontFamilyHandler()" id="list"></select>
+        <button class="stylebt"  onclick="setHandler()">Set CSS Properties</button>
+        <div id="getProps"></div>
+       <script>
+            function onColorHandler(){
+                let colorType = document.querySelector("#colorbox").value;
+                console.log(colorType);
+                document.querySelector("#text-container").style.color = colorType;
+            }
+
+            function onChangeHandler(){
+                   let fontType = document.querySelector("#rangebox").value;
+                   console.log(fontType);
+                   document.querySelector("#text-container").style.fontSize = fontType;
+            }
+
+            function onBoldHandler(){
+                let boldType = document.querySelector("#bold").innerText;
+                if(boldType == "bold"){
+                    document.querySelector("#text-container").style.fontWeight="bold";
+                    document.querySelector("#bold").innerHTML = "Remove bold";
+                }
+                else{
+                    document.querySelector("#text-container").style.fontWeight="normal";
+                    document.querySelector("#bold").innerHTML = "bold";
+                }
+            }
+
+            function onItalicHandler(){
+                let italicType = document.querySelector("#italic").innerText;
+                if(italicType == "italic"){
+                    document.querySelector("#text-container").style.fontStyle="italic";
+                    document.querySelector("#italic").innerHTML = "Remove italic";
+                }
+                else{
+                    document.querySelector("#text-container").style.fontStyle="normal";
+                    document.querySelector("#italic").innerHTML = "italic";
+                }
+            }
+
+            function onDecorationHandler(){
+                let decorationType = document.querySelector("#underline").innerText;
+                if(decorationType == "underline"){
+                    document.querySelector("#text-container").style.textDecoration = "underline";
+                    document.querySelector("#underline").innerHTML="Remove underline";
+                }
+                else{
+                    document.querySelector("#text-container").style.textDecoration = "none";
+                    document.querySelector("#underline").innerHTML = "underline";
+                }
+            }
+
+            let fontList=["cursive","fantasy","monospace","revert","sans-serif"];
+
+            let global= document.querySelector("#list");
+            for(let input of fontList){
+                let option = document.createElement("option");
+                option.innerText = input;
+                global.append(option);
+            }
+
+            function onFontFamilyHandler(){
+                let select = document.querySelector("#list");
+                let optionType = document.querySelector("#list").options[select.selectedIndex].value;
+                console.log(optionType);
+                document.querySelector("#text-container").style.fontFamily = optionType;
+            }
+
+            function setHandler(){
+                 document.querySelector("#getProps").innerHTML = `
+                 color:${document.querySelector("#text-container").style.color};<br>
+                 font-size:${document.querySelector("#text-container").style.fontSize};<br>
+                 font-weight:${document.querySelector("#text-container").style.fontWeight};<br>
+                 font-style:${document.querySelector("#text-container").style.fontStyle};<br>
+                 text-decoration:${document.querySelector("#text-container").style.textDecoration};<br>
+                 font-family:${document.querySelector("#text-container").style.fontFamily};<br>
+                 `;
+            }
+
+        </script>
+
+    </body>
+</html>
