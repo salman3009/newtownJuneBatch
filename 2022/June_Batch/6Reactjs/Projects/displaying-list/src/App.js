@@ -18,10 +18,16 @@ function App() {
     console.log(getList);
   }
 
+  const onDeleteHandler=(index)=>{
+    let list = getList;
+    list.splice(index,1);
+    setList([...list]);
+  }
+
   return (
     <div className="App">
      <FormInput onAddHandler={onAddHandler} onSetChangeHandler={onSetChangeHandler} />
-     <List list={getList}/>
+     <List onDeleteHandler={onDeleteHandler} list={getList}/>
     </div>
   );
 }

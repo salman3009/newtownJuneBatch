@@ -4,7 +4,10 @@ const List=(props)=>{
     return (<div className='list-box'>
         <ul>
             {props.list.map((obj,index)=>{
-                return(<li key={index}>{obj}</li>)
+                return(<div className="list" key={index}>
+                    <li>{obj}</li>
+                    <button onClick={()=>props.onDeleteHandler(index)}>Delete</button>
+                </div>)
             })}
         </ul>
     </div>)

@@ -13,7 +13,7 @@ input{
     height: 50px;
 }
 
-button{
+.form-button{
     display: block;
     margin:30px auto;
     width: 60%;
