@@ -6,16 +6,22 @@ import List from './List/List';
 function App() {
 
   const [getText,setText]=useState('');
+  const [getList,setList] = useState([]);
 
   const onSetChangeHandler=(event)=>{
     console.log(event.target.value);
     setText(event.target.value);
   }
 
+  const onAddHandler=()=>{
+    setList([...getList,getText]);
+    console.log(getList);
+  }
+
   return (
     <div className="App">
-     <FormInput  onSetChangeHandler={onSetChangeHandler} />
-     <List getText={getText}/>
+     <FormInput onAddHandler={onAddHandler} onSetChangeHandler={onSetChangeHandler} />
+     <List list={getList}/>
     </div>
   );
 }

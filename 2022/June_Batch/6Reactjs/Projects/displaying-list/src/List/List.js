@@ -3,7 +3,9 @@ import './List.css';
 const List=(props)=>{
     return (<div className='list-box'>
         <ul>
-            <li>{props.getText}</li>
+            {props.list.map((obj,index)=>{
+                return(<li key={index}>{obj}</li>)
+            })}
         </ul>
     </div>)
 }
