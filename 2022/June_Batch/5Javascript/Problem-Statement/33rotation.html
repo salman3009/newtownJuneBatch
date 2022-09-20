@@ -1,0 +1,31 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/p5o0hzcvg6s2/
+</script>
+<html>
+    <head>
+        <style>
+            div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: transform 2s;
+        }
+        </style>
+
+    </head>
+    <body>
+        <div id="box" onmouseover=rotate_box()></div>
+    </body>
+    <script>
+        let flag=1
+        function rotate_box() {
+            if(flag%2==1){
+                document.getElementById('box').style.transform = 'rotate(180deg)';
+                flag = 0
+            }else{
+                document.getElementById('box').style.transform = 'rotate(0deg)';
+                flag = 1
+            }
+        }
+    </script>
+</html>

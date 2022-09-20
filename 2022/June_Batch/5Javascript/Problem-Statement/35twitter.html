@@ -1,0 +1,33 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/7bee1xl0m2qq/
+</script>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        // listen for a scroll event and load more images if we reach
+        // the bottom of the window
+        function populate() {
+            while (true) {
+                // document bottom
+                let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+
+                // if the user hasn't scrolled far enough (>100px to the end)
+                if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+
+                // let's add more data
+                document.body.insertAdjacentHTML("beforeend", `<p>Date: ${new Date()}</p>`);
+            }
+        }
+
+        window.addEventListener('scroll', populate);
+        populate();
+
+    </script>
+</body>
+
+</html>

@@ -67,14 +67,14 @@ const FormInput=()=>{
             <label>
               Email
             </label>
-            <input type="text" value={getForm.email} onChange={onChangeHandler}  name="email"/>
+            <input type="email" value={getForm.email} onChange={onChangeHandler}  name="email"/>
             {getGlobal && getFormValidation.email && <div className="danger">Email must be valid address,e.g:akash@gamil.com</div>}
         </div>
         <div className="form-group">
             <label>
               Password
             </label>
-            <input type="text" value={getForm.password} onChange={onChangeHandler}  name="password"/>
+            <input type="password" value={getForm.password} onChange={onChangeHandler}  name="password"/>
             {getGlobal && getFormValidation.password && <div className="danger">Password must be alphanumeric(@,_and - are also allowed) and between 6-20 characters</div>}
         </div>
         <div className="form-group">

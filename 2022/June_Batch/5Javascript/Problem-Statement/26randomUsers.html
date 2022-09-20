@@ -2,62 +2,48 @@
     // https://my.newtonschool.co/playground/markup/5gye6jb6wevg/
 </script>
 <html>
-    <head>
+  <head>
 
-    </head>
-    <body>
-        <article class="user">
-            <div class="img-holder">
-                <img src="">
-            </div>
-            <h2 class="user-name"></h2>
-            <section class="user-info">
-    
-            </section>
-            <div class="btn-holder">
-                <button data-attr="age">Age</button>
-                <button data-attr="email">Email</button>
-                <button data-attr="phone">Phone</button>
-            </div>
-        </article>
-        <button onclick="display()" id="getUser">GET ANOTHER USER</button>
-        <script>
-            const img = document.querySelector('.img-holder img')
-        const userNameEl = document.querySelector('h2.user-name')
-        const userInfoEl = document.querySelector('.user-info')
-        const btns = document.querySelectorAll('.btn-holder button')
-        const getRandomUserInfo = async () => {
-            const URL = "https://randomuser.me/api/";
-            const response = await fetch(URL);
-            const data = await response.json();
-            const person = data.results[0];
-            const { phone, email } = person;
-            const { large: image } = person.picture;
-            const { first, last } = person.name;
-            const {
-                dob: { age },
-            } = person;
+  </head>
+  <body>
+    <img id="image">
+    <h3 id="fullName"></h3>
+    <h1 id="additional-info"></h1>
+    <button onClick="onAgeHandler()" data-attr="age">age</button>
+    <button onClick="onEmailHandler()" data-attr="email">email</button>
+    <button onClick="onPhoneHandler()" data-attr="phone">phone</button>
+    <button onClick="getUser()" id="getUser">getuser</button>
 
-            return {
-                phone,
-                email,
-                image,
-                name: `${first} ${last}`,
-                age,
-            };
-        }
-        const display = async () =>{
-            userInfoEl.innerText = ''
-            const data = await getRandomUserInfo();
-            img.setAttribute('src',data['image'])
-            userNameEl.innerHTML = data['name']
-            btns.forEach(btn=>{
-                btn.addEventListener('click',(e)=>{
-                    userInfoEl.innerText = data[e.target.dataset['attr']]
-                })
-            })
-        }
-        display()
-        </script>
-    </body>
+    <script>
+
+     let email,phone,age,fullName;
+      async function initialLoad(){
+        let list = await fetch('https://randomuser.me/api/');
+        let load = await list.json();
+        console.log(load.results[0]);
+        email = load.results[0].email;
+        phone = load.results[0].phone;
+        age = load.results[0].dob.age;
+        fullName =  fullName = `${load.results[0].name.first} ${load.results[0].name.last}`;
+        document.querySelector("#fullName").innerText = fullName;
+        document.querySelector("#image").src = load.results[0].picture.large;
+      }
+      initialLoad();
+
+      function onAgeHandler(){
+         document.querySelector("#additional-info").innerText = age;
+      }
+      function onEmailHandler(){
+        document.querySelector("#additional-info").innerText = email;
+      }
+      function onPhoneHandler(){
+        document.querySelector("#additional-info").innerText = phone;
+      }
+
+      function getUser(){
+        document.querySelector("#additional-info").innerHTML="";
+        initialLoad();
+      }
+    </script>
+  </body>
 </html>
