@@ -5,12 +5,14 @@ import {alphaNumericValidation,emailValidation,passwordValidation,bioValidation,
 const FormInput=()=>{
 
    const [getGlobal,setGlobal]=useState(false);
+   const [getConfirm,setConfirm]=useState(true);
 
    const [getForm,setForm]=useState({
     firstName:'',
     lastName:'',
     email:'',
     password:'',
+    confirm:'',
     telephone:'',
     bio:''
    });
@@ -21,7 +23,8 @@ const FormInput=()=>{
     email:false,
     password:false,
     telephone:false,
-    bio:false
+    bio:false,
+    confirm:false
    });
 
    useEffect(()=>{
@@ -38,6 +41,7 @@ const FormInput=()=>{
         lastName:alphaNumericValidation(getForm.lastName),
         email:emailValidation(getForm.email),
         password:passwordValidation(getForm.password),
+        confirm:passwordValidation(getForm.confirm),
         telephone:telephoneValidation(getForm.telephone),
         bio:bioValidation(getForm.bio)  
     });   
@@ -46,9 +50,18 @@ const FormInput=()=>{
    const onSubmit=()=>{
     formValidationCheck();
     setGlobal(true);
+    console.log(getForm);
+    if( getForm.password!="" && getForm.confirm!="" && getForm.password === getForm.confirm){
+        setConfirm(false);
+    }
+    else{
+        setConfirm(true);
+    }
+  
    }
 
      return (<div>
+        {getGlobal && getConfirm && <div className="danger">password there is no match</div>}
         <div className="form-group">
             <label>
               First Name
@@ -76,6 +89,13 @@ const FormInput=()=>{
             </label>
             <input type="password" value={getForm.password} onChange={onChangeHandler}  name="password"/>
             {getGlobal && getFormValidation.password && <div className="danger">Password must be alphanumeric(@,_and - are also allowed) and between 6-20 characters</div>}
+        </div>
+        <div className="form-group">
+            <label>
+             Confirm Password
+            </label>
+            <input type="password" value={getForm.confirm} onChange={onChangeHandler}  name="confirm"/>
+            {getGlobal && getFormValidation.confirm && <div className="danger">Password must be alphanumeric(@,_and - are also allowed) and between 6-20 characters</div>}
         </div>
         <div className="form-group">
             <label>
