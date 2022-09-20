@@ -5,6 +5,7 @@
 }
 label{
     display: block;
+    margin-top:20px;
     font-size:20px;
     font-weight: 600;
     margin-bottom:10px;
@@ -16,6 +17,7 @@ input{
 }
 button{
     display: block;
+    margin-top:25px;
     width: 50%;
     height: 40px;
     background-color: slategray;
@@ -23,4 +25,10 @@ button{
     border:0px;
     font-size:20px;
     font-weight: bold;
+}
+
+.danger{
+    margin-top:5px;
+    text-align: center;
+    color:red;
 }
