@@ -1,0 +1,16 @@
+.modal{
+    width: 400px;
+    height: 100px;
+    background-color: grey;
+    position: fixed;
+    top:25%;
+    left:30%;
+    box-shadow:2px 2px 3px solid grey;
+    border-radius: 3px;
+}
+
+select{
+    display: block;
+    width: 60%;
+    margin: 40px auto;
+}
