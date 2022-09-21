@@ -6,15 +6,20 @@ import Modal from './Modal/Modal';
 function App() {
 
   const [getFlag,setFlag] = useState(false);
+  const [getIndex,setIndex] = useState(0);
 
   const onChangeImageHandler=()=>{
     setFlag(!getFlag);
   }
 
+  const onChangeIndeHandler=(event)=>{
+       setIndex(event.target.value);
+  }
+
   return (
     <div className="App">
-      <ImageList onChangeImageHandler={onChangeImageHandler}/>
-      {getFlag && <Modal/>}
+      <ImageList id={getIndex} onChangeImageHandler={onChangeImageHandler}/>
+      {getFlag && <Modal onChangeIndeHandler={onChangeIndeHandler} />}
     </div>
   );
 }
