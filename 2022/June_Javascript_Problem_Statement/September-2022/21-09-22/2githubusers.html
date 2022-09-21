@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+  <ol id="ordered">
+
+  </ol>
+  <div id="page-number"></div>
+  <button onClick="onPageNumberForward()" id="load_next">load next</button>
+  <button onClick="onPageNumberBackWard()" id="load_prev">load previous</button>
+
+  <script>
+
+    let i = 1;
+    async function initialLoad() {
+      let list = await fetch(`https://api.github.com/repositories/1296269/issues?page=${i}&per_page=5`);
+      let load = await list.json();
+      let global = document.querySelector("#ordered");
+      global.innerHTML="";
+      let store ="";
+      for (let obj of load) {
+        store += `<li>${obj.title}</li>`
+      }
+      global.innerHTML = store;
+      document.querySelector("#page-number").innerText = `Page number ${i}`;
+    }
+    initialLoad();
+
+    function onPageNumberForward() {
+      i++;
+      initialLoad();
+    }
+
+    function onPageNumberBackWard() {
+      if (i == 1) {
+        return;
+      }
+      i--;
+      initialLoad();
+    }
+
+
+  </script>
+</body>
+
+</html>

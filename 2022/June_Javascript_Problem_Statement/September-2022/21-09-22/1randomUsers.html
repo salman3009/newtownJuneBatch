@@ -1,0 +1,57 @@
+<script>
+//   https://my.newtonschool.co/playground/markup/5gye6jb6wevg/
+</script>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <img id="picture" />
+    <h1 id="fullName"></h1>
+    <div id="additional-info"></div>
+    <button onClick="getDetails('age')" data-attr="age">Age</button>
+    <button onClick="getDetails('email')" data-attr="email">Email</button>
+    <button onClick="getDetails('phone')" data-attr="phone">Phone</button>
+    <button onClick="initialLoad()" id="getUser">Get User</button>
+    <script>
+        let fullName;
+        let age, email, phone;
+        async function initialLoad() {
+            try {
+                let payload = await fetch('https://randomuser.me/api/');
+                payload = await payload.json();
+                console.log(payload.results[0].name);
+                fullName = `${payload.results[0].name.first} ${payload.results[0].name.last}`;
+                age = payload.results[0].dob.age;
+                phone = payload.results[0].phone;
+                email = payload.results[0].email;
+                document.querySelector("#fullName").innerHTML = fullName;
+                document.querySelector('#picture').src = payload.results[0].picture.large;
+            }
+            catch (err) {
+                console.log(err);
+            }
+
+
+        }
+        initialLoad();
+
+        function getDetails(input) {
+            if (input == 'email') {
+                document.querySelector('#additional-info').innerHTML = email;
+            }
+            else if (input == 'phone') {
+                document.querySelector('#additional-info').innerHTML = phone;
+            }
+            else {
+                document.querySelector('#additional-info').innerHTML = age;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
