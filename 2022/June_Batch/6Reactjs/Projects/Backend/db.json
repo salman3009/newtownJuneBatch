@@ -1,0 +1,15 @@
+{
+   "list":[
+    {
+        "title":"javascript",
+        "amount":4000,
+        "duration":4
+    },
+    {
+        "title":"html",
+        "amount":2000,
+        "duration":1
+    }
+   ]
+
+}

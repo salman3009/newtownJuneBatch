@@ -1,11 +1,11 @@
 import './Section.css';
 import Button from '../UI/Button/Button';
 import { useRef } from 'react';
-
+import InputForwardRef from '../UI/InputForwardRef';
 const Section=(props)=>{
 
-    const refType = useRef(null);
-    const refPasswordType = useRef(null);
+    const refType = useRef();
+    const refPasswordType = useRef();
 
     const onClickHandler=()=>{
         console.log(refType.current.value);
@@ -20,12 +20,13 @@ const Section=(props)=>{
     return (<div className="container">
         {props.children}
         <div className="box">
-        Email:<input ref={refType} type="text" id="email" name="fullName"/>
+        {/* Email:<input ref={refType} type="text" id="email" name="fullName"/> */}
+         Email:<InputForwardRef type="email" id="email" name="fullName" ref={refType}/>
         </div>
         <div className="box">
-        Password:<input  ref={refPasswordType} type="text"/>
+        Password:<input  ref={refPasswordType} type="password"/>
         </div>
-        <Button onClickHandler={onClickHandler}>Login</Button>
+        <Button id="login" name="loginsubmit" onClickHandler={onClickHandler}>Login</Button>
     </div>)
 }
 
