@@ -2,5 +2,13 @@
     width: 300px;
     height: 200px;
     margin:50px auto;
-    border: 1px solid black;
+    border: 50px solid red;
+}
+
+
+.image-box-one{
+    width: 300px;
+    height: 200px;
+    margin:50px auto;
+    border: 50px solid green;
 }
