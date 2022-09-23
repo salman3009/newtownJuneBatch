@@ -1,37 +1,49 @@
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 
+const Table = () => {
 
-const Table = ()=>{
-   return (<div>
+  const [getList,setList]=useState([]);
+
+  useEffect(() => {
+    initialDetails();
+  }, []);
+
+  const initialDetails = () => {
+    try {
+      axios.get('http://localhost:3000/product').then((response) => {
+        console.log(response.data);
+        setList([...response.data]);
+      }).catch((error) => {
+        console.log(error);
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  return (<div>
     <table className="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-   </div>)
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+          {getList.map((obj,index)=>{
+             return(<tr key={index}>
+              <td>{index+1}</td>
+             <td>{obj.title}</td>
+             <td>{obj.amount}</td>
+             <td>{obj.duration}</td>
+             </tr>)
+          })}
+      </tbody>
+    </table>
+  </div>)
 }
 export default Table;
