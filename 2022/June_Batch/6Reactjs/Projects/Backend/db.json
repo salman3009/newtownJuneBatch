@@ -17,6 +17,48 @@
       "amount": 3000,
       "duration": 2,
       "id": 4
+    },
+    {
+      "title": "3",
+      "amount": "3",
+      "duration": "3",
+      "id": 5
+    },
+    {
+      "title": "Duration",
+      "amount": "3000",
+      "duration": "1",
+      "id": 6
+    },
+    {
+      "title": "Duration",
+      "amount": "3000",
+      "duration": "1",
+      "id": 7
+    },
+    {
+      "title": "suresh",
+      "amount": "2000",
+      "duration": "5",
+      "id": 8
+    },
+    {
+      "title": "details",
+      "amount": "2000",
+      "duration": "34",
+      "id": 9
+    },
+    {
+      "title": "car",
+      "amount": "2000",
+      "duration": "2",
+      "id": 10
+    },
+    {
+      "title": "van",
+      "amount": "1000",
+      "duration": "4",
+      "id": 11
     }
   ],
   "registration": [

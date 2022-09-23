@@ -1,30 +1,11 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
 
-const Table = () => {
 
-  const [getList,setList]=useState([]);
 
-  useEffect(() => {
-    initialDetails();
-  }, []);
+const Table = (props) => {
 
-  const initialDetails = () => {
-    try {
-      axios.get('http://localhost:3000/product').then((response) => {
-        console.log(response.data);
-        setList([...response.data]);
-      }).catch((error) => {
-        console.log(error);
-      })
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
+ 
   return (<div>
-    <table className="table table-dark">
+    {props.getFlag ? <table className="table table-dark">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -34,7 +15,7 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-          {getList.map((obj,index)=>{
+          {props.getList.map((obj,index)=>{
              return(<tr key={index}>
               <td>{index+1}</td>
              <td>{obj.title}</td>
@@ -43,7 +24,8 @@ const Table = () => {
              </tr>)
           })}
       </tbody>
-    </table>
+    </table>:<h1 style={{textAlign:"center"}}>No Data found</h1>}
+   
   </div>)
 }
 export default Table;
