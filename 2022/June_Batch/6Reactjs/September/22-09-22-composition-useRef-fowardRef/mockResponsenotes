@@ -1,0 +1,44 @@
+Mock Response for Backend:
+
+step1: npm install -g json-server
+
+Step2: Create one new folder called Backend 
+
+Step3: Inside the Backend folder create one file called package.json(npm init)
+
+step4:create one file called db.json 
+
+Backend 
+    package.json 
+    db.json 
+
+db.json
+{
+	"list":[
+{
+	"id":1,
+	"fullName":"akash"
+}
+	]
+}
+}
+
+step 5: cmd: json-server --watch db.json 
+
+step 6:
+open the post man:
+
+Get: http://localhost:3000/list 
+
+delete: http://localhost:3000/list/1
+
+post:http://localhost:3000/list 
+{
+	"fullName":"suresh"
+}
+
+patch:http://localhost:3000/list/1
+{
+	"fullName":"suresh"
+}
+=======================================

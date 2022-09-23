@@ -1,15 +1,38 @@
 {
-   "list":[
+  "product": [
     {
-        "title":"javascript",
-        "amount":4000,
-        "duration":4
+      "title": "javascript",
+      "amount": 4000,
+      "duration": 4,
+      "id": 1
     },
     {
-        "title":"html",
-        "amount":2000,
-        "duration":1
+      "title": "css",
+      "amount": 5000,
+      "duration": 4,
+      "id": 2
+    },
+    {
+      "title": "css",
+      "amount": 3000,
+      "duration": 2,
+      "id": 4
     }
-   ]
-
+  ],
+  "registration": [
+    {
+      "id": 1,
+      "fullName": "akash",
+      "age": 23,
+      "subject": "maths",
+      "address": "bangalore"
+    },
+    {
+      "fullName": "rakesh",
+      "age": 23,
+      "subject": "commerce",
+      "address": "delhi",
+      "id": 2
+    }
+  ]
 }

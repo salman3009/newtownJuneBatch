@@ -1,0 +1,30 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/iw0czwud5j2p/
+</script>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+    <h1>I am a headline made with HTML</h1>
+    <br />
+    <p id="useless-paragraph">Useless paragraph.</p>
+    <br />
+    <button onclick="toggleVisibility()">Toggle Button</button>
+    <script>
+        function toggleVisibility(){
+            let para = document.getElementById("useless-paragraph");
+            if(para.style.display === "none"){
+                para.style.display = "block";
+            }
+            else{
+                para.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

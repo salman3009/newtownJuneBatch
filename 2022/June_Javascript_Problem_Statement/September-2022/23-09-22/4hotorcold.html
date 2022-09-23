@@ -1,0 +1,33 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/os4jyxbr825q/
+</script>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="main">
+        I am learning to generate random number. I will be able to handle randomness in any of my applications that needs it. Press the button to get a random number.
+    </p>
+
+    <button id="btn" onclick="displayRandomNumber()">Click Me!!</button>
+
+    <p id="num"></p>
+
+    <script>
+         let details = Math.floor(Math.random()*40);
+            console.log(details);
+        details-=20;
+        console.log(details);
+        function displayRandomNumber(){
+            let details = Math.floor(Math.random()*40);
+            console.log(details);
+            document.getElementById("num").innerHTML = details;
+        }
+      
+    </script>
+</body>
+
+</html>

@@ -18,7 +18,7 @@
             t.width = 100;
             t.height = 100;
             t.onclick = (e) => captchaClick(e);
-            t.src = `images/${i + 1}.jpg`;
+            t.src = `images/${i + 1}.png`;
             image.push(t);
         }
         let temp = Math.floor(Math.random() * 5);
@@ -27,7 +27,7 @@
         t.width = 100;
         t.height = 100;
         t.onclick = (e) => captchaClick(e);
-        t.src = `images/${temp + 1}.jpg`;
+        t.src = `images/${temp + 1}.png`;
         image.push(t);
         image.sort(() => Math.random() - 0.5);
         for (let i = 0; i < 6; i++) {

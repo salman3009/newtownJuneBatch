@@ -1,0 +1,26 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/p2rxo3mak6cu/
+</script>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style='margin-left: 10%;'>
+            <h3>Add Two Numbers</h3>
+            <!--write your code here-->
+            <input type="number" id="num1"/>
+            <input type="number" id="num2"/>
+            <button onClick="onAddHandler()" id="mybtn">Add</button>
+            <input type="text" id="result" disabled/>
+        </div>
+        <script>
+              function onAddHandler(){
+                let inputOne = parseFloat(document.getElementById("num1").value);
+                let inputTwo = parseFloat(document.getElementById("num2").value);
+                let result = inputOne + inputTwo;
+                document.getElementById("result").value = result;
+              }  
+        </script>
+    </body>
+</html>

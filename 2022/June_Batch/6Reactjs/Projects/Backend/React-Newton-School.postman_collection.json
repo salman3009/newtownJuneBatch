@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "React-Newton-School",
+		"_postman_id": "b5e5597c-3e11-e490-c16d-1584afd1a092",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProduct",
+			"request": {
+				"url": "http://localhost:3000/product",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n      \"title\":\"details\",\n      \"category\":\"1\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PostProduct",
+			"request": {
+				"url": "http://localhost:3000/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"title\": \"css\",\n        \"amount\": 3000,\n        \"duration\": 2\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetRegistration",
+			"request": {
+				"url": "http://localhost:3000/registration",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n      \"title\":\"details\",\n      \"category\":\"1\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PostRegistration",
+			"request": {
+				"url": "http://localhost:3000/registration",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"fullName\": \"rakesh\",\n        \"age\": 23,\n        \"subject\": \"commerce\",\n        \"address\": \"delhi\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"url": "http://localhost:3000/product/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n      \"title\":\"details\",\n      \"category\":\"1\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PatchProduct",
+			"request": {
+				"url": "http://localhost:3000/product/2",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"title\": \"css\",\n        \"amount\": 5000,\n        \"duration\": 4\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
