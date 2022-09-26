@@ -37,11 +37,19 @@ function App() {
     })
   }
 
+  const onDeleteHandler=(id)=>{
+       axios.delete(`http://localhost:3000/product/${id}`).then((response)=>{
+             initialDetails();  
+       }).catch((error)=>{
+         console.log(error);
+       }) 
+  }
+
 
   return (
     <div className="App">
       <Form onSubmitHandler={onSubmitHandler}/>
-      <Table getFlag={getFlag} getList={getList}/>
+      <Table onDeleteHandler={onDeleteHandler} getFlag={getFlag} getList={getList}/>
     </div>
   );
 }

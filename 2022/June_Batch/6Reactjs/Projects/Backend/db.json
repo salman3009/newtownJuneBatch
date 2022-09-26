@@ -1,12 +1,6 @@
 {
   "product": [
     {
-      "title": "javascript",
-      "amount": 4000,
-      "duration": 4,
-      "id": 1
-    },
-    {
       "title": "css",
       "amount": 5000,
       "duration": 4,
@@ -47,18 +41,6 @@
       "amount": "2000",
       "duration": "34",
       "id": 9
-    },
-    {
-      "title": "car",
-      "amount": "2000",
-      "duration": "2",
-      "id": 10
-    },
-    {
-      "title": "van",
-      "amount": "1000",
-      "duration": "4",
-      "id": 11
     }
   ],
   "registration": [
