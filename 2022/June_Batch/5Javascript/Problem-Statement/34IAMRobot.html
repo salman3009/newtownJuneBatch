@@ -1,126 +1,103 @@
 <script>
     // https://my.newtonschool.co/playground/markup/toxdm2ltx2y6/
 </script>
+
 <html>
-
 <head>
-
 </head>
-
 <body>
     <h3>Please click on the identical tiles to verify that you are not a robot</h3>
-    <div id="main"></div>
+<div id="main">
+    <div id="list">  
+    </div>
+</div>
+   
     <script>
-        let image = [];
-        for (let i = 0; i < 5; i++) {
-            let t = document.createElement("IMG");
-            t.setAttribute("data-ns-test", `img${i + 1}`);
-            t.width = 100;
-            t.height = 100;
-            t.onclick = (e) => captchaClick(e);
-            t.src = `images/${i + 1}.png`;
-            image.push(t);
-        }
-        let temp = Math.floor(Math.random() * 5);
-        let t = document.createElement("IMG");
-        t.setAttribute("data-ns-test", `img${temp + 1}`);
-        t.width = 100;
-        t.height = 100;
-        t.onclick = (e) => captchaClick(e);
-        t.src = `images/${temp + 1}.png`;
-        image.push(t);
-        image.sort(() => Math.random() - 0.5);
-        for (let i = 0; i < 6; i++) {
-            document.getElementById("main").appendChild(image[i]);
-        }
+        let inputOne=[];
+        let globalMain = document.getElementById("main");
+        let para = document.createElement("p");
+        let global = document.getElementById("list");
+        let random = Math.ceil(Math.random() * 5);
+        console.log(random);
+        for (let i = 1; i <= 5; i++) {
+            if (random == i) {
+                let img = document.createElement("img");
+                img.src = `${random}.png`;
+                img.id=i;
+                img.setAttribute('data-ns-test',`img${i}`);
+                img.addEventListener('click',onImageHandler);
+                global.appendChild(img);
+            }
+                let img = document.createElement("img");
+                img.src = `${i}.png`;
+                img.id = i;
+                img.setAttribute('data-ns-test',`img${i}`);
+                img.addEventListener('click',onImageHandler);
+                global.appendChild(img);
 
-
-        let captcha = [];
-        function clearCaptcha() {
-            // console.log("Clearing captcha");
-            for (let i = 0; i < 6; i++) {
-                image[i].onclick = (e) => captchaClick(e);
-            }
-            captcha = [];
-            try {
-                document.getElementById("para").remove();
-            }
-            catch (e) {
-
-            }
-            try {
-                document.getElementById("btn").remove();
-            }
-            catch (e) {
-
-            }
-            try {
-                document.getElementById("reset").remove();
-            }
-            catch (e) {
-
-            }
+            
         }
 
+        let count = 0;
+        let imageCount=[];
 
-        function captchaClick(e) {
-            console.log(e.target.attributes["data-ns-test"].nodeValue)
-            captcha.push(e.target.attributes["data-ns-test"].nodeValue);
-            e.target.onclick = () => { };
-            // console.log(captcha);
-
-            if (captcha.length === 1) {
-                let p = document.createElement("button");
-                p.id = "reset";
-                p.innerHTML = "Reset";
-                p.onclick = () => {
-                    clearCaptcha();
-                }
-                document.getElementById("main").appendChild(p);
-            }
-
-            if (captcha.length === 2) {
-                let t = document.createElement("button");
-                t.id = "btn";
-                t.innerHTML = "Verify";
-                t.onclick = () => {
-                    captchaVerify();
-                }
-                document.getElementById("main").appendChild(t);
-            }
-            else if (captcha.length > 2) {
-                try {
+        function onImageHandler(event){
+               count++;
+               inputOne.push(event.target.id);
+               console.log(event.target.getAttribute("data-ns-test"));
+               imageCount.push(event.target.getAttribute("data-ns-test"));
+               if(count==2){
+                createVerifyButton();
+               }
+               if(imageCount.length>=2 && imageCount[0]==imageCount[1]){
+                if(document.getElementById("btn")){
                     document.getElementById("btn").remove();
                 }
-                catch (e) {
-
+                if(document.querySelector("p")){
+                    document.querySelector("p").remove();
                 }
-            }
-            try {
-                document.getElementById("para").remove();
-            }
-            catch (e) {
-
-            }
+               }
+               if(count==1){
+               createResetButton();
+               } 
         }
 
+        function createResetButton(){
+            let button = document.createElement("button");
+            button.id="reset";
+            button.innerHTML = "Reset";
+            button.addEventListener("click",onResetHandler);
+            globalMain.appendChild(button);
+        }
 
-        function captchaVerify() {
-            if (captcha.length === 2 && captcha[0] === captcha[1]) {
-                let t = document.createElement("P");
-                t.innerHTML = "You are a human. Congratulations!";
-                t.id = "para";
-                document.getElementById("main").appendChild(t);
+        function createVerifyButton(){
+            let button = document.createElement("button");
+            button.id="btn";
+            button.innerHTML = "Verify";
+            button.addEventListener("click",onVerifyHandler);
+            globalMain.appendChild(button);
+        }
+
+        function onResetHandler(){
+            count = 0;
+            document.getElementById("reset").style.display = "none";
+            document.getElementById("btn").style.display = "none";
+            para.innerHTML = "";
+            inputOne = [];
+            imageCount=[];
+        }
+
+        function onVerifyHandler(){  
+            para.id = "para";
+            if((inputOne && inputOne.length>0) && (inputOne[0] == inputOne[1])){
+                 para.innerHTML = "You are a human. Congratulations!"
+                 document.getElementById("btn").style.display = "none";
             }
-            else {
-                let t = document.createElement("P");
-                t.innerHTML = "We can't verify you as a human. You selected the non-identical tiles.";
-                t.id = "para";
-                document.getElementById("main").appendChild(t);
+            else{
+                para.innerHTML = "We can't verify you as a human. You selected the non-identical tiles."
             }
-            document.getElementById("btn").remove();
+            globalMain.appendChild(para);
         }
     </script>
 </body>
-
 </html>

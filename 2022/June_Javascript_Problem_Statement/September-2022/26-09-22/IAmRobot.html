@@ -1,0 +1,130 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/toxdm2ltx2y6/
+</script>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script>
+
+        let counter = 0;
+        let inputOne ="";
+        let inputTwo="";
+        let global = document.getElementById("main");
+        function creatingInitialImages() {
+            let randomImage = Math.ceil(Math.random() * 5);
+            console.log(randomImage);
+            for (let i = 1; i <= 5; i++) {
+                if(i == randomImage){
+               let image = document.createElement('img');
+               image.src=`${i}.png`;
+               image.addEventListener('click',addImageHandler);
+               image.setAttribute('data-ns-test',`img${i}`);
+               image.style.width = "200px";
+               image.style.height = "200px";
+               image.style.margin = "10px";
+               global.appendChild(image);
+                }
+               let image = document.createElement('img');
+               image.src=`${i}.png`;
+               image.addEventListener('click',addImageHandler);
+               image.setAttribute('data-ns-test',`img${i}`);
+               image.style.width = "200px";
+               image.style.height = "200px";
+               image.style.margin = "10px";
+               global.appendChild(image);
+            }
+        }
+
+        function initialLoad(){
+            let heading = document.createElement("h3");
+            heading.innerHTML = "Please click on the identical tiles to verify that you are not a robot";
+            heading.style.textAlign = "center";
+            global.appendChild(heading);
+        }
+
+        function addImageHandler(event){
+            counter++;
+            if(counter==1){
+                createResetButton(); 
+                inputOne = event.target.getAttribute("data-ns-test");
+                console.log(inputOne);
+            }
+            if(counter == 2){
+                createVerifyButton();
+                inputTwo = event.target.getAttribute("data-ns-test");
+                console.log(inputTwo);
+            }
+            if(counter == 3){
+                clearVerifyButton();
+            }
+        }
+
+        function createResetButton(){
+          let reset = document.createElement("button");
+          reset.id="reset";
+          reset.addEventListener("click",clearResetButtonHandler);
+          reset.innerHTML = "Reset";
+          reset.style.display = "block";
+          reset.style.margin = "10px auto";
+          global.appendChild(reset);
+        }
+
+        function createVerifyButton(){
+            let verify = document.createElement("button");
+            verify.id = "btn";
+            verify.addEventListener("click",verifyButtonSubmitHandler);
+            verify.innerHTML = "Verify";
+            verify.style.display = "block";
+            verify.style.margin = "10px auto";
+            global.appendChild(verify);
+        }
+
+        function clearResetButtonHandler(){
+             counter = 0;
+             inputOne="";
+             inputTwo="";
+             document.getElementById("reset").remove();
+             if(document.getElementById("btn")){
+                document.getElementById("btn").remove();
+             }
+             if(document.getElementById("para")){
+                document.getElementById("para").remove();
+             }
+        }
+
+        function verifyButtonSubmitHandler(){
+            if(document.getElementById("para")){
+                return ;
+            }
+            let para = document.createElement("p");
+            para.id="para";
+            para.style.textAlign = "center";
+            if(inputOne!="" && inputTwo!="" && (inputOne == inputTwo)){
+                para.innerHTML = "You are a human. Congratulations!."
+            }
+            else{
+                para.innerHTML = "We can't verify you as a human. You selected the non-identical tiles.";
+            }
+            global.appendChild(para);
+        }
+
+        function clearVerifyButton(){
+            document.getElementById("btn").remove();
+            inputOne="";
+            inputTwo="";
+        }
+
+        creatingInitialImages();
+        initialLoad();
+
+    </script>
+</body>
+
+</html>
