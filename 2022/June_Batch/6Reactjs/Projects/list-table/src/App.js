@@ -8,10 +8,24 @@ function App() {
 
   const [getList,setList]=useState([]);
   const [getFlag,setFlag]=useState(false);
+  const [getEditStatus,setEditStatus] = useState(false);
+  const [getEditObject,setEditObject]=useState({
+    title:'',
+    amount:'',
+    duration:''
+  })
+  const[getId,setId]=useState(-1);
 
   useEffect(() => {
     initialDetails();
   }, []);
+
+  const onChangeHandler=(event)=>{
+    setEditObject({
+        ...getEditObject,
+       [event.target.name]:event.target.value
+    })
+ }
 
   const initialDetails = () => {
     try {
@@ -28,9 +42,15 @@ function App() {
     }
   }
 
-  const onSubmitHandler=(payload)=>{
-    axios.post('http://localhost:3000/product',payload).then((response)=>{
+  const onSubmitHandler=(event)=>{
+    event.preventDefault();
+    axios.post('http://localhost:3000/product',getEditObject).then((response)=>{
       console.log(response);
+      setEditObject({
+        title:'',
+        amount:'',
+        duration:''
+      });
       initialDetails();
     }).catch((error)=>{
        console.log(error);
@@ -45,11 +65,38 @@ function App() {
        }) 
   }
 
+  const onEditInitialHandler=(index,id)=>{
+    console.log(index,id);
+       setEditStatus(true);
+       setId(id);
+       setEditObject({
+        title:getList[index].title,
+        amount:getList[index].amount,
+        duration:getList[index].duration
+       })
+  }
+
+  const onEditFinalSubmitHandler=(event)=>{
+    event.preventDefault();
+         console.log(getEditObject);
+      axios.patch(`http://localhost:3000/product/${getId}`,getEditObject).then((response)=>{
+        setEditObject({
+          title:'',
+          amount:'',
+          duration:''
+        });
+        setEditStatus(false);
+      initialDetails();
+      }).catch((error)=>{
+           console.log(error);
+      })
+  }
+
 
   return (
     <div className="App">
-      <Form onSubmitHandler={onSubmitHandler}/>
-      <Table onDeleteHandler={onDeleteHandler} getFlag={getFlag} getList={getList}/>
+      <Form onChangeHandler={onChangeHandler} onEditFinalSubmitHandler={onEditFinalSubmitHandler} title={getEditObject.title} amount={getEditObject.amount} duration={getEditObject.duration} getEditStatus={getEditStatus} onEditInitialHandler={onEditInitialHandler} onSubmitHandler={onSubmitHandler}/>
+      <Table onEditInitialHandler={onEditInitialHandler} onDeleteHandler={onDeleteHandler} getFlag={getFlag} getList={getList}/>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 {
   "product": [
     {
-      "title": "css",
+      "title": "language",
       "amount": 5000,
-      "duration": 4,
+      "duration": "7",
       "id": 2
     },
     {
@@ -31,7 +31,7 @@
       "id": 7
     },
     {
-      "title": "suresh",
+      "title": "ramesh",
       "amount": "2000",
       "duration": "5",
       "id": 8
@@ -41,6 +41,18 @@
       "amount": "2000",
       "duration": "34",
       "id": 9
+    },
+    {
+      "title": "newton",
+      "amount": "200",
+      "duration": "4",
+      "id": 10
+    },
+    {
+      "title": "rock",
+      "amount": "2000",
+      "duration": "222",
+      "id": 11
     }
   ],
   "registration": [

@@ -12,6 +12,7 @@ const Table = (props) => {
           <th scope="col">Title</th>
           <th scope="col">Amount</th>
           <th scope="col">Duration</th>
+          <th scope="col">Edit</th>
           <th scope="col">Delete</th>
         </tr>
       </thead>
@@ -22,6 +23,7 @@ const Table = (props) => {
              <td>{obj.title}</td>
              <td>{obj.amount}</td>
              <td>{obj.duration}</td>
+             <td><button onClick={()=>props.onEditInitialHandler(index,obj.id)} class="btn btn-primary">Edit</button></td>
              <td><button onClick={()=>props.onDeleteHandler(obj.id)} class="btn btn-primary">Delete</button></td>
              </tr>)
           })}

@@ -1,41 +1,20 @@
-import { useState } from "react";
-import axios from 'axios';
 const Form = (props) => {
-
-     const [getForm,setForm]=useState({
-        title:'',
-        amount:0,
-        duration:0
-     });
-
-     const onChangeHandler=(event)=>{
-        setForm({
-            ...getForm,
-           [event.target.name]:event.target.value
-        })
-     }
-
-     const onSubmitHandler=(event)=>{
-         event.preventDefault();
-         props.onSubmitHandler(getForm);
-      
-     }
 
     return (<div>
         <form>
             <div class="form-group">
                 <label>Title</label>
-                <input type="text" onChange={onChangeHandler}  class="form-control" name="title" />
+                <input type="text" value={props.title} onChange={props.onChangeHandler}  class="form-control" name="title" />
             </div>
             <div class="form-group">
                 <label>Amount</label>
-                <input type="text"  onChange={onChangeHandler} class="form-control" name="amount" />
+                <input type="text" value={props.amount} onChange={props.onChangeHandler} class="form-control" name="amount" />
             </div>
             <div class="form-group">
                 <label>Duration</label>
-                <input type="text"  onChange={onChangeHandler} class="form-control" name="duration" />
+                <input type="text" value={props.duration} onChange={props.onChangeHandler} class="form-control" name="duration" />
             </div>
-            <button onClick={onSubmitHandler} type="submit" class="btn btn-primary">Submit</button>
+            {props.getEditStatus?<button onClick={props.onEditFinalSubmitHandler} type="submit" class="btn btn-primary">Edit</button>:<button onClick={props.onSubmitHandler} type="submit" class="btn btn-primary">Submit</button>}
         </form>
     </div>)
 }
