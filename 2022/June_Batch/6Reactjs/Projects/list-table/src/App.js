@@ -31,7 +31,9 @@ function App() {
     try {
       axios.get('http://localhost:3000/product').then((response) => {
         console.log(response.data);
+        //to fetch table data
         setList([...response.data]);
+        //to hide the table container
         setFlag(true);
       }).catch((error) => {
         console.log(error);
@@ -46,6 +48,7 @@ function App() {
     event.preventDefault();
     axios.post('http://localhost:3000/product',getEditObject).then((response)=>{
       console.log(response);
+      //to set the form with empty
       setEditObject({
         title:'',
         amount:'',
@@ -67,8 +70,11 @@ function App() {
 
   const onEditInitialHandler=(index,id)=>{
     console.log(index,id);
+    //to show edit or submit button
        setEditStatus(true);
+    //to send id while submitting for patch method
        setId(id);
+       //to update the form
        setEditObject({
         title:getList[index].title,
         amount:getList[index].amount,

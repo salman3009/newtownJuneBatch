@@ -1,0 +1,8 @@
+Edit Approach:
+1.We need to fetch existing Data 
+    (i)We need index of that particular field 
+2.We need to bind the data in the form 
+    (i)We need state variable 
+3.We need to send the data to backend for update 
+     (i)Id and payload 
+     
