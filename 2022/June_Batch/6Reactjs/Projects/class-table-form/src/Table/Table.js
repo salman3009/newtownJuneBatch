@@ -10,11 +10,6 @@ class Table extends Component {
         //to acccess any data from parent component we need to use pre-defined keyword called props
         console.log(this.props.list);
     }
-
-
-
-    
-
     render() {
         return (<>
             <div className="marginTable container">
@@ -27,11 +22,16 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mobile</td>
-                            <td>3000</td>
-                        </tr>
+                        {this.props.list.map((obj, index) => {
+                            return (
+                                <tr key={index}>
+                                    <th scope="row">{index + 1}</th>
+                                    <td>{obj.product}</td>
+                                    <td>{obj.amount}</td>
+                                </tr>
+                            )
+                        })}
+
                     </tbody>
                 </table>
             </div>

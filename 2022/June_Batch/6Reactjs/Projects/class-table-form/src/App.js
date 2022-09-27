@@ -19,13 +19,23 @@ class App extends Component {
   }
 
   //api call with axios method
-  getListDetails = () => {
-    axios.get("http://localhost:3000/classtable").then((response) => {
-      console.log(response.data);
-      this.setState({list:response.data})
-    }).catch((error) => {
-      console.log(error);
-    })
+  // getListDetails = () => {
+  //   axios.get("http://localhost:3000/classtable").then((response) => {
+  //     console.log(response.data);
+  //     this.setState({list:response.data})
+  //   }).catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+
+   getListDetails = async ()=>{
+    try{
+    let result = await axios.get("http://localhost:3000/classtable");
+    this.setState({list:result.data});
+    }
+    catch(err){
+      console.log(err);
+    }
   }
 
   render() {
