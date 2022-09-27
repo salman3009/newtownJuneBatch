@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let list=[];
+            let flag = true;
+            while(flag){
+            let random = Math.ceil(Math.random()*6);
+            let result = list.indexOf(random);
+            if(result==-1){
+                list.push(random);
+            }
+            if(list.length==6){
+                flag=false;
+            }
+            }
+            console.log(list);
+            let imageRandom = Math.ceil(Math.random()*5);
+            for(let i=1;i<=6;i++){
+                if(i==6){
+                    let index = list.indexOf(i);
+                list[index]=`img${imageRandom}`
+                    continue;
+                }
+                let index = list.indexOf(i);
+                list[index]=`img${i}`
+            }
+            console.log(list);
+     
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/w8vrwrwr6em9/
+</script>
+<html>
+
+<head>
+    <style>
+        div {
+            border: 1px solid black;
+            background-color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table style="width:100%">
+        <tr>
+            <div id="1" value="1">1</div>
+            <div id="2" value="2">2</div>
+            <div id="3" value="3">3</div>
+        </tr>
+        <tr>
+            <div id="4" value="4">4</div>
+            <div id="5" value="5">5</div>
+            <div id="6" value="6">6</div>
+        </tr>
+        <tr>
+            <div id="7" value="7">7</div>
+            <div id="8" value="8">8</div>
+            <div id="9" value="9">9</div>
+        </tr>
+    </table>
+    <input type="number" id="wall_id" maxlength=1 min='1' max='9'>
+    <input id="wall_color">
+    <button id="apply">Apply Colour</button>
+    <button id="reset">Reset</button>
+    <script>
+        let flag = false;
+        let div_block;
+        let old_div_block;
+        let colour_block;
+        $('#apply').click(function () {
+            console.log('clicked')
+            div_block = document.getElementById('wall_id').value;
+            colour_block = document.getElementById('wall_color').value;
+            if (parseInt(div_block) >= 1 && parseInt(div_block) <= 9 && flag == false) {
+                old_div_block = div_block
+                $(`#${old_div_block}`).css('background-color', `${colour_block}`);
+                $(`#${div_block}`).css('background-color', `${colour_block}`);
+                flag = true
+            } else if (parseInt(div_block) >= 1 && parseInt(div_block) <= 9 && flag == true) {
+                $(`#${old_div_block}`).css('background-color', `transparent`);
+                $(`#${div_block}`).css('background-color', `${colour_block}`);
+                old_div_block = div_block
+            } else {
+                console.log('else')
+            }
+            $('#reset').click(() => {
+                for (let i = 1; i <= 9; i++) {
+                    $(`#${i}`).css('background-color', 'transparent')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

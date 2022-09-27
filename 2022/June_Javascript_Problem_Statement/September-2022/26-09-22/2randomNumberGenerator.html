@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="main">
+
+        </div>
+    </body>
+</html>
+//1,2,3,4,5
+//3,2,5,4,1
+//4,3,1,2,1,5 = 6
+//5,4,3,5,2,1 = 6
+<script>
+    let list=[];
+    let flag = true;
+    while(flag){
+        let random = Math.ceil(Math.random()*6);
+        let result = list.indexOf(random);
+        if(result==-1){
+            list.push(random);
+        }
+        if(list.length==6){
+            flag = false;
+        }
+        // flag = false
+    }
+    console.log(list);
+    let global = document.getElementById("main");
+    let randomImage = Math.ceil(Math.random()*5);
+    console.log(randomImage);
+    for(let i=0;i<list.length;i++){
+        console.log(list[i]);
+      if(list[i]==6){
+        let image = document.createElement("img");
+        image.src=`${randomImage}.png`;
+        global.appendChild(image);
+        continue;
+      }
+       let image = document.createElement("img");
+        image.src=`${list[i]}.png`;
+        global.appendChild(image);
+    }
+
+</script>
