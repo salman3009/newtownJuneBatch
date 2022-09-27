@@ -7,6 +7,7 @@ class App extends Component {
 
   //it is use to initialize the state
   constructor(props) {
+    console.log("constructor");
     super(props);
     this.state = {
       list: [],
@@ -17,8 +18,15 @@ class App extends Component {
     }
   }
 
+  static getDerivedStateFromProps(props,state){
+    console.log("getDerivedStateFromProps");
+     console.log(props,state);
+     return true;
+  }
+
   //first time rendering and binding any api below method is used
   componentDidMount() {
+    console.log("componentDidMount");
     this.getListDetails();
   }
 
@@ -54,10 +62,13 @@ class App extends Component {
 
   onSubmitHandler = async (event) => {
     try {
+      //to prevent from submitting the form
       event.preventDefault();
       console.log(this.state.form);
+      //post method consists of two paramets (url,payload)
       let result = await axios.post("http://localhost:3000/classtable", this.state.form);
       console.log(result);
+      //calling list again to fetch updated data from backend
       this.getListDetails();
     } catch (err) {
 
@@ -65,6 +76,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("render");
     return (<>
       <Form onSubmitHandler={this.onSubmitHandler} onChangeHandler={this.onChangeHandler} />
       {this.state.list && this.state.list.length > 0 && <Table list={this.state.list} />}
