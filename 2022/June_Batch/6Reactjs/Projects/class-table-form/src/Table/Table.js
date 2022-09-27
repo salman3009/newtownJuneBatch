@@ -7,6 +7,8 @@ class Table extends Component {
 
     constructor(props) {
         super(props);
+        //to acccess any data from parent component we need to use pre-defined keyword called props
+        console.log(this.props.list);
     }
 
 

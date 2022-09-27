@@ -5,6 +5,7 @@ import axios from 'axios';
 
 class App extends Component {
 
+  //it is use to initialize the state
   constructor(props) {
     super(props);
     this.state = {
@@ -12,13 +13,16 @@ class App extends Component {
     }
   }
 
+  //first time rendering and binding any api below method is used
   componentDidMount() {
     this.getListDetails();
   }
 
+  //api call with axios method
   getListDetails = () => {
     axios.get("http://localhost:3000/classtable").then((response) => {
       console.log(response.data);
+      this.setState({list:response.data})
     }).catch((error) => {
       console.log(error);
     })
@@ -27,7 +31,7 @@ class App extends Component {
   render() {
     return (<>
       <Form />
-      <Table />
+      {this.state.list && this.state.list.length>0 && <Table list={this.state.list}/>}
     </>)
   }
 }
