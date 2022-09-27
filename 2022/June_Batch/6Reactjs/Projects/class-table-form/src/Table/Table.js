@@ -10,6 +10,19 @@ class Table extends Component {
         //to acccess any data from parent component we need to use pre-defined keyword called props
         console.log(this.props.list);
     }
+
+    static getDerivedStateFromProps(props,state){
+        return state;
+    }
+
+    // getSnapshotBeforeUpdate(prevProps,PrevState){
+    //     console.log(prevProps,prevState);
+    // }
+
+    componentDidUpdate(){
+         console.log("component didupdate");
+    }
+
     render() {
         return (<>
             <div className="marginTable container">
