@@ -70,5 +70,15 @@
       "address": "delhi",
       "id": 2
     }
+  ],
+  "classtable":[
+    {
+      "product":"mobile",
+      "amount":3000
+    },
+    {
+      "product":"van",
+      "amount":6000
+    }
   ]
 }
