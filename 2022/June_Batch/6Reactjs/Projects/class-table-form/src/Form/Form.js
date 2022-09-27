@@ -13,13 +13,13 @@ class Form extends Component {
                 <form>
                     <div className="form-group">
                         <label>Product Name</label>
-                        <input type="text" className="form-control" name="product" />
+                        <input onChange={this.props.onChangeHandler} type="text" className="form-control" name="product" />
                     </div>
                     <div className="form-group">
                         <label>Product Amount</label>
-                        <input type="number" className="form-control" name="amount" />
+                        <input onChange={this.props.onChangeHandler} type="number" className="form-control" name="amount" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button  onClick={this.props.onSubmitHandler} type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         </>)

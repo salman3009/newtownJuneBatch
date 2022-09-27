@@ -71,14 +71,26 @@
       "id": 2
     }
   ],
-  "classtable":[
+  "classtable": [
     {
-      "product":"mobile",
-      "amount":3000
+      "id": 1,
+      "product": "mobile",
+      "amount": 3000
     },
     {
-      "product":"van",
-      "amount":6000
+      "id": 2,
+      "product": "van",
+      "amount": 6000
+    },
+    {
+      "product": "cycle",
+      "amount": "2000",
+      "id": 3
+    },
+    {
+      "product": "htc",
+      "amount": "100",
+      "id": 4
     }
   ]
 }

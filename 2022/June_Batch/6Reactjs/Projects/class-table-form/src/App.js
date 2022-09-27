@@ -9,7 +9,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: []
+      list: [],
+      form: {
+        product: '',
+        amount: ''
+      }
     }
   }
 
@@ -28,20 +32,42 @@ class App extends Component {
   //   })
   // }
 
-   getListDetails = async ()=>{
-    try{
-    let result = await axios.get("http://localhost:3000/classtable");
-    this.setState({list:result.data});
+  getListDetails = async () => {
+    try {
+      let result = await axios.get("http://localhost:3000/classtable");
+      //state will impact only list variable not form variable
+      this.setState({ list: result.data });
     }
-    catch(err){
+    catch (err) {
       console.log(err);
+    }
+  }
+
+  onChangeHandler = (event) => {
+    //state will impact form object not list variable
+    this.setState({
+      form: {
+        ...this.state.form, [event.target.name]: event.target.value
+      }
+    })
+  }
+
+  onSubmitHandler = async (event) => {
+    try {
+      event.preventDefault();
+      console.log(this.state.form);
+      let result = await axios.post("http://localhost:3000/classtable", this.state.form);
+      console.log(result);
+      this.getListDetails();
+    } catch (err) {
+
     }
   }
 
   render() {
     return (<>
-      <Form />
-      {this.state.list && this.state.list.length>0 && <Table list={this.state.list}/>}
+      <Form onSubmitHandler={this.onSubmitHandler} onChangeHandler={this.onChangeHandler} />
+      {this.state.list && this.state.list.length > 0 && <Table list={this.state.list} />}
     </>)
   }
 }
