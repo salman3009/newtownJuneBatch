@@ -2,16 +2,21 @@ import { Component } from 'react';
 import './Table.css';
 
 
+
 class Table extends Component {
 
     constructor(props) {
         super(props);
     }
 
+
+
+    
+
     render() {
         return (<>
             <div className="marginTable container">
-                <table class="table table-bordered">
+                <table className="table table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

@@ -19,7 +19,7 @@ class Form extends Component {
                         <label>Product Amount</label>
                         <input type="number" className="form-control" name="amount" />
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         </>)
