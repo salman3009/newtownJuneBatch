@@ -21,6 +21,11 @@ class Table extends Component {
         };
     }
 
+    componentWillUnmount(){
+        console.log("componentwillunmount");
+        alert("componentUnMount")
+      }
+      
     onChangeHandler=()=>{
         this.setState({
             flag:!this.state.flag

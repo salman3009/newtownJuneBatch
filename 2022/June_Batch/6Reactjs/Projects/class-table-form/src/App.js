@@ -10,6 +10,7 @@ class App extends Component {
     // console.log("constructor");
     super(props);
     this.state = {
+      flag:true,
       list: [],
       form: {
         product: '',
@@ -75,11 +76,25 @@ class App extends Component {
     }
   }
 
+  onChangeFlagHandler=()=>{
+    this.setState({
+      flag:false
+    })
+  }
+
+
+
   render() {
     // console.log("render");
+    let component;
+    if(this.state.flag){
+      component = <Table list={this.state.list} />
+    }
     return (<>
+     {component}
+    <button onClick={this.onChangeFlagHandler}>Change Flag</button>
       <Form onSubmitHandler={this.onSubmitHandler} onChangeHandler={this.onChangeHandler} />
-      {this.state.list && this.state.list.length > 0 && <Table list={this.state.list} />}
+                   
     </>)
   }
 }
