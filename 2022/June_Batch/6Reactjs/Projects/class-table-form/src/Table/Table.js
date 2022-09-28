@@ -8,25 +8,40 @@ class Table extends Component {
     constructor(props) {
         super(props);
         //to acccess any data from parent component we need to use pre-defined keyword called props
-        console.log(this.props.list);
+        // console.log(this.props.list);
+        this.state={
+            check:'',
+            flag:false
+        }
     }
 
     static getDerivedStateFromProps(props,state){
-        return state;
+        return {
+            check:props.list
+        };
     }
 
-    // getSnapshotBeforeUpdate(prevProps,PrevState){
-    //     console.log(prevProps,prevState);
-    // }
+    onChangeHandler=()=>{
+        this.setState({
+            flag:!this.state.flag
+        })
+    }
+
+    getSnapshotBeforeUpdate(PrevProps,PrevState){
+        console.log("prevState",PrevState);
+    }
 
     componentDidUpdate(){
-         console.log("component didupdate");
+        console.log("component did update");
     }
+
+
 
     render() {
         return (<>
             <div className="marginTable container">
-                <table className="table table-bordered">
+               <button onClick={this.onChangeHandler}>Submit Flag</button>
+               {this.state.flag && <table className="table table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -35,7 +50,7 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.list.map((obj, index) => {
+                        {this.state.check.map((obj, index) => {
                             return (
                                 <tr key={index}>
                                     <th scope="row">{index + 1}</th>
@@ -46,7 +61,7 @@ class Table extends Component {
                         })}
 
                     </tbody>
-                </table>
+                </table>} 
             </div>
         </>)
     }
