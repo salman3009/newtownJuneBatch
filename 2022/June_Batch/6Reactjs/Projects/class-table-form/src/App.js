@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Form from './Form/Form';
 import Table from './Table/Table';
 import axios from 'axios';
+import Person from './Person';
+import ErrorBoundary from './ErrorBoundary';
 
 class App extends Component {
 
@@ -91,10 +93,12 @@ class App extends Component {
       component = <Table list={this.state.list} />
     }
     return (<>
+     <ErrorBoundary>
      {component}
+     <Person name="jack"/>
     <button onClick={this.onChangeFlagHandler}>Change Flag</button>
       <Form onSubmitHandler={this.onSubmitHandler} onChangeHandler={this.onChangeHandler} />
-                   
+      </ErrorBoundary>            
     </>)
   }
 }
