@@ -1,0 +1,25 @@
+Lifecyle methods:
+
+1.Mounting  --> new created component will be inserted into DOM
+   (i)constructor --> it is use to initialize the state
+   (ii)render --> it is use to render jsx
+   (iii)componentDidMount --> it is use to trigger api from backend from initiaze rendering state.
+
+2.Updating  ---> Any state changes happens in that particular component
+    (i)componentDidUpdate --> it will trigger this method whenever state changes happen in this component.
+
+3.UnMounting  ---> Removing the component from DOM
+  //Before removing this particular component we call method to clear state data or some set of interval or some data to be clear before removing rom dom.
+  (i)componentWillUnmount
+
+4.error handling
+   //if any error occurs during rendering time 
+   (i)static getDerivedStateFromError --> it will capture the error will return to state
+   (ii)componentDidCatch --> it will exact error
+=================================================================
+   functional component 
+   useEffect:
+   1.componentDidMount
+   2.componentDidUpdate 
+   3.componentWillUnmount
+ =========================================================
