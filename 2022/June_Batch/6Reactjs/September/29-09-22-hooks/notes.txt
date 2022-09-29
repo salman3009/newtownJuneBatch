@@ -1,0 +1,10 @@
+Hooks:
+1.Before 16.9 we don't have state in functional component 
+2.Because of hooks concept we can able to have state in functional component after version 16.9.
+(i)useState()
+(ii)useEffect()
+(iii)useReducer()
+(iv)useCallback()
+(v)useContext() API 
+(vi)useRef()
+
