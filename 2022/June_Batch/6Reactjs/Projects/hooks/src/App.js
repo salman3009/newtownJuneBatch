@@ -16,12 +16,20 @@ const App = () => {
 
   //It is going to call everytime when there is change in state
   //similar to componentDidUpdate
+  // useEffect(() => {
+  //   alert("It is going to call everytime updates happens");
+  //   if (getCount >= 5) {
+  //     setCount(1);
+  //   }
+  // })
+
+
   useEffect(() => {
-    // alert("It is going to call everytime updates happens");
+    alert("It is going to call on particular state updates");
     if (getCount >= 5) {
       setCount(1);
     }
-  })
+  },[getCount])
 
   const onIncrementHandler = () => {
     setCount(getCount + 1);

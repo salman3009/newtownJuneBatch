@@ -5,8 +5,6 @@ const List=()=>{
 
     //similar to component willunmount
     //whenver you remove this component form DOM
-   
-
     useEffect(()=>{
         const details = setInterval(()=>{
             console.log("interval is calling");
