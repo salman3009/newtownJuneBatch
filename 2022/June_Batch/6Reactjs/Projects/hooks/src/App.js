@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import List from './List';
-
+import Reducer from './Reducer';
 const App = () => {
 
   const [getCount, setCount] = useState(0);
@@ -25,7 +25,7 @@ const App = () => {
 
 
   useEffect(() => {
-    alert("It is going to call on particular state updates");
+    //alert("It is going to call on particular state updates");
     if (getCount >= 5) {
       setCount(1);
     }
@@ -44,14 +44,20 @@ const App = () => {
     setFlag(!getFlag);
   }
 
+  const onNeutralHandler=()=>{
+    setCount(1);
+  }
+
   return (<>
     <div className="container">
+      <h5>UseState</h5>
       <div>
         <input type="text" value={getCount} readOnly />
       </div>
       <div>
         <button onClick={onIncrementHandler}>Increment</button>
         <button onClick={onDecrementHandler}>Decrement</button>
+        <button onClick={onNeutralHandler}>Neutral</button>
       </div>
 
     </div>
@@ -62,8 +68,10 @@ const App = () => {
       <div>
         {getFlag && <List />}
       </div>
+      <div>
+      </div>
     </div>
-
+    <Reducer/>
   </>)
 
 }
