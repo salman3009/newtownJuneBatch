@@ -1,0 +1,48 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/sb006lrksauf/
+</script>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="main">
+            Bill Amount:<input type="number" id="billamt"/>
+            Number of People:<input type="number" id="peopleamt"/>
+            Calculate button:<button onClick="onCalculateHandler()" id="calculate">calculate</button>
+            <select id="serviceQual">
+              <option value="0.05">5%</option>
+              <option value="0.1">10%</option>
+              <option value="0.15">15%</option>
+              <option value="0.2">20%</option>
+              <option value="0.25">25%</option>
+              <option value="0.3">30%</option>
+            </select>
+        </div>
+  
+
+        <script>
+            function onCalculateHandler(){
+               let result = document.getElementById("billamt").value?Number(document.getElementById("billamt").value):null;
+               if(!result){
+                alert("Please Enter Bill Amount");
+                return ;
+               }
+               let per = document.getElementById("serviceQual").value;
+               let noOfPeople = document.getElementById("peopleamt").value?Number(document.getElementById("peopleamt").value):1;
+               let finalAmount = ((result/noOfPeople)*per).toFixed(2);
+               let h1 = document.createElement("h1");
+               if(noOfPeople>1){
+                h1.innerHTML = `TIP AMOUNT ${finalAmount} Each`;
+               }
+               else{
+                h1.innerHTML = `TIP AMOUNT ${finalAmount}`;
+               }
+               let global = document.getElementById("main");
+               global.appendChild(h1);
+            }
+        </script>
+
+
+    </body>
+</html>

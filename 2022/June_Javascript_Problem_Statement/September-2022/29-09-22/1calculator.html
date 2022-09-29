@@ -1,0 +1,48 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/x4c0bdl6hmfi/
+</script>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="input"/>
+        <button id="block0" onClick="onAdd(0)">0</button>
+        <button id="block1" onClick="onAdd(1)">1</button>
+        <button id="block2" onClick="onAdd(2)">2</button>
+        <button id="block3" onClick="onAdd(3)">3</button>
+        <button id="block4" onClick="onAdd(4)">4</button>
+        <button id="block5" onClick="onAdd(5)">5</button>
+        <button id="block6" onClick="onAdd(6)" >6</button>
+        <button id="block7" onClick="onAdd(7)">7</button>
+        <button id="block8" onClick="onAdd(8)">8</button>
+        <button id="block9" onClick="onAdd(9)">9</button>
+        <button id="plus" onClick="onAdd('+')">+</button>
+        <button id="minus" onClick="onAdd('-')">-</button>
+        <button id="multiply" onClick="onAdd('*')">*</button>
+        <button id="divide" onClick="onAdd('/')">/</button>
+        <button id="clr" onClick="onClear(0)">cls</button>
+        <button id="dot" onClick="onAdd('.')">.</button>
+        <button id="ans" onClick="onAnswer()">ans</button>
+
+        <script>
+            let num="";
+            function onAdd(input){
+                num+=input;
+                document.getElementById('input').value = num;
+            }
+            function onClear(){
+                num="";
+                document.getElementById('input').value = num;
+            }
+            function onAnswer(){
+                let result = eval(num);
+                document.getElementById('input').value = result;
+                num="";
+            }
+        </script>
+        
+
+    </body>
+</html>
