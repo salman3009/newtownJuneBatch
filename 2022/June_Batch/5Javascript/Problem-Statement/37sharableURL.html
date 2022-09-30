@@ -2,36 +2,33 @@
     // https://my.newtonschool.co/playground/markup/fw36g7c1j4yv/
 </script>
 <html>
-<head>
-</head>
-<body>
-    <h3 id="url">https://localhost:8080/</h3>
-    <label for="name">Name:</label><br>
-    <input id="name" type="text" id="name" name="name"><br>
-    <label for="year">Graduation year:</label><br>
-    <input id="year" type="number" id="year" name="year"><br><br>
-    <button id="button" onClick="urlUpdater()">Submit</button>
-    <script>
-        var url = "https://localhost:8080/"
-        function urlUpdater() {
-            var params = {
-                name: document.getElementById("name").value,
-                year: document.getElementById("year").value,
-            };
+    <head>
 
-            let cnt = 0;
-
-            var esc = encodeURIComponent;
-            var query = Object.keys(params)
-                .map(function (k) {
-                    if (params[k] !== "") { cnt++; return esc(k) + '=' + esc(params[k]) + "&"; }
-                })
-                .join('');
-            let t = url + "?" + query;
-            t = t.substring(0, t.length - 1);
-            document.getElementById("url").innerHTML = t;
-        }
-    </script>
-</body>
-
+    </head>
+    <body>
+        <h3 id="url">https://localhost:8080/</h3>
+        <input id="name" name="name"/>
+        <input id="year" name="year"/>
+        <button onClick="onSubmitHandler()" id="button">Submit</button>
+        <script>
+            function onSubmitHandler(){
+                let name = document.getElementById("name").value;
+                let year = document.getElementById("year").value;
+                document.getElementById('url').innerHTML="";
+                if(name && year){
+                    document.getElementById("url").innerHTML = `https://localhost:8080/?name=${name}&year=${year}`;
+                }
+                else if(name){
+                    let result = document.getElementById("url").innerHTML;
+                    document.getElementById("url").innerHTML = `https://localhost:8080/?name=${name}`;
+                }
+                else if(year){
+                    let result = document.getElementById("url").innerHTML;
+                    document.getElementById("url").innerHTML = `https://localhost:8080/?year=${year}`;
+                }else{
+                    document.getElementById('url').innerHTML="https://localhost:8080/"; 
+                }
+            }
+        </script>
+    </body>
 </html>

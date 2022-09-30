@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="dropId" ondrop="drop(event)" ondragover="dragOver(event)" style="width:200px;height:200px;border:1px solid black">
+
+        </div>
+        <img src="./1.png" id="dragId" draggable="true" ondragstart="start(event)" />
+
+        <script>
+            function start(event){
+                event.dataTransfer.setData("data",event.target.id);
+            }
+
+            function dragOver(event){
+               event.preventDefault();
+            }
+
+            function drop(event){
+                let sectionId = event.dataTransfer.getData("data");
+                console.log(sectionId);
+                event.target.appendChild(document.getElementById(sectionId));
+            }
+        </script>
+    </body>
+</html>
