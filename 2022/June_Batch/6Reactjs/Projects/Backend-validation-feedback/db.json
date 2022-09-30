@@ -1,0 +1,22 @@
+{
+  "feedbackquestion": [
+    {
+      "question": "How was the lecture today",
+      "options":["Good","Average","Below average"],
+      "id": 1
+    },
+    {
+      "question": "How was the communication?",
+      "options":["Good","Average","Below average"],
+      "id": 2
+    }, {
+      "question": "How was the lecture notes",
+      "options":["Good","Average","Below average"],
+      "id": 3
+    }, {
+      "question": "Overal feedback",
+      "options":["Good","Average","Below average"],
+      "id": 4
+    }
+  ]
+}
