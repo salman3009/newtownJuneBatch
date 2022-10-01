@@ -67,3 +67,59 @@
 </body>
 
 </html>
+
+
+
+
+
+<!-- <html>
+    <head>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="1" value="1">1</div>
+        <div id="2" value="2">2</div>
+        <div id="3" value="3">3</div>
+        <div id="4" value="4">4</div>
+        <div id="5" value="5">5</div>
+        <div id="6" value="6">6</div>
+        <div id="7" value="7">7</div>
+        <div id="8" value="8">8</div>
+        <div id="9" value="9">9</div>
+        ID of the wall<input type="number" maxlength=1 min='1' max='9' id="wall_id" type="text"/>
+       Color of the Wall <input id="wall_color" type="text"/>
+        <button onClick="Apply()" id="apply">Apply</button>
+        <button onClick="Reset()" id="reset">Reset</button>
+
+        <script>
+            function Apply(){
+                 let id = document.getElementById("wall_id").value;
+                 let color = document.getElementById("wall_color").value;
+                 document.getElementById(id).style.backgroundColor = color;
+                 for(let i=1;i<=9;i++){
+                    if(id==i){
+                        continue;
+                    }
+                    document.getElementById(i).style.backgroundColor = "transparent";
+                }
+
+            }
+
+            function Reset(){
+                for(let i=1;i<=9;i++){
+                    document.getElementById(i).style.backgroundColor = "transparent";
+                }
+
+            }
+        </script>
+      
+
+    </body>
+</html> -->

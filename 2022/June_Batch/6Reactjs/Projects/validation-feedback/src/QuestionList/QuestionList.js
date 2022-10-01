@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import './QuestionList.css';
 import axios from 'axios';
+import Table from '../Table/Table';
 
 const QuestionList = () => {
 
     const [getList, setList] = useState([]);
     const [getAnswer,setAnswer]=useState([]);
+    const [getFlag,setFlag] = useState(false);
 
     useEffect(() => {
         getInitialDetails();
@@ -53,7 +55,12 @@ const QuestionList = () => {
            console.log(index,data);
     }
 
-    return (<div className='container'>
+    const onSubmitHandler=()=>{
+        setFlag(true);
+    }
+
+    return (<>
+    <div className='container'>
         {getList.map((obj, index) => {
             return (<div className="heading" key={index}>
                 <h3>{obj.question}</h3>
@@ -68,7 +75,12 @@ const QuestionList = () => {
 
             </div>)
         })}
+        <button onClick={onSubmitHandler}>Submit</button>
 
-    </div>)
+    </div>
+    <div>
+      {getFlag && <Table global={getAnswer}/> }  
+    </div>
+    </>)
 }
 export default QuestionList;

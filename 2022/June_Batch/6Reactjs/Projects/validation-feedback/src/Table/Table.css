@@ -1,0 +1,10 @@
+.container-table{
+    width: 400px;
+    min-height: 300px;
+    margin:20px auto;
+}
+
+table,tr,td{
+    border:1px solid blue;
+    padding:10px;
+}
