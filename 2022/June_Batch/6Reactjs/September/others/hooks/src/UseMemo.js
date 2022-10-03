@@ -1,39 +1,35 @@
 import { useState ,useMemo} from "react";
 
 function UseMemo(props){
-
     const[getCount,setCount]=useState(0);
 
     const[getAge,setAge]=useState(0);
-
+ 
     const incrementHandler=()=>{
         setCount(getCount+1)
     }
-
+ 
     const  ageHandler=()=>{
         setAge(getAge+1)
     }
-
-    const Even=useMemo(()=>{
-        let i=0;
-        while(i<20){
-         console.log(i);
-         i++;
+ 
+    const Even=(num)=>{
+       console.log("caculate");
+       for (let i = 0; i < 1000000000; i++) {
+          num += 1;
         }
-        return getCount%2===0;
-    },[getCount])
-      
+        return num;
+    }
+   // const calculation = Even(getCount);
+   const calculation = useMemo(() => Even(getCount), [getCount]);
     
-
-  
-  
-  
+    
     return(<div
     >
         {getCount}<br/>
     <button onClick={incrementHandler}>Increment</button><br/>
     <button onClick={ageHandler}>age</button><br/>
-     {Even ? "even number":"odd number"}
+     {calculation}
     </div>)
 }
 
