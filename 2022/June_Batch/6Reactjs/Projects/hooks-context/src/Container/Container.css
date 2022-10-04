@@ -1,0 +1,10 @@
+.container{
+    width: 300px;
+    height: 200px;
+    border:1px solid black;
+    margin:10px auto;
+}
+
+.box{
+    text-align: center;
+}
