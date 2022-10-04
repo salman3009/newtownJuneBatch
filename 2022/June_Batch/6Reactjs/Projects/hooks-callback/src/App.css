@@ -1,2 +1,16 @@
+.container{
+    width: 300px;
+    height: 200px;
+    margin:10px auto;
+    border:1px solid black;
+}
 
+.counter{
+    text-align: center;
+    margin:10px;
+}
 
+button{
+    display: block;
+    margin:10px auto;
+}

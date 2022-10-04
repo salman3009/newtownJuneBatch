@@ -1,10 +1,13 @@
 
-import Callback from './Callback'
+import Callback from './Callback';
+import UseMemo from './UseMemo';
 
 const App=()=>{
 
   return (<div>
-   <Callback/>
+   {/* <Callback/> */}
+   <UseMemo/>
   </div>)
+
 }
 export default App;
