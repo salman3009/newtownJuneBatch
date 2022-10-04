@@ -1,1 +1,68 @@
 Interview Basic Topic:
+Interview Basic Topic:
+What is component?
+Component is nothing but a function 
+In reactjs component will return jsx 
+jsx - javascript xml 
+Each and every component will render jsx to display the output in original DOM.
+
+Types of Component?
+In Reacts we can write the component in two ways.
+(i)functional component 
+(ii)class component 
+
+=======================================================
+What is Class component 
+//By using ES6 class concept we can implement this approach
+//It consists of constructor method to initialize state data 
+//It consists of render method to render jsx output to original dom 
+//Class component will extends to react.component 
+//render method is mandatory to render the data.
+
+What is props?
+//props is nothing but an custom attribute to custom components.
+//By using props we can pass data from parent component to nested child component.
+//To use props in class component we need to use variable name called props.
+
+what is State?
+state is nothing but a data or information store in some variable.
+In reactjs state play important role because whenever we have dynamic data the react will not render again the jsx.
+To make react know that we need to render jsx again we need to store dynamic data inside the state.
+Whenever there is state changes happens react will trigger the jsx to re-render again.
+
+To use state in react we need to use the variable called state to initialize the data.
+To update the state in reactjs application we need to use setState to update any data.
+state variable should be always be an object.
+Example
+
+
+class App extends React.Component{
+	
+    constructor(props){
+          super(props);
+          this.state={
+            counter:0
+          };
+    }
+
+    getCounterHandler=()=>{
+         this.setState({
+         counter:this.state.counter+1
+         });
+    }
+
+    render(){
+        return (<>
+          {this.state.counter}
+          <button onClick={this.getCounterHandler}>click</btton>
+        </>)
+    }
+
+
+}
+
+
+
+=========================================================
+
+
