@@ -1,9 +1,17 @@
 import './Button.css';
+import {UserContext} from '../App';
 
-const Button=(props)=>{
+const Button=()=>{
 
     return(<div>
-        <button>Print - {props.counter}</button>
+        <button>Print - 
+            <UserContext.Consumer>
+            {
+                obj=>{
+                    return obj.counter;
+                }
+            }
+            </UserContext.Consumer></button>
     </div>)
 }
 
