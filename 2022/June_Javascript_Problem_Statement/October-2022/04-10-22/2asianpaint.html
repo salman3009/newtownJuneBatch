@@ -1,0 +1,69 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/w8vrwrwr6em9/
+</script>
+<html>
+    <head>
+        <style>
+            .container{
+                display: flex;
+                width: 100%;
+            }
+            .box{
+                text-align: center;
+                width: 120px;
+                height: 50px;
+                border:1px solid black;
+            }
+            input,button{
+                display: block;
+                margin:10px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="box" id="1" value="1">1</div>
+            <div class="box" id="2" value="2">2</div>
+            <div class="box" id="3" value="3">3</div>
+            <div class="box" id="4" value="4">4</div>
+            <div class="box" id="5" value="5">5</div>
+            <div class="box" id="6" value="6">6</div>
+            <div class="box" id="7" value="7">7</div>
+            <div class="box" id="8" value="8">8</div>
+            <div class="box" id="9" value="9">9</div>
+        </div>
+   
+
+        Id Wall:<input type="text" id="wall_id"/>
+        Color Wall:<input type="text" id="wall_color"/>
+
+        <button onClick="onApply()" id="apply">Apply</button>
+        <button onClick="onReset()" id="reset"> Reset</button>
+
+        <script>
+            function onApply(){
+              let wall = document.getElementById("wall_id").value;
+              let color = document.getElementById("wall_color").value;
+              document.getElementById(wall).style.backgroundColor = color;
+
+              for(let i=1;i<=9;i++){
+                if(i == wall){
+                    continue;
+                }
+                document.getElementById(i).style.backgroundColor = "transparent";
+
+              }
+
+            }
+
+            function onReset(){
+                for(let i=1;i<=9;i++){
+                document.getElementById(i).style.backgroundColor = "transparent";
+
+              }
+            }
+        </script>
+    </body>
+</html>

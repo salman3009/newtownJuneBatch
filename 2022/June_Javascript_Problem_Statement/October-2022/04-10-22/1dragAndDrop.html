@@ -1,0 +1,53 @@
+<script>
+    //  https://my.newtonschool.co/playground/markup/gb0b3v5vuqsz/
+</script>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <div id="div1" ondrop="drop(event)"  ondragover="dragOver(event)">
+            <img src="./1.png" id="drag1" draggable="true" ondragstart="onDragStart(event)"/>
+        </div>
+
+        <div id="div2" ondrop="drop(event)"  ondragover="dragOver(event)">
+            <img src="./2.png" id="drag2" draggable="true" ondragstart="onDragStart(event)"/>
+        </div>
+
+        <div id="div3" ondrop="drop(event)"  ondragover="dragOver(event)">
+            <img src="./3.png" id="drag3" draggable="true" ondragstart="onDragStart(event)"/>
+        </div>
+
+        <div id="div4" ondrop="drop(event)"  ondragover="dragOver(event)">
+            <img src="./4.png" id="drag4" draggable="true" ondragstart="onDragStart(event)"/>
+        </div>
+
+        <div id="div5" ondrop="drop(event)"  ondragover="dragOver(event)">
+            <img src="./5.png" id="drag5" draggable="true" ondragstart="onDragStart(event)"/>
+        </div>
+        <div id="div6" ondrop="drop(event)"  ondragover="dragOver(event)">
+            <img src="./6.png" id="drag6" draggable="true" ondragstart="onDragStart(event)"/>
+        </div>
+
+        <script>
+
+            function dragOver(event){
+             event.preventDefault();
+            }
+
+            function onDragStart(event){
+              event.dataTransfer.setData("child",event.target.id);
+              event.dataTransfer.setData("parent",event.target.parentElement.id);
+            }
+
+            function drop(event){
+                let child = event.dataTransfer.getData("child");
+                let parent = event.dataTransfer.getData("parent");
+                event.target.parentElement.appendChild(document.getElementById(child));
+                document.getElementById(parent).appendChild(event.target);
+            }
+        </script>
+        
+    </body>
+</html>
