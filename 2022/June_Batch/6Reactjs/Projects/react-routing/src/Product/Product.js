@@ -1,6 +1,14 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Product.css';
 
 const Product = () => {
+
+    const {pathname} = useLocation();
+
+    useEffect(()=>{
+       console.log(pathname);
+    },[])
     return (<div style={{marginTop:"100px"}} className='container'>
         <div className='row'>
             <div className="col-12">

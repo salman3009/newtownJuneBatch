@@ -13,8 +13,9 @@ const Login = () => {
         event.preventDefault();
         alert("onSubmit");
         //step 3: use navigation and put th product name
-        navigation('/product');
+            navigation('/product');  
     }
+    
     return (<div className="container">
         <div className="row">
             <div className="col-4">
