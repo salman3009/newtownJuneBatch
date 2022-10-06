@@ -1,5 +1,6 @@
 import './Table.css';
 import Button from '../Button/Button';
+//Step4: please import the UserContext
 import { UserContext } from '../App';
 
 const Table=(props)=>{
@@ -10,9 +11,11 @@ const Table=(props)=>{
                 <th>calculate</th>
             </tr>
             <tr>
+                {/* Step 5: you can use the Consumer to access the data using 
+                the callback function */}
                 <td><UserContext.Consumer>
                        {
-                        obj=>{
+                        (obj)=>{
                             return obj.name;
                         }
                        }
