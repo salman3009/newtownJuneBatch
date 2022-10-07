@@ -9,10 +9,23 @@ import Register from './Register/Register';
 import Contact from './Contact/Contact';
 import Product from './Product/Product';
 import NoMatch from './NoMatch/NoMatch';
-
-
+import User from './Users/User';
+import Users from './Users/Users';
 
 function App() {
+
+  const UsersList=[
+    {
+    id:1,fullName:"john",
+   },
+   {
+    id:2,fullName:"harry"
+   },
+   {
+    id:3,fullName:"potter"
+   }
+];
+
   return (
    <div>
     {/* step3:Wrapped with BrowserRouter component */}
@@ -28,6 +41,9 @@ function App() {
       {/* dynamic params */}
       <Route path="product/:id" element={<Product/>}/>
       <Route path="*" element={<NoMatch/>}/>
+      <Route path="users" element={<Users list={UsersList}/>}>
+          <Route path=":id" element={<User/>}/>
+      </Route>
      </Routes>
        {/* <NoMatch/> */}
     </BrowserRouter>
