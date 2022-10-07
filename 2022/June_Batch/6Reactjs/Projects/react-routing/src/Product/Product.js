@@ -1,14 +1,17 @@
 import { useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams,useSearchParams } from 'react-router-dom';
 import './Product.css';
 
 const Product = () => {
 
     const {pathname} = useLocation();
     const {id} = useParams();
+    const [searchParams] = useSearchParams();
 
     useEffect(()=>{
        console.log(pathname);
+       console.log(searchParams.get('email'));
+       console.log(searchParams.get('password'));
     },[])
     return (<div style={{marginTop:"100px"}} className='container'>
         <div className='row'>

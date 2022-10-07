@@ -2,19 +2,35 @@
 import './Login.css';
 //step 1 useNavigate for internal routing
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 
 const Login = () => {
 
     //step2: do the instantiation for using useNavigation
     const navigation = useNavigate();
+    const [getForm,setForm] = useState({
+        email:'',
+        password:''
+    });
+
+    useEffect(()=>{
+          console.log(getForm);
+    },[getForm])
+
+    const onChangeHandler=(event)=>{
+        setForm({
+          ...getForm,[event.target.name]:event.target.value
+        })
+    }
 
     const onSubmitHandler=(event)=>{
         event.preventDefault();
         let id= 343;
         alert("onSubmit");
         //step 3: use navigation and put th product name
-            navigation(`/product/${id}`);  
+        //search params or query params
+            navigation(`/product/${id}?email=${getForm.email}&password=${getForm.password}`);  
     }
     
     return (<div className="container">
@@ -26,11 +42,11 @@ const Login = () => {
                 <form>
                     <div class="form-group">
                         <label>Email address</label>
-                        <input type="email" class="form-control" name="email" placeholder="Enter email" />
+                        <input type="email" onChange={onChangeHandler} class="form-control" name="email" placeholder="Enter email" />
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password" />
+                        <input type="password" onChange={onChangeHandler} class="form-control" name="password" placeholder="Password" />
                     </div>
                     <button  onClick={onSubmitHandler} type="submit" class="btn btn-primary">Login</button>
                 </form>
