@@ -25,7 +25,8 @@ function App() {
       <Route path="login" element={<Login/>}/>
       <Route path="register" element={<Register/>}/>
       <Route path="contact" element={<Contact/>}/>
-      <Route path="product" element={<Product/>}/>
+      {/* dynamic params */}
+      <Route path="product/:id" element={<Product/>}/>
       <Route path="*" element={<NoMatch/>}/>
      </Routes>
        {/* <NoMatch/> */}

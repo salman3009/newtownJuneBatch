@@ -11,9 +11,10 @@ const Login = () => {
 
     const onSubmitHandler=(event)=>{
         event.preventDefault();
+        let id= 343;
         alert("onSubmit");
         //step 3: use navigation and put th product name
-            navigation('/product');  
+            navigation(`/product/${id}`);  
     }
     
     return (<div className="container">

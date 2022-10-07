@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import './Product.css';
 
 const Product = () => {
 
     const {pathname} = useLocation();
+    const {id} = useParams();
 
     useEffect(()=>{
        console.log(pathname);
@@ -15,7 +16,7 @@ const Product = () => {
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">#-{id}</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Color</th>
