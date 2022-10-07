@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="clearIntervalData()">Clear Set Interval</button>
+
+        <script>
+            setTimeout(()=>{
+               console.log("setTimeout will run");
+            },3000)
+        </script>
+           <script>
+            let clear;
+            clear = setInterval(()=>{
+               console.log("every two seconds");
+            },2000)
+
+            function clearIntervalData(){
+                clearInterval(clear);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<script>
+    // https://my.newtonschool.co/playground/markup/dpm08ptm3v62/
+</script>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="time">00:00:00</h1>
+    <button onclick="start()" id="start">start</button>
+    <button onclick="pause()" id="pause">pause</button>
+    <button onclick="stop()" id="stop">stop</button>
+
+    <!-- <script>
+       let details =  parseInt(2/3600);
+       console.log(details);
+    </script> -->
+    <script>
+
+
+        let clear;
+        let timer=0;
+
+        function clearInitial() {
+            document.getElementById("stop").setAttribute("disabled", true);
+            document.getElementById("pause").setAttribute("disabled", true);
+        }
+        clearInitial();
+
+        function setTime(){
+            //1 hour - 3600 seconds
+            //1 minute - 60 seconds
+            //<10?-01: 11
+            //00:00:00
+            //Hours - (parseInt(timer/3600)<10?"0":"") + parseInt(timer/3600)
+            //Minutes - (parseInt((timer/60)%60)<10?"0":"")+parseInt((timer/60)%60)
+            //seconds - (parseInt((timer)%60)<10?"0":"")+parseInt((timer)%60)
+            document.getElementById("time").innerHTML = (parseInt(timer/3600)<10?"0":"") + parseInt(timer/3600)+":"+(parseInt((timer/60)%60)<10?"0":"")+parseInt((timer/60)%60)+":"+(parseInt((timer)%60)<10?"0":"")+parseInt((timer)%60);
+        }
+
+        function start() {
+            clear = setInterval(()=>{
+              timer = timer+0.1;
+              setTime();
+            },100);
+            //100ms = 0.1 second
+            //1000ms = 1 second
+            document.getElementById("stop").removeAttribute("disabled");
+            document.getElementById("pause").removeAttribute("disabled");
+            document.getElementById("start").setAttribute("disabled", true);
+        }
+
+        function pause() {
+            let input = document.getElementById("pause").innerHTML;
+            if (input == "pause") {
+                clearInterval(clear);
+                document.getElementById("pause").innerHTML = "continue";
+            }
+            else {
+            clear = setInterval(()=>{
+              timer = timer+0.1;
+              setTime();
+            },100);
+                document.getElementById("pause").innerHTML = "pause";
+            }
+        }
+
+        function stop() {
+            timer = 0;
+            clearInterval(clear);
+            document.getElementById("time").innerHTML = "00:00:00";
+            document.getElementById("stop").setAttribute("disabled", true);
+            document.getElementById("pause").setAttribute("disabled", true);
+            document.getElementById("start").removeAttribute("disabled");
+        }
+    </script>
+</body>
+
+</html>
