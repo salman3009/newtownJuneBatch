@@ -3,12 +3,13 @@ import './Login.css';
 //step 1 useNavigate for internal routing
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
+import Spinner from '../Spinner/Spinner';
 
 const Login = () => {
 
     //step2: do the instantiation for using useNavigation
     const navigation = useNavigate();
+    const [getLoading,setLoading] = useState(false);
     const [getForm,setForm] = useState({
         email:'',
         password:''
@@ -27,13 +28,19 @@ const Login = () => {
     const onSubmitHandler=(event)=>{
         event.preventDefault();
         let id= 343;
-        alert("onSubmit");
+        setLoading(true);
         //step 3: use navigation and put th product name
         //search params or query params
+        setTimeout(()=>{
+            setLoading(false);
             navigation(`/product/${id}?email=${getForm.email}&password=${getForm.password}`);  
+        },3000);
+            
     }
     
+
     return (<div className="container">
+        {getLoading && <Spinner/>}
         <div className="row">
             <div className="col-4">
 
