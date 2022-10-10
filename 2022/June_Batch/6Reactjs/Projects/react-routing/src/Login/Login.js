@@ -28,10 +28,12 @@ const Login = () => {
     const onSubmitHandler=(event)=>{
         event.preventDefault();
         let id= 343;
+        //make spinner loader true before axios call
         setLoading(true);
         //step 3: use navigation and put th product name
         //search params or query params
         setTimeout(()=>{
+            //make spinner loader false after getting response from axios
             setLoading(false);
             navigation(`/product/${id}?email=${getForm.email}&password=${getForm.password}`);  
         },3000);
