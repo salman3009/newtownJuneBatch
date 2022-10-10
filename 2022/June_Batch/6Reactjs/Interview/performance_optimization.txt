@@ -1,0 +1,6 @@
+performance optimization
+1.lazy loading
+2.usecallback
+3.useMemo
+4.Drilling of props to avoid(useContext)
+5.UI resuable component ex button component,spinner component

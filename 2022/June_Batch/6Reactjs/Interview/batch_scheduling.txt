@@ -1,0 +1,7 @@
+Batch Scheduling:
+1.All react states are async code.
+2.Async code will not depend on another state.
+3.If you need state to be updated after another state update please use useEffects()
+4.If any state changes happens entire functional component will re-render.
+5.Multiple states in one single function will re-render only one time from react 17 onwards because of batch scheduling architecture.
+6.Batch scheduling is already written by react developers. During compilation it will take care automatically.
