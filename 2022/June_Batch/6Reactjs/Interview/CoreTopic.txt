@@ -1,0 +1,38 @@
+Topics:
+1.Functional component and class component 
+2.Virtual DOM and Real DOM
+3.what is package.json 
+4.What is props and state in functional component 
+5.What is props and state in class component 
+6.Lifecycle hooks in class component 
+7.useHooks in functional component 
+      1.useState
+      2.useEffect 
+      3.useCallback
+      4.useContext
+      5.useRef
+      6.useMemo 
+      7.useReducer 
+8.What is jsx and how to write condition inside the jsx 
+9.how to iterate data inside the jsx using map function 
+10.concept of key inside the map function 
+11.how to pass props from parent component to child component 
+12.how to call methods from child component to parent component 
+13.form validations 
+14.react routing 
+       1.BrowserRouter 
+       2.Routes
+       3.Route 
+       4.Element
+       5.Link 
+       6.NavLink
+       7.useNavigate 
+
+15.lazy loading 
+16.batch scheduling
+       1.concept of sync and async code 
+       2.bulk state updates 
+       3.state dependency with another state 
+       4.component rerender process 
+17.how to use dynamic images inside the react application
+18. how to apply normal css class and dynamic styling 
