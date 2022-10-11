@@ -17,11 +17,11 @@ const Header = (props) => {
           </li>
         </ul>
         {!props.getLoginStatus &&  <form className="form-inline my-2 my-lg-0">
-          <button style={{ marginRight: '15px' }} className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to="login">Login</Link></button>
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to="register">Register</Link></button>
+          <button style={{ marginRight: '15px' }} className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to="/">Login</Link></button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to="/register">Register</Link></button>
         </form>}
         {props.getLoginStatus &&  <form className="form-inline my-2 my-lg-0">
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to="register">Logout</Link></button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to="/">Logout</Link></button>
         </form>}
        
       </div>

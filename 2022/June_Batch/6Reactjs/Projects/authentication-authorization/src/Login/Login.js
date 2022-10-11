@@ -1,22 +1,45 @@
 
 import './Login.css';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 
+const Login = (props) => {
 
-
-const Login = () => {
-
-    //step2: do the instantiation for using useNavigation
     const navigation = useNavigate();
+    const [getForm,setForm] = useState({
+        email:'',
+        password:''
+    });
+
+    const onChangeHandler=(event)=>{
+       setForm({
+        ...getForm,
+        [event.target.name]:event.target.value
+       })
+    }
+    //step2: do the instantiation for using useNavigation
+ 
+
+
 
     const onSubmitHandler=(event)=>{
         event.preventDefault();
-        navigation('/product');  
+        if(getForm.email === "salman@gmail.com" && getForm.password == "12345"){
+           sessionStorage.setItem("token",true);
+            navigation('product');   
+        }
+        else{
+            alert("Invalid credentials");
+        }
+      
             
     }
     
 
-    return (<div className="container">
+    return (<>
+    <Header getLoginStatus={false}/>
+    <div className="container">
         <div className="row">
             <div className="col-4">
 
@@ -25,11 +48,11 @@ const Login = () => {
                 <form>
                     <div class="form-group">
                         <label>Email address</label>
-                        <input type="email"  class="form-control" name="email" placeholder="Enter email" />
+                        <input type="email" onChange={onChangeHandler} class="form-control" name="email" placeholder="Enter email" />
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password"  class="form-control" name="password" placeholder="Password" />
+                        <input type="password" onChange={onChangeHandler} class="form-control" name="password" placeholder="Password" />
                     </div>
                     <button  onClick={onSubmitHandler} type="submit" class="btn btn-primary">Login</button>
                 </form>
@@ -39,7 +62,8 @@ const Login = () => {
             </div>
         </div>
 
-    </div>)
+    </div>
+    </>)
 }
 
 export default Login;

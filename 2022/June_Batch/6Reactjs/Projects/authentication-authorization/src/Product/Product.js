@@ -1,8 +1,23 @@
 import './Product.css';
+import Header from '../Header/Header';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Product = () => {
 
-    return (<div style={{marginTop:"100px"}} className='container'>
+    const navigation = useNavigate();
+    
+    useEffect(()=>{
+        console.log(typeof sessionStorage.getItem("token"));
+        if(sessionStorage.getItem("token") == "false"){
+            navigation('/');  
+        }
+    },[])
+
+    return (
+    <>
+       <Header getLoginStatus={true}/>
+       <div style={{marginTop:"100px"}} className='container'>
         <div className='row'>
             <div className="col-12">
                 <table class="table">
@@ -38,7 +53,9 @@ const Product = () => {
             </div>
         </div>
 
-    </div>)
+    </div>
+    </>
+    )
 }
 
 export default Product;
