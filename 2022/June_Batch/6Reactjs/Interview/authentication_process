@@ -1,0 +1,8 @@
+Authentication Process:
+1.Always keep route open for login and register component anyone can access this route.
+2.Any private page example dashboard component or product component we need to protect this route.
+3.To protect route we need to maintain some set of data either in session storage or redux store.
+4.Whenever we access private route please add useEffect initial rendering callback to check whether user is authenticated to use this route or not.
+5.Initial Maintain one variable inside the session storage or redux store for routing navigation purpose.
+6.To make header component flexible for all routes make it children component in all routes component.
+7.Control it from props for header component to dynamically show login,register,logout or other set of navigations.
