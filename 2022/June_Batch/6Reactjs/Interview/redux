@@ -1,0 +1,28 @@
+1.Local State or component State:
+1.useState
+2.useReducer
+===============================
+2.Passing state from parent to any child component 
+1.useContext - Data can be passed only downwards direction there is no upwards directions
+================================================
+centralized state or  Flux architecture or redux implemenation
+1.Action - Button click is an action
+2.Dispatcher - Taking finalized data to store
+3.Store  - centralized state data
+4.View - Displaying in UI with  store data.
+============================================
+Redux implementation:
+Step1:
+cmd:npm install npm install @reduxjs/toolkit -  version 7-8 (redux toolkit);
+Step2:
+we need to create one folder called store inside store create one file called store.js
+step3:
+Please import store.js inside the index.js and use provider from redux.
+step4:
+create one folder called reducer and create one file to dispatch the data.
+step5: In any component you can call reducer to disptach data.
+step6: you can use store data anywhere by using the concept of useSelector.
+============================================================
+
+
+
