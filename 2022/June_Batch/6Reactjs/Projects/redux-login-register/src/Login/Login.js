@@ -2,11 +2,14 @@
 import './Login.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import {useDispatch,useSelector} from 'react-redux';
+import { loginSuccess } from '../redux/authencation';
 
 const Login = (props) => {
 
     const navigation = useNavigate();
+    const dispatch = useDispatch();
+    const {email,password} = useSelector((state)=>state.authentication);
     const [getForm,setForm] = useState({
         email:'',
         password:''
@@ -25,15 +28,14 @@ const Login = (props) => {
 
     const onSubmitHandler=(event)=>{
         event.preventDefault();
-        if(getForm.email === "salman@gmail.com" && getForm.password == "12345"){
-           sessionStorage.setItem("token",true);
+        if(getForm.email === email && getForm.password == password){
+            dispatch(loginSuccess());
             navigation('product');   
         }
         else{
             alert("Invalid credentials");
         }
-      
-            
+        
     }
     
 

@@ -11,16 +11,21 @@ const authSlice = createSlice({
     },
     reducers:{
         registerSuccess:(state,action)=>{
-             console.log(action.payload);
+            state.email = action.payload.email;
+            state.password = action.payload.password;
+            state.username = action.payload.username;
         },
         registerFailure:(state,action)=>{
             console.log(action.payload);
         },
         loginSuccess:(state,action)=>{
-            console.log(action.payload)
+           state.token = true;
         },
-        logout:(state,action)=>{
-            console.log(action.payload);
+        logout:(state)=>{
+            state.token = false;
+            state.email="";
+            state.password="";
+            state.username="";
         }
     }
 });

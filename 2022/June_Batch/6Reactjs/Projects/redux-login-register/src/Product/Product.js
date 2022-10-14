@@ -1,14 +1,18 @@
 import './Product.css';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 const Product = () => {
 
     const navigation = useNavigate();
+    const {token} = useSelector((state)=>state.authentication);
     
     useEffect(()=>{
-
-    },[])
+        if(!token){
+          navigation('/');
+        }
+    },[token])
 
     return (
     <>
