@@ -1,0 +1,46 @@
+Go to components/Header.js
+===================================================
+How to Access State:
+const Header=({isAuthenticated})=>{
+  return (
+    <div>
+    <nav className="navbar bg-dark">
+      <h1>
+        <a href="index.html"><i className="fas fa-code"></i> DeveloperConnect</a>
+      </h1>
+      {!isAuthenticated?<div>
+        <ul>
+        <li><Link to='/'>Developers</Link></li>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/register'>Register</Link></li>
+      </ul>
+      </div>:<div>
+      <ul>
+        <li><Link to='/'>Developers</Link></li>
+        <li><Link to='/login'>Logout</Link></li>
+      </ul>
+        </div>}
+      
+    </nav>
+    <Switch>
+    <Route path='/'  exact component={Landing}/>
+    <Route path='/login'  exact component={Login}/>
+    <Route path='/register'  exact component={Register}/>
+    </Switch>
+  
+    </div>
+     
+  )
+}
+
+Header.propTypes ={
+  isAuthenticated:PropTypes.bool
+}
+
+const mapStateToProps = state =>({
+  isAuthenticated:state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps,null)(Header);
+===============================================================
+

@@ -1,0 +1,173 @@
+Redux:  
+
+Register.js  Register.js      Register.js
+Action--->Reducer------>state----------->Register.js
+=================================================================
+Install the extension:
+1.https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+2.First create file called store.js inside the src folder
+3.Inside the src create a folder called reducers and create file index.js
+
+Install the following package:
+1.npm install redux
+2.npm install redux-devtools-extension
+3.npm install redux-thunk
+4.npm install react-redux
+5.npm install --save prop-types
+code:
+create file called store.js:
+//applyMiddleware - dispatch async actions in addition to normal actions.
+//Redux Thunk middleware allows you to write action creators that return a function instead of an action.
+ The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met
+
+import {createStore,applyMiddleware, compose} from 'redux';
+import{composeWithDevTools} from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers';
+
+
+const initialState ={};
+
+const middleware =[thunk];
+
+const store = createStore(
+    rootReducer,
+    initialState,
+    composeWithDevTools(applyMiddleware(...middleware))
+);
+
+export default store;
+
+=====================================================================
+App.js
+import {Provider} from 'react-redux';
+import store from './store';
+
+<Provider store={store}>
+
+</Provider>
+
+======================================================
+reducer/index.js
+import {combineReducers} from 'redux';
+export default combineReducers({
+});
+=================================================
+Create a folder called Actions/types.js
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';
+================================================
+
+Inside Reducers/auth.js
+import {
+    REGISTER_SUCCESS,
+    REGISTER_FAIL
+} from '../Actions/types';
+
+const initialState ={
+    token:localStorage.getItem('token'),
+    isAuthenticated:null,
+    loading:true,
+    user:null
+}
+
+export default function(state=initialState,action){
+
+    const {type,payload} = action;
+
+    switch(type){
+        case REGISTER_SUCCESS:
+        localStorage.setItem('token',"1234567");
+        return{
+            ...state,
+            ...payload,
+            isAuthenticated:true,
+            loading:false
+        }
+        case REGISTER_FAIL:
+        localStorage.removeItem('token');
+        return {
+            ...state,
+            token:null,
+            isAuthenticated:false,
+            loading:false
+        }
+        default:
+        return state;
+
+    }
+}
+======================================================
+Reducers/index.js
+import {combineReducers} from 'redux';
+import auth  from './auth';
+export default combineReducers({
+    auth
+});
+
+==================================================
+
+Inside folder Actions/auth.js
+import axios from 'axios';
+import {
+    REGISTER_SUCCESS,
+    REGISTER_FAIL,
+}from './types';
+
+
+//Register User
+export const register =({
+    name,email,password
+})=>async dispatch=>{
+  debugger;
+    const config ={
+        headers:{
+        'Content-Type':'application/json'
+        }
+    }
+    
+    const body = JSON.stringify({name,email,password});
+
+    try{
+        const res = await axios.post('https://jsonplaceholder.typicode.com/todos',body,config);
+        dispatch({
+            type:REGISTER_SUCCESS,
+            payload:res.data
+        });
+    }
+    catch(err)
+    {
+     dispatch({
+            type:REGISTER_FAIL
+        });
+    }
+}
+============================================================
+Inside Component/register.js
+
+import {register} from '../../Actions/auth';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+
+const Register =({register})=>{
+
+  let {name,email,password}=order.orderData;
+    register({name,email,password});
+
+}
+
+Register.propTypes ={
+    register:PropTypes.func.isRequired,
+};
+  
+export default connect(null,{register})(Register)
+======================================================
+
+
+
+
+
+
+
+
+

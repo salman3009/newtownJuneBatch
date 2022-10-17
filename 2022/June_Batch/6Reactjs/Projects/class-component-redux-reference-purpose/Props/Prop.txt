@@ -1,0 +1,12 @@
+3.creating propTypes:
+npm install --save prop-types
+========================================
+https://www.npmjs.com/package/prop-types
+code:
+import propTypes from 'prop-types';
+
+Login.propTypes ={
+  login:PropTypes.func.isRequired,
+  isAuthenticated:PropTypes.bool
+}
+======================================

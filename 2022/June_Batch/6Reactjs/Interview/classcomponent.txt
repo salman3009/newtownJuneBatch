@@ -1,0 +1,22 @@
+Inside the react application. How to write the class component:
+Example:
+class App extends Component{
+	render(){
+	    return (<div>Hello world</div>)
+	}
+}
+or 
+import React from 'react';
+class App extends React.Component{ 
+	   render(){
+	        return (<div>Hello world</div>)
+	   }
+}
+
+1.render is a lifecyle method use to return jsx.
+2.It is mandatory method other class component will not return anything to the UI.
+==============================================================
+
+
+
+

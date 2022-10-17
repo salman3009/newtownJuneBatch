@@ -1,0 +1,26 @@
+//Register User
+//How to navigation
+export const register =({
+    name,email,password
+},history)=>async dispatch=>{
+        history.push('/');
+}
+===============================================================
+import{Link,withRouter} from 'react-router-dom';
+
+const Register =({register,history})=>{
+
+
+
+const submitHandler = ( event ) => {
+    event.preventDefault();
+    register({name,email,password},history);
+}
+
+Register.propTypes ={
+    register:PropTypes.func.isRequired,
+  };
+  
+
+  export default connect(null,{register})(withRouter(Register));
+  =====================================================================
