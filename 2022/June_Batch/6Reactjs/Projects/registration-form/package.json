@@ -1,6 +1,10 @@
 {
   "name": "registration-form",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.17.0",
+    "npm": "8.19.1"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -16,6 +16,60 @@ class App extends React.Component{
 1.render is a lifecyle method use to return jsx.
 2.It is mandatory method other class component will not return anything to the UI.
 ==============================================================
+States:
+1.To use state inside the class component we need to use state variable inside the constructor
+2.Inside the constructor we need to initialize the state variable with some dummy values.
+3.you can have only one state variable inside the class component
+4.State variable should be an object.
+5.Inside the object you can have any datatypes.
+6.Any variable declaration inside the class component you need to have this keyword.
+Example:
+import { Component } from ‘react’;
+class App extends Component{
+    constructor(){
+        this.state={
+            fullName:‘’,
+            age:44,
+            flag:true,
+            list:[1,2,3,4]
+        }
+    }
+	render(){
+	    return (<div>Hello world</div>)
+	}
+}
+====================================================
+Props:
+//Passing argument from parent component to child component 
+//To access props in class component we need to use this keyword and variable name is props.
+//Whenver you need props inside the class component please use constructor method and pass props to super 
+class constructor.
+Example:
+import Child from './Child';
+class App extends Component{
+
+  constructor(props){
+     super(props);
+  }
+
+  render(){
+	return (<Child fullName={"salman"} age={"11"}/>)
+  }
+}
+
+class Child extends Component{
+
+
+  constructor(props){
+     super(props);
+  }
+
+  render(){
+	return(<div>{this.props.fullName}-{this.props.age}</div>)
+  }
+}
+========================================================
+
 
 
 
