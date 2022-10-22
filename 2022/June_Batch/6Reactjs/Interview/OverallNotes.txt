@@ -1,0 +1,305 @@
+Setup For Reactjs:
+1.We need to install nodejs latest version above 16
+2.We need to install reactjs - npx create-react-app project-name
+3.To run the project - npm start
+=================================
+Main Files:
+1.HTML - Inside the public folder index.html 
+2.Index.js - start phase of js file 
+3.App.js - main source code file 
+4.package.json - configuration file 
+5.node_modules - all packages are installed here. It can be downloaded at any time from network: npm install 
+=======================================================
+Inside the index.js file 
+1.first file that is used to render the react application to html 
+2.using the package ReactDOM.createRoot()
+=================================================
+App.js 
+1.For latest version functional component is written 
+Example:
+function App(){
+	  return (<div>Hello </div>);
+}
+export default App;
+2.every function inside the react component will return jsx(javascript xml).
+3.Inside the jsx we are returning the html code from virtual dom to real dom.
+4.Jsx Rules:
+      1.All html tags is to be closed.
+      2.CSS class should be rename to className.
+      3.Always it should wrapped one element example div,<></>
+================================================
+State and Props in functional component:
+State:
+1.Any data if you have dynamic value we need to store in state.otherwise react will not re-render for static data.
+2.For dynamic value we need to store in state.
+3.Whenever changes happen in dynamic value. React will rerender again.
+4.To use state in functional component we need to use hooks.
+Example:
+const [getList,setList]=useState('');
+5.you can declare state with some initialize value but it is not mandatory.
+6.state will return two values.
+          1.Updated/latest  state value 
+          2.Setting/updated the current state value
+7.Whenever updates happen in state the entire variable will be overwritten.
+8.always use spread parameter while updating the array or object. because react component will think same address there is no to rerender state.
+<!-- <script>
+    //spread
+    let listOne=[1,2];
+    let listTwo=listOne;
+    console.log(listOne,listTwo);
+    listTwo.push(5);
+    console.log(listOne,listTwo);
+</script> -->
+
+<script>
+    //spread
+    let listOne=[1,2];
+    let listTwo=[...listOne];
+    console.log(listOne,listTwo);
+    listTwo.push(5);
+    console.log(listOne,listTwo);
+</script>
+
+Props:
+9.Props is nothing but an argument to pass value from parent component to child component.
+10.It is single object argument inside this you will have multiple properties.
+11.you can pass any datatype from parent to child component.
+Example:
+Function App{
+	
+	return(
+     <Child fullName="akash" age="44">
+	)
+}
+export default App;
+
+Function Child(props){
+	 return (<div>{props.fullName} {props.age}</div>)
+}
+============================================
+Handling Form in Functional component:
+1.Always use state to handle the form values and error
+2.Always use object inside the state.
+3.Declare two methods one is for updating the value and final submission
+4.During update please use spread parameter to copy existing property of object.
+5.During final submission we need to use preventDefault method to avoid further course of action.
+6.Declare separate state variable for handling error.
+7.use Regex pattern to handle errors inside the form and display proper error message.
+Example:
+Step1:
+  const [getList,setList]= useState({
+        mobile:'no mobile',
+        price:2000,
+        discount:2000
+     });
+step2:
+       const onChangeHandler=(event)=>{
+         setList({...getList,[event.target.name]:event.target.value});
+       }
+step3:
+  const onSubmitHandler=(event)=>{
+         event.preventDefault();
+       }
+
+step4:
+   return(<form>
+     Enter Price Details:<input type="text" name="price" onChange={onChangeHandler} id="price"/>
+       <button onClick={onSubmitHandler}>Submit</button>
+   </form>
+ //inside the form input tag. name and onChange method is important.
+=============================================
+Handling Form Validation in functional component:
+Step1:
+   const [getFormValidation,setFormValidation]=useState({
+    firstName:false
+   });
+
+Step2:
+export const alphaNumericValidation = (input) => {
+    let result = /^[a-zA-Z0-9]{3,16}$/.test(input);
+    if (result) {
+        return false;
+    }
+    return true;
+}
+
+step3:
+   const formValidationCheck=()=>{
+    setFormValidation({
+        firstName:alphaNumericValidation(getForm.firstName)
+    });   
+   }
+
+step4:
+   {getGlobal && getFormValidation.firstName && <div className="danger">First Name must be alphanumeric and contain 3 - 16 characters</div>} 
+
+==============================================================
+Displaying image,icon,video:
+1.While displaying image/icon/video we need to import dynamically the path of this file using import statement.
+2.All external files like image/icon/video create one assets folder inside the src folder.
+3.Don't give the file path directly inside the react application it will through the error.
+Example:
+import image  from '../image';
+const ImageList = ()=>{
+   return (<div>
+    <img src={image}/>
+   </div>)
+}
+export default ImageList;
+====================================================================
+Class Components Overall:
+
+
+Inside the react application. How to write the class component:
+Example:
+class App extends Component{
+	render(){
+	    return (<div>Hello world</div>)
+	}
+}
+or 
+import React from 'react';
+class App extends React.Component{ 
+	   render(){
+	        return (<div>Hello world</div>)
+	   }
+}
+
+1.render is a lifecyle method use to return jsx.
+2.It is mandatory method other class component will not return anything to the UI.
+==============================================================
+States in Class Components :
+1.To use state inside the class component we need to use state variable inside the constructor
+2.Inside the constructor we need to initialize the state variable with some dummy values.
+3.you can have only one state variable inside the class component
+4.State variable should be an object.
+5.Inside the object you can have any datatypes.
+6.Any variable declaration inside the class component you need to have this keyword.
+Example:
+import { Component } from ‘react’;
+class App extends Component{
+    constructor(){
+        this.state={
+            fullName:‘’,
+            age:44,
+            flag:true,
+            list:[1,2,3,4]
+        }
+    }
+	render(){
+	    return (<div>Hello world</div>)
+	}
+}
+====================================================
+Props in Class Components :
+//Passing argument from parent component to child component 
+//To access props in class component we need to use this keyword and variable name is props.
+//Whenver you need props inside the class component please use constructor method and pass props to super 
+class constructor.
+Example:
+import Child from './Child';
+class App extends Component{
+
+  constructor(props){
+     super(props);
+  }
+
+  render(){
+	return (<Child fullName={"salman"} age={"11"}/>)
+  }
+}
+
+class Child extends Component{
+
+
+  constructor(props){
+     super(props);
+  }
+
+  render(){
+	return(<div>{this.props.fullName}-{this.props.age}</div>)
+  }
+}
+========================================================
+Iterating Data in functional component:(Map Function)
+1.If you have any array we can iteration array inside the jsx.
+2.To iterate inside the jsx we need to use map function.
+3.map function is only one method to iterate the data inside the jsx. others method are not allowed inside the jsx.
+4.map function will consists of two arguments first is iteration data and second is index.
+4.Whenever we use map function please add key property inside the map with outer div tag.
+5.You can write the events(onClick,onChange) and you can pass index value to differentiate the click of the data from the list.
+Example:
+ {state.getList.map((obj,index)=>{
+             return(<tr key={index}>
+              <td>{index+1}</td>
+             <td>{obj.title}</td>
+             <td><button onClick={()=>onEditInitialHandler(index)} class="btn btn-primary">Edit</button></td>
+             </tr>)
+          })}
+============================================================================
+Array inside Object:
+1.Any data the is displayed on UI will have similar set of data with differet properties.
+2.Most of the time will display the similar set of data to users. Example flipkart,amazon,youtube,facebook,netflix.
+3.But array will iterate the data using map function.Inside the array will have object for each index to display different set of data for each iteration.
+Example:
+"product": [
+    {
+      "title": "language",
+      "amount": 5000,
+      "duration": "7",
+      "id": 2
+    },
+    {
+      "title": "css",
+      "amount": 3000,
+      "duration": 2,
+      "id": 4
+    },
+    {
+      "title": "3",
+      "amount": "3",
+      "duration": "3",
+      "id": 5
+    }]
+ ============================================
+Life Cycle of hooks in Functional component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
