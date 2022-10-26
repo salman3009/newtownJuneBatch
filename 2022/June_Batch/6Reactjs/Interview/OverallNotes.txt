@@ -262,7 +262,201 @@ Example:
       "id": 5
     }]
  ============================================
-Life Cycle of hooks in Functional component
+Life Cycle of hooks in Functional component or life cycle in functional component 
+1.life cycle means binding of javascript data to html page.
+2.life cycle in functional component can be implement by using hooks called useEffect.
+3.Depends upon the useEffect parameter we can diffferentiate different life cycle in function component.
+4.In functional component we have mounting,updating,unmounting phase but there is no error handling phase 
+present inside the functional component.
+Example:
+1.
+useEffect(()=>{},[]) ---> It will call only one time during initial rendering of functional
+component.
+
+2.
+useEffect(()=>{}) --> It will call for every update in state or props.
+
+3.
+useEffect(()=>{},[state]) -->whenver there is a change in particular state or props given in array bracket. 
+useEffect(()=>{},[state,props]) For that it will again trigger.
+useEffect(()=>{},[props1,props2])
+useEffect(()=>{},[state1,state3])
+
+
+4.useEffect(()=>{   --->it will call whenever we unmount the component from react rendering.
+   return ()=>{cleartTimeout()}
+})
+
+React useEffect hooks with  life cycle of class component:
+
+1.useEffect(()=>{},[])  --- componentDidMount 
+2.useEffect(()=>{})  --- componentDidUpdate
+3.useEffect(()=>{},[state]) --- componentDidUpdate(write condition inside this method)
+4.useEffect(()=>{  
+   return ()=>{cleartTimeout()}  -- componentWillUnmount
+})
+==============================================================
+life hooks in class component:
+1.Mounting - Binding of javascript with html or rendering the initial data in functional component.
+2.updating - whenever there is change in state or props is called updating phase.
+3.unMounting - whenever we leave the component.
+4.Error Handling - any error occur in jsx.
+
+Mounting: constructor ---> render ---> componentDidMount
+1.constructor  - it is use to initialize the props and state data.
+2.render - it is use to render the initial html tag to original DOM.
+3.componentDidMount -- it is use to bind the javascript code with html or Mainly used for rest api call.
+
+Updating:shouldComponentUpdate-render-->componentDidUpdate 
+1.shouldComponentUpdate - whenever we change props or state before rendering we can change the data or we can stop further events of update.
+2.render  - it is use to render the initial html tag to original DOM.
+3.componentDidUpdate - after updates in state or props this method will trigger.
+
+unMounting
+1.componentWillUnMount - whenever we leave the component. beforing leaving the component it will call.
+
+Error Handling
+1.getDerivedStateFromError - whenever error occured in jsx this method will trigger.
+2.componentDidCatch - this method will receive an argument to check the type of error.
+
+==============================================================
+Types of Hooks in functional component:
+1.hooks concept is available from react version 16.9 (2019).
+2.hooks will support only in functional component not in class component.
+Types 
+1.useState   - 1
+2.useReducer 
+3.useEffect   - 2
+4.useCallback
+5.useMemo 
+6.useRef 
+7.useContext  - 3
+8.useNavigate
+
+1.useState - it helps to maintain state inside the functional component and it will return 
+two arguments. 1.latest state data 2.to update the state data.
+Example:
+const [getList,setList]=useState("0");
+
+2.useReducer - it also helps to maintain the state inside the functional component. 
+if we have different condition for state update we can use useReducer instead of useState.
+
+3.useEffect - it is an cycle life phase in functional component 
+
+4.useCallback - Mainly for performance. it is use to avoid rendering of duplicate component again and again.
+
+5.useMemo - Mainly for performance. it is help to store cache data. No need to recalculate the existing logic.
+
+6.useRef - It is use to access the DOM manipulation directly and it is safe to use instead using javascript DOM methods.
+
+7.useContext  - It is use to avoid drilling of props to nested components.
+(i)Provider - provider will provide data to the props.
+(ii)Consumer - consumer will consume the data from props.
+
+8.useNavigate - it is used to navigate from one component to another component by using 
+react-router.
+
+=======================================
+Rest API integration with axios
+1.Rest ApI we can integrate with following approach 
+      1.fetch  - default javascript package
+      2.axios - third party package and most familar one. 
+2.With axios more features is added like error handling in easy way and interceptor concept and react developers community 
+prefer using this package.
+3.Install this package using npm 
+4.axios will return promise and it is async code 
+5.axios will take care of converting json to javascript and javacript to json 
+6.axios will support all http methods liks get,post,patch,delete.
+example:
+import axios form axios;
+
+axios.get("url").then().catch()
+
+7.axios will work both in functional component as well as in class component.
+==================================================================
+Redux:
+1.Local State or component State:
+1.useState
+2.useReducer
+
+2.Passing state from parent to any child component 
+1.useContext - Data can be passed only downwards direction there is no upwards directions
+
+centralized state or  Flux architecture or redux implemenation
+1.Action - Button click is an action
+2.Dispatcher - Taking finalized data to store
+3.Store  - centralized state data
+4.View - Displaying in UI with  store data.
+
+Redux implementation:
+Step1:
+cmd:npm install npm install @reduxjs/toolkit -  version 7-8 (redux toolkit);
+Step2:
+we need to create one folder called store inside store create one file called store.js
+step3:
+Please import store.js inside the index.js and use provider from redux.
+step4:
+create one folder called reducer and create one file to dispatch the data.
+step5: In any component you can call reducer to disptach data.
+step6: you can use store data anywhere by using the concept of useSelector.
+============================================================
+performance optimization
+1.lazy loading - whenever we on particular route then only component will unbundle in the browser.
+2.usecallback
+3.useMemo
+4.Drilling of props to avoid(useContext)
+5.UI resuable component ex button component,spinner component
+=================================================================
+Batch Scheduling:
+1.All react states are async code.
+2.Async code will not depend on another state.
+3.If you need state to be updated after another state update please use useEffects()
+4.If any state changes happens entire functional component will re-render.
+5.Multiple states in one single function will re-render only one time from react 17 onwards because of batch scheduling architecture.
+6.Batch scheduling is already written by react developers. During compilation it will take care automatically.
+-----------------------------------------------------------------------
+Topics:
+1.Functional component and class component 
+2.Virtual DOM and Real DOM
+3.what is package.json 
+4.What is props and state in functional component 
+5.What is props and state in class component 
+6.Lifecycle hooks in class component 
+7.useHooks in functional component 
+      1.useState
+      2.useEffect 
+      3.useCallback
+      4.useContext
+      5.useRef
+      6.useMemo 
+      7.useReducer 
+8.What is jsx and how to write condition inside the jsx 
+9.how to iterate data inside the jsx using map function 
+10.concept of key inside the map function 
+11.how to pass props from parent component to child component 
+12.how to call methods from child component to parent component 
+13.form validations 
+14.react routing 
+       1.BrowserRouter 
+       2.Routes
+       3.Route 
+       4.Element
+       5.Link 
+       6.NavLink
+       7.useNavigate 
+
+15.lazy loading 
+16.batch scheduling
+       1.concept of sync and async code 
+       2.bulk state updates 
+       3.state dependency with another state 
+       4.component rerender process 
+17.how to use dynamic images inside the react application
+18. how to apply normal css class and dynamic styling 
+=====================================================================
+
+
+
 
 
 

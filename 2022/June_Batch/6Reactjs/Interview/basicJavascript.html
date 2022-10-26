@@ -17,6 +17,7 @@
 </script> -->
 
 
+
 <html>
     <head>
 
@@ -27,5 +28,23 @@
             <input type="text"/>
             <input type="submit"/>
         </form>
+
+        <button onclick="myDetails()">click</button>
     </body>
 </html>
+<script>
+    //async code
+    //setTimeout,setInterval,socket connection 
+
+   const result = setTimeout(()=>{
+        console.log("calling");
+    },3000);
+
+    function myDetails(){
+        debugger;
+        alert("hello")
+       clearTimeout(result);
+    }
+
+
+</script>
