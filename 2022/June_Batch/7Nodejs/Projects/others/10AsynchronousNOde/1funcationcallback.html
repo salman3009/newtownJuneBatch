@@ -1,0 +1,32 @@
+<script>
+function doHomeWork(a,callback)
+{
+    debugger;
+    console.log("The value of a"+a);
+
+
+    callback();
+}
+function finish()
+{
+    debugger;
+    console.log("This is finish one");
+    afterfinish(3,finish2);
+}
+
+function afterfinish(c,callback)
+{
+    debugger;
+    console.log("the value of c"+c);
+    callback();
+}
+function finish2()
+{
+    debugger;
+console.log("This is finish two");
+}
+
+doHomeWork(3,finish);
+
+
+</script>

@@ -1,0 +1,21 @@
+{
+  "name": "mean-course",
+  "version": "0.0.0",
+  "scripts": {
+"start":"node server.js",
+"dev":"nodemon server.js"
+  },
+  "private": true,
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "mongoose": "^5.1.2",
+    "mongoose-unique-validator": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "ts-node": "~5.0.1"
+  }
+}

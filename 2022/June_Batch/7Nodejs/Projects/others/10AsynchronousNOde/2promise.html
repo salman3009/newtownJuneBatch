@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Promise</title>
+</head>
+<body>
+<p>The promise</p>
+</body>
+</html>
+<script>
+function getSum(n1, n2) {   
+   var isAnyNegative = function() {   
+      return n1 < 0 || n2 < 0;   
+   }   
+   var promise = new Promise(function(resolve, reject) {   
+      if (isAnyNegative()) {   
+         reject(Error("Negatives not supported"));   
+      }   
+      resolve(n1 + n2)
+   });   
+   return promise;   
+} 
+
+getSum(5, 6)   
+.then(function (result) {   
+   console.log(result);   
+},   
+function (error) {   
+   console.log(error);   
+});
+
+
+//Two then function
+getSum(5, 6)   
+.then(function(result) {   
+   console.log(result); 
+   console.log("inside the function 1");   
+   return getSum(10, 20); 
+   // this returns another promise   
+},   
+function(error) {   
+   console.log(error);   
+})   
+.then(function(result) {   
+    console.log("inside the function 2");   
+	 console.log(result);   
+}, 
+function(error) {   
+   console.log(error);
+});  
+
+
+//Three then function
+  function getSum(n1, n2) {   
+      var isAnyNegative = function() {   
+         return n1 < 0 || n2 < 0;   
+      }   
+      var promise = new Promise(function(resolve, reject) {   
+         if (isAnyNegative()) {   
+            reject(Error("Negatives not supported"));   
+         }   
+         resolve(n1 + n2);   
+      });   
+      return promise;   
+   }   
+   getSum(5, 6)   
+   .then(function(result) {   
+      console.log(result);   
+	  console.log("Three function:1");
+      return getSum(10, 20); 
+      //this returns another Promise   
+   },   
+   function(error) {   
+      console.log(error);   
+   })
+   .then(function(result) {   
+      console.log(result);   
+      return getSum(30, 40); 
+	  	  console.log("Three function:2");
+      //this returns another Promise   
+   }, 
+   function(error) {   
+      console.log(error);   
+   })   
+   .then(function(result) {   
+      console.log(result);   
+	  	  console.log("Three function:3");
+   }, 
+   function(error) {         
+      console.log(error);   
+   });   
+   console.log("End of script ");   
+   
+
+</script>
