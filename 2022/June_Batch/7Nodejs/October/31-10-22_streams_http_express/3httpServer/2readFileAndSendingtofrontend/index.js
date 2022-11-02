@@ -1,9 +1,9 @@
 const http = require('http');
 const fs = require('fs');
-let readStream = fs.createReadStream(__dirname+'/read.txt','utf8');
+let stream = fs.createReadStream(__dirname+'/read.txt','utf8');
 http.createServer(function(req,res){
-    readStream.on('data',function(chunk){
-        res.write(chunk);
+    stream.on('data',function(input){
+        res.write(input);
         res.end();
     });
 }).listen(8000);

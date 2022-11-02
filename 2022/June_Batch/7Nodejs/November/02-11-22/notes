@@ -1,0 +1,14 @@
+To setup Express server:
+1.create one folder called  basic-express-setup
+2.Inside the folder please run the below command:
+cmd:npm init
+3.npm init - will create base package.json file for you.
+4.npm install express
+/* once express or any new package is install for first time it will create package-lock.json and node-modules folder will be created*/
+/* please dont change anything inside the package-lock.json and node-modules. This file will be created automatically from network*/
+5.create one file called index.js inside our folder.
+6.setup up npm start inside the package.json 
+  "scripts": {
+    "start":"node index.js"
+  },
+7.
