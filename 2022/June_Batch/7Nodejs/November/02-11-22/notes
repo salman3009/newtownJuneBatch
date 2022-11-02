@@ -12,3 +12,21 @@ cmd:npm init
     "start":"node index.js"
   },
 7.
+creating server
+const express = require('express');
+const app = express();
+app.listen(8080,()=>{
+    console.log("our application is listening on port 8080");
+});
+
+8.creating get method api 
+app.get('',(req,res)=>{
+    res.send("hello world");
+});
+
+9.creating different route name for get method
+app.get('/about',(req,res)=>{
+    res.send("This is about page");
+});
+
+10.send method helps to send the data in array or object or string or number or html you can send it.
