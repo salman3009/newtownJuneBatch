@@ -1,0 +1,89 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NodeExpress-newton-school",
+		"_postman_id": "b572a40f-9b89-2dee-45b6-46ca472b1985",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"url": "http://localhost:8000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"url": "http://localhost:8000/contactDetails",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullName\":\"\",\n\t\"age\":3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "QueryDetails",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/queryDetails?fullName=\"akash\"&age=43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"queryDetails"
+					],
+					"query": [
+						{
+							"key": "fullName",
+							"value": "\"akash\"",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "age",
+							"value": "43",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Params",
+			"request": {
+				"url": "http://localhost:8000/deleteDetails/akash/4444",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

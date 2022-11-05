@@ -1,0 +1,22 @@
+{
+    "employee":[
+        {
+            "fullName":"akash",
+            "age":22,
+            "designation":"software",
+            "address":"Bangalore"
+        },
+        {
+            "fullName":"suresh",
+            "age":45,
+            "designation":"Designer",
+            "address":"Delhi"
+        },
+        {
+            "fullName":"amit",
+            "age":56,
+            "designation":"Developer",
+            "address":"Noida"
+        }
+    ]
+}

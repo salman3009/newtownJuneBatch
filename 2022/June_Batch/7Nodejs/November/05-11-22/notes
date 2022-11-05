@@ -1,0 +1,44 @@
+Middelware in expressjs:
+1.It will help to check mutliple functionalities before reaching to final solution.
+2.It will act like series of pipeline where each block will consists of set of condition each frontend request need to pass in sequence manner to get verified details.
+3.We cannot skip middleware but we can write some condition to skip the process of verification.
+4.To write middelware in express we have to app.use() method.
+Example:
+app.use((req,res,next)=>{
+	next();
+});
+5.all callback function inside the expressjs will have three parameters req,res,next. but next is optional parameter for other methods like get,post,delete,patch. But for app.use() method we need to next keyword to proceed to next set of block.
+6.Inside the req object we can access followings details:
+   1.req.url - it will provide request url details
+   2.req.headers -- it will provide host connections and other os details of frontend
+   3.req.body -- It will provide body details
+ ====================================================
+ Three ways of sending data to backend.
+
+ 1.req.body - post/patch
+ Example:
+ url:http://locahost:8000/details
+ body{
+   "fullname":"akash",
+   "age":33
+ }
+
+
+ 2.req.params - get/delete/post/patch
+ url:http://localhost:8000/details/444
+
+
+ 3.req.query - get/delete/post/patch
+ url:http://losthhost:8000/details?fullName="salman"&age=454
+
+ Real Time usage:
+ 1.params we use mainly for deleting some unique data or to fetch some unique data
+ 2.query mainly for filter or search or pagination purpose mainly used query data
+ 3.req.body mainly for forms details or to update details
+ ==========================================
+
+
+
+
+
+

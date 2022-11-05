@@ -78,6 +78,18 @@ app.get("/api/send",(req,res,next)=>{
   res.send('<h1>Hello world</h1>');
 });
 
+app.get("/api/params/:id",(req,res,next)=>{
+  const id = req.params.id;
+  res.send(id);
+});
+
+//http://localhost:3000/api/query?page=2&limit=3
+app.get("/api/query",(req,res,next)=>{
+  let page = req.query.page;
+  let limit = req.query.limit;
+  res.send(`page:${page} and limit ${limit}`);
+});
+
 
 
 

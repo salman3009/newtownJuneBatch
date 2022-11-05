@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uploading with Multer</title>
+
+<style>
+    input[type=file], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+  </style>
+</head>
+<body>
+
+<div>
+
+ <!--  SINGLE FILE -->
+<form action="/uploadfile" method="POST"> 
+   <input type="text" name="fullName" />
+   <input type="submit" value="submit"/>
+</form>
+
+
+</div>
+
+</body>
+</html>
+
+
+

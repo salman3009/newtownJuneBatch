@@ -1,0 +1,15 @@
+1.Inside the express js to create get and post method:
+example:
+app.get('',()=>{});
+app.post('',()=>{});
+
+2.
+How to send json data from backend to frontend;
+example:
+res.status().json({})
+//Inside the json you can send the object and automatically in frontend it will be converted in json response.
+
+3.How to access frontend body data in backend?
+//we need to use req.body to access the data in backend
+//we need to use body parser given by nodejs to parse and extract the data from frontend.
+//So in backend you need to convert to json or object it will take care automatically.
