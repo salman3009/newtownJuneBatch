@@ -7,6 +7,11 @@ app.use((req,res,next) => {
     return next();
 });
 
+app.use((req,res,next)=>{
+    res.setHeader("Access-Control-Allow-Origin","*");
+    return next();
+});
+
 app.get('', (req, res) => {
 
     let employee = [{

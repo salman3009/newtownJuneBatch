@@ -10,8 +10,9 @@ function App() {
   },[]);
 
   const initialDataList=()=>{
-    axios.get("").then((response)=>{
+    axios.get("http://localhost:8080").then((response)=>{
        console.log(response);
+       setList([...response.data.list])
     }).catch((error)=>{
        console.log(error);
     })
@@ -25,8 +26,8 @@ function App() {
           <td>Age</td>
           <td>Location</td>
          </tr>
-         {getList.map((obj)=>{
-             return (<tr>
+         {getList.map((obj,index)=>{
+             return (<tr key={index}>
               <td>{obj.fullName}</td>
               <td>{obj.age}</td>
               <td>{obj.location}</td>
